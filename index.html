@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Optimizing Space-Based Missile Defense</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div id="ui">
+    <h1>Optimizing Space-Based Missile Defense</h1>
+
+    <p class="introText">
+      Explore space-based interceptor constellations for various missile threats.
+    </p>
+
+    <section class="panelSection">
+      <label class="sectionLabel">Scenario</label>
+
+      <label for="countrySelect">Threat Region</label>
+      <select id="countrySelect"></select>
+
+      <div class="twoColumnControls">
+        <div>
+          <label for="interceptorSelect">Interceptors / Satellite</label>
+          <select id="interceptorSelect"></select>
+        </div>
+
+        <div>
+          <label for="salvoSelect">Missile Salvo Size</label>
+          <select id="salvoSelect"></select>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
+    <section class="panelSection">
+      <label class="sectionLabel">Constellation</label>
+
+      <p class="statIntro">
+        To defend against this missile threat with boost-phase interceptors, this constellation needs:
+      </p>
+
+      <div class="statsGridWithIn">
+        <div class="statBlock">
+          <div id="satelliteStat" class="statNumber">—</div>
+          <div class="statLabel">Satellites</div>
+        </div>
+
+        <div class="statIn">in</div>
+
+        <div class="statBlock">
+          <div id="planeStat" class="statNumber">—</div>
+          <div class="statLabel">Orbital Planes</div>
+        </div>
+      </div>
+
+      <canvas id="coverageChart" width="280" height="142"></canvas>
+    </section>
+
+    <hr>
+
+    <section class="panelSection">
+      <label class="sectionLabel">Visualization</label>
+
+      <div class="visualizationToggleRow">
+        <div class="viewSwitch" aria-label="Visualization mode">
+          <button id="mode3DBtn" class="viewSwitchOption activeViewSwitch">3D Globe</button>
+          <button id="mode2DBtn" class="viewSwitchOption">2D Map</button>
+        </div>
+      </div>
+
+      <label class="subsectionLabel">Playback</label>
+
+      <div class="playbackRow">
+        <button id="playBtn" class="miniControl playPauseMini" title="Play / Pause">
+          <span class="pauseIcon"></span>
+        </button>
+
+        <input id="timelineSlider" type="range" min="0" max="24" step="0.01" value="0">
+
+        <div class="speedMiniGroup">
+          <button id="speedHalfBtn" class="miniControl speedMini">0.5×</button>
+          <button id="speedOneBtn" class="miniControl speedMini activeSpeed">1×</button>
+          <button id="speedTwoBtn" class="miniControl speedMini">2×</button>
+        </div>
+      </div>
+
+      <label class="subsectionLabel legendTitle">Legend</label>
+
+      <div class="legendContainer">
+        <div id="legend3D" class="legendList">
+          <div class="legendRow">
+            <span class="legendDot legendDotActive"></span>
+            <span>Satellites over threat region</span>
+          </div>
+
+          <div class="legendRow">
+            <span class="legendDot legendDotInactive"></span>
+            <span>Satellites away from threat region</span>
+          </div>
+        </div>
+
+        <div id="legend2D" class="legend2D">
+          <div class="gradientLegendRow">
+            <div class="noCoverageSwatch"></div>
+            <div class="gradientLegendBar"></div>
+          </div>
+
+          <div class="gradientLegendLabels">
+            <span>No coverage</span>
+            <span id="coverageRangeLabel">
+              <span class="coverageRangeMin">1</span>
+              <span class="coverageRangeText">satellites within range</span>
+              <span id="coverageMaxLabel" class="coverageRangeMax">Max</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="status"></div>
+  </div>
+
+  <div id="cameraControls">
+    <button id="zoomInBtn" class="cameraBtn" title="Zoom in">+</button>
+    <button id="zoomOutBtn" class="cameraBtn" title="Zoom out">−</button>
+    <button id="viewToggleBtn" class="cameraBtn" title="Toggle globe / horizon view">◠</button>
+  </div>
+
+  <div id="canvas-wrap">
+    <canvas id="map2dCanvas"></canvas>
+  </div>
+
+  <img id="gtLogo" src="assets/ESPL.png" alt="Engineering Space Policy Laboratory">
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/",
+      "topojson-client": "https://cdn.jsdelivr.net/npm/topojson-client@3/+esm",
+      "d3-geo": "https://cdn.jsdelivr.net/npm/d3-geo@3/+esm",
+      "d3-delaunay": "https://cdn.jsdelivr.net/npm/d3-delaunay@6/+esm",
+      "d3-geo-projection": "https://cdn.jsdelivr.net/npm/d3-geo-projection@4/+esm"
+    }
+  }
+  </script>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>l>

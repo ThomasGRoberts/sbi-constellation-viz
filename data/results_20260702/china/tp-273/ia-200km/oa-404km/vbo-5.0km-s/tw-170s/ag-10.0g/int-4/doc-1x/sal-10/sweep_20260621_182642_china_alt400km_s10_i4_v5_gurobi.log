@@ -1,0 +1,211 @@
+
+Gurobi 13.0.2 (linux64) logging started Mon Jun 22 13:11:19 2026
+
+Set parameter LogFile to value "/tmp/sweep_20260621_182642_china_alt400km_s10_i4_v5_gurobi.log"
+Set parameter Method to value 1
+Set parameter NodefileStart to value 4
+Set parameter RINS to value 50
+Gurobi Optimizer version 13.0.2 build v13.0.2rc1 (linux64 - "Debian GNU/Linux 13 (trixie)")
+
+CPU model: Intel(R) Xeon(R) Platinum 8375C CPU @ 2.90GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 8 physical cores, 16 logical processors, using up to 16 threads
+
+Non-default parameters:
+TimeLimit  21600
+MIPGap  0.01
+Method  1
+LPWarmStart  1
+Heuristics  0.2
+MIPFocus  1
+NodefileStart  4
+RINS  50
+Symmetry  2
+Cuts  2
+CoverCuts  2
+LogToConsole  0
+
+Academic license 2812613 - for non-commercial use only - registered to no___@gatech.edu
+Optimize a model with 392028 rows, 35900 columns and 56361564 nonzeros (Min)
+Model fingerprint: 0x31a2846e
+Model has 35900 linear objective coefficients
+Variable types: 0 continuous, 35900 integer (35900 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [3e+00, 3e+00]
+
+Found heuristic solution: objective 2321.0000000
+Presolve removed 0 rows and 0 columns (presolve time = 7s)...
+Presolve removed 0 rows and 0 columns (presolve time = 14s)...
+Presolve removed 0 rows and 0 columns (presolve time = 19s)...
+Presolve removed 0 rows and 0 columns (presolve time = 24s)...
+Presolve removed 0 rows and 0 columns (presolve time = 31s)...
+Presolve removed 0 rows and 0 columns (presolve time = 37s)...
+Presolve removed 0 rows and 0 columns (presolve time = 48s)...
+Presolve removed 0 rows and 0 columns (presolve time = 54s)...
+Presolve removed 0 rows and 0 columns (presolve time = 59s)...
+Presolve removed 0 rows and 0 columns (presolve time = 65s)...
+Presolve removed 0 rows and 0 columns (presolve time = 65s)...
+Presolve removed 0 rows and 0 columns (presolve time = 71s)...
+Presolve removed 0 rows and 0 columns (presolve time = 78s)...
+Presolve removed 0 rows and 0 columns (presolve time = 80s)...
+Presolve removed 0 rows and 0 columns (presolve time = 89s)...
+Presolve removed 0 rows and 0 columns (presolve time = 90s)...
+Presolve removed 0 rows and 0 columns (presolve time = 95s)...
+Presolve removed 0 rows and 0 columns (presolve time = 100s)...
+Presolve removed 0 rows and 0 columns (presolve time = 105s)...
+Presolve removed 0 rows and 0 columns (presolve time = 113s)...
+Presolve removed 0 rows and 0 columns (presolve time = 124s)...
+Presolve removed 0 rows and 0 columns (presolve time = 132s)...
+Presolve time: 131.94s
+Presolved: 392028 rows, 35900 columns, 56361564 nonzeros
+Variable types: 0 continuous, 35900 integer (35900 binary)
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0   -0.0000000e+00   0.000000e+00   8.670000e+02    162s
+      74    9.5196723e+02   0.000000e+00   0.000000e+00    162s
+      74    9.5196723e+02   0.000000e+00   0.000000e+00    162s
+
+Use crossover to convert LP symmetric solution to basic solution...
+
+Root crossover log...
+
+  371924 variables added to crossover basis                      168s
+  375974 variables added to crossover basis                      170s
+  376964 variables added to crossover basis                      175s
+  377354 variables added to crossover basis                      180s
+  377624 variables added to crossover basis                      185s
+  377864 variables added to crossover basis                      190s
+  378614 variables added to crossover basis                      195s
+  379244 variables added to crossover basis                      200s
+  379724 variables added to crossover basis                      205s
+  381254 variables added to crossover basis                      210s
+  382154 variables added to crossover basis                      215s
+  382904 variables added to crossover basis                      220s
+  383474 variables added to crossover basis                      225s
+  383984 variables added to crossover basis                      230s
+  384584 variables added to crossover basis                      235s
+  385064 variables added to crossover basis                      240s
+  385484 variables added to crossover basis                      245s
+  385844 variables added to crossover basis                      250s
+  386174 variables added to crossover basis                      256s
+  386444 variables added to crossover basis                      260s
+  386684 variables added to crossover basis                      265s
+  386924 variables added to crossover basis                      270s
+  387164 variables added to crossover basis                      276s
+  387374 variables added to crossover basis                      280s
+  387584 variables added to crossover basis                      286s
+  387794 variables added to crossover basis                      291s
+  387974 variables added to crossover basis                      295s
+  388184 variables added to crossover basis                      301s
+  388334 variables added to crossover basis                      305s
+  388514 variables added to crossover basis                      310s
+  388694 variables added to crossover basis                      315s
+  388874 variables added to crossover basis                      320s
+  389054 variables added to crossover basis                      326s
+  389204 variables added to crossover basis                      331s
+  389354 variables added to crossover basis                      335s
+  389504 variables added to crossover basis                      340s
+  389684 variables added to crossover basis                      346s
+  389834 variables added to crossover basis                      351s
+  389984 variables added to crossover basis                      356s
+  390134 variables added to crossover basis                      361s
+  390284 variables added to crossover basis                      366s
+  390434 variables added to crossover basis                      371s
+  390554 variables added to crossover basis                      375s
+  390704 variables added to crossover basis                      380s
+  390854 variables added to crossover basis                      385s
+  391004 variables added to crossover basis                      390s
+  391154 variables added to crossover basis                      396s
+  391304 variables added to crossover basis                      401s
+  391424 variables added to crossover basis                      405s
+  391574 variables added to crossover basis                      410s
+  391694 variables added to crossover basis                      415s
+  391844 variables added to crossover basis                      420s
+  391994 variables added to crossover basis                      426s
+
+       0 DPushes remaining with DInf 0.0000000e+00               934s
+
+       0 PPushes remaining with PInf 0.0000000e+00               935s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 1.6505862e-08    936s
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+      77    9.5196723e+02   0.000000e+00   0.000000e+00   1139s
+Crossover time: 976.22 seconds (2292.78 work units)
+
+Root relaxation: objective 9.519672e+02, 77 iterations, 1001.23 seconds (2312.92 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  951.96723    0 20104 2321.00000  951.96723  59.0%     - 1874s
+H    0     0                    1832.0000000  951.96723  48.0%     - 1874s
+H    0     0                    1752.0000000  951.96723  45.7%     - 1909s
+H    0     0                    1729.0000000  951.96723  44.9%     - 1909s
+H    0     0                    1711.0000000  951.96723  44.4%     - 1909s
+H    0     0                    1703.0000000  951.96723  44.1%     - 1920s
+H    0     0                    1698.0000000  951.96723  43.9%     - 1931s
+H    0     0                    1695.0000000  951.96723  43.8%     - 1943s
+H    0     0                    1685.0000000  951.96723  43.5%     - 1950s
+H    0     0                    1684.0000000  951.96723  43.5%     - 1955s
+H    0     0                    1683.0000000  951.96723  43.4%     - 1964s
+H    0     0                    1679.0000000  951.96723  43.3%     - 1971s
+H    0     0                    1678.0000000  951.96723  43.3%     - 1992s
+H    0     0                    1677.0000000  951.96723  43.2%     - 2027s
+H    0     0                    1674.0000000  951.96723  43.1%     - 2030s
+H    0     0                    1673.0000000  951.96723  43.1%     - 2035s
+H    0     0                    1672.0000000  951.96723  43.1%     - 2038s
+H    0     0                    1671.0000000  951.96723  43.0%     - 2040s
+H    0     0                    1670.0000000  951.96723  43.0%     - 2047s
+H    0     0                    1669.0000000  951.96723  43.0%     - 2062s
+H    0     0                    1668.0000000  951.96723  42.9%     - 2069s
+H    0     0                    1667.0000000  951.96723  42.9%     - 2076s
+H    0     0                    1666.0000000  951.96723  42.9%     - 2095s
+H    0     0                    1665.0000000  951.96723  42.8%     - 2098s
+H    0     0                    1664.0000000  951.96723  42.8%     - 2185s
+H    0     0                    1663.0000000  951.96723  42.8%     - 2197s
+H    0     0                    1662.0000000  951.96723  42.7%     - 2203s
+H    0     0                    1661.0000000  951.96723  42.7%     - 2203s
+H    0     0                    1660.0000000  951.96723  42.7%     - 2266s
+H    0     0                    1659.0000000  951.96723  42.6%     - 2300s
+H    0     0                    1657.0000000  951.96723  42.5%     - 2382s
+H    0     0                    1656.0000000  951.96723  42.5%     - 2390s
+H    0     0                    1652.0000000  951.96723  42.4%     - 2417s
+H    0     0                    1651.0000000  951.96723  42.3%     - 2430s
+H    0     0                    1650.0000000  951.96723  42.3%     - 2442s
+H    0     0                    1649.0000000  951.96723  42.3%     - 2474s
+H    0     0                    1647.0000000  951.96723  42.2%     - 2474s
+H    0     0                    1645.0000000  951.96723  42.1%     - 2480s
+H    0     0                    1644.0000000  951.96723  42.1%     - 2485s
+H    0     0                    1643.0000000  951.96723  42.1%     - 2488s
+H    0     0                    1642.0000000  951.96723  42.0%     - 2526s
+H    0     0                    1641.0000000  951.96723  42.0%     - 2533s
+H    0     0                    1640.0000000  951.96723  42.0%     - 2537s
+H    0     0                    1639.0000000  951.96723  41.9%     - 2544s
+H    0     0                    1638.0000000  951.96723  41.9%     - 2548s
+H    0     0                    1637.0000000  951.96723  41.8%     - 2556s
+H    0     0                    1636.0000000  951.96723  41.8%     - 2559s
+H    0     0                    1635.0000000  951.96723  41.8%     - 2563s
+H    0     0                    1634.0000000  951.96723  41.7%     - 2567s
+H    0     0                    1633.0000000  951.96723  41.7%     - 2571s
+H    0     0                    1632.0000000  951.96723  41.7%     - 2578s
+H    0     0                    1631.0000000  951.96723  41.6%     - 2592s
+H    0     0                    1630.0000000  951.96723  41.6%     - 2803s
+     0     0  951.96723    0 20104 1630.00000  951.96723  41.6%     - 8046s
+
+Explored 1 nodes (77 simplex iterations) in 21600.86 seconds (48271.19 work units)
+Thread count was 16 (of 16 available processors)
+
+Solution count 10: 1630 1631 1632 ... 1639
+
+Time limit reached
+Best objective 1.630000000000e+03, best bound 9.520000000000e+02, gap 41.5951%
+
+User-callback calls 242713, time in user-callback 0.92 sec

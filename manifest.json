@@ -1,0 +1,1328 @@
+[
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-6.0km-s/tw-170s/ag-10.0g/int-1/doc-1x/sal-1/sweep_20260620_020529_china_alt400km_s1_i1_v6.csv",
+    "country": "china",
+    "interceptors": "1",
+    "salvo": "1"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-10.0km-s/tw-170s/ag-10.0g/int-1/doc-1x/sal-1/sweep_20260623_041454_china_alt400km_s1_i1_v10.csv",
+    "country": "china",
+    "interceptors": "1",
+    "salvo": "1"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-4.0km-s/tw-170s/ag-10.0g/int-1/doc-1x/sal-1/sweep_20260623_041454_china_alt400km_s1_i1_v4.csv",
+    "country": "china",
+    "interceptors": "1",
+    "salvo": "1"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-5.0km-s/tw-170s/ag-10.0g/int-1/doc-1x/sal-1/sweep_20260620_020529_china_alt400km_s1_i1_v5.csv",
+    "country": "china",
+    "interceptors": "1",
+    "salvo": "1"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-6.0km-s/tw-170s/ag-10.0g/int-1/doc-1x/sal-1/sweep_20260626_235454_china_alt550km_s1_i1_v6.csv",
+    "country": "china",
+    "interceptors": "1",
+    "salvo": "1"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-10.0km-s/tw-170s/ag-10.0g/int-1/doc-1x/sal-1/sweep_20260626_235454_china_alt550km_s1_i1_v10.csv",
+    "country": "china",
+    "interceptors": "1",
+    "salvo": "1"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-4.0km-s/tw-170s/ag-10.0g/int-1/doc-1x/sal-1/sweep_20260626_235454_china_alt550km_s1_i1_v4.csv",
+    "country": "china",
+    "interceptors": "1",
+    "salvo": "1"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-5.0km-s/tw-170s/ag-10.0g/int-1/doc-1x/sal-1/sweep_20260626_235454_china_alt550km_s1_i1_v5.csv",
+    "country": "china",
+    "interceptors": "1",
+    "salvo": "1"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-6.0km-s/tw-170s/ag-10.0g/int-1/doc-1x/sal-1/sweep_20260626_235454_china_alt260km_s1_i1_v6.csv",
+    "country": "china",
+    "interceptors": "1",
+    "salvo": "1"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-10.0km-s/tw-170s/ag-10.0g/int-1/doc-1x/sal-1/sweep_20260626_235454_china_alt260km_s1_i1_v10.csv",
+    "country": "china",
+    "interceptors": "1",
+    "salvo": "1"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-4.0km-s/tw-170s/ag-10.0g/int-1/doc-1x/sal-1/sweep_20260626_235454_china_alt260km_s1_i1_v4.csv",
+    "country": "china",
+    "interceptors": "1",
+    "salvo": "1"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-5.0km-s/tw-170s/ag-10.0g/int-1/doc-1x/sal-1/sweep_20260626_235454_china_alt260km_s1_i1_v5.csv",
+    "country": "china",
+    "interceptors": "1",
+    "salvo": "1"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-6.0km-s/tw-170s/ag-10.0g/int-1/doc-1x/sal-10/sweep_20260621_182642_china_alt400km_s10_i1_v6.csv",
+    "country": "china",
+    "interceptors": "1",
+    "salvo": "10"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-10.0km-s/tw-170s/ag-10.0g/int-1/doc-1x/sal-10/sweep_20260623_041454_china_alt400km_s10_i1_v10.csv",
+    "country": "china",
+    "interceptors": "1",
+    "salvo": "10"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-4.0km-s/tw-170s/ag-10.0g/int-1/doc-1x/sal-10/sweep_20260621_182642_china_alt400km_s10_i1_v4.csv",
+    "country": "china",
+    "interceptors": "1",
+    "salvo": "10"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-5.0km-s/tw-170s/ag-10.0g/int-1/doc-1x/sal-10/sweep_20260623_041454_china_alt400km_s10_i1_v5.csv",
+    "country": "china",
+    "interceptors": "1",
+    "salvo": "10"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-6.0km-s/tw-170s/ag-10.0g/int-1/doc-1x/sal-10/sweep_20260626_235454_china_alt550km_s10_i1_v6.csv",
+    "country": "china",
+    "interceptors": "1",
+    "salvo": "10"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-10.0km-s/tw-170s/ag-10.0g/int-1/doc-1x/sal-10/sweep_20260626_235454_china_alt550km_s10_i1_v10.csv",
+    "country": "china",
+    "interceptors": "1",
+    "salvo": "10"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-4.0km-s/tw-170s/ag-10.0g/int-1/doc-1x/sal-10/sweep_20260626_235454_china_alt550km_s10_i1_v4.csv",
+    "country": "china",
+    "interceptors": "1",
+    "salvo": "10"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-5.0km-s/tw-170s/ag-10.0g/int-1/doc-1x/sal-10/sweep_20260626_235454_china_alt550km_s10_i1_v5.csv",
+    "country": "china",
+    "interceptors": "1",
+    "salvo": "10"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-6.0km-s/tw-170s/ag-10.0g/int-1/doc-1x/sal-10/sweep_20260626_235454_china_alt260km_s10_i1_v6.csv",
+    "country": "china",
+    "interceptors": "1",
+    "salvo": "10"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-10.0km-s/tw-170s/ag-10.0g/int-1/doc-1x/sal-10/sweep_20260626_235454_china_alt260km_s10_i1_v10.csv",
+    "country": "china",
+    "interceptors": "1",
+    "salvo": "10"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-4.0km-s/tw-170s/ag-10.0g/int-1/doc-1x/sal-10/sweep_20260626_235454_china_alt260km_s10_i1_v4.csv",
+    "country": "china",
+    "interceptors": "1",
+    "salvo": "10"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-5.0km-s/tw-170s/ag-10.0g/int-1/doc-1x/sal-10/sweep_20260626_235454_china_alt260km_s10_i1_v5.csv",
+    "country": "china",
+    "interceptors": "1",
+    "salvo": "10"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-6.0km-s/tw-170s/ag-10.0g/int-1/doc-1x/sal-20/sweep_20260623_041454_china_alt400km_s20_i1_v6.csv",
+    "country": "china",
+    "interceptors": "1",
+    "salvo": "20"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-10.0km-s/tw-170s/ag-10.0g/int-1/doc-1x/sal-20/sweep_20260623_041454_china_alt400km_s20_i1_v10.csv",
+    "country": "china",
+    "interceptors": "1",
+    "salvo": "20"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-4.0km-s/tw-170s/ag-10.0g/int-1/doc-1x/sal-20/sweep_20260623_041454_china_alt400km_s20_i1_v4.csv",
+    "country": "china",
+    "interceptors": "1",
+    "salvo": "20"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-5.0km-s/tw-170s/ag-10.0g/int-1/doc-1x/sal-20/sweep_20260623_041454_china_alt400km_s20_i1_v5.csv",
+    "country": "china",
+    "interceptors": "1",
+    "salvo": "20"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-6.0km-s/tw-170s/ag-10.0g/int-1/doc-1x/sal-20/sweep_20260626_235454_china_alt550km_s20_i1_v6.csv",
+    "country": "china",
+    "interceptors": "1",
+    "salvo": "20"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-10.0km-s/tw-170s/ag-10.0g/int-1/doc-1x/sal-20/sweep_20260626_235454_china_alt550km_s20_i1_v10.csv",
+    "country": "china",
+    "interceptors": "1",
+    "salvo": "20"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-4.0km-s/tw-170s/ag-10.0g/int-1/doc-1x/sal-20/sweep_20260626_235454_china_alt550km_s20_i1_v4.csv",
+    "country": "china",
+    "interceptors": "1",
+    "salvo": "20"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-5.0km-s/tw-170s/ag-10.0g/int-1/doc-1x/sal-20/sweep_20260626_235454_china_alt550km_s20_i1_v5.csv",
+    "country": "china",
+    "interceptors": "1",
+    "salvo": "20"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-6.0km-s/tw-170s/ag-10.0g/int-1/doc-1x/sal-20/sweep_20260626_235454_china_alt260km_s20_i1_v6.csv",
+    "country": "china",
+    "interceptors": "1",
+    "salvo": "20"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-10.0km-s/tw-170s/ag-10.0g/int-1/doc-1x/sal-20/sweep_20260626_235454_china_alt260km_s20_i1_v10.csv",
+    "country": "china",
+    "interceptors": "1",
+    "salvo": "20"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-4.0km-s/tw-170s/ag-10.0g/int-1/doc-1x/sal-20/sweep_20260626_235454_china_alt260km_s20_i1_v4.csv",
+    "country": "china",
+    "interceptors": "1",
+    "salvo": "20"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-5.0km-s/tw-170s/ag-10.0g/int-1/doc-1x/sal-20/sweep_20260626_235454_china_alt260km_s20_i1_v5.csv",
+    "country": "china",
+    "interceptors": "1",
+    "salvo": "20"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-6.0km-s/tw-170s/ag-10.0g/int-1/doc-1x/sal-50/sweep_20260625_231022_china_alt400km_s50_i1_v6.csv",
+    "country": "china",
+    "interceptors": "1",
+    "salvo": "50"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-10.0km-s/tw-170s/ag-10.0g/int-1/doc-1x/sal-50/sweep_20260625_231022_china_alt400km_s50_i1_v10.csv",
+    "country": "china",
+    "interceptors": "1",
+    "salvo": "50"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-4.0km-s/tw-170s/ag-10.0g/int-1/doc-1x/sal-50/sweep_20260625_231022_china_alt400km_s50_i1_v4.csv",
+    "country": "china",
+    "interceptors": "1",
+    "salvo": "50"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-5.0km-s/tw-170s/ag-10.0g/int-1/doc-1x/sal-50/sweep_20260625_231022_china_alt400km_s50_i1_v5.csv",
+    "country": "china",
+    "interceptors": "1",
+    "salvo": "50"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-6.0km-s/tw-170s/ag-10.0g/int-1/doc-1x/sal-50/sweep_20260629_013743_china_alt550km_s50_i1_v6.csv",
+    "country": "china",
+    "interceptors": "1",
+    "salvo": "50"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-10.0km-s/tw-170s/ag-10.0g/int-1/doc-1x/sal-50/sweep_20260629_013743_china_alt550km_s50_i1_v10.csv",
+    "country": "china",
+    "interceptors": "1",
+    "salvo": "50"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-5.0km-s/tw-170s/ag-10.0g/int-1/doc-1x/sal-50/sweep_20260629_013743_china_alt550km_s50_i1_v5.csv",
+    "country": "china",
+    "interceptors": "1",
+    "salvo": "50"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-6.0km-s/tw-170s/ag-10.0g/int-1/doc-1x/sal-50/sweep_20260629_013743_china_alt260km_s50_i1_v6.csv",
+    "country": "china",
+    "interceptors": "1",
+    "salvo": "50"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-10.0km-s/tw-170s/ag-10.0g/int-1/doc-1x/sal-50/sweep_20260629_013743_china_alt260km_s50_i1_v10.csv",
+    "country": "china",
+    "interceptors": "1",
+    "salvo": "50"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-4.0km-s/tw-170s/ag-10.0g/int-1/doc-1x/sal-50/sweep_20260629_013743_china_alt260km_s50_i1_v4.csv",
+    "country": "china",
+    "interceptors": "1",
+    "salvo": "50"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-5.0km-s/tw-170s/ag-10.0g/int-1/doc-1x/sal-50/sweep_20260629_013743_china_alt260km_s50_i1_v5.csv",
+    "country": "china",
+    "interceptors": "1",
+    "salvo": "50"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-6.0km-s/tw-170s/ag-10.0g/int-1/doc-1x/sal-100/sweep_20260625_231022_china_alt400km_s100_i1_v6.csv",
+    "country": "china",
+    "interceptors": "1",
+    "salvo": "100"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-10.0km-s/tw-170s/ag-10.0g/int-1/doc-1x/sal-100/sweep_20260625_231022_china_alt400km_s100_i1_v10.csv",
+    "country": "china",
+    "interceptors": "1",
+    "salvo": "100"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-4.0km-s/tw-170s/ag-10.0g/int-1/doc-1x/sal-100/sweep_20260625_231022_china_alt400km_s100_i1_v4.csv",
+    "country": "china",
+    "interceptors": "1",
+    "salvo": "100"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-5.0km-s/tw-170s/ag-10.0g/int-1/doc-1x/sal-100/sweep_20260625_231022_china_alt400km_s100_i1_v5.csv",
+    "country": "china",
+    "interceptors": "1",
+    "salvo": "100"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-4.0km-s/tw-170s/ag-10.0g/int-1/doc-1x/sal-100/sweep_20260626_235454_china_alt550km_s100_i1_v4.csv",
+    "country": "china",
+    "interceptors": "1",
+    "salvo": "100"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-4.0km-s/tw-170s/ag-10.0g/int-1/doc-1x/sal-100/sweep_20260629_013743_china_alt260km_s100_i1_v4.csv",
+    "country": "china",
+    "interceptors": "1",
+    "salvo": "100"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-6.0km-s/tw-170s/ag-10.0g/int-2/doc-1x/sal-1/sweep_20260620_020529_china_alt400km_s1_i2_v6.csv",
+    "country": "china",
+    "interceptors": "2",
+    "salvo": "1"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-10.0km-s/tw-170s/ag-10.0g/int-2/doc-1x/sal-1/sweep_20260623_041454_china_alt400km_s1_i2_v10.csv",
+    "country": "china",
+    "interceptors": "2",
+    "salvo": "1"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-4.0km-s/tw-170s/ag-10.0g/int-2/doc-1x/sal-1/sweep_20260623_041454_china_alt400km_s1_i2_v4.csv",
+    "country": "china",
+    "interceptors": "2",
+    "salvo": "1"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-5.0km-s/tw-170s/ag-10.0g/int-2/doc-1x/sal-1/sweep_20260620_020529_china_alt400km_s1_i2_v5.csv",
+    "country": "china",
+    "interceptors": "2",
+    "salvo": "1"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-6.0km-s/tw-170s/ag-10.0g/int-2/doc-1x/sal-1/sweep_20260626_235454_china_alt550km_s1_i2_v6.csv",
+    "country": "china",
+    "interceptors": "2",
+    "salvo": "1"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-10.0km-s/tw-170s/ag-10.0g/int-2/doc-1x/sal-1/sweep_20260626_235454_china_alt550km_s1_i2_v10.csv",
+    "country": "china",
+    "interceptors": "2",
+    "salvo": "1"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-4.0km-s/tw-170s/ag-10.0g/int-2/doc-1x/sal-1/sweep_20260626_235454_china_alt550km_s1_i2_v4.csv",
+    "country": "china",
+    "interceptors": "2",
+    "salvo": "1"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-5.0km-s/tw-170s/ag-10.0g/int-2/doc-1x/sal-1/sweep_20260626_235454_china_alt550km_s1_i2_v5.csv",
+    "country": "china",
+    "interceptors": "2",
+    "salvo": "1"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-6.0km-s/tw-170s/ag-10.0g/int-2/doc-1x/sal-1/sweep_20260626_235454_china_alt260km_s1_i2_v6.csv",
+    "country": "china",
+    "interceptors": "2",
+    "salvo": "1"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-10.0km-s/tw-170s/ag-10.0g/int-2/doc-1x/sal-1/sweep_20260626_235454_china_alt260km_s1_i2_v10.csv",
+    "country": "china",
+    "interceptors": "2",
+    "salvo": "1"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-4.0km-s/tw-170s/ag-10.0g/int-2/doc-1x/sal-1/sweep_20260626_235454_china_alt260km_s1_i2_v4.csv",
+    "country": "china",
+    "interceptors": "2",
+    "salvo": "1"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-5.0km-s/tw-170s/ag-10.0g/int-2/doc-1x/sal-1/sweep_20260626_235454_china_alt260km_s1_i2_v5.csv",
+    "country": "china",
+    "interceptors": "2",
+    "salvo": "1"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-6.0km-s/tw-170s/ag-10.0g/int-2/doc-1x/sal-10/sweep_20260623_041454_china_alt400km_s10_i2_v6.csv",
+    "country": "china",
+    "interceptors": "2",
+    "salvo": "10"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-10.0km-s/tw-170s/ag-10.0g/int-2/doc-1x/sal-10/sweep_20260623_041454_china_alt400km_s10_i2_v10.csv",
+    "country": "china",
+    "interceptors": "2",
+    "salvo": "10"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-4.0km-s/tw-170s/ag-10.0g/int-2/doc-1x/sal-10/sweep_20260621_182642_china_alt400km_s10_i2_v4.csv",
+    "country": "china",
+    "interceptors": "2",
+    "salvo": "10"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-5.0km-s/tw-170s/ag-10.0g/int-2/doc-1x/sal-10/sweep_20260623_041454_china_alt400km_s10_i2_v5.csv",
+    "country": "china",
+    "interceptors": "2",
+    "salvo": "10"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-6.0km-s/tw-170s/ag-10.0g/int-2/doc-1x/sal-10/sweep_20260626_235454_china_alt550km_s10_i2_v6.csv",
+    "country": "china",
+    "interceptors": "2",
+    "salvo": "10"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-10.0km-s/tw-170s/ag-10.0g/int-2/doc-1x/sal-10/sweep_20260626_235454_china_alt550km_s10_i2_v10.csv",
+    "country": "china",
+    "interceptors": "2",
+    "salvo": "10"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-4.0km-s/tw-170s/ag-10.0g/int-2/doc-1x/sal-10/sweep_20260626_235454_china_alt550km_s10_i2_v4.csv",
+    "country": "china",
+    "interceptors": "2",
+    "salvo": "10"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-5.0km-s/tw-170s/ag-10.0g/int-2/doc-1x/sal-10/sweep_20260626_235454_china_alt550km_s10_i2_v5.csv",
+    "country": "china",
+    "interceptors": "2",
+    "salvo": "10"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-6.0km-s/tw-170s/ag-10.0g/int-2/doc-1x/sal-10/sweep_20260626_235454_china_alt260km_s10_i2_v6.csv",
+    "country": "china",
+    "interceptors": "2",
+    "salvo": "10"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-10.0km-s/tw-170s/ag-10.0g/int-2/doc-1x/sal-10/sweep_20260626_235454_china_alt260km_s10_i2_v10.csv",
+    "country": "china",
+    "interceptors": "2",
+    "salvo": "10"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-4.0km-s/tw-170s/ag-10.0g/int-2/doc-1x/sal-10/sweep_20260626_235454_china_alt260km_s10_i2_v4.csv",
+    "country": "china",
+    "interceptors": "2",
+    "salvo": "10"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-5.0km-s/tw-170s/ag-10.0g/int-2/doc-1x/sal-10/sweep_20260626_235454_china_alt260km_s10_i2_v5.csv",
+    "country": "china",
+    "interceptors": "2",
+    "salvo": "10"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-6.0km-s/tw-170s/ag-10.0g/int-2/doc-1x/sal-20/sweep_20260623_041454_china_alt400km_s20_i2_v6.csv",
+    "country": "china",
+    "interceptors": "2",
+    "salvo": "20"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-10.0km-s/tw-170s/ag-10.0g/int-2/doc-1x/sal-20/sweep_20260625_231022_china_alt400km_s20_i2_v10.csv",
+    "country": "china",
+    "interceptors": "2",
+    "salvo": "20"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-4.0km-s/tw-170s/ag-10.0g/int-2/doc-1x/sal-20/sweep_20260623_041454_china_alt400km_s20_i2_v4.csv",
+    "country": "china",
+    "interceptors": "2",
+    "salvo": "20"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-5.0km-s/tw-170s/ag-10.0g/int-2/doc-1x/sal-20/sweep_20260623_041454_china_alt400km_s20_i2_v5.csv",
+    "country": "china",
+    "interceptors": "2",
+    "salvo": "20"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-6.0km-s/tw-170s/ag-10.0g/int-2/doc-1x/sal-20/sweep_20260626_235454_china_alt550km_s20_i2_v6.csv",
+    "country": "china",
+    "interceptors": "2",
+    "salvo": "20"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-10.0km-s/tw-170s/ag-10.0g/int-2/doc-1x/sal-20/sweep_20260626_235454_china_alt550km_s20_i2_v10.csv",
+    "country": "china",
+    "interceptors": "2",
+    "salvo": "20"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-4.0km-s/tw-170s/ag-10.0g/int-2/doc-1x/sal-20/sweep_20260626_235454_china_alt550km_s20_i2_v4.csv",
+    "country": "china",
+    "interceptors": "2",
+    "salvo": "20"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-5.0km-s/tw-170s/ag-10.0g/int-2/doc-1x/sal-20/sweep_20260626_235454_china_alt550km_s20_i2_v5.csv",
+    "country": "china",
+    "interceptors": "2",
+    "salvo": "20"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-6.0km-s/tw-170s/ag-10.0g/int-2/doc-1x/sal-20/sweep_20260626_235454_china_alt260km_s20_i2_v6.csv",
+    "country": "china",
+    "interceptors": "2",
+    "salvo": "20"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-10.0km-s/tw-170s/ag-10.0g/int-2/doc-1x/sal-20/sweep_20260626_235454_china_alt260km_s20_i2_v10.csv",
+    "country": "china",
+    "interceptors": "2",
+    "salvo": "20"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-4.0km-s/tw-170s/ag-10.0g/int-2/doc-1x/sal-20/sweep_20260626_235454_china_alt260km_s20_i2_v4.csv",
+    "country": "china",
+    "interceptors": "2",
+    "salvo": "20"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-5.0km-s/tw-170s/ag-10.0g/int-2/doc-1x/sal-20/sweep_20260626_235454_china_alt260km_s20_i2_v5.csv",
+    "country": "china",
+    "interceptors": "2",
+    "salvo": "20"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-6.0km-s/tw-170s/ag-10.0g/int-2/doc-1x/sal-50/sweep_20260625_231022_china_alt400km_s50_i2_v6.csv",
+    "country": "china",
+    "interceptors": "2",
+    "salvo": "50"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-10.0km-s/tw-170s/ag-10.0g/int-2/doc-1x/sal-50/sweep_20260625_231022_china_alt400km_s50_i2_v10.csv",
+    "country": "china",
+    "interceptors": "2",
+    "salvo": "50"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-4.0km-s/tw-170s/ag-10.0g/int-2/doc-1x/sal-50/sweep_20260625_231022_china_alt400km_s50_i2_v4.csv",
+    "country": "china",
+    "interceptors": "2",
+    "salvo": "50"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-5.0km-s/tw-170s/ag-10.0g/int-2/doc-1x/sal-50/sweep_20260625_231022_china_alt400km_s50_i2_v5.csv",
+    "country": "china",
+    "interceptors": "2",
+    "salvo": "50"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-6.0km-s/tw-170s/ag-10.0g/int-2/doc-1x/sal-50/sweep_20260629_013743_china_alt550km_s50_i2_v6.csv",
+    "country": "china",
+    "interceptors": "2",
+    "salvo": "50"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-10.0km-s/tw-170s/ag-10.0g/int-2/doc-1x/sal-50/sweep_20260629_013743_china_alt550km_s50_i2_v10.csv",
+    "country": "china",
+    "interceptors": "2",
+    "salvo": "50"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-4.0km-s/tw-170s/ag-10.0g/int-2/doc-1x/sal-50/sweep_20260629_013743_china_alt550km_s50_i2_v4.csv",
+    "country": "china",
+    "interceptors": "2",
+    "salvo": "50"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-5.0km-s/tw-170s/ag-10.0g/int-2/doc-1x/sal-50/sweep_20260629_013743_china_alt550km_s50_i2_v5.csv",
+    "country": "china",
+    "interceptors": "2",
+    "salvo": "50"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-6.0km-s/tw-170s/ag-10.0g/int-2/doc-1x/sal-50/sweep_20260629_013743_china_alt260km_s50_i2_v6.csv",
+    "country": "china",
+    "interceptors": "2",
+    "salvo": "50"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-10.0km-s/tw-170s/ag-10.0g/int-2/doc-1x/sal-50/sweep_20260629_013743_china_alt260km_s50_i2_v10.csv",
+    "country": "china",
+    "interceptors": "2",
+    "salvo": "50"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-4.0km-s/tw-170s/ag-10.0g/int-2/doc-1x/sal-50/sweep_20260629_013743_china_alt260km_s50_i2_v4.csv",
+    "country": "china",
+    "interceptors": "2",
+    "salvo": "50"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-5.0km-s/tw-170s/ag-10.0g/int-2/doc-1x/sal-50/sweep_20260629_013743_china_alt260km_s50_i2_v5.csv",
+    "country": "china",
+    "interceptors": "2",
+    "salvo": "50"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-6.0km-s/tw-170s/ag-10.0g/int-2/doc-1x/sal-100/sweep_20260625_231022_china_alt400km_s100_i2_v6.csv",
+    "country": "china",
+    "interceptors": "2",
+    "salvo": "100"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-4.0km-s/tw-170s/ag-10.0g/int-2/doc-1x/sal-100/sweep_20260625_231022_china_alt400km_s100_i2_v4.csv",
+    "country": "china",
+    "interceptors": "2",
+    "salvo": "100"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-5.0km-s/tw-170s/ag-10.0g/int-2/doc-1x/sal-100/sweep_20260625_231022_china_alt400km_s100_i2_v5.csv",
+    "country": "china",
+    "interceptors": "2",
+    "salvo": "100"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-6.0km-s/tw-170s/ag-10.0g/int-4/doc-1x/sal-1/sweep_20260620_020529_china_alt400km_s1_i4_v6.csv",
+    "country": "china",
+    "interceptors": "4",
+    "salvo": "1"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-10.0km-s/tw-170s/ag-10.0g/int-4/doc-1x/sal-1/sweep_20260623_041454_china_alt400km_s1_i4_v10.csv",
+    "country": "china",
+    "interceptors": "4",
+    "salvo": "1"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-4.0km-s/tw-170s/ag-10.0g/int-4/doc-1x/sal-1/sweep_20260623_041454_china_alt400km_s1_i4_v4.csv",
+    "country": "china",
+    "interceptors": "4",
+    "salvo": "1"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-5.0km-s/tw-170s/ag-10.0g/int-4/doc-1x/sal-1/sweep_20260620_020529_china_alt400km_s1_i4_v5.csv",
+    "country": "china",
+    "interceptors": "4",
+    "salvo": "1"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-6.0km-s/tw-170s/ag-10.0g/int-4/doc-1x/sal-1/sweep_20260626_235454_china_alt550km_s1_i4_v6.csv",
+    "country": "china",
+    "interceptors": "4",
+    "salvo": "1"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-10.0km-s/tw-170s/ag-10.0g/int-4/doc-1x/sal-1/sweep_20260626_235454_china_alt550km_s1_i4_v10.csv",
+    "country": "china",
+    "interceptors": "4",
+    "salvo": "1"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-4.0km-s/tw-170s/ag-10.0g/int-4/doc-1x/sal-1/sweep_20260626_235454_china_alt550km_s1_i4_v4.csv",
+    "country": "china",
+    "interceptors": "4",
+    "salvo": "1"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-5.0km-s/tw-170s/ag-10.0g/int-4/doc-1x/sal-1/sweep_20260626_235454_china_alt550km_s1_i4_v5.csv",
+    "country": "china",
+    "interceptors": "4",
+    "salvo": "1"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-6.0km-s/tw-170s/ag-10.0g/int-4/doc-1x/sal-1/sweep_20260626_235454_china_alt260km_s1_i4_v6.csv",
+    "country": "china",
+    "interceptors": "4",
+    "salvo": "1"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-10.0km-s/tw-170s/ag-10.0g/int-4/doc-1x/sal-1/sweep_20260626_235454_china_alt260km_s1_i4_v10.csv",
+    "country": "china",
+    "interceptors": "4",
+    "salvo": "1"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-4.0km-s/tw-170s/ag-10.0g/int-4/doc-1x/sal-1/sweep_20260626_235454_china_alt260km_s1_i4_v4.csv",
+    "country": "china",
+    "interceptors": "4",
+    "salvo": "1"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-5.0km-s/tw-170s/ag-10.0g/int-4/doc-1x/sal-1/sweep_20260626_235454_china_alt260km_s1_i4_v5.csv",
+    "country": "china",
+    "interceptors": "4",
+    "salvo": "1"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-6.0km-s/tw-170s/ag-10.0g/int-4/doc-1x/sal-10/sweep_20260621_182642_china_alt400km_s10_i4_v6.csv",
+    "country": "china",
+    "interceptors": "4",
+    "salvo": "10"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-10.0km-s/tw-170s/ag-10.0g/int-4/doc-1x/sal-10/sweep_20260623_041454_china_alt400km_s10_i4_v10.csv",
+    "country": "china",
+    "interceptors": "4",
+    "salvo": "10"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-4.0km-s/tw-170s/ag-10.0g/int-4/doc-1x/sal-10/sweep_20260623_041454_china_alt400km_s10_i4_v4.csv",
+    "country": "china",
+    "interceptors": "4",
+    "salvo": "10"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-5.0km-s/tw-170s/ag-10.0g/int-4/doc-1x/sal-10/sweep_20260621_182642_china_alt400km_s10_i4_v5.csv",
+    "country": "china",
+    "interceptors": "4",
+    "salvo": "10"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-6.0km-s/tw-170s/ag-10.0g/int-4/doc-1x/sal-10/sweep_20260626_235454_china_alt550km_s10_i4_v6.csv",
+    "country": "china",
+    "interceptors": "4",
+    "salvo": "10"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-10.0km-s/tw-170s/ag-10.0g/int-4/doc-1x/sal-10/sweep_20260626_235454_china_alt550km_s10_i4_v10.csv",
+    "country": "china",
+    "interceptors": "4",
+    "salvo": "10"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-4.0km-s/tw-170s/ag-10.0g/int-4/doc-1x/sal-10/sweep_20260626_235454_china_alt550km_s10_i4_v4.csv",
+    "country": "china",
+    "interceptors": "4",
+    "salvo": "10"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-5.0km-s/tw-170s/ag-10.0g/int-4/doc-1x/sal-10/sweep_20260626_235454_china_alt550km_s10_i4_v5.csv",
+    "country": "china",
+    "interceptors": "4",
+    "salvo": "10"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-6.0km-s/tw-170s/ag-10.0g/int-4/doc-1x/sal-10/sweep_20260626_235454_china_alt260km_s10_i4_v6.csv",
+    "country": "china",
+    "interceptors": "4",
+    "salvo": "10"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-10.0km-s/tw-170s/ag-10.0g/int-4/doc-1x/sal-10/sweep_20260626_235454_china_alt260km_s10_i4_v10.csv",
+    "country": "china",
+    "interceptors": "4",
+    "salvo": "10"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-4.0km-s/tw-170s/ag-10.0g/int-4/doc-1x/sal-10/sweep_20260626_235454_china_alt260km_s10_i4_v4.csv",
+    "country": "china",
+    "interceptors": "4",
+    "salvo": "10"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-5.0km-s/tw-170s/ag-10.0g/int-4/doc-1x/sal-10/sweep_20260626_235454_china_alt260km_s10_i4_v5.csv",
+    "country": "china",
+    "interceptors": "4",
+    "salvo": "10"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-6.0km-s/tw-170s/ag-10.0g/int-4/doc-1x/sal-20/sweep_20260623_041454_china_alt400km_s20_i4_v6.csv",
+    "country": "china",
+    "interceptors": "4",
+    "salvo": "20"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-10.0km-s/tw-170s/ag-10.0g/int-4/doc-1x/sal-20/sweep_20260625_231022_china_alt400km_s20_i4_v10.csv",
+    "country": "china",
+    "interceptors": "4",
+    "salvo": "20"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-4.0km-s/tw-170s/ag-10.0g/int-4/doc-1x/sal-20/sweep_20260623_041454_china_alt400km_s20_i4_v4.csv",
+    "country": "china",
+    "interceptors": "4",
+    "salvo": "20"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-5.0km-s/tw-170s/ag-10.0g/int-4/doc-1x/sal-20/sweep_20260623_041454_china_alt400km_s20_i4_v5.csv",
+    "country": "china",
+    "interceptors": "4",
+    "salvo": "20"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-6.0km-s/tw-170s/ag-10.0g/int-4/doc-1x/sal-20/sweep_20260626_235454_china_alt550km_s20_i4_v6.csv",
+    "country": "china",
+    "interceptors": "4",
+    "salvo": "20"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-10.0km-s/tw-170s/ag-10.0g/int-4/doc-1x/sal-20/sweep_20260626_235454_china_alt550km_s20_i4_v10.csv",
+    "country": "china",
+    "interceptors": "4",
+    "salvo": "20"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-4.0km-s/tw-170s/ag-10.0g/int-4/doc-1x/sal-20/sweep_20260626_235454_china_alt550km_s20_i4_v4.csv",
+    "country": "china",
+    "interceptors": "4",
+    "salvo": "20"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-5.0km-s/tw-170s/ag-10.0g/int-4/doc-1x/sal-20/sweep_20260626_235454_china_alt550km_s20_i4_v5.csv",
+    "country": "china",
+    "interceptors": "4",
+    "salvo": "20"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-6.0km-s/tw-170s/ag-10.0g/int-4/doc-1x/sal-20/sweep_20260626_235454_china_alt260km_s20_i4_v6.csv",
+    "country": "china",
+    "interceptors": "4",
+    "salvo": "20"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-10.0km-s/tw-170s/ag-10.0g/int-4/doc-1x/sal-20/sweep_20260626_235454_china_alt260km_s20_i4_v10.csv",
+    "country": "china",
+    "interceptors": "4",
+    "salvo": "20"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-4.0km-s/tw-170s/ag-10.0g/int-4/doc-1x/sal-20/sweep_20260626_235454_china_alt260km_s20_i4_v4.csv",
+    "country": "china",
+    "interceptors": "4",
+    "salvo": "20"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-5.0km-s/tw-170s/ag-10.0g/int-4/doc-1x/sal-20/sweep_20260626_235454_china_alt260km_s20_i4_v5.csv",
+    "country": "china",
+    "interceptors": "4",
+    "salvo": "20"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-6.0km-s/tw-170s/ag-10.0g/int-4/doc-1x/sal-50/sweep_20260625_231022_china_alt400km_s50_i4_v6.csv",
+    "country": "china",
+    "interceptors": "4",
+    "salvo": "50"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-10.0km-s/tw-170s/ag-10.0g/int-4/doc-1x/sal-50/sweep_20260625_231022_china_alt400km_s50_i4_v10.csv",
+    "country": "china",
+    "interceptors": "4",
+    "salvo": "50"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-4.0km-s/tw-170s/ag-10.0g/int-4/doc-1x/sal-50/sweep_20260625_231022_china_alt400km_s50_i4_v4.csv",
+    "country": "china",
+    "interceptors": "4",
+    "salvo": "50"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-5.0km-s/tw-170s/ag-10.0g/int-4/doc-1x/sal-50/sweep_20260625_231022_china_alt400km_s50_i4_v5.csv",
+    "country": "china",
+    "interceptors": "4",
+    "salvo": "50"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-6.0km-s/tw-170s/ag-10.0g/int-4/doc-1x/sal-50/sweep_20260629_013743_china_alt550km_s50_i4_v6.csv",
+    "country": "china",
+    "interceptors": "4",
+    "salvo": "50"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-10.0km-s/tw-170s/ag-10.0g/int-4/doc-1x/sal-50/sweep_20260629_013743_china_alt550km_s50_i4_v10.csv",
+    "country": "china",
+    "interceptors": "4",
+    "salvo": "50"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-4.0km-s/tw-170s/ag-10.0g/int-4/doc-1x/sal-50/sweep_20260629_013743_china_alt550km_s50_i4_v4.csv",
+    "country": "china",
+    "interceptors": "4",
+    "salvo": "50"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-5.0km-s/tw-170s/ag-10.0g/int-4/doc-1x/sal-50/sweep_20260629_013743_china_alt550km_s50_i4_v5.csv",
+    "country": "china",
+    "interceptors": "4",
+    "salvo": "50"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-6.0km-s/tw-170s/ag-10.0g/int-4/doc-1x/sal-50/sweep_20260629_013743_china_alt260km_s50_i4_v6.csv",
+    "country": "china",
+    "interceptors": "4",
+    "salvo": "50"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-10.0km-s/tw-170s/ag-10.0g/int-4/doc-1x/sal-50/sweep_20260629_013743_china_alt260km_s50_i4_v10.csv",
+    "country": "china",
+    "interceptors": "4",
+    "salvo": "50"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-4.0km-s/tw-170s/ag-10.0g/int-4/doc-1x/sal-50/sweep_20260629_013743_china_alt260km_s50_i4_v4.csv",
+    "country": "china",
+    "interceptors": "4",
+    "salvo": "50"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-5.0km-s/tw-170s/ag-10.0g/int-4/doc-1x/sal-50/sweep_20260629_013743_china_alt260km_s50_i4_v5.csv",
+    "country": "china",
+    "interceptors": "4",
+    "salvo": "50"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-6.0km-s/tw-170s/ag-10.0g/int-4/doc-1x/sal-100/sweep_20260625_231022_china_alt400km_s100_i4_v6.csv",
+    "country": "china",
+    "interceptors": "4",
+    "salvo": "100"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-10.0km-s/tw-170s/ag-10.0g/int-4/doc-1x/sal-100/sweep_20260625_231022_china_alt400km_s100_i4_v10.csv",
+    "country": "china",
+    "interceptors": "4",
+    "salvo": "100"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-4.0km-s/tw-170s/ag-10.0g/int-4/doc-1x/sal-100/sweep_20260625_231022_china_alt400km_s100_i4_v4.csv",
+    "country": "china",
+    "interceptors": "4",
+    "salvo": "100"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-5.0km-s/tw-170s/ag-10.0g/int-4/doc-1x/sal-100/sweep_20260625_231022_china_alt400km_s100_i4_v5.csv",
+    "country": "china",
+    "interceptors": "4",
+    "salvo": "100"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-6.0km-s/tw-170s/ag-10.0g/int-6/doc-1x/sal-1/sweep_20260620_020529_china_alt400km_s1_i6_v6.csv",
+    "country": "china",
+    "interceptors": "6",
+    "salvo": "1"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-10.0km-s/tw-170s/ag-10.0g/int-6/doc-1x/sal-1/sweep_20260623_041454_china_alt400km_s1_i6_v10.csv",
+    "country": "china",
+    "interceptors": "6",
+    "salvo": "1"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-4.0km-s/tw-170s/ag-10.0g/int-6/doc-1x/sal-1/sweep_20260623_041454_china_alt400km_s1_i6_v4.csv",
+    "country": "china",
+    "interceptors": "6",
+    "salvo": "1"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-5.0km-s/tw-170s/ag-10.0g/int-6/doc-1x/sal-1/sweep_20260620_020529_china_alt400km_s1_i6_v5.csv",
+    "country": "china",
+    "interceptors": "6",
+    "salvo": "1"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-6.0km-s/tw-170s/ag-10.0g/int-6/doc-1x/sal-1/sweep_20260626_235454_china_alt550km_s1_i6_v6.csv",
+    "country": "china",
+    "interceptors": "6",
+    "salvo": "1"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-10.0km-s/tw-170s/ag-10.0g/int-6/doc-1x/sal-1/sweep_20260626_235454_china_alt550km_s1_i6_v10.csv",
+    "country": "china",
+    "interceptors": "6",
+    "salvo": "1"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-4.0km-s/tw-170s/ag-10.0g/int-6/doc-1x/sal-1/sweep_20260626_235454_china_alt550km_s1_i6_v4.csv",
+    "country": "china",
+    "interceptors": "6",
+    "salvo": "1"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-5.0km-s/tw-170s/ag-10.0g/int-6/doc-1x/sal-1/sweep_20260626_235454_china_alt550km_s1_i6_v5.csv",
+    "country": "china",
+    "interceptors": "6",
+    "salvo": "1"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-6.0km-s/tw-170s/ag-10.0g/int-6/doc-1x/sal-1/sweep_20260626_235454_china_alt260km_s1_i6_v6.csv",
+    "country": "china",
+    "interceptors": "6",
+    "salvo": "1"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-10.0km-s/tw-170s/ag-10.0g/int-6/doc-1x/sal-1/sweep_20260626_235454_china_alt260km_s1_i6_v10.csv",
+    "country": "china",
+    "interceptors": "6",
+    "salvo": "1"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-4.0km-s/tw-170s/ag-10.0g/int-6/doc-1x/sal-1/sweep_20260626_235454_china_alt260km_s1_i6_v4.csv",
+    "country": "china",
+    "interceptors": "6",
+    "salvo": "1"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-5.0km-s/tw-170s/ag-10.0g/int-6/doc-1x/sal-1/sweep_20260626_235454_china_alt260km_s1_i6_v5.csv",
+    "country": "china",
+    "interceptors": "6",
+    "salvo": "1"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-6.0km-s/tw-170s/ag-10.0g/int-6/doc-1x/sal-10/sweep_20260623_041454_china_alt400km_s10_i6_v6.csv",
+    "country": "china",
+    "interceptors": "6",
+    "salvo": "10"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-10.0km-s/tw-170s/ag-10.0g/int-6/doc-1x/sal-10/sweep_20260623_041454_china_alt400km_s10_i6_v10.csv",
+    "country": "china",
+    "interceptors": "6",
+    "salvo": "10"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-4.0km-s/tw-170s/ag-10.0g/int-6/doc-1x/sal-10/sweep_20260621_182642_china_alt400km_s10_i6_v4.csv",
+    "country": "china",
+    "interceptors": "6",
+    "salvo": "10"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-5.0km-s/tw-170s/ag-10.0g/int-6/doc-1x/sal-10/sweep_20260621_182642_china_alt400km_s10_i6_v5.csv",
+    "country": "china",
+    "interceptors": "6",
+    "salvo": "10"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-6.0km-s/tw-170s/ag-10.0g/int-6/doc-1x/sal-10/sweep_20260626_235454_china_alt550km_s10_i6_v6.csv",
+    "country": "china",
+    "interceptors": "6",
+    "salvo": "10"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-10.0km-s/tw-170s/ag-10.0g/int-6/doc-1x/sal-10/sweep_20260626_235454_china_alt550km_s10_i6_v10.csv",
+    "country": "china",
+    "interceptors": "6",
+    "salvo": "10"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-4.0km-s/tw-170s/ag-10.0g/int-6/doc-1x/sal-10/sweep_20260626_235454_china_alt550km_s10_i6_v4.csv",
+    "country": "china",
+    "interceptors": "6",
+    "salvo": "10"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-5.0km-s/tw-170s/ag-10.0g/int-6/doc-1x/sal-10/sweep_20260626_235454_china_alt550km_s10_i6_v5.csv",
+    "country": "china",
+    "interceptors": "6",
+    "salvo": "10"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-6.0km-s/tw-170s/ag-10.0g/int-6/doc-1x/sal-10/sweep_20260626_235454_china_alt260km_s10_i6_v6.csv",
+    "country": "china",
+    "interceptors": "6",
+    "salvo": "10"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-10.0km-s/tw-170s/ag-10.0g/int-6/doc-1x/sal-10/sweep_20260626_235454_china_alt260km_s10_i6_v10.csv",
+    "country": "china",
+    "interceptors": "6",
+    "salvo": "10"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-4.0km-s/tw-170s/ag-10.0g/int-6/doc-1x/sal-10/sweep_20260626_235454_china_alt260km_s10_i6_v4.csv",
+    "country": "china",
+    "interceptors": "6",
+    "salvo": "10"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-5.0km-s/tw-170s/ag-10.0g/int-6/doc-1x/sal-10/sweep_20260626_235454_china_alt260km_s10_i6_v5.csv",
+    "country": "china",
+    "interceptors": "6",
+    "salvo": "10"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-6.0km-s/tw-170s/ag-10.0g/int-6/doc-1x/sal-20/sweep_20260623_041454_china_alt400km_s20_i6_v6.csv",
+    "country": "china",
+    "interceptors": "6",
+    "salvo": "20"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-10.0km-s/tw-170s/ag-10.0g/int-6/doc-1x/sal-20/sweep_20260625_231022_china_alt400km_s20_i6_v10.csv",
+    "country": "china",
+    "interceptors": "6",
+    "salvo": "20"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-4.0km-s/tw-170s/ag-10.0g/int-6/doc-1x/sal-20/sweep_20260623_041454_china_alt400km_s20_i6_v4.csv",
+    "country": "china",
+    "interceptors": "6",
+    "salvo": "20"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-5.0km-s/tw-170s/ag-10.0g/int-6/doc-1x/sal-20/sweep_20260623_041454_china_alt400km_s20_i6_v5.csv",
+    "country": "china",
+    "interceptors": "6",
+    "salvo": "20"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-6.0km-s/tw-170s/ag-10.0g/int-6/doc-1x/sal-20/sweep_20260626_235454_china_alt550km_s20_i6_v6.csv",
+    "country": "china",
+    "interceptors": "6",
+    "salvo": "20"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-10.0km-s/tw-170s/ag-10.0g/int-6/doc-1x/sal-20/sweep_20260626_235454_china_alt550km_s20_i6_v10.csv",
+    "country": "china",
+    "interceptors": "6",
+    "salvo": "20"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-4.0km-s/tw-170s/ag-10.0g/int-6/doc-1x/sal-20/sweep_20260626_235454_china_alt550km_s20_i6_v4.csv",
+    "country": "china",
+    "interceptors": "6",
+    "salvo": "20"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-5.0km-s/tw-170s/ag-10.0g/int-6/doc-1x/sal-20/sweep_20260626_235454_china_alt550km_s20_i6_v5.csv",
+    "country": "china",
+    "interceptors": "6",
+    "salvo": "20"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-6.0km-s/tw-170s/ag-10.0g/int-6/doc-1x/sal-20/sweep_20260626_235454_china_alt260km_s20_i6_v6.csv",
+    "country": "china",
+    "interceptors": "6",
+    "salvo": "20"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-10.0km-s/tw-170s/ag-10.0g/int-6/doc-1x/sal-20/sweep_20260626_235454_china_alt260km_s20_i6_v10.csv",
+    "country": "china",
+    "interceptors": "6",
+    "salvo": "20"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-4.0km-s/tw-170s/ag-10.0g/int-6/doc-1x/sal-20/sweep_20260626_235454_china_alt260km_s20_i6_v4.csv",
+    "country": "china",
+    "interceptors": "6",
+    "salvo": "20"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-5.0km-s/tw-170s/ag-10.0g/int-6/doc-1x/sal-20/sweep_20260626_235454_china_alt260km_s20_i6_v5.csv",
+    "country": "china",
+    "interceptors": "6",
+    "salvo": "20"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-6.0km-s/tw-170s/ag-10.0g/int-6/doc-1x/sal-50/sweep_20260625_231022_china_alt400km_s50_i6_v6.csv",
+    "country": "china",
+    "interceptors": "6",
+    "salvo": "50"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-10.0km-s/tw-170s/ag-10.0g/int-6/doc-1x/sal-50/sweep_20260625_231022_china_alt400km_s50_i6_v10.csv",
+    "country": "china",
+    "interceptors": "6",
+    "salvo": "50"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-4.0km-s/tw-170s/ag-10.0g/int-6/doc-1x/sal-50/sweep_20260625_231022_china_alt400km_s50_i6_v4.csv",
+    "country": "china",
+    "interceptors": "6",
+    "salvo": "50"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-5.0km-s/tw-170s/ag-10.0g/int-6/doc-1x/sal-50/sweep_20260625_231022_china_alt400km_s50_i6_v5.csv",
+    "country": "china",
+    "interceptors": "6",
+    "salvo": "50"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-6.0km-s/tw-170s/ag-10.0g/int-6/doc-1x/sal-50/sweep_20260629_013743_china_alt550km_s50_i6_v6.csv",
+    "country": "china",
+    "interceptors": "6",
+    "salvo": "50"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-10.0km-s/tw-170s/ag-10.0g/int-6/doc-1x/sal-50/sweep_20260629_013743_china_alt550km_s50_i6_v10.csv",
+    "country": "china",
+    "interceptors": "6",
+    "salvo": "50"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-4.0km-s/tw-170s/ag-10.0g/int-6/doc-1x/sal-50/sweep_20260629_013743_china_alt550km_s50_i6_v4.csv",
+    "country": "china",
+    "interceptors": "6",
+    "salvo": "50"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-554km/vbo-5.0km-s/tw-170s/ag-10.0g/int-6/doc-1x/sal-50/sweep_20260629_013743_china_alt550km_s50_i6_v5.csv",
+    "country": "china",
+    "interceptors": "6",
+    "salvo": "50"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-6.0km-s/tw-170s/ag-10.0g/int-6/doc-1x/sal-50/sweep_20260629_013743_china_alt260km_s50_i6_v6.csv",
+    "country": "china",
+    "interceptors": "6",
+    "salvo": "50"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-10.0km-s/tw-170s/ag-10.0g/int-6/doc-1x/sal-50/sweep_20260629_013743_china_alt260km_s50_i6_v10.csv",
+    "country": "china",
+    "interceptors": "6",
+    "salvo": "50"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-4.0km-s/tw-170s/ag-10.0g/int-6/doc-1x/sal-50/sweep_20260629_013743_china_alt260km_s50_i6_v4.csv",
+    "country": "china",
+    "interceptors": "6",
+    "salvo": "50"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-262km/vbo-5.0km-s/tw-170s/ag-10.0g/int-6/doc-1x/sal-50/sweep_20260629_013743_china_alt260km_s50_i6_v5.csv",
+    "country": "china",
+    "interceptors": "6",
+    "salvo": "50"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-6.0km-s/tw-170s/ag-10.0g/int-6/doc-1x/sal-100/sweep_20260625_231022_china_alt400km_s100_i6_v6.csv",
+    "country": "china",
+    "interceptors": "6",
+    "salvo": "100"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-4.0km-s/tw-170s/ag-10.0g/int-6/doc-1x/sal-100/sweep_20260625_231022_china_alt400km_s100_i6_v4.csv",
+    "country": "china",
+    "interceptors": "6",
+    "salvo": "100"
+  },
+  {
+    "path": "data/results_20260702/china/tp-273/ia-200km/oa-404km/vbo-5.0km-s/tw-170s/ag-10.0g/int-6/doc-1x/sal-100/sweep_20260625_231022_china_alt400km_s100_i6_v5.csv",
+    "country": "china",
+    "interceptors": "6",
+    "salvo": "100"
+  },
+  {
+    "path": "data/results_20260702/iran/tp-44/ia-200km/oa-404km/vbo-6.0km-s/tw-170s/ag-10.0g/int-1/doc-1x/sal-2/sweep_20260701_121240_iran_alt400km_s2_i1_v6.csv",
+    "country": "iran",
+    "interceptors": "1",
+    "salvo": "2"
+  },
+  {
+    "path": "data/results_20260702/iran/tp-44/ia-200km/oa-404km/vbo-4.0km-s/tw-170s/ag-10.0g/int-1/doc-1x/sal-2/sweep_20260701_121240_iran_alt400km_s2_i1_v4.csv",
+    "country": "iran",
+    "interceptors": "1",
+    "salvo": "2"
+  },
+  {
+    "path": "data/results_20260702/iran/tp-44/ia-200km/oa-404km/vbo-6.0km-s/tw-170s/ag-10.0g/int-2/doc-1x/sal-2/sweep_20260701_010247_iran_alt400km_s2_i2_v6.csv",
+    "country": "iran",
+    "interceptors": "2",
+    "salvo": "2"
+  },
+  {
+    "path": "data/results_20260702/iran/tp-44/ia-200km/oa-404km/vbo-4.0km-s/tw-170s/ag-10.0g/int-2/doc-1x/sal-2/sweep_20260701_121240_iran_alt400km_s2_i2_v4.csv",
+    "country": "iran",
+    "interceptors": "2",
+    "salvo": "2"
+  },
+  {
+    "path": "data/results_20260702/iran/tp-44/ia-200km/oa-404km/vbo-6.0km-s/tw-170s/ag-10.0g/int-4/doc-1x/sal-2/sweep_20260701_121240_iran_alt400km_s2_i4_v6.csv",
+    "country": "iran",
+    "interceptors": "4",
+    "salvo": "2"
+  },
+  {
+    "path": "data/results_20260702/iran/tp-44/ia-200km/oa-404km/vbo-4.0km-s/tw-170s/ag-10.0g/int-4/doc-1x/sal-2/sweep_20260701_121240_iran_alt400km_s2_i4_v4.csv",
+    "country": "iran",
+    "interceptors": "4",
+    "salvo": "2"
+  },
+  {
+    "path": "data/results_20260702/north-korea/tp-2/ia-200km/oa-404km/vbo-6.0km-s/tw-170s/ag-10.0g/int-1/doc-1x/sal-10/sweep_20260701_005042_north-korea_alt400km_s10_i1_v6.csv",
+    "country": "north-korea",
+    "interceptors": "1",
+    "salvo": "10"
+  },
+  {
+    "path": "data/results_20260702/north-korea/tp-2/ia-200km/oa-404km/vbo-4.0km-s/tw-170s/ag-10.0g/int-1/doc-1x/sal-10/sweep_20260701_005042_north-korea_alt400km_s10_i1_v4.csv",
+    "country": "north-korea",
+    "interceptors": "1",
+    "salvo": "10"
+  },
+  {
+    "path": "data/results_20260702/north-korea/tp-2/ia-200km/oa-404km/vbo-6.0km-s/tw-170s/ag-10.0g/int-2/doc-1x/sal-10/sweep_20260701_005042_north-korea_alt400km_s10_i2_v6.csv",
+    "country": "north-korea",
+    "interceptors": "2",
+    "salvo": "10"
+  },
+  {
+    "path": "data/results_20260702/north-korea/tp-2/ia-200km/oa-404km/vbo-4.0km-s/tw-170s/ag-10.0g/int-2/doc-1x/sal-10/sweep_20260701_005042_north-korea_alt400km_s10_i2_v4.csv",
+    "country": "north-korea",
+    "interceptors": "2",
+    "salvo": "10"
+  },
+  {
+    "path": "data/results_20260702/north-korea/tp-2/ia-200km/oa-404km/vbo-6.0km-s/tw-170s/ag-10.0g/int-4/doc-1x/sal-10/sweep_20260701_005042_north-korea_alt400km_s10_i4_v6.csv",
+    "country": "north-korea",
+    "interceptors": "4",
+    "salvo": "10"
+  },
+  {
+    "path": "data/results_20260702/north-korea/tp-2/ia-200km/oa-404km/vbo-4.0km-s/tw-170s/ag-10.0g/int-4/doc-1x/sal-10/sweep_20260701_005042_north-korea_alt400km_s10_i4_v4.csv",
+    "country": "north-korea",
+    "interceptors": "4",
+    "salvo": "10"
+  },
+  {
+    "path": "data/results_20260702/russia/tp-500/ia-200km/oa-404km/vbo-4.0km-s/tw-170s/ag-10.0g/int-2/doc-1x/sal-10/sweep_20260701_005042_russia_alt400km_s10_i2_v4.csv",
+    "country": "russia",
+    "interceptors": "2",
+    "salvo": "10"
+  },
+  {
+    "path": "data/results_20260702/russia/tp-500/ia-200km/oa-404km/vbo-4.0km-s/tw-170s/ag-10.0g/int-4/doc-1x/sal-10/sweep_20260701_005042_russia_alt400km_s10_i4_v4.csv",
+    "country": "russia",
+    "interceptors": "4",
+    "salvo": "10"
+  }
+]

@@ -1,0 +1,43 @@
+{
+  "job_name": "sweep_20260626_235454_china_alt260km_s1_i6_v4",
+  "target_mode": "country",
+  "target_country": "China",
+  "target_points": null,
+  "target_shell_n_points": 15000,
+  "altitude_override_km": 260.0,
+  "inclination_sweep_bounds_deg": [
+    20.0,
+    90.0
+  ],
+  "use_j2": false,
+  "v_bo_km_s": 4.0,
+  "salvo_size": 1,
+  "n_interceptors_per_sat": 6,
+  "mip_gap": 0.01,
+  "time_limit_s": 10800.0,
+  "altitude_max_repeat_days": 1,
+  "n_seeds_for_milp": null,
+  "seeds_for_milp_by_salvo": {
+    "1": 10,
+    "5": 25,
+    "20": 50,
+    "50": 100,
+    "100": 150
+  },
+  "dt_s": 120.0,
+  "t_window_s": 170.0,
+  "a_g": 10.0,
+  "intercept_alt_km": 200.0,
+  "min_elev_deg": 0.0,
+  "inc_screen_step_deg": 1.0,
+  "n_raan_offsets": 10,
+  "seed_workers": 8,
+  "reserve_polar_orbits": false,
+  "mip_focus": 1,
+  "heuristics_frac": 0.2,
+  "solver_params": {
+    "Method": 1,
+    "NodefileStart": 4,
+    "RINS": 50
+  }
+}
