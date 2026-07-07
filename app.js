@@ -10,7 +10,9 @@ const MU_EARTH_KM3_S2 = 398600.4418;
 const SCALE = 1 / EARTH_RADIUS_KM;
 
 const SECONDS_PER_HOUR = 3600;
-const ANIMATION_PERIOD_HOURS = 24;
+
+let scenarioDurationSeconds = 24 * SECONDS_PER_HOUR;
+let scenarioTimeStepSeconds = 120;
 
 const PLANE_RAAN_BIN_DEG = 6.0;
 const PLANE_INC_BIN_DEG = 1.0;
@@ -20,10 +22,11 @@ const TRAJECTORY_RADIUS = 0.0008;
 const COUNTRY_LINE_RADIUS = 0.00045;
 const FOCUS_LINE_RADIUS = 0.00125;
 
-const COVERAGE_HISTORY_LIMIT = 140;
-const COVERAGE_SAMPLE_INTERVAL_SECONDS = 0.01 * SECONDS_PER_HOUR;
-const COVERAGE_WINDOW_SECONDS =
-  (COVERAGE_HISTORY_LIMIT - 1) * COVERAGE_SAMPLE_INTERVAL_SECONDS;
+const COVERAGE_HISTORY_LIMIT = 30;
+
+function coverageWindowSeconds() {
+  return (COVERAGE_HISTORY_LIMIT - 1) * scenarioTimeStepSeconds;
+}
 
 const GLOBAL_TESSELLATION_POINT_COUNT = 15000;
 
@@ -197,7 +200,7 @@ function updateCoverageLegendMax() {
 }
 
 function formatTimeHHMM(seconds) {
-  const loopSeconds = ANIMATION_PERIOD_HOURS * SECONDS_PER_HOUR;
+  const loopSeconds = scenarioDurationSeconds;
   const wrapped = ((seconds % loopSeconds) + loopSeconds) % loopSeconds;
   const totalMinutes = Math.floor(wrapped / 60);
   const hours = Math.floor(totalMinutes / 60);
@@ -326,11 +329,11 @@ function sampleCoverageAtTime(timeSeconds) {
 function shouldAddCoverageSample(force = false) {
   if (force || lastCoverageSampleSeconds === null) return true;
 
-  const loopSeconds = ANIMATION_PERIOD_HOURS * SECONDS_PER_HOUR;
+  const loopSeconds = scenarioDurationSeconds;
   const rawDelta = simulationSeconds - lastCoverageSampleSeconds;
   const wrappedDelta = rawDelta < 0 ? rawDelta + loopSeconds : rawDelta;
 
-  return wrappedDelta >= COVERAGE_SAMPLE_INTERVAL_SECONDS;
+  return wrappedDelta >= scenarioTimeStepSeconds;
 }
 
 function addCoverageSample(metrics, force = false) {
@@ -345,23 +348,23 @@ function fillCoverageHistoryToTime(targetSeconds) {
     return;
   }
 
-  const loopSeconds = ANIMATION_PERIOD_HOURS * SECONDS_PER_HOUR;
+  const loopSeconds = scenarioDurationSeconds;
   const target = Math.max(0, Math.min(loopSeconds, targetSeconds));
   const epsilon = 0.0001;
 
   const shouldRebuild =
     lastCoverageSampleSeconds === null ||
     target + epsilon < lastCoverageSampleSeconds ||
-    target - lastCoverageSampleSeconds > COVERAGE_WINDOW_SECONDS;
+    target - lastCoverageSampleSeconds > coverageWindowSeconds();
 
   if (shouldRebuild) {
     coverageHistory = [];
     lastCoverageSampleSeconds = null;
 
-    const windowStart = Math.max(0, target - COVERAGE_WINDOW_SECONDS);
+    const windowStart = Math.max(0, target - coverageWindowSeconds());
     const firstSample =
-      Math.ceil(windowStart / COVERAGE_SAMPLE_INTERVAL_SECONDS) *
-      COVERAGE_SAMPLE_INTERVAL_SECONDS;
+      Math.ceil(windowStart / scenarioTimeStepSeconds) *
+      scenarioTimeStepSeconds;
 
     let sampleTime = Math.max(0, firstSample);
 
@@ -372,7 +375,7 @@ function fillCoverageHistoryToTime(targetSeconds) {
     while (sampleTime <= target + epsilon) {
       const metrics = sampleCoverageAtTime(sampleTime);
       addCoverageSampleAtTime(sampleTime, metrics);
-      sampleTime += COVERAGE_SAMPLE_INTERVAL_SECONDS;
+      sampleTime += scenarioTimeStepSeconds;
     }
 
     if (
@@ -388,12 +391,12 @@ function fillCoverageHistoryToTime(targetSeconds) {
   }
 
   let nextSampleTime =
-    lastCoverageSampleSeconds + COVERAGE_SAMPLE_INTERVAL_SECONDS;
+    lastCoverageSampleSeconds + scenarioTimeStepSeconds;
 
   while (nextSampleTime <= target + epsilon) {
     const metrics = sampleCoverageAtTime(nextSampleTime);
     addCoverageSampleAtTime(nextSampleTime, metrics);
-    nextSampleTime += COVERAGE_SAMPLE_INTERVAL_SECONDS;
+    nextSampleTime += scenarioTimeStepSeconds;
   }
 
   if (
@@ -1525,6 +1528,19 @@ async function loadScenarioJson(csvPath) {
   }
 
   const data = await response.json();
+
+  scenarioDurationSeconds =
+    Number(data.sim?.horizon_s) || 24 * SECONDS_PER_HOUR;
+
+  scenarioTimeStepSeconds =
+    Number(data.sim?.dt_s) || 120;
+
+  if (timelineSlider) {
+    timelineSlider.max = (
+      scenarioDurationSeconds / SECONDS_PER_HOUR
+    ).toFixed(2);
+  }
+
   const runConfig = data.run_config || {};
 
   interceptAltitudeKm = Number(
@@ -2047,7 +2063,7 @@ function animate() {
       SECONDS_PER_HOUR
     );
 
-    const loopSeconds = ANIMATION_PERIOD_HOURS * SECONDS_PER_HOUR;
+    const loopSeconds = scenarioDurationSeconds;
 
     if (simulationSeconds > loopSeconds) {
       simulationSeconds = 0;
