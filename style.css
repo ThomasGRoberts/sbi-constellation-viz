@@ -32,13 +32,34 @@ body {
   top: 18px;
   left: 18px;
   z-index: 10;
-  width: 315px;
+  width: 325px;
+  max-height: calc(100vh - 36px);
+  box-sizing: border-box;
+  overflow-y: auto;
+  overscroll-behavior: contain;
   background: rgba(255,255,255,.94);
   border: 1px solid #dddddd;
   border-radius: 16px;
   padding: 16px;
   box-shadow: 0 12px 35px rgba(0,0,0,.10);
   backdrop-filter: blur(10px);
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0,0,0,.18) transparent;
+}
+
+#ui::-webkit-scrollbar {
+  width: 8px;
+}
+
+#ui::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#ui::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,.16);
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
 }
 
 h1 {
@@ -68,24 +89,13 @@ h1 {
   margin: 0;
 }
 
-label,
-.sectionLabel {
+label {
   display: block;
   margin-top: 10px;
   color: #555555;
   font-size: 12px;
   font-weight: 600;
   letter-spacing: .02em;
-}
-
-.sectionLabel {
-  margin-top: 0;
-  margin-bottom: 10px;
-  color: #444444;
-  font-size: 12px;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: .06em;
 }
 
 .subsectionLabel {
@@ -120,10 +130,14 @@ select {
   gap: 10px;
 }
 
+.twoColumnControls label {
+  white-space: nowrap;
+}
+
 hr {
   border: 0;
-  border-top: 1px solid #dddddd;
-  margin: 15px 0;
+  border-top: 1px solid rgba(0,0,0,.10);
+  margin: 14px 0;
 }
 
 .statsGridWithIn {

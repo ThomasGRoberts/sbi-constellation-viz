@@ -1253,23 +1253,19 @@ function j2RaanRateRadPerSec(aKm, e, iRad) {
 }
 
 function orbitalPosition(row, tSeconds) {
-  const a = Number(row.a_km);
-  const e = Number(row.e || 0);
-  const i = degToRad(Number(row.i_deg));
-  const raan0 = degToRad(Number(row.raan_deg));
-  const argp = degToRad(Number(row.argp_deg || 0));
+  const displayPlane = row.assignedPlane || row;
+
+  const a = Number(displayPlane.a_km ?? row.a_km);
+  const i = degToRad(Number(displayPlane.i_deg ?? row.i_deg));
+  const raan0 = degToRad(Number(displayPlane.raan_deg ?? row.raan_deg));
   const argLat0 = degToRad(Number(row.arg_lat_deg || 0));
 
   const n = Math.sqrt(MU_EARTH_KM3_S2 / Math.pow(a, 3));
-  const raan = raan0 + j2RaanRateRadPerSec(a, e, i) * tSeconds;
+  const raan = raan0 + j2RaanRateRadPerSec(a, 0, i) * tSeconds;
   const argLat = argLat0 + n * tSeconds;
 
-  const trueAnomaly = argLat - argp;
-  const p = a * (1 - e * e);
-  const r = p / (1 + e * Math.cos(trueAnomaly));
-
-  const xOrb = r * Math.cos(argLat);
-  const yOrb = r * Math.sin(argLat);
+  const xOrb = a * Math.cos(argLat);
+  const yOrb = a * Math.sin(argLat);
 
   const cosO = Math.cos(raan);
   const sinO = Math.sin(raan);
@@ -1282,7 +1278,6 @@ function orbitalPosition(row, tSeconds) {
 
   return new THREE.Vector3(x * SCALE, z * SCALE, -y * SCALE);
 }
-
 function orbitalPlanePoint(plane, uDeg, tSeconds) {
   const a = plane.a_km * SCALE;
   const i = degToRad(plane.i_deg);
@@ -1764,7 +1759,12 @@ function apply3DViewOffset() {
   const ui = getUiBounds();
   const width = window.innerWidth;
   const height = window.innerHeight;
-  const shiftPixels = ui.right / 2;
+
+  const openAreaLeft = ui.right;
+  const openAreaRight = width;
+  const openAreaCenter = openAreaLeft + ((openAreaRight - openAreaLeft) / 2);
+  const canvasCenter = width / 2;
+  const shiftPixels = openAreaCenter - canvasCenter;
 
   camera.setViewOffset(
     width,
@@ -1799,8 +1799,6 @@ function setFullEarthView() {
 }
 
 function setHorizonView() {
-  clear3DViewOffset();
-
   const focus = getFocusVector(1);
   const worldNorth = new THREE.Vector3(0, 1, 0);
 
@@ -1833,6 +1831,8 @@ function setHorizonView() {
   controls.target.copy(target);
   controls.update();
 
+  apply3DViewOffset();
+
   isHorizonView = true;
   viewToggleBtn.textContent = "◎";
 }
@@ -1864,7 +1864,7 @@ countrySelect.addEventListener("change", () => {
 
 interceptorSelect.addEventListener("change", () => {
   clearConstellation();
-  refreshDropdowns(true, true);
+  loadSelectedScenario();
 });
 
 salvoSelect.addEventListener("change", () => {
