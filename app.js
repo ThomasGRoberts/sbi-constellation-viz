@@ -522,7 +522,7 @@ function drawCoverageChart() {
     ctx.fillStyle = "#999999";
     ctx.font = "12px -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif";
     ctx.textAlign = "left";
-    ctx.fillText("Coverage history appears after a scenario loads.", chartLeft, cssHeight / 2 + 4);
+    ctx.fillText("", chartLeft, cssHeight / 2 + 4);
     ctx.restore();
     return;
   }
