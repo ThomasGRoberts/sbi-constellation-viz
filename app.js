@@ -5,14 +5,16 @@ import { geoPath } from "d3-geo";
 import { geoMollweide } from "d3-geo-projection";
 import { Delaunay } from "d3-delaunay";
 
-const EARTH_RADIUS_KM = 6371;
+const EARTH_RADIUS_KM = 6378.137;
 const MU_EARTH_KM3_S2 = 398600.4418;
+const EARTH_ROTATION_RATE_RAD_PER_SEC = 7.2921150e-5;
 const SCALE = 1 / EARTH_RADIUS_KM;
 
 const SECONDS_PER_HOUR = 3600;
 
 let scenarioDurationSeconds = 24 * SECONDS_PER_HOUR;
 let scenarioTimeStepSeconds = 120;
+let scenarioUseJ2 = false;
 
 const PLANE_RAAN_BIN_DEG = 6.0;
 const PLANE_INC_BIN_DEG = 1.0;
@@ -58,8 +60,10 @@ let globalCoverageCounts = [];
 let coverageHistory = [];
 let coverageCurrentMetrics = null;
 let lastCoverageSampleSeconds = null;
+let deferredMapDrawTimer = null;
 let killRadiusKm = null;
 let interceptAltitudeKm = 200;
+let minElevationDeg = 0;
 let focusLatDeg = 35.0;
 let focusLonDeg = 103.0;
 
@@ -216,6 +220,25 @@ function resetCoverageHistory() {
   drawCoverageChart();
 }
 
+function satelliteCoversPoint(satPos, pointPos, killRadiusSceneSq) {
+  if (satPos.distanceToSquared(pointPos) > killRadiusSceneSq) {
+    return false;
+  }
+
+  const lineOfSight = satPos.clone().sub(pointPos);
+  const lineOfSightLength = lineOfSight.length();
+
+  if (lineOfSightLength <= 0) {
+    return false;
+  }
+
+  const localUp = pointPos.clone().normalize();
+  const sinElevation = lineOfSight.dot(localUp) / lineOfSightLength;
+  const minSinElevation = Math.sin(degToRad(minElevationDeg));
+
+  return sinElevation >= minSinElevation;
+}
+
 function computeCountsForPositions(positions) {
   const counts = positions.map(() => 0);
 
@@ -230,7 +253,7 @@ function computeCountsForPositions(positions) {
     const satPos = obj.sprite.position;
 
     positions.forEach((pointPos, idx) => {
-      if (satPos.distanceToSquared(pointPos) <= killRadiusSceneSq) {
+      if (satelliteCoversPoint(satPos, pointPos, killRadiusSceneSq)) {
         counts[idx] += 1;
       }
     });
@@ -267,7 +290,7 @@ function computeCoverageMetrics(updateMaterials = false) {
     const satPos = obj.sprite.position;
 
     targetPositions.forEach((targetPos, targetIdx) => {
-      if (satPos.distanceToSquared(targetPos) <= killRadiusSceneSq) {
+      if (satelliteCoversPoint(satPos, targetPos, killRadiusSceneSq)) {
         countsByTarget[targetIdx] += 1;
         activeSatellites.add(satIdx);
       }
@@ -337,9 +360,12 @@ function shouldAddCoverageSample(force = false) {
 }
 
 function addCoverageSample(metrics, force = false) {
-  if (!metrics || !shouldAddCoverageSample(force)) return;
+  if (!metrics) return;
 
-  addCoverageSampleAtTime(simulationSeconds, metrics);
+  if (shouldAddCoverageSample(force)) {
+    addCoverageSampleAtTime(simulationSeconds, metrics);
+  }
+
   drawCoverageChart();
 }
 
@@ -536,15 +562,26 @@ function drawCoverageChart() {
   const maxValue = Math.max(1, ...allValues);
 
   function makePoints(series) {
-    return series.map((value, idx) => {
-      const denom = Math.max(1, COVERAGE_HISTORY_LIMIT - 1);
-      const visibleOffset = coverageHistory.length - 1 - idx;
-      const x = chartRight - (visibleOffset / denom) * chartWidth;
-      const normalized = Math.min(1, Math.max(0, value / maxValue));
-      const y = chartBottom - normalized * chartHeight;
+    const visibleWindowSeconds = coverageWindowSeconds();
+    const visibleEndSeconds = simulationSeconds;
 
-      return { x, y, value };
-    });
+    return series
+      .map((value, idx) => {
+        const sample = coverageHistory[idx];
+        const sampleTime = sample.timeSeconds;
+
+        const ageSeconds = visibleEndSeconds - sampleTime;
+        const fracFromRight = visibleWindowSeconds <= 0
+          ? 0
+          : ageSeconds / visibleWindowSeconds;
+
+        const x = chartRight - (fracFromRight * chartWidth);
+        const normalized = Math.min(1, Math.max(0, value / maxValue));
+        const y = chartBottom - normalized * chartHeight;
+
+        return { x, y, value };
+      })
+      .filter(point => point.x >= chartLeft - 2 && point.x <= chartRight + 2);
   }
 
   const minPoints = makePoints(coverageHistory.map(sample => sample.min));
@@ -572,12 +609,30 @@ function drawCoverageChart() {
   ctx.textBaseline = "top";
   ctx.fillStyle = "#666666";
 
+  const visibleWindowSeconds = coverageWindowSeconds();
+  const tickIntervalSeconds = visibleWindowSeconds / tickCount;
+  const newestTickTimeSeconds =
+    Math.floor(simulationSeconds / tickIntervalSeconds) * tickIntervalSeconds;
+
   for (let i = 0; i <= tickCount; i += 1) {
-    const frac = i / tickCount;
-    const x = chartLeft + frac * chartWidth;
-    const idx = Math.round(frac * Math.max(0, coverageHistory.length - 1));
-    const sample = coverageHistory[idx] || coverageHistory[0];
-    const label = formatTimeHHMM(sample.timeSeconds);
+    const tickTimeSeconds = newestTickTimeSeconds - ((tickCount - i) * tickIntervalSeconds);
+
+    if (tickTimeSeconds < 0) {
+      continue;
+    }
+
+    const ageSeconds = simulationSeconds - tickTimeSeconds;
+    const fracFromRight = visibleWindowSeconds <= 0
+      ? 0
+      : ageSeconds / visibleWindowSeconds;
+
+    const x = chartRight - (fracFromRight * chartWidth);
+
+    if (x < chartLeft || x > chartRight) {
+      continue;
+    }
+
+    const label = formatTimeHHMM(tickTimeSeconds);
 
     ctx.strokeStyle = "#dddddd";
     ctx.beginPath();
@@ -919,6 +974,30 @@ function drawZeroCoverageOutlines() {
   mapCtx.restore();
 }
 
+let deferredCoverageHistoryTimer = null;
+
+function scheduleDeferredCoverageHistoryFill(targetSeconds, delayMs = 120) {
+  if (deferredCoverageHistoryTimer !== null) {
+    clearTimeout(deferredCoverageHistoryTimer);
+  }
+
+  deferredCoverageHistoryTimer = setTimeout(() => {
+    deferredCoverageHistoryTimer = null;
+    fillCoverageHistoryToTime(targetSeconds);
+  }, delayMs);
+}
+
+function scheduleDeferredMapDraw(delayMs = 80) {
+  if (deferredMapDrawTimer !== null) {
+    clearTimeout(deferredMapDrawTimer);
+  }
+
+  deferredMapDrawTimer = setTimeout(() => {
+    deferredMapDrawTimer = null;
+    draw2DMap();
+  }, delayMs);
+}
+
 function draw2DMap() {
   if (visualizationMode !== "2d" || !mapCanvas || !mapCtx) return;
 
@@ -1131,6 +1210,15 @@ function latLonToVector3(latDeg, lonDeg, radius = 1) {
   );
 }
 
+function rotateInertialVectorToEarthFixed(position, tSeconds) {
+  return position
+    .clone()
+    .applyAxisAngle(
+      new THREE.Vector3(0, 1, 0),
+      -EARTH_ROTATION_RATE_RAD_PER_SEC * tSeconds
+    );
+}
+
 function makeSatelliteSpriteTexture(fillColor, strokeColor) {
   const canvas = document.createElement("canvas");
   canvas.width = 128;
@@ -1248,11 +1336,19 @@ function addBoundaryTube(ring, isFocus) {
 
 function j2RaanRateRadPerSec(aKm, e, iRad) {
   const J2 = 1.08262668e-3;
-  const earthRadiusKm = 6378.1363;
+  const earthRadiusKm = EARTH_RADIUS_KM;
   const n = Math.sqrt(MU_EARTH_KM3_S2 / Math.pow(aKm, 3));
   const p = aKm * (1 - e * e);
 
   return -1.5 * J2 * n * Math.pow(earthRadiusKm / p, 2) * Math.cos(iRad);
+}
+
+function raanAtTimeRad(raan0Rad, aKm, e, iRad, tSeconds) {
+  if (!scenarioUseJ2) {
+    return raan0Rad;
+  }
+
+  return raan0Rad + j2RaanRateRadPerSec(aKm, e, iRad) * tSeconds;
 }
 
 function orbitalPosition(row, tSeconds) {
@@ -1264,7 +1360,7 @@ function orbitalPosition(row, tSeconds) {
   const argLat0 = degToRad(Number(row.arg_lat_deg || 0));
 
   const n = Math.sqrt(MU_EARTH_KM3_S2 / Math.pow(a, 3));
-  const raan = raan0 + j2RaanRateRadPerSec(a, 0, i) * tSeconds;
+  const raan = raanAtTimeRad(raan0, a, 0, i, tSeconds);
   const argLat = argLat0 + n * tSeconds;
 
   const xOrb = a * Math.cos(argLat);
@@ -1279,13 +1375,16 @@ function orbitalPosition(row, tSeconds) {
   const y = xOrb * sinO + yOrb * cosO * cosI;
   const z = yOrb * sinI;
 
-  return new THREE.Vector3(x * SCALE, z * SCALE, -y * SCALE);
+  const inertialPosition = new THREE.Vector3(x * SCALE, z * SCALE, -y * SCALE);
+
+  return rotateInertialVectorToEarthFixed(inertialPosition, tSeconds);
 }
+
 function orbitalPlanePoint(plane, uDeg, tSeconds) {
   const a = plane.a_km * SCALE;
   const i = degToRad(plane.i_deg);
   const raan0 = degToRad(plane.raan_deg);
-  const raan = raan0 + j2RaanRateRadPerSec(plane.a_km, 0, i) * tSeconds;
+  const raan = raanAtTimeRad(raan0, plane.a_km, 0, i, tSeconds);
   const u = degToRad(uDeg);
 
   const xOrb = a * Math.cos(u);
@@ -1300,7 +1399,9 @@ function orbitalPlanePoint(plane, uDeg, tSeconds) {
   const y = xOrb * sinO + yOrb * cosO * cosI;
   const z = yOrb * sinI;
 
-  return new THREE.Vector3(x, z, -y);
+  const inertialPosition = new THREE.Vector3(x, z, -y);
+
+  return rotateInertialVectorToEarthFixed(inertialPosition, tSeconds);
 }
 
 function parseCSV(text) {
@@ -1353,6 +1454,8 @@ function clearConstellation() {
   mapColorScaleMax = 1;
   killRadiusKm = null;
   interceptAltitudeKm = 200;
+  minElevationDeg = 0;
+  scenarioUseJ2 = false;
   simulationSeconds = 0;
   isPlaying = true;
 
@@ -1461,7 +1564,7 @@ function updateSatellitePositions() {
   });
 }
 
-function updateCoverageColors(forceCoverageSample = false, recordCoverageSample = true) {
+function updateCoverageColors(forceCoverageSample = false, recordCoverageSample = true, deferMapDraw = false) {
   const metrics = computeCoverageMetrics(true);
 
   coverageCurrentMetrics = metrics;
@@ -1489,10 +1592,10 @@ function updateTimelineSlider() {
   timelineSlider.value = hours.toFixed(2);
 }
 
-function updateSceneForTime(forceCoverageSample = false, recordCoverageSample = true) {
+function updateSceneForTime(forceCoverageSample = false, recordCoverageSample = true, deferMapDraw = false) {
   updateSatellitePositions();
   updateTrajectoryLines();
-  updateCoverageColors(forceCoverageSample, recordCoverageSample);
+  updateCoverageColors(forceCoverageSample, recordCoverageSample, deferMapDraw);
   updateTimelineSlider();
 }
 
@@ -1535,6 +1638,8 @@ async function loadScenarioJson(csvPath) {
   scenarioTimeStepSeconds =
     Number(data.sim?.dt_s) || 120;
 
+  scenarioUseJ2 = data.sim?.use_j2 === true;
+
   if (timelineSlider) {
     timelineSlider.max = (
       scenarioDurationSeconds / SECONDS_PER_HOUR
@@ -1553,6 +1658,14 @@ async function loadScenarioJson(csvPath) {
     runConfig.r_max_km ??
     data.r_max_km ??
     null
+  );
+
+  minElevationDeg = Number(
+    runConfig.min_elev_deg ??
+    runConfig.min_elevation_deg ??
+    data.cov?.min_elev_deg ??
+    data.cov?.min_elevation_deg ??
+    0
   );
 
   const targetRadius = (EARTH_RADIUS_KM + interceptAltitudeKm) / EARTH_RADIUS_KM;
@@ -1916,10 +2029,10 @@ if (timelineSlider) {
 
     const targetSeconds = Number(timelineSlider.value) * SECONDS_PER_HOUR;
 
-    fillCoverageHistoryToTime(targetSeconds);
-
     simulationSeconds = targetSeconds;
-    updateSceneForTime(false, false);
+    updateSceneForTime(false, false, visualizationMode === "2d");
+
+    scheduleDeferredCoverageHistoryFill(targetSeconds);
   });
 }
 
