@@ -239,7 +239,7 @@ function satelliteCoversPoint(satPos, pointPos, killRadiusSceneSq) {
   return sinElevation >= minSinElevation;
 }
 
-function computeCountsForPositions(positions) {
+function computeCountsForPositions(positions, timeSeconds = simulationSeconds) {
   const counts = positions.map(() => 0);
 
   if (!killRadiusKm || positions.length === 0 || satObjects.length === 0) {
@@ -250,7 +250,7 @@ function computeCountsForPositions(positions) {
   const killRadiusSceneSq = killRadiusScene * killRadiusScene;
 
   satObjects.forEach(obj => {
-    const satPos = obj.sprite.position;
+    const satPos = analyticalOrbitalPosition(obj.row, timeSeconds);
 
     positions.forEach((pointPos, idx) => {
       if (satelliteCoversPoint(satPos, pointPos, killRadiusSceneSq)) {
@@ -268,7 +268,7 @@ function updateMapColorScaleMax(currentMax) {
   updateCoverageLegendMax();
 }
 
-function computeCoverageMetrics(updateMaterials = false) {
+function computeCoverageMetrics(updateMaterials = false, timeSeconds = simulationSeconds) {
   if (!killRadiusKm || targetPositions.length === 0 || satObjects.length === 0) {
     targetCoverageCounts = targetPositions.map(() => 0);
 
@@ -287,7 +287,7 @@ function computeCoverageMetrics(updateMaterials = false) {
   const killRadiusSceneSq = killRadiusScene * killRadiusScene;
 
   satObjects.forEach((obj, satIdx) => {
-    const satPos = obj.sprite.position;
+    const satPos = analyticalOrbitalPosition(obj.row, timeSeconds);
 
     targetPositions.forEach((targetPos, targetIdx) => {
       if (satelliteCoversPoint(satPos, targetPos, killRadiusSceneSq)) {
@@ -300,7 +300,7 @@ function computeCoverageMetrics(updateMaterials = false) {
   targetCoverageCounts = countsByTarget;
 
   if (visualizationMode === "2d") {
-    globalCoverageCounts = computeCountsForPositions(globalCellPositions);
+    globalCoverageCounts = computeCountsForPositions(globalCellPositions, timeSeconds);
     updateMapColorScaleMax(Math.max(1, ...globalCoverageCounts));
   }
 
@@ -346,7 +346,7 @@ function sampleCoverageAtTime(timeSeconds) {
     obj.sprite.position.copy(orbitalPosition(obj.row, timeSeconds));
   });
 
-  return computeCoverageMetrics(false);
+  return computeCoverageMetrics(false, timeSeconds);
 }
 
 function shouldAddCoverageSample(force = false) {
@@ -363,7 +363,12 @@ function addCoverageSample(metrics, force = false) {
   if (!metrics) return;
 
   if (shouldAddCoverageSample(force)) {
-    addCoverageSampleAtTime(simulationSeconds, metrics);
+    const sampleTime = force
+      ? simulationSeconds
+      : Math.floor(simulationSeconds / scenarioTimeStepSeconds) * scenarioTimeStepSeconds;
+
+    const sampledMetrics = sampleCoverageAtTime(sampleTime);
+    addCoverageSampleAtTime(sampleTime, sampledMetrics);
   }
 
   drawCoverageChart();
@@ -1215,7 +1220,7 @@ function rotateInertialVectorToEarthFixed(position, tSeconds) {
     .clone()
     .applyAxisAngle(
       new THREE.Vector3(0, 1, 0),
-      -EARTH_ROTATION_RATE_RAD_PER_SEC * tSeconds
+      EARTH_ROTATION_RATE_RAD_PER_SEC * tSeconds
     );
 }
 
@@ -1357,6 +1362,33 @@ function orbitalPosition(row, tSeconds) {
   const a = Number(displayPlane.a_km ?? row.a_km);
   const i = degToRad(Number(displayPlane.i_deg ?? row.i_deg));
   const raan0 = degToRad(Number(displayPlane.raan_deg ?? row.raan_deg));
+  const argLat0 = degToRad(Number(row.arg_lat_deg || 0));
+
+  const n = Math.sqrt(MU_EARTH_KM3_S2 / Math.pow(a, 3));
+  const raan = raanAtTimeRad(raan0, a, 0, i, tSeconds);
+  const argLat = argLat0 + n * tSeconds;
+
+  const xOrb = a * Math.cos(argLat);
+  const yOrb = a * Math.sin(argLat);
+
+  const cosO = Math.cos(raan);
+  const sinO = Math.sin(raan);
+  const cosI = Math.cos(i);
+  const sinI = Math.sin(i);
+
+  const x = xOrb * cosO - yOrb * sinO * cosI;
+  const y = xOrb * sinO + yOrb * cosO * cosI;
+  const z = yOrb * sinI;
+
+  const inertialPosition = new THREE.Vector3(x * SCALE, z * SCALE, -y * SCALE);
+
+  return rotateInertialVectorToEarthFixed(inertialPosition, tSeconds);
+}
+
+function analyticalOrbitalPosition(row, tSeconds) {
+  const a = Number(row.a_km);
+  const i = degToRad(Number(row.i_deg));
+  const raan0 = degToRad(Number(row.raan_deg));
   const argLat0 = degToRad(Number(row.arg_lat_deg || 0));
 
   const n = Math.sqrt(MU_EARTH_KM3_S2 / Math.pow(a, 3));
