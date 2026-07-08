@@ -220,6 +220,16 @@ function resetCoverageHistory() {
   drawCoverageChart();
 }
 
+function restartCoverageHistoryAtTime(timeSeconds) {
+  coverageHistory = [];
+  coverageCurrentMetrics = null;
+  lastCoverageSampleSeconds = null;
+
+  const metrics = sampleCoverageAtTime(timeSeconds);
+  addCoverageSampleAtTime(timeSeconds, metrics);
+  drawCoverageChart();
+}
+
 function satelliteCoversPoint(satPos, pointPos, killRadiusSceneSq) {
   if (satPos.distanceToSquared(pointPos) > killRadiusSceneSq) {
     return false;
@@ -977,19 +987,6 @@ function drawZeroCoverageOutlines() {
   });
 
   mapCtx.restore();
-}
-
-let deferredCoverageHistoryTimer = null;
-
-function scheduleDeferredCoverageHistoryFill(targetSeconds, delayMs = 120) {
-  if (deferredCoverageHistoryTimer !== null) {
-    clearTimeout(deferredCoverageHistoryTimer);
-  }
-
-  deferredCoverageHistoryTimer = setTimeout(() => {
-    deferredCoverageHistoryTimer = null;
-    fillCoverageHistoryToTime(targetSeconds);
-  }, delayMs);
 }
 
 function scheduleDeferredMapDraw(delayMs = 80) {
@@ -2064,7 +2061,7 @@ if (timelineSlider) {
     simulationSeconds = targetSeconds;
     updateSceneForTime(false, false, visualizationMode === "2d");
 
-    scheduleDeferredCoverageHistoryFill(targetSeconds);
+    restartCoverageHistoryAtTime(targetSeconds);
   });
 }
 
