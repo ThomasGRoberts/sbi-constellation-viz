@@ -1,0 +1,2685 @@
+{
+  "version": 1,
+  "timestamp": "2026-07-24T21:24:22.322713",
+  "n_satellites": 568,
+  "obj_val": 568.0,
+  "mip_gap": 0.3626760563380282,
+  "status_str": "Time limit",
+  "propagator": "Nominal_Propagator",
+  "bc_kg_m2": 80.0,
+  "cov": {
+    "T_window_s": 170.0,
+    "v_bo_km_s": 10.0,
+    "a_g": 10.0,
+    "intercept_alt_km": 200.0,
+    "min_elev_deg": 0.0
+  },
+  "sim": {
+    "horizon_s": 172208.1942896936,
+    "dt_s": 120.0057103064067,
+    "use_j2": false,
+    "use_drag": false,
+    "analysis_matrix_dtype": "uint8"
+  },
+  "targets": [
+    {
+      "name": "Russia target 0",
+      "lat_deg": 80.28749311106205,
+      "lon_deg": 46.669246645948675
+    },
+    {
+      "name": "Russia target 1",
+      "lat_deg": 78.97185442092942,
+      "lon_deg": 103.92856109477248
+    },
+    {
+      "name": "Russia target 2",
+      "lat_deg": 75.85178484771785,
+      "lon_deg": 105.73756064140076
+    },
+    {
+      "name": "Russia target 3",
+      "lat_deg": 75.69635127836945,
+      "lon_deg": 138.19874039121777
+    },
+    {
+      "name": "Russia target 4",
+      "lat_deg": 75.20971026441005,
+      "lon_deg": 98.0745155906036
+    },
+    {
+      "name": "Russia target 5",
+      "lat_deg": 74.82555358272822,
+      "lon_deg": 110.47358294011349
+    },
+    {
+      "name": "Russia target 6",
+      "lat_deg": 74.73824373785453,
+      "lon_deg": 57.950290790002384
+    },
+    {
+      "name": "Russia target 7",
+      "lat_deg": 74.59380086578653,
+      "lon_deg": 90.41147053980637
+    },
+    {
+      "name": "Russia target 8",
+      "lat_deg": 74.22428908488634,
+      "lon_deg": 102.8105378893228
+    },
+    {
+      "name": "Russia target 9",
+      "lat_deg": 73.64457357120948,
+      "lon_deg": 95.14749283852564
+    },
+    {
+      "name": "Russia target 10",
+      "lat_deg": 73.29551541876369,
+      "lon_deg": 107.54656018804206
+    },
+    {
+      "name": "Russia target 11",
+      "lat_deg": 73.2159656524344,
+      "lon_deg": 55.02326803792445
+    },
+    {
+      "name": "Russia target 12",
+      "lat_deg": 73.08419020928736,
+      "lon_deg": 87.48444778772841
+    },
+    {
+      "name": "Russia target 13",
+      "lat_deg": 72.95340385639538,
+      "lon_deg": 119.94562753754542
+    },
+    {
+      "name": "Russia target 14",
+      "lat_deg": 72.74614688264272,
+      "lon_deg": 99.88351513723183
+    },
+    {
+      "name": "Russia target 15",
+      "lat_deg": 72.41440666329844,
+      "lon_deg": 112.28258248673524
+    },
+    {
+      "name": "Russia target 16",
+      "lat_deg": 72.28841737460515,
+      "lon_deg": 144.74376223655224
+    },
+    {
+      "name": "Russia target 17",
+      "lat_deg": 72.21323852232352,
+      "lon_deg": 92.22047008644768
+    },
+    {
+      "name": "Russia target 18",
+      "lat_deg": 72.08861905437519,
+      "lon_deg": 124.68164983626468
+    },
+    {
+      "name": "Russia target 19",
+      "lat_deg": 72.01424833306172,
+      "lon_deg": 72.15835768613405
+    },
+    {
+      "name": "Russia target 20",
+      "lat_deg": 71.89095349342293,
+      "lon_deg": 104.61953743595109
+    },
+    {
+      "name": "Russia target 21",
+      "lat_deg": 71.81736452684353,
+      "lon_deg": 52.09624528584649
+    },
+    {
+      "name": "Russia target 22",
+      "lat_deg": 71.69535153696721,
+      "lon_deg": 84.55742503563744
+    },
+    {
+      "name": "Russia target 23",
+      "lat_deg": 71.57411898066516,
+      "lon_deg": 117.0186047854545
+    },
+    {
+      "name": "Russia target 24",
+      "lat_deg": 71.45365153852521,
+      "lon_deg": 149.4797845352715
+    },
+    {
+      "name": "Russia target 25",
+      "lat_deg": 71.38173213958419,
+      "lon_deg": 96.95649238515387
+    },
+    {
+      "name": "Russia target 26",
+      "lat_deg": 71.3339343819506,
+      "lon_deg": -178.05903571492453
+    },
+    {
+      "name": "Russia target 27",
+      "lat_deg": 71.2624582326321,
+      "lon_deg": 129.4176721349579
+    },
+    {
+      "name": "Russia target 28",
+      "lat_deg": 71.19124398463094,
+      "lon_deg": 76.89437998485329
+    },
+    {
+      "name": "Russia target 29",
+      "lat_deg": 71.07312754109665,
+      "lon_deg": 109.35555973465728
+    },
+    {
+      "name": "Russia target 30",
+      "lat_deg": 71.00259734107027,
+      "lon_deg": 56.83226758455271
+    },
+    {
+      "name": "Russia target 31",
+      "lat_deg": 70.95571698458204,
+      "lon_deg": 141.81673948447428
+    },
+    {
+      "name": "Russia target 32",
+      "lat_deg": 70.88560405589485,
+      "lon_deg": 89.2934473343567
+    },
+    {
+      "name": "Russia target 33",
+      "lat_deg": 70.76929606104841,
+      "lon_deg": 121.7546270841737
+    },
+    {
+      "name": "Russia target 34",
+      "lat_deg": 70.69983504053081,
+      "lon_deg": 69.23133493405612
+    },
+    {
+      "name": "Russia target 35",
+      "lat_deg": 70.65366098245123,
+      "lon_deg": 154.2158068339777
+    },
+    {
+      "name": "Russia target 36",
+      "lat_deg": 70.58459792448872,
+      "lon_deg": 101.69251468387313
+    },
+    {
+      "name": "Russia target 37",
+      "lat_deg": 70.4700146786324,
+      "lon_deg": 134.15369443367712
+    },
+    {
+      "name": "Russia target 38",
+      "lat_deg": 70.40157380919008,
+      "lon_deg": 81.63040228355953
+    },
+    {
+      "name": "Russia target 39",
+      "lat_deg": 70.28801306333303,
+      "lon_deg": 114.09158203337654
+    },
+    {
+      "name": "Russia target 40",
+      "lat_deg": 70.17507707736709,
+      "lon_deg": 146.55276178319355
+    },
+    {
+      "name": "Russia target 41",
+      "lat_deg": 70.10761093559961,
+      "lon_deg": 94.02946963306294
+    },
+    {
+      "name": "Russia target 42",
+      "lat_deg": 69.99565257621137,
+      "lon_deg": 126.49064938287995
+    },
+    {
+      "name": "Russia target 43",
+      "lat_deg": 69.92876510917746,
+      "lon_deg": 73.96735723277533
+    },
+    {
+      "name": "Russia target 44",
+      "lat_deg": 69.88429194550388,
+      "lon_deg": 158.95182913269696
+    },
+    {
+      "name": "Russia target 45",
+      "lat_deg": 69.81775835279687,
+      "lon_deg": 106.42853698259239
+    },
+    {
+      "name": "Russia target 46",
+      "lat_deg": 69.7073336353201,
+      "lon_deg": 138.88971673238336
+    },
+    {
+      "name": "Russia target 47",
+      "lat_deg": 69.64135423579712,
+      "lon_deg": 86.36642458227874
+    },
+    {
+      "name": "Russia target 48",
+      "lat_deg": 69.59748149244288,
+      "lon_deg": 171.35089648220037
+    },
+    {
+      "name": "Russia target 49",
+      "lat_deg": 69.53184119970861,
+      "lon_deg": 118.82760433209575
+    },
+    {
+      "name": "Russia target 50",
+      "lat_deg": 69.42288611400481,
+      "lon_deg": 151.28878408188677
+    },
+    {
+      "name": "Russia target 51",
+      "lat_deg": 69.35777719583487,
+      "lon_deg": 98.76549193178215
+    },
+    {
+      "name": "Russia target 52",
+      "lat_deg": 69.24969655925096,
+      "lon_deg": 131.22667168159916
+    },
+    {
+      "name": "Russia target 53",
+      "lat_deg": 69.1851057325315,
+      "lon_deg": 78.7033795314685
+    },
+    {
+      "name": "Russia target 54",
+      "lat_deg": 69.14215138568798,
+      "lon_deg": 163.68785143141622
+    },
+    {
+      "name": "Russia target 55",
+      "lat_deg": 69.07787786145423,
+      "lon_deg": 111.16455928128556
+    },
+    {
+      "name": "Russia target 56",
+      "lat_deg": 68.97117234730679,
+      "lon_deg": 143.62573903110257
+    },
+    {
+      "name": "Russia target 57",
+      "lat_deg": 68.90739646504328,
+      "lon_deg": 91.102446880998
+    },
+    {
+      "name": "Russia target 58",
+      "lat_deg": 68.86498126494942,
+      "lon_deg": 176.08691878091958
+    },
+    {
+      "name": "Russia target 59",
+      "lat_deg": 68.80151031961074,
+      "lon_deg": 123.56362663078897
+    },
+    {
+      "name": "Russia target 60",
+      "lat_deg": 68.73822014720248,
+      "lon_deg": 71.04033448068438
+    },
+    {
+      "name": "Russia target 61",
+      "lat_deg": 68.69612633110457,
+      "lon_deg": 156.02480638060598
+    },
+    {
+      "name": "Russia target 62",
+      "lat_deg": 68.6331338754127,
+      "lon_deg": 103.50151423050136
+    },
+    {
+      "name": "Russia target 63",
+      "lat_deg": 68.52853796094246,
+      "lon_deg": 135.9626939803054
+    },
+    {
+      "name": "Russia target 64",
+      "lat_deg": 68.4660128044256,
+      "lon_deg": 83.43940183018776
+    },
+    {
+      "name": "Russia target 65",
+      "lat_deg": 68.42442525904356,
+      "lon_deg": 168.4238737301224
+    },
+    {
+      "name": "Russia target 66",
+      "lat_deg": 68.4036600874571,
+      "lon_deg": 30.916109680083196
+    },
+    {
+      "name": "Russia target 67",
+      "lat_deg": 68.36218667149137,
+      "lon_deg": 115.90058158000477
+    },
+    {
+      "name": "Russia target 68",
+      "lat_deg": 68.30011804835488,
+      "lon_deg": 63.37728942987414
+    },
+    {
+      "name": "Russia target 69",
+      "lat_deg": 68.25883267052072,
+      "lon_deg": 148.36176132979574
+    },
+    {
+      "name": "Russia target 70",
+      "lat_deg": 68.19704409345378,
+      "lon_deg": 95.83846917969117
+    },
+    {
+      "name": "Russia target 71",
+      "lat_deg": 68.15594408688298,
+      "lon_deg": -179.17705892038725
+    },
+    {
+      "name": "Russia target 72",
+      "lat_deg": 68.09443160221774,
+      "lon_deg": 128.29964892950818
+    },
+    {
+      "name": "Russia target 73",
+      "lat_deg": 68.03308291323764,
+      "lon_deg": 75.77635677940361
+    },
+    {
+      "name": "Russia target 74",
+      "lat_deg": 67.99227410688185,
+      "lon_deg": 160.7608286793252
+    },
+    {
+      "name": "Russia target 75",
+      "lat_deg": 67.93119537263215,
+      "lon_deg": 108.23753652919459
+    },
+    {
+      "name": "Russia target 76",
+      "lat_deg": 67.8702768188089,
+      "lon_deg": 55.71424437908999
+    },
+    {
+      "name": "Russia target 77",
+      "lat_deg": 67.82975278514665,
+      "lon_deg": 140.6987162790116
+    },
+    {
+      "name": "Russia target 78",
+      "lat_deg": 67.76909826978174,
+      "lon_deg": 88.17542412890703
+    },
+    {
+      "name": "Russia target 79",
+      "lat_deg": 67.7287490578484,
+      "lon_deg": 173.1598960288286
+    },
+    {
+      "name": "Russia target 80",
+      "lat_deg": 67.70860044906186,
+      "lon_deg": 35.65213197877637
+    },
+    {
+      "name": "Russia target 81",
+      "lat_deg": 67.6683549907785,
+      "lon_deg": 120.63660387872403
+    },
+    {
+      "name": "Russia target 82",
+      "lat_deg": 67.60811550263205,
+      "lon_deg": 68.11331172859337
+    },
+    {
+      "name": "Russia target 83",
+      "lat_deg": 67.56804110457549,
+      "lon_deg": 153.097783628515
+    },
+    {
+      "name": "Russia target 84",
+      "lat_deg": 67.50805648504968,
+      "lon_deg": 100.57449147841044
+    },
+    {
+      "name": "Russia target 85",
+      "lat_deg": 67.40841772426745,
+      "lon_deg": 133.03567122822744
+    },
+    {
+      "name": "Russia target 86",
+      "lat_deg": 67.34883387772054,
+      "lon_deg": 80.51237907809679
+    },
+    {
+      "name": "Russia target 87",
+      "lat_deg": 67.30919367141628,
+      "lon_deg": 165.49685097804445
+    },
+    {
+      "name": "Russia target 88",
+      "lat_deg": 67.24985603601993,
+      "lon_deg": 112.97355882791379
+    },
+    {
+      "name": "Russia target 89",
+      "lat_deg": 67.19066458606707,
+      "lon_deg": 60.450266677809225
+    },
+    {
+      "name": "Russia target 90",
+      "lat_deg": 67.15128427106562,
+      "lon_deg": 145.43473857773085
+    },
+    {
+      "name": "Russia target 91",
+      "lat_deg": 67.09233394212247,
+      "lon_deg": 92.91144642762623
+    },
+    {
+      "name": "Russia target 92",
+      "lat_deg": 67.05311333724487,
+      "lon_deg": 177.89591832754786
+    },
+    {
+      "name": "Russia target 93",
+      "lat_deg": 67.03352679641696,
+      "lon_deg": 40.38815427749563
+    },
+    {
+      "name": "Russia target 94",
+      "lat_deg": 66.99440103518067,
+      "lon_deg": 125.3726261774172
+    },
+    {
+      "name": "Russia target 95",
+      "lat_deg": 66.89686079483083,
+      "lon_deg": 157.8338059272342
+    },
+    {
+      "name": "Russia target 96",
+      "lat_deg": 66.83852306083605,
+      "lon_deg": 105.31051377712964
+    },
+    {
+      "name": "Russia target 97",
+      "lat_deg": 66.78032384277078,
+      "lon_deg": 52.787221627025076
+    },
+    {
+      "name": "Russia target 98",
+      "lat_deg": 66.74160080243885,
+      "lon_deg": 137.7716935269467
+    },
+    {
+      "name": "Russia target 99",
+      "lat_deg": 66.68363013585086,
+      "lon_deg": 85.24840137681605
+    },
+    {
+      "name": "Russia target 100",
+      "lat_deg": 66.64505851315211,
+      "lon_deg": 170.2328732767637
+    },
+    {
+      "name": "Russia target 101",
+      "lat_deg": 66.62579523585796,
+      "lon_deg": 32.72510922671145
+    },
+    {
+      "name": "Russia target 102",
+      "lat_deg": 66.58731356348298,
+      "lon_deg": 117.70958112663305
+    },
+    {
+      "name": "Russia target 103",
+      "lat_deg": 66.52970270727764,
+      "lon_deg": 65.18628897652846
+    },
+    {
+      "name": "Russia target 104",
+      "lat_deg": 66.49136947793632,
+      "lon_deg": 150.17076087645006
+    },
+    {
+      "name": "Russia target 105",
+      "lat_deg": 66.43397992185056,
+      "lon_deg": 97.6474687263455
+    },
+    {
+      "name": "Russia target 106",
+      "lat_deg": 66.39579332481746,
+      "lon_deg": -177.36805937373293
+    },
+    {
+      "name": "Russia target 107",
+      "lat_deg": 66.37672185171482,
+      "lon_deg": 45.124176576214836
+    },
+    {
+      "name": "Russia target 108",
+      "lat_deg": 66.33862237993132,
+      "lon_deg": 130.10864847613647
+    },
+    {
+      "name": "Russia target 109",
+      "lat_deg": 66.28158133328934,
+      "lon_deg": 77.58535632603184
+    },
+    {
+      "name": "Russia target 110",
+      "lat_deg": 66.24362567109503,
+      "lon_deg": 162.56982822595347
+    },
+    {
+      "name": "Russia target 111",
+      "lat_deg": 66.18679904349291,
+      "lon_deg": 110.0465360758489
+    },
+    {
+      "name": "Russia target 112",
+      "lat_deg": 66.1300998384163,
+      "lon_deg": 57.52324392574431
+    },
+    {
+      "name": "Russia target 113",
+      "lat_deg": 66.09237070958324,
+      "lon_deg": 142.5077158256659
+    },
+    {
+      "name": "Russia target 114",
+      "lat_deg": 66.03588186175084,
+      "lon_deg": 89.98442367553525
+    },
+    {
+      "name": "Russia target 115",
+      "lat_deg": 65.9982921418334,
+      "lon_deg": 174.96889557545683
+    },
+    {
+      "name": "Russia target 116",
+      "lat_deg": 65.94201117632191,
+      "lon_deg": 122.44560342535226
+    },
+    {
+      "name": "Russia target 117",
+      "lat_deg": 65.88585377202104,
+      "lon_deg": 69.9223112752477
+    },
+    {
+      "name": "Russia target 118",
+      "lat_deg": 65.8484837206031,
+      "lon_deg": 154.90678317514323
+    },
+    {
+      "name": "Russia target 119",
+      "lat_deg": 65.79253033686068,
+      "lon_deg": 102.38349102503867
+    },
+    {
+      "name": "Russia target 120",
+      "lat_deg": 65.75529551042176,
+      "lon_deg": -172.6320370750137
+    },
+    {
+      "name": "Russia target 121",
+      "lat_deg": 65.73669823256705,
+      "lon_deg": 49.8601988749341
+    },
+    {
+      "name": "Russia target 122",
+      "lat_deg": 65.69954379301045,
+      "lon_deg": 134.84467077485567
+    },
+    {
+      "name": "Russia target 123",
+      "lat_deg": 65.6439119638178,
+      "lon_deg": 82.32137862472507
+    },
+    {
+      "name": "Russia target 124",
+      "lat_deg": 65.60689027583904,
+      "lon_deg": 167.30585052467268
+    },
+    {
+      "name": "Russia target 125",
+      "lat_deg": 65.55145643773571,
+      "lon_deg": 114.78255837456811
+    },
+    {
+      "name": "Russia target 126",
+      "lat_deg": 65.49614031564678,
+      "lon_deg": 62.259266224463545
+    },
+    {
+      "name": "Russia target 127",
+      "lat_deg": 65.45932790427354,
+      "lon_deg": 147.24373812435908
+    },
+    {
+      "name": "Russia target 128",
+      "lat_deg": 65.40420620660157,
+      "lon_deg": 94.72044597425452
+    },
+    {
+      "name": "Russia target 129",
+      "lat_deg": 65.3675226825985,
+      "lon_deg": 179.70491787415006
+    },
+    {
+      "name": "Russia target 130",
+      "lat_deg": 65.349200116532,
+      "lon_deg": 42.19715382414992
+    },
+    {
+      "name": "Russia target 131",
+      "lat_deg": 65.31259323332642,
+      "lon_deg": 127.18162572404549
+    },
+    {
+      "name": "Russia target 132",
+      "lat_deg": 65.25777810513732,
+      "lon_deg": 74.6583335739409
+    },
+    {
+      "name": "Russia target 133",
+      "lat_deg": 65.22129782206656,
+      "lon_deg": 159.64280547388853
+    },
+    {
+      "name": "Russia target 134",
+      "lat_deg": 65.16667154267714,
+      "lon_deg": 107.11951332373184
+    },
+    {
+      "name": "Russia target 135",
+      "lat_deg": 65.11215757415702,
+      "lon_deg": 54.59622117362727
+    },
+    {
+      "name": "Russia target 136",
+      "lat_deg": 65.07587695816787,
+      "lon_deg": 139.58069307357493
+    },
+    {
+      "name": "Russia target 137",
+      "lat_deg": 65.02154853626267,
+      "lon_deg": 87.05740092347037
+    },
+    {
+      "name": "Russia target 138",
+      "lat_deg": 64.98539094276927,
+      "lon_deg": 172.0418728233659
+    },
+    {
+      "name": "Russia target 139",
+      "lat_deg": 64.96733047228803,
+      "lon_deg": 34.53410877331365
+    },
+    {
+      "name": "Russia target 140",
+      "lat_deg": 64.93124605135881,
+      "lon_deg": 119.51858067326134
+    },
+    {
+      "name": "Russia target 141",
+      "lat_deg": 64.87721032536957,
+      "lon_deg": 66.99528852315672
+    },
+    {
+      "name": "Russia target 142",
+      "lat_deg": 64.84124680684124,
+      "lon_deg": 151.9797604230523
+    },
+    {
+      "name": "Russia target 143",
+      "lat_deg": 64.78739145931593,
+      "lon_deg": 99.45646827294769
+    },
+    {
+      "name": "Russia target 144",
+      "lat_deg": 64.73364341258203,
+      "lon_deg": 46.93317612284312
+    },
+    {
+      "name": "Russia target 145",
+      "lat_deg": 64.69787065400122,
+      "lon_deg": 131.9176480227908
+    },
+    {
+      "name": "Russia target 146",
+      "lat_deg": 64.6442999213922,
+      "lon_deg": 79.3943558726341
+    },
+    {
+      "name": "Russia target 147",
+      "lat_deg": 64.60864474527371,
+      "lon_deg": 164.37882777258176
+    },
+    {
+      "name": "Russia target 148",
+      "lat_deg": 64.5552494546022,
+      "lon_deg": 111.85553562247713
+    },
+    {
+      "name": "Russia target 149",
+      "lat_deg": 64.50195854384654,
+      "lon_deg": 59.33224347237257
+    },
+    {
+      "name": "Russia target 150",
+      "lat_deg": 64.46648893482515,
+      "lon_deg": 144.31671537226805
+    },
+    {
+      "name": "Russia target 151",
+      "lat_deg": 64.41337053704312,
+      "lon_deg": 91.79342322216354
+    },
+    {
+      "name": "Russia target 152",
+      "lat_deg": 64.37801533722043,
+      "lon_deg": 176.7778951221112
+    },
+    {
+      "name": "Russia target 153",
+      "lat_deg": 64.36035478579946,
+      "lon_deg": 39.270131072058945
+    },
+    {
+      "name": "Russia target 154",
+      "lat_deg": 64.32506766220976,
+      "lon_deg": 124.25460297195451
+    },
+    {
+      "name": "Russia target 155",
+      "lat_deg": 64.27222157415657,
+      "lon_deg": 71.73131082184992
+    },
+    {
+      "name": "Russia target 156",
+      "lat_deg": 64.23704697600299,
+      "lon_deg": 156.71578272179755
+    },
+    {
+      "name": "Russia target 157",
+      "lat_deg": 64.18436880891265,
+      "lon_deg": 104.19249057169299
+    },
+    {
+      "name": "Russia target 158",
+      "lat_deg": 64.1317905702544,
+      "lon_deg": 51.669198421536294
+    },
+    {
+      "name": "Russia target 159",
+      "lat_deg": 64.0967936251829,
+      "lon_deg": 136.65367032148396
+    },
+    {
+      "name": "Russia target 160",
+      "lat_deg": 64.04438058011858,
+      "lon_deg": 84.13037817137933
+    },
+    {
+      "name": "Russia target 161",
+      "lat_deg": 64.00949320564054,
+      "lon_deg": 169.11485007127487
+    },
+    {
+      "name": "Russia target 162",
+      "lat_deg": 63.992065848792755,
+      "lon_deg": 31.607086021274796
+    },
+    {
+      "name": "Russia target 163",
+      "lat_deg": 63.95724368614426,
+      "lon_deg": 116.5915579211703
+    },
+    {
+      "name": "Russia target 164",
+      "lat_deg": 63.905091492745804,
+      "lon_deg": 64.06826577106574
+    },
+    {
+      "name": "Russia target 165",
+      "lat_deg": 63.87037714482934,
+      "lon_deg": 149.0527376709873
+    },
+    {
+      "name": "Russia target 166",
+      "lat_deg": 63.81838586481349,
+      "lon_deg": 96.52944552085671
+    },
+    {
+      "name": "Russia target 167",
+      "lat_deg": 63.76649036404241,
+      "lon_deg": 44.006153370752145
+    },
+    {
+      "name": "Russia target 168",
+      "lat_deg": 63.73194629264065,
+      "lon_deg": 128.99062527069975
+    },
+    {
+      "name": "Russia target 169",
+      "lat_deg": 63.68020916059087,
+      "lon_deg": 76.46733312056915
+    },
+    {
+      "name": "Russia target 170",
+      "lat_deg": 63.6457701470343,
+      "lon_deg": 161.45180502049072
+    },
+    {
+      "name": "Russia target 171",
+      "lat_deg": 63.5941898265037,
+      "lon_deg": 108.92851287038616
+    },
+    {
+      "name": "Russia target 172",
+      "lat_deg": 63.54270285579359,
+      "lon_deg": 56.40522072028159
+    },
+    {
+      "name": "Russia target 173",
+      "lat_deg": 63.50842979964393,
+      "lon_deg": 141.38969262017713
+    },
+    {
+      "name": "Russia target 174",
+      "lat_deg": 63.45709720041363,
+      "lon_deg": 88.86640047007256
+    },
+    {
+      "name": "Russia target 175",
+      "lat_deg": 63.42292655857515,
+      "lon_deg": 173.85087237002017
+    },
+    {
+      "name": "Russia target 176",
+      "lat_deg": 63.40585650558189,
+      "lon_deg": 36.34310831996797
+    },
+    {
+      "name": "Russia target 177",
+      "lat_deg": 63.371746837124206,
+      "lon_deg": 121.32758021988957
+    },
+    {
+      "name": "Russia target 178",
+      "lat_deg": 63.32065813514565,
+      "lon_deg": 68.804288069785
+    },
+    {
+      "name": "Russia target 179",
+      "lat_deg": 63.2866493077513,
+      "lon_deg": 153.78875996970658
+    },
+    {
+      "name": "Russia target 180",
+      "lat_deg": 63.235711142215386,
+      "lon_deg": 101.26546781960201
+    },
+    {
+      "name": "Russia target 181",
+      "lat_deg": 63.18486260890997,
+      "lon_deg": 48.74217566947138
+    },
+    {
+      "name": "Russia target 182",
+      "lat_deg": 63.1510131296813,
+      "lon_deg": 133.72664756939298
+    },
+    {
+      "name": "Russia target 183",
+      "lat_deg": 63.100312849464814,
+      "lon_deg": 81.20335541928841
+    },
+    {
+      "name": "Russia target 184",
+      "lat_deg": 63.06656173752601,
+      "lon_deg": 166.18782731921
+    },
+    {
+      "name": "Russia target 185",
+      "lat_deg": 63.01600831185947,
+      "lon_deg": 113.66453516910542
+    },
+    {
+      "name": "Russia target 186",
+      "lat_deg": 62.96554233654687,
+      "lon_deg": 61.14124301897476
+    },
+    {
+      "name": "Russia target 187",
+      "lat_deg": 62.93194669377386,
+      "lon_deg": 146.1257149188964
+    },
+    {
+      "name": "Russia target 188",
+      "lat_deg": 62.88162537967681,
+      "lon_deg": 93.60242276879177
+    },
+    {
+      "name": "Russia target 189",
+      "lat_deg": 62.84812572795101,
+      "lon_deg": 178.5868946687134
+    },
+    {
+      "name": "Russia target 190",
+      "lat_deg": 62.83139021596371,
+      "lon_deg": 41.0791306186872
+    },
+    {
+      "name": "Russia target 191",
+      "lat_deg": 62.79794773123591,
+      "lon_deg": 126.06360251860883
+    },
+    {
+      "name": "Russia target 192",
+      "lat_deg": 62.747855088349354,
+      "lon_deg": 73.54031036850421
+    },
+    {
+      "name": "Russia target 193",
+      "lat_deg": 62.714507178532294,
+      "lon_deg": 158.52478226842584
+    },
+    {
+      "name": "Russia target 194",
+      "lat_deg": 62.66455574482552,
+      "lon_deg": 106.00149011829518
+    },
+    {
+      "name": "Russia target 195",
+      "lat_deg": 62.61468841519493,
+      "lon_deg": 53.478197968190614
+    },
+    {
+      "name": "Russia target 196",
+      "lat_deg": 62.58149002544616,
+      "lon_deg": 138.46266986811224
+    },
+    {
+      "name": "Russia target 197",
+      "lat_deg": 62.53176184689975,
+      "lon_deg": 85.93937771800762
+    },
+    {
+      "name": "Russia target 198",
+      "lat_deg": 62.498655802341816,
+      "lon_deg": 170.92384961792925
+    },
+    {
+      "name": "Russia target 199",
+      "lat_deg": 62.482116552240335,
+      "lon_deg": 33.41608556787699
+    },
+    {
+      "name": "Russia target 200",
+      "lat_deg": 62.44906551327851,
+      "lon_deg": 118.40055746779859
+    },
+    {
+      "name": "Russia target 201",
+      "lat_deg": 62.39955736006415,
+      "lon_deg": 65.87726531769403
+    },
+    {
+      "name": "Russia target 202",
+      "lat_deg": 62.36659733641397,
+      "lon_deg": 150.86173721761566
+    },
+    {
+      "name": "Russia target 203",
+      "lat_deg": 62.31722509252174,
+      "lon_deg": 98.33844506751103
+    },
+    {
+      "name": "Russia target 204",
+      "lat_deg": 62.26793381028062,
+      "lon_deg": 45.8151529173804
+    },
+    {
+      "name": "Russia target 205",
+      "lat_deg": 62.235117720023005,
+      "lon_deg": 130.79962481732804
+    },
+    {
+      "name": "Russia target 206",
+      "lat_deg": 62.18596041286394,
+      "lon_deg": 78.27633266722347
+    },
+    {
+      "name": "Russia target 207",
+      "lat_deg": 62.10420872407094,
+      "lon_deg": 110.73751241701444
+    },
+    {
+      "name": "Russia target 208",
+      "lat_deg": 62.055263316756765,
+      "lon_deg": 58.21422026690985
+    },
+    {
+      "name": "Russia target 209",
+      "lat_deg": 62.022676789549244,
+      "lon_deg": 143.19869216683145
+    },
+    {
+      "name": "Russia target 210",
+      "lat_deg": 61.97386230833829,
+      "lon_deg": 90.67540001670079
+    },
+    {
+      "name": "Russia target 211",
+      "lat_deg": 61.92512583324753,
+      "lon_deg": 38.152107866596225
+    },
+    {
+      "name": "Russia target 212",
+      "lat_deg": 61.892677985028044,
+      "lon_deg": 123.13657976654389
+    },
+    {
+      "name": "Russia target 213",
+      "lat_deg": 61.84407061547482,
+      "lon_deg": 70.61328761641326
+    },
+    {
+      "name": "Russia target 214",
+      "lat_deg": 61.81170846386687,
+      "lon_deg": 155.5977595163348
+    },
+    {
+      "name": "Russia target 215",
+      "lat_deg": 61.76322908282365,
+      "lon_deg": 103.07446736623024
+    },
+    {
+      "name": "Russia target 216",
+      "lat_deg": 61.714825965233665,
+      "lon_deg": 50.55117521612567
+    },
+    {
+      "name": "Russia target 217",
+      "lat_deg": 61.682599394466884,
+      "lon_deg": 135.5356471160212
+    },
+    {
+      "name": "Russia target 218",
+      "lat_deg": 61.6343225105542,
+      "lon_deg": 83.01235496591664
+    },
+    {
+      "name": "Russia target 219",
+      "lat_deg": 61.602179735242835,
+      "lon_deg": 167.9968268658643
+    },
+    {
+      "name": "Russia target 220",
+      "lat_deg": 61.586120848937014,
+      "lon_deg": 30.489062815812076
+    },
+    {
+      "name": "Russia target 221",
+      "lat_deg": 61.55402800802221,
+      "lon_deg": 115.47353471570761
+    },
+    {
+      "name": "Russia target 222",
+      "lat_deg": 61.50595086406046,
+      "lon_deg": 62.95024256560305
+    },
+    {
+      "name": "Russia target 223",
+      "lat_deg": 61.47394068251038,
+      "lon_deg": 147.93471446555066
+    },
+    {
+      "name": "Russia target 224",
+      "lat_deg": 61.425987002868155,
+      "lon_deg": 95.41142231544609
+    },
+    {
+      "name": "Russia target 225",
+      "lat_deg": 61.37810690222386,
+      "lon_deg": 42.8881301652894
+    },
+    {
+      "name": "Russia target 226",
+      "lat_deg": 61.3462275290428,
+      "lon_deg": 127.87260206523706
+    },
+    {
+      "name": "Russia target 227",
+      "lat_deg": 61.29846923724594,
+      "lon_deg": 75.3493099151325
+    },
+    {
+      "name": "Russia target 228",
+      "lat_deg": 61.266670729922815,
+      "lon_deg": 160.33378181502803
+    },
+    {
+      "name": "Russia target 229",
+      "lat_deg": 61.219033230544184,
+      "lon_deg": 107.81048966492347
+    },
+    {
+      "name": "Russia target 230",
+      "lat_deg": 61.171467724446146,
+      "lon_deg": 55.28719751481887
+    },
+    {
+      "name": "Russia target 231",
+      "lat_deg": 61.13979720637803,
+      "lon_deg": 140.2716694147665
+    },
+    {
+      "name": "Russia target 232",
+      "lat_deg": 61.09235089482863,
+      "lon_deg": 87.74837726460987
+    },
+    {
+      "name": "Russia target 233",
+      "lat_deg": 61.04497562814016,
+      "lon_deg": 35.22508511450525
+    },
+    {
+      "name": "Russia target 234",
+      "lat_deg": 61.01343141321194,
+      "lon_deg": 120.20955701445291
+    },
+    {
+      "name": "Russia target 235",
+      "lat_deg": 60.966173777264636,
+      "lon_deg": 67.68626486434835
+    },
+    {
+      "name": "Russia target 236",
+      "lat_deg": 60.93470766151634,
+      "lon_deg": 152.67073676424388
+    },
+    {
+      "name": "Russia target 237",
+      "lat_deg": 60.887566695778624,
+      "lon_deg": 100.14744461413932
+    },
+    {
+      "name": "Russia target 238",
+      "lat_deg": 60.84049527639315,
+      "lon_deg": 47.624152464034694
+    },
+    {
+      "name": "Russia target 239",
+      "lat_deg": 60.8091527997143,
+      "lon_deg": 132.6086243639303
+    },
+    {
+      "name": "Russia target 240",
+      "lat_deg": 60.7621965399506,
+      "lon_deg": 80.08533221382567
+    },
+    {
+      "name": "Russia target 241",
+      "lat_deg": 60.73093052591482,
+      "lon_deg": 165.06980411377333
+    },
+    {
+      "name": "Russia target 242",
+      "lat_deg": 60.68408849770934,
+      "lon_deg": 112.54651196361664
+    },
+    {
+      "name": "Russia target 243",
+      "lat_deg": 60.637314568002445,
+      "lon_deg": 60.02321981351207
+    },
+    {
+      "name": "Russia target 244",
+      "lat_deg": 60.606169619022225,
+      "lon_deg": 145.00769171345974
+    },
+    {
+      "name": "Russia target 245",
+      "lat_deg": 60.55950846100558,
+      "lon_deg": 92.48439956335511
+    },
+    {
+      "name": "Russia target 246",
+      "lat_deg": 60.51291453464806,
+      "lon_deg": 39.961107413250545
+    },
+    {
+      "name": "Russia target 247",
+      "lat_deg": 60.48188910964516,
+      "lon_deg": 124.94557931314608
+    },
+    {
+      "name": "Russia target 248",
+      "lat_deg": 60.43540652514451,
+      "lon_deg": 72.42228716304152
+    },
+    {
+      "name": "Russia target 249",
+      "lat_deg": 60.35808291269683,
+      "lon_deg": 104.88346691283249
+    },
+    {
+      "name": "Russia target 250",
+      "lat_deg": 60.31177665197745,
+      "lon_deg": 52.360174762727894
+    },
+    {
+      "name": "Russia target 251",
+      "lat_deg": 60.28094224762062,
+      "lon_deg": 137.3446466626756
+    },
+    {
+      "name": "Russia target 252",
+      "lat_deg": 60.23474506713985,
+      "lon_deg": 84.82135451254493
+    },
+    {
+      "name": "Russia target 253",
+      "lat_deg": 60.203983098622444,
+      "lon_deg": 169.8058264124665
+    },
+    {
+      "name": "Russia target 254",
+      "lat_deg": 60.188612926073816,
+      "lon_deg": 32.29806236241427
+    },
+    {
+      "name": "Russia target 255",
+      "lat_deg": 60.15789414829646,
+      "lon_deg": 117.28253426236193
+    },
+    {
+      "name": "Russia target 256",
+      "lat_deg": 60.11186973247669,
+      "lon_deg": 64.75924211225737
+    },
+    {
+      "name": "Russia target 257",
+      "lat_deg": 60.08122249290691,
+      "lon_deg": 149.7437140121529
+    },
+    {
+      "name": "Russia target 258",
+      "lat_deg": 60.03530496925853,
+      "lon_deg": 97.22042186204828
+    },
+    {
+      "name": "Russia target 259",
+      "lat_deg": 59.98945118536667,
+      "lon_deg": 44.69712971194372
+    },
+    {
+      "name": "Russia target 260",
+      "lat_deg": 59.95891726183025,
+      "lon_deg": 129.68160161186535
+    },
+    {
+      "name": "Russia target 261",
+      "lat_deg": 59.9131690587252,
+      "lon_deg": 77.15830946173469
+    },
+    {
+      "name": "Russia target 262",
+      "lat_deg": 59.882705252677944,
+      "lon_deg": 162.14278136168235
+    },
+    {
+      "name": "Russia target 263",
+      "lat_deg": 59.83706182392431,
+      "lon_deg": 109.61948921157773
+    },
+    {
+      "name": "Russia target 264",
+      "lat_deg": 59.79148087683004,
+      "lon_deg": 57.09619706144713
+    },
+    {
+      "name": "Russia target 265",
+      "lat_deg": 59.761128150158775,
+      "lon_deg": 142.0806689613687
+    },
+    {
+      "name": "Russia target 266",
+      "lat_deg": 59.71565070770039,
+      "lon_deg": 89.55737681126413
+    },
+    {
+      "name": "Russia target 267",
+      "lat_deg": 59.67023499254532,
+      "lon_deg": 37.03408466115957
+    },
+    {
+      "name": "Russia target 268",
+      "lat_deg": 59.639992004148944,
+      "lon_deg": 122.0185565610551
+    },
+    {
+      "name": "Russia target 269",
+      "lat_deg": 59.59467854864078,
+      "lon_deg": 69.49526441095054
+    },
+    {
+      "name": "Russia target 270",
+      "lat_deg": 59.5192915155066,
+      "lon_deg": 101.95644416076755
+    },
+    {
+      "name": "Russia target 271",
+      "lat_deg": 59.47414008629505,
+      "lon_deg": 49.43315201063692
+    },
+    {
+      "name": "Russia target 272",
+      "lat_deg": 59.444072629042054,
+      "lon_deg": 134.41762391058455
+    },
+    {
+      "name": "Russia target 273",
+      "lat_deg": 59.39902148739376,
+      "lon_deg": 81.89433176045395
+    },
+    {
+      "name": "Russia target 274",
+      "lat_deg": 59.35403016147702,
+      "lon_deg": 29.371039610349357
+    },
+    {
+      "name": "Russia target 275",
+      "lat_deg": 59.324069044090905,
+      "lon_deg": 114.35551151027096
+    },
+    {
+      "name": "Russia target 276",
+      "lat_deg": 59.27917682253373,
+      "lon_deg": 61.83221936016636
+    },
+    {
+      "name": "Russia target 277",
+      "lat_deg": 59.20448768597239,
+      "lon_deg": 94.2933991099834
+    },
+    {
+      "name": "Russia target 278",
+      "lat_deg": 59.159752520562385,
+      "lon_deg": 41.77010695985274
+    },
+    {
+      "name": "Russia target 279",
+      "lat_deg": 59.12996154981026,
+      "lon_deg": 126.75457885974828
+    },
+    {
+      "name": "Russia target 280",
+      "lat_deg": 59.08532361358772,
+      "lon_deg": 74.23128670966977
+    },
+    {
+      "name": "Russia target 281",
+      "lat_deg": 59.011055813192826,
+      "lon_deg": 106.69246645948681
+    },
+    {
+      "name": "Russia target 282",
+      "lat_deg": 58.96657197863625,
+      "lon_deg": 54.16917430935615
+    },
+    {
+      "name": "Russia target 283",
+      "lat_deg": 58.93694795372614,
+      "lon_deg": 139.15364620930382
+    },
+    {
+      "name": "Russia target 284",
+      "lat_deg": 58.89255952986582,
+      "lon_deg": 86.63035405917316
+    },
+    {
+      "name": "Russia target 285",
+      "lat_deg": 58.84822802319488,
+      "lon_deg": 34.107061909094654
+    },
+    {
+      "name": "Russia target 286",
+      "lat_deg": 58.81870518510396,
+      "lon_deg": 119.09153380899022
+    },
+    {
+      "name": "Russia target 287",
+      "lat_deg": 58.77446799719862,
+      "lon_deg": 66.56824165885956
+    },
+    {
+      "name": "Russia target 288",
+      "lat_deg": 58.70086427212339,
+      "lon_deg": 99.02942140867657
+    },
+    {
+      "name": "Russia target 289",
+      "lat_deg": 58.65677659917461,
+      "lon_deg": 46.50612925854594
+    },
+    {
+      "name": "Russia target 290",
+      "lat_deg": 58.62741573783399,
+      "lon_deg": 131.49060115849358
+    },
+    {
+      "name": "Russia target 291",
+      "lat_deg": 58.5834206517715,
+      "lon_deg": 78.9673090084151
+    },
+    {
+      "name": "Russia target 292",
+      "lat_deg": 58.51021814521015,
+      "lon_deg": 111.42848875817998
+    },
+    {
+      "name": "Russia target 293",
+      "lat_deg": 58.46636984408483,
+      "lon_deg": 58.90519660810145
+    },
+    {
+      "name": "Russia target 294",
+      "lat_deg": 58.393410606511885,
+      "lon_deg": 91.36637635786633
+    },
+    {
+      "name": "Russia target 295",
+      "lat_deg": 58.34970745004917,
+      "lon_deg": 38.843084207787825
+    },
+    {
+      "name": "Russia target 296",
+      "lat_deg": 58.32060203320617,
+      "lon_deg": 123.82755610768339
+    },
+    {
+      "name": "Russia target 297",
+      "lat_deg": 58.27698877228201,
+      "lon_deg": 71.30426395755273
+    },
+    {
+      "name": "Russia target 298",
+      "lat_deg": 58.20441909015724,
+      "lon_deg": 103.76544370742187
+    },
+    {
+      "name": "Russia target 299",
+      "lat_deg": 58.16094837074308,
+      "lon_deg": 51.24215155729124
+    },
+    {
+      "name": "Russia target 300",
+      "lat_deg": 58.131997375856976,
+      "lon_deg": 136.22662345718675
+    },
+    {
+      "name": "Russia target 301",
+      "lat_deg": 58.08861494852583,
+      "lon_deg": 83.70333130710827
+    },
+    {
+      "name": "Russia target 302",
+      "lat_deg": 58.04528520586936,
+      "lon_deg": 31.180039156977614
+    },
+    {
+      "name": "Russia target 303",
+      "lat_deg": 58.01642787321911,
+      "lon_deg": 116.16451105687315
+    },
+    {
+      "name": "Russia target 304",
+      "lat_deg": 57.97318545867921,
+      "lon_deg": 63.64121890679462
+    },
+    {
+      "name": "Russia target 305",
+      "lat_deg": 57.90123046590157,
+      "lon_deg": 96.10239865661163
+    },
+    {
+      "name": "Russia target 306",
+      "lat_deg": 57.85812654373248,
+      "lon_deg": 43.579106506481025
+    },
+    {
+      "name": "Russia target 307",
+      "lat_deg": 57.8294192463466,
+      "lon_deg": 128.56357840642863
+    },
+    {
+      "name": "Russia target 308",
+      "lat_deg": 57.78640112158311,
+      "lon_deg": 76.04028625629803
+    },
+    {
+      "name": "Russia target 309",
+      "lat_deg": 57.757750829488806,
+      "lon_deg": 161.02475815619357
+    },
+    {
+      "name": "Russia target 310",
+      "lat_deg": 57.71481792486717,
+      "lon_deg": 108.50146600611504
+    },
+    {
+      "name": "Russia target 311",
+      "lat_deg": 57.67193587783774,
+      "lon_deg": 55.97817385598441
+    },
+    {
+      "name": "Russia target 312",
+      "lat_deg": 57.600578262187675,
+      "lon_deg": 88.43935360580144
+    },
+    {
+      "name": "Russia target 313",
+      "lat_deg": 57.55783084045039,
+      "lon_deg": 35.916061455670786
+    },
+    {
+      "name": "Russia target 314",
+      "lat_deg": 57.52936041335574,
+      "lon_deg": 120.90053335561845
+    },
+    {
+      "name": "Russia target 315",
+      "lat_deg": 57.48669640589272,
+      "lon_deg": 68.37724120548782
+    },
+    {
+      "name": "Russia target 316",
+      "lat_deg": 57.41570025895283,
+      "lon_deg": 100.83842095530485
+    },
+    {
+      "name": "Russia target 317",
+      "lat_deg": 57.37316856915058,
+      "lon_deg": 48.3151288051742
+    },
+    {
+      "name": "Russia target 318",
+      "lat_deg": 57.34484148786922,
+      "lon_deg": 133.29960070512186
+    },
+    {
+      "name": "Russia target 319",
+      "lat_deg": 57.302391789945254,
+      "lon_deg": 80.7763085549912
+    },
+    {
+      "name": "Russia target 320",
+      "lat_deg": 57.25999102916061,
+      "lon_deg": 28.2530164049127
+    },
+    {
+      "name": "Russia target 321",
+      "lat_deg": 57.23175094773937,
+      "lon_deg": 113.23748830480827
+    },
+    {
+      "name": "Russia target 322",
+      "lat_deg": 57.189431322784465,
+      "lon_deg": 60.714196154729706
+    },
+    {
+      "name": "Russia target 323",
+      "lat_deg": 57.119006138615504,
+      "lon_deg": 93.17537590449462
+    },
+    {
+      "name": "Russia target 324",
+      "lat_deg": 57.07681523552957,
+      "lon_deg": 40.65208375441608
+    },
+    {
+      "name": "Russia target 325",
+      "lat_deg": 57.04871460437949,
+      "lon_deg": 125.63655565431162
+    },
+    {
+      "name": "Russia target 326",
+      "lat_deg": 57.006603476331094,
+      "lon_deg": 73.11326350423312
+    },
+    {
+      "name": "Russia target 327",
+      "lat_deg": 56.97855585685012,
+      "lon_deg": 158.09773540412868
+    },
+    {
+      "name": "Russia target 328",
+      "lat_deg": 56.936523990191944,
+      "lon_deg": 105.57444325405015
+    },
+    {
+      "name": "Russia target 329",
+      "lat_deg": 56.89453943602036,
+      "lon_deg": 53.051151103919494
+    },
+    {
+      "name": "Russia target 330",
+      "lat_deg": 56.8665759280913,
+      "lon_deg": 138.03562300381503
+    },
+    {
+      "name": "Russia target 331",
+      "lat_deg": 56.82466982444252,
+      "lon_deg": 85.5123308537365
+    },
+    {
+      "name": "Russia target 332",
+      "lat_deg": 56.78281055075353,
+      "lon_deg": 32.98903870360587
+    },
+    {
+      "name": "Russia target 333",
+      "lat_deg": 56.75493029654037,
+      "lon_deg": 117.97351060355356
+    },
+    {
+      "name": "Russia target 334",
+      "lat_deg": 56.71314867573637,
+      "lon_deg": 65.4502184534229
+    },
+    {
+      "name": "Russia target 335",
+      "lat_deg": 56.64361556582945,
+      "lon_deg": 97.91139820323991
+    },
+    {
+      "name": "Russia target 336",
+      "lat_deg": 56.60195716848186,
+      "lon_deg": 45.38810605310928
+    },
+    {
+      "name": "Russia target 337",
+      "lat_deg": 56.57421040777867,
+      "lon_deg": 130.37257795305698
+    },
+    {
+      "name": "Russia target 338",
+      "lat_deg": 56.53262839460053,
+      "lon_deg": 77.84928580292632
+    },
+    {
+      "name": "Russia target 339",
+      "lat_deg": 56.50493239653402,
+      "lon_deg": 162.83375770282186
+    },
+    {
+      "name": "Russia target 340",
+      "lat_deg": 56.4634262883852,
+      "lon_deg": 110.31046555274332
+    },
+    {
+      "name": "Russia target 341",
+      "lat_deg": 56.42196549526578,
+      "lon_deg": 57.787173402612666
+    },
+    {
+      "name": "Russia target 342",
+      "lat_deg": 56.3529644129124,
+      "lon_deg": 90.24835315242967
+    },
+    {
+      "name": "Russia target 343",
+      "lat_deg": 56.31162363280382,
+      "lon_deg": 37.72506100229907
+    },
+    {
+      "name": "Russia target 344",
+      "lat_deg": 56.28408795500571,
+      "lon_deg": 122.70953290224668
+    },
+    {
+      "name": "Russia target 345",
+      "lat_deg": 56.242821578596704,
+      "lon_deg": 70.1862407521682
+    },
+    {
+      "name": "Russia target 346",
+      "lat_deg": 56.17414291757687,
+      "lon_deg": 102.64742050193308
+    },
+    {
+      "name": "Russia target 347",
+      "lat_deg": 56.13299463335733,
+      "lon_deg": 50.12412835185458
+    },
+    {
+      "name": "Russia target 348",
+      "lat_deg": 56.10558689006629,
+      "lon_deg": 135.1086002517501
+    },
+    {
+      "name": "Russia target 349",
+      "lat_deg": 56.064511824413934,
+      "lon_deg": 82.58530810161949
+    },
+    {
+      "name": "Russia target 350",
+      "lat_deg": 56.02348047468008,
+      "lon_deg": 30.062015951540957
+    },
+    {
+      "name": "Russia target 351",
+      "lat_deg": 55.996150448966574,
+      "lon_deg": 115.04648785148862
+    },
+    {
+      "name": "Russia target 352",
+      "lat_deg": 55.955191603428986,
+      "lon_deg": 62.523195701305866
+    },
+    {
+      "name": "Russia target 353",
+      "lat_deg": 55.88702298433953,
+      "lon_deg": 94.98437545117497
+    },
+    {
+      "name": "Russia target 354",
+      "lat_deg": 55.84617923035338,
+      "lon_deg": 42.46108330104437
+    },
+    {
+      "name": "Russia target 355",
+      "lat_deg": 55.81897388838278,
+      "lon_deg": 127.4455552009399
+    },
+    {
+      "name": "Russia target 356",
+      "lat_deg": 55.77820150127557,
+      "lon_deg": 74.92226305086137
+    },
+    {
+      "name": "Russia target 357",
+      "lat_deg": 55.75104359357128,
+      "lon_deg": 159.9067349507569
+    },
+    {
+      "name": "Russia target 358",
+      "lat_deg": 55.71034214349096,
+      "lon_deg": 107.38344280062631
+    },
+    {
+      "name": "Russia target 359",
+      "lat_deg": 55.6696830510153,
+      "lon_deg": 54.86015065054775
+    },
+    {
+      "name": "Russia target 360",
+      "lat_deg": 55.60201161142285,
+      "lon_deg": 87.32133040036479
+    },
+    {
+      "name": "Russia target 361",
+      "lat_deg": 55.56146472995958,
+      "lon_deg": 34.798038250286254
+    },
+    {
+      "name": "Russia target 362",
+      "lat_deg": 55.53445670884006,
+      "lon_deg": 119.78251015018179
+    },
+    {
+      "name": "Russia target 363",
+      "lat_deg": 55.493979416313806,
+      "lon_deg": 67.25921800005116
+    },
+    {
+      "name": "Russia target 364",
+      "lat_deg": 55.42660953334598,
+      "lon_deg": 99.7203977498682
+    },
+    {
+      "name": "Russia target 365",
+      "lat_deg": 55.38624272590792,
+      "lon_deg": 47.19710559973754
+    },
+    {
+      "name": "Russia target 366",
+      "lat_deg": 55.35935439808878,
+      "lon_deg": 132.18157749963308
+    },
+    {
+      "name": "Russia target 367",
+      "lat_deg": 55.319056114130134,
+      "lon_deg": 79.65828534955455
+    },
+    {
+      "name": "Russia target 368",
+      "lat_deg": 55.251983170649105,
+      "lon_deg": 112.11946509937161
+    },
+    {
+      "name": "Russia target 369",
+      "lat_deg": 55.211793687848306,
+      "lon_deg": 59.59617294924095
+    },
+    {
+      "name": "Russia target 370",
+      "lat_deg": 55.144901230052625,
+      "lon_deg": 92.05735269905796
+    },
+    {
+      "name": "Russia target 371",
+      "lat_deg": 55.10481953240065,
+      "lon_deg": 39.53406054892733
+    },
+    {
+      "name": "Russia target 372",
+      "lat_deg": 55.07812072071795,
+      "lon_deg": 124.51853244892709
+    },
+    {
+      "name": "Russia target 373",
+      "lat_deg": 55.038105879540446,
+      "lon_deg": 71.99524029874436
+    },
+    {
+      "name": "Russia target 374",
+      "lat_deg": 55.01145150939398,
+      "lon_deg": 156.97971219869203
+    },
+    {
+      "name": "Russia target 375",
+      "lat_deg": 54.97150313730748,
+      "lon_deg": 104.4564200486135
+    },
+    {
+      "name": "Russia target 376",
+      "lat_deg": 54.931594462216445,
+      "lon_deg": 51.93312789848284
+    },
+    {
+      "name": "Russia target 377",
+      "lat_deg": 54.86516784640235,
+      "lon_deg": 84.39430764829984
+    },
+    {
+      "name": "Russia target 378",
+      "lat_deg": 54.82536436022656,
+      "lon_deg": 31.871015498169214
+    },
+    {
+      "name": "Russia target 379",
+      "lat_deg": 54.79885048712275,
+      "lon_deg": 116.85548739806478
+    },
+    {
+      "name": "Russia target 380",
+      "lat_deg": 54.759112254142615,
+      "lon_deg": 64.33219524798625
+    },
+    {
+      "name": "Russia target 381",
+      "lat_deg": 54.69296840612949,
+      "lon_deg": 96.79337499775113
+    },
+    {
+      "name": "Russia target 382",
+      "lat_deg": 54.65333380442235,
+      "lon_deg": 44.270082847672626
+    },
+    {
+      "name": "Russia target 383",
+      "lat_deg": 54.626932199502996,
+      "lon_deg": 129.25455474756814
+    },
+    {
+      "name": "Russia target 384",
+      "lat_deg": 54.58736188894043,
+      "lon_deg": 76.73126259748966
+    },
+    {
+      "name": "Russia target 385",
+      "lat_deg": 54.52149663971142,
+      "lon_deg": 109.19244234725454
+    },
+    {
+      "name": "Russia target 386",
+      "lat_deg": 54.482028439176,
+      "lon_deg": 56.66915019717601
+    },
+    {
+      "name": "Russia target 387",
+      "lat_deg": 54.416332605325735,
+      "lon_deg": 89.13032994694095
+    },
+    {
+      "name": "Russia target 388",
+      "lat_deg": 54.376965596242876,
+      "lon_deg": 36.607037796862414
+    },
+    {
+      "name": "Russia target 389",
+      "lat_deg": 54.350741882825574,
+      "lon_deg": 121.59150969681008
+    },
+    {
+      "name": "Russia target 390",
+      "lat_deg": 54.24601389158499,
+      "lon_deg": 101.52939729649643
+    },
+    {
+      "name": "Russia target 391",
+      "lat_deg": 54.20680939304204,
+      "lon_deg": 49.00610514641792
+    },
+    {
+      "name": "Russia target 392",
+      "lat_deg": 54.180693717588646,
+      "lon_deg": 133.99057704631343
+    },
+    {
+      "name": "Russia target 393",
+      "lat_deg": 54.1415510980114,
+      "lon_deg": 81.46728489618283
+    },
+    {
+      "name": "Russia target 394",
+      "lat_deg": 54.07639547753806,
+      "lon_deg": 113.92846464599984
+    },
+    {
+      "name": "Russia target 395",
+      "lat_deg": 54.03735115297363,
+      "lon_deg": 61.40517249586921
+    },
+    {
+      "name": "Russia target 396",
+      "lat_deg": 53.97235863454972,
+      "lon_deg": 93.86635224568624
+    },
+    {
+      "name": "Russia target 397",
+      "lat_deg": 53.933411740211646,
+      "lon_deg": 41.34306009560771
+    },
+    {
+      "name": "Russia target 398",
+      "lat_deg": 53.90746732683029,
+      "lon_deg": 126.32753199550325
+    },
+    {
+      "name": "Russia target 399",
+      "lat_deg": 53.86858089258147,
+      "lon_deg": 73.80423984537259
+    },
+    {
+      "name": "Russia target 400",
+      "lat_deg": 53.842676675596586,
+      "lon_deg": 158.7887117452682
+    },
+    {
+      "name": "Russia target 401",
+      "lat_deg": 53.80385037121294,
+      "lon_deg": 106.26541959518966
+    },
+    {
+      "name": "Russia target 402",
+      "lat_deg": 53.76505998742845,
+      "lon_deg": 53.742127445059
+    },
+    {
+      "name": "Russia target 403",
+      "lat_deg": 53.739219629537494,
+      "lon_deg": 138.72659934505873
+    },
+    {
+      "name": "Russia target 404",
+      "lat_deg": 53.70048885317611,
+      "lon_deg": 86.203307194876
+    },
+    {
+      "name": "Russia target 405",
+      "lat_deg": 53.66179368610769,
+      "lon_deg": 33.680015044745375
+    },
+    {
+      "name": "Russia target 406",
+      "lat_deg": 53.636016633872664,
+      "lon_deg": 118.66448694474514
+    },
+    {
+      "name": "Russia target 407",
+      "lat_deg": 53.53306549380407,
+      "lon_deg": 98.60237454443154
+    },
+    {
+      "name": "Russia target 408",
+      "lat_deg": 53.49452330499753,
+      "lon_deg": 46.07908239430088
+    },
+    {
+      "name": "Russia target 409",
+      "lat_deg": 53.46884796350758,
+      "lon_deg": 131.06355429424855
+    },
+    {
+      "name": "Russia target 410",
+      "lat_deg": 53.4303640444255,
+      "lon_deg": 78.54026214411789
+    },
+    {
+      "name": "Russia target 411",
+      "lat_deg": 53.366301484496866,
+      "lon_deg": 111.00144189393495
+    },
+    {
+      "name": "Russia target 412",
+      "lat_deg": 53.32791015015493,
+      "lon_deg": 58.478149743804266
+    },
+    {
+      "name": "Russia target 413",
+      "lat_deg": 53.264001240499795,
+      "lon_deg": 90.9393294936213
+    },
+    {
+      "name": "Russia target 414",
+      "lat_deg": 53.22570170418041,
+      "lon_deg": 38.41603734349067
+    },
+    {
+      "name": "Russia target 415",
+      "lat_deg": 53.09828314443327,
+      "lon_deg": 103.33839684307259
+    },
+    {
+      "name": "Russia target 416",
+      "lat_deg": 53.060131129020995,
+      "lon_deg": 50.815104692994055
+    },
+    {
+      "name": "Russia target 417",
+      "lat_deg": 53.03471521247437,
+      "lon_deg": 135.79957659294166
+    },
+    {
+      "name": "Russia target 418",
+      "lat_deg": 52.996619399460826,
+      "lon_deg": 83.27628444281106
+    },
+    {
+      "name": "Russia target 419",
+      "lat_deg": 52.93320094804754,
+      "lon_deg": 115.73746419262812
+    },
+    {
+      "name": "Russia target 420",
+      "lat_deg": 52.83192422993415,
+      "lon_deg": 95.6753517923666
+    },
+    {
+      "name": "Russia target 421",
+      "lat_deg": 52.794006299314105,
+      "lon_deg": 43.15205964223597
+    },
+    {
+      "name": "Russia target 422",
+      "lat_deg": 52.768746031873796,
+      "lon_deg": 128.13653154213148
+    },
+    {
+      "name": "Russia target 423",
+      "lat_deg": 52.66785112768206,
+      "lon_deg": 108.07441914181788
+    },
+    {
+      "name": "Russia target 424",
+      "lat_deg": 52.63007556216305,
+      "lon_deg": 55.55112699173935
+    },
+    {
+      "name": "Russia target 425",
+      "lat_deg": 52.60490995953017,
+      "lon_deg": 140.5355988916349
+    },
+    {
+      "name": "Russia target 426",
+      "lat_deg": 52.567188642644396,
+      "lon_deg": 88.01230674150429
+    },
+    {
+      "name": "Russia target 427",
+      "lat_deg": 52.529499741225656,
+      "lon_deg": 35.48901459142576
+    },
+    {
+      "name": "Russia target 428",
+      "lat_deg": 52.50439176628962,
+      "lon_deg": 120.4734864913213
+    },
+    {
+      "name": "Russia target 429",
+      "lat_deg": 52.40410290516827,
+      "lon_deg": 100.4113740910077
+    },
+    {
+      "name": "Russia target 430",
+      "lat_deg": 52.36655332496581,
+      "lon_deg": 47.88808194092914
+    },
+    {
+      "name": "Russia target 431",
+      "lat_deg": 52.34153799379215,
+      "lon_deg": 132.87255384087678
+    },
+    {
+      "name": "Russia target 432",
+      "lat_deg": 52.30404150844955,
+      "lon_deg": 80.34926169069405
+    },
+    {
+      "name": "Russia target 433",
+      "lat_deg": 52.24161782449091,
+      "lon_deg": 112.81044144056318
+    },
+    {
+      "name": "Russia target 434",
+      "lat_deg": 52.204205732267845,
+      "lon_deg": 60.28714929043255
+    },
+    {
+      "name": "Russia target 435",
+      "lat_deg": 52.14192213523319,
+      "lon_deg": 92.74832904024959
+    },
+    {
+      "name": "Russia target 436",
+      "lat_deg": 52.104593756183355,
+      "lon_deg": 40.225036890171026
+    },
+    {
+      "name": "Russia target 437",
+      "lat_deg": 52.01761544955074,
+      "lon_deg": 157.67068853983147
+    },
+    {
+      "name": "Russia target 438",
+      "lat_deg": 51.98039076885069,
+      "lon_deg": 105.147396389753
+    },
+    {
+      "name": "Russia target 439",
+      "lat_deg": 51.943196995562154,
+      "lon_deg": 52.62410423962231
+    },
+    {
+      "name": "Russia target 440",
+      "lat_deg": 51.91841827179355,
+      "lon_deg": 137.60857613957
+    },
+    {
+      "name": "Russia target 441",
+      "lat_deg": 51.88127580553075,
+      "lon_deg": 85.08528398943935
+    },
+    {
+      "name": "Russia target 442",
+      "lat_deg": 51.819439787136055,
+      "lon_deg": 117.54646373925641
+    },
+    {
+      "name": "Russia target 443",
+      "lat_deg": 51.72067826207226,
+      "lon_deg": 97.48435133894276
+    },
+    {
+      "name": "Russia target 444",
+      "lat_deg": 51.68369827496558,
+      "lon_deg": 44.9610591888121
+    },
+    {
+      "name": "Russia target 445",
+      "lat_deg": 51.659061722105534,
+      "lon_deg": 129.9455310888119
+    },
+    {
+      "name": "Russia target 446",
+      "lat_deg": 51.56064911436212,
+      "lon_deg": 109.8834186884983
+    },
+    {
+      "name": "Russia target 447",
+      "lat_deg": 51.52379926376232,
+      "lon_deg": 57.36012653836761
+    },
+    {
+      "name": "Russia target 448",
+      "lat_deg": 51.49924925561475,
+      "lon_deg": 142.34459843826312
+    },
+    {
+      "name": "Russia target 449",
+      "lat_deg": 51.46244901703247,
+      "lon_deg": 89.82130628818464
+    },
+    {
+      "name": "Russia target 450",
+      "lat_deg": 51.42567842945679,
+      "lon_deg": 37.298014138053986
+    },
+    {
+      "name": "Russia target 451",
+      "lat_deg": 51.30332284059446,
+      "lon_deg": 102.22037363768806
+    },
+    {
+      "name": "Russia target 452",
+      "lat_deg": 51.26667974432529,
+      "lon_deg": 49.6970814875574
+    },
+    {
+      "name": "Russia target 453",
+      "lat_deg": 51.24226723723182,
+      "lon_deg": 134.68155338745294
+    },
+    {
+      "name": "Russia target 454",
+      "lat_deg": 51.20567274952157,
+      "lon_deg": 82.1582612373744
+    },
+    {
+      "name": "Russia target 455",
+      "lat_deg": 51.144746456512806,
+      "lon_deg": 114.61944098713934
+    },
+    {
+      "name": "Russia target 456",
+      "lat_deg": 51.04743127997796,
+      "lon_deg": 94.55732858682575
+    },
+    {
+      "name": "Russia target 457",
+      "lat_deg": 51.01099077425888,
+      "lon_deg": 42.034036436747186
+    },
+    {
+      "name": "Russia target 458",
+      "lat_deg": 50.88972858455,
+      "lon_deg": 106.95639593638123
+    },
+    {
+      "name": "Russia target 459",
+      "lat_deg": 50.82921575086323,
+      "lon_deg": 139.41757568619823
+    },
+    {
+      "name": "Russia target 460",
+      "lat_deg": 50.79294567868696,
+      "lon_deg": 86.89428353606763
+    },
+    {
+      "name": "Russia target 461",
+      "lat_deg": 50.73255801454951,
+      "lon_deg": 119.35546328588464
+    },
+    {
+      "name": "Russia target 462",
+      "lat_deg": 50.59997832090761,
+      "lon_deg": 46.77005873549248
+    },
+    {
+      "name": "Russia target 463",
+      "lat_deg": 50.57591304864715,
+      "lon_deg": 131.754530635388
+    },
+    {
+      "name": "Russia target 464",
+      "lat_deg": 50.47977461639836,
+      "lon_deg": 111.6924182350744
+    },
+    {
+      "name": "Russia target 465",
+      "lat_deg": 50.34790262240249,
+      "lon_deg": 39.10701368463015
+    },
+    {
+      "name": "Russia target 466",
+      "lat_deg": 50.22833599682519,
+      "lon_deg": 104.02937318431628
+    },
+    {
+      "name": "Russia target 467",
+      "lat_deg": 50.16866499307614,
+      "lon_deg": 136.49055293413335
+    },
+    {
+      "name": "Russia target 468",
+      "lat_deg": 50.073346023074144,
+      "lon_deg": 116.4284405338197
+    },
+    {
+      "name": "Russia target 469",
+      "lat_deg": 49.97821615273507,
+      "lon_deg": 96.3663281335061
+    },
+    {
+      "name": "Russia target 470",
+      "lat_deg": 49.94259092110806,
+      "lon_deg": 43.843035983375444
+    },
+    {
+      "name": "Russia target 471",
+      "lat_deg": 49.918855396356136,
+      "lon_deg": 128.82750788327098
+    },
+    {
+      "name": "Russia target 472",
+      "lat_deg": 49.824029873036494,
+      "lon_deg": 108.76539548300946
+    },
+    {
+      "name": "Russia target 473",
+      "lat_deg": 49.729389855673375,
+      "lon_deg": 88.70328308269586
+    },
+    {
+      "name": "Russia target 474",
+      "lat_deg": 49.51712115013354,
+      "lon_deg": 133.56353018201628
+    },
+    {
+      "name": "Russia target 475",
+      "lat_deg": 49.29405466313614,
+      "lon_deg": 40.91601323131053
+    },
+    {
+      "name": "Russia target 476",
+      "lat_deg": 49.118660229566586,
+      "lon_deg": 138.29955248076158
+    },
+    {
+      "name": "Russia target 477",
+      "lat_deg": 48.89738017685146,
+      "lon_deg": 45.65203553005583
+    },
+    {
+      "name": "Russia target 478",
+      "lat_deg": 48.87414455274166,
+      "lon_deg": 130.6365074299514
+    },
+    {
+      "name": "Russia target 479",
+      "lat_deg": 48.48077412988187,
+      "lon_deg": 135.3725297286967
+    },
+    {
+      "name": "Russia target 480",
+      "lat_deg": 48.26227363398774,
+      "lon_deg": 42.72501277793879
+    },
+    {
+      "name": "Russia target 481",
+      "lat_deg": 47.85081102961818,
+      "lon_deg": 132.44550697657962
+    },
+    {
+      "name": "Russia target 482",
+      "lat_deg": 47.63496224425048,
+      "lon_deg": 39.79799002587387
+    },
+    {
+      "name": "Russia target 483",
+      "lat_deg": 47.465183231073034,
+      "lon_deg": 137.18152927527285
+    },
+    {
+      "name": "Russia target 484",
+      "lat_deg": 47.250913624515256,
+      "lon_deg": 44.53401232451495
+    },
+    {
+      "name": "Russia target 485",
+      "lat_deg": 46.84728599799638,
+      "lon_deg": 134.25450652315578
+    },
+    {
+      "name": "Russia target 486",
+      "lat_deg": 46.6354795290553,
+      "lon_deg": 41.606989572450004
+    },
+    {
+      "name": "Russia target 487",
+      "lat_deg": 46.25851031956977,
+      "lon_deg": 46.3430118711953
+    },
+    {
+      "name": "Russia target 488",
+      "lat_deg": 46.026966675276626,
+      "lon_deg": 38.67996682038509
+    },
+    {
+      "name": "Russia target 489",
+      "lat_deg": 45.862170611356284,
+      "lon_deg": 136.063506069784
+    },
+    {
+      "name": "Russia target 490",
+      "lat_deg": 45.65412737696496,
+      "lon_deg": 43.41598911907826
+    },
+    {
+      "name": "Russia target 491",
+      "lat_deg": 45.056198028421086,
+      "lon_deg": 40.48896636701335
+    },
+    {
+      "name": "Russia target 492",
+      "lat_deg": 44.68968024419542,
+      "lon_deg": 45.22498866570655
+    },
+    {
+      "name": "Russia target 493",
+      "lat_deg": 44.304113540553416,
+      "lon_deg": 134.94548286434735
+    },
+    {
+      "name": "Russia target 494",
+      "lat_deg": 44.10163854867057,
+      "lon_deg": 42.29796591364163
+    },
+    {
+      "name": "Russia target 495",
+      "lat_deg": 43.74103342032286,
+      "lon_deg": 47.033988212334805
+    },
+    {
+      "name": "Russia target 496",
+      "lat_deg": 43.71988910784896,
+      "lon_deg": 132.01846011228247
+    },
+    {
+      "name": "Russia target 497",
+      "lat_deg": 43.162249910485855,
+      "lon_deg": 44.10696546026986
+    },
+    {
+      "name": "Russia target 498",
+      "lat_deg": 42.23708977291531,
+      "lon_deg": 45.91596500689815
+    },
+    {
+      "name": "Russia target 499",
+      "lat_deg": 41.32529964146761,
+      "lon_deg": 47.724964553526405
+    }
+  ],
+  "countries": [
+    "Russia"
+  ],
+  "run_config": {
+    "target_mode": "country",
+    "target_country": "Russia",
+    "target_points": null,
+    "target_shell_n_points": 15000,
+    "n_targets": 500,
+    "dt_s": 120.0,
+    "t_window_s": 170.0,
+    "v_bo_km_s": 10.0,
+    "a_g": 10.0,
+    "intercept_alt_km": 200.0,
+    "min_elev_deg": 0.0,
+    "r_max_km": 1190.141893511036,
+    "altitude_override_km": 400.0,
+    "altitude_max_repeat_days": 2,
+    "h_star_km": 306.7956188316985,
+    "actual_alt_km": 404.352,
+    "rgt_ratio": "31:2",
+    "L": 1436,
+    "horizon_s": 172208.1942896936,
+    "inclination_sweep_bounds_deg": [
+      40.0,
+      90.0
+    ],
+    "inclination_screen_step_deg": 1.0,
+    "n_raan_offsets": 10,
+    "raan_interval_deg": 11.612903225806452,
+    "raan_step_deg": 1.1612903225806452,
+    "n_seeds_simulated": 510,
+    "n_seeds_live": 510,
+    "n_seeds_for_milp": 20,
+    "reserve_polar_orbits": false,
+    "polar_reservation_inclinations": [],
+    "seeds_selected": [
+      {
+        "rank": 1,
+        "inc_deg": 71.0,
+        "raan_deg": 0.0
+      },
+      {
+        "rank": 2,
+        "inc_deg": 70.0,
+        "raan_deg": 1.1612903225806452
+      },
+      {
+        "rank": 3,
+        "inc_deg": 69.0,
+        "raan_deg": 3.483870967741936
+      },
+      {
+        "rank": 4,
+        "inc_deg": 68.0,
+        "raan_deg": 9.290322580645162
+      },
+      {
+        "rank": 5,
+        "inc_deg": 67.0,
+        "raan_deg": 10.451612903225808
+      },
+      {
+        "rank": 6,
+        "inc_deg": 72.0,
+        "raan_deg": 8.129032258064516
+      },
+      {
+        "rank": 7,
+        "inc_deg": 66.0,
+        "raan_deg": 1.1612903225806452
+      },
+      {
+        "rank": 8,
+        "inc_deg": 73.0,
+        "raan_deg": 6.967741935483872
+      },
+      {
+        "rank": 9,
+        "inc_deg": 65.0,
+        "raan_deg": 0.0
+      },
+      {
+        "rank": 10,
+        "inc_deg": 74.0,
+        "raan_deg": 4.645161290322581
+      },
+      {
+        "rank": 11,
+        "inc_deg": 75.0,
+        "raan_deg": 4.645161290322581
+      },
+      {
+        "rank": 12,
+        "inc_deg": 64.0,
+        "raan_deg": 1.1612903225806452
+      },
+      {
+        "rank": 13,
+        "inc_deg": 76.0,
+        "raan_deg": 4.645161290322581
+      },
+      {
+        "rank": 14,
+        "inc_deg": 63.0,
+        "raan_deg": 10.451612903225808
+      },
+      {
+        "rank": 15,
+        "inc_deg": 77.0,
+        "raan_deg": 6.967741935483872
+      },
+      {
+        "rank": 16,
+        "inc_deg": 78.0,
+        "raan_deg": 6.967741935483872
+      },
+      {
+        "rank": 17,
+        "inc_deg": 62.0,
+        "raan_deg": 1.1612903225806452
+      },
+      {
+        "rank": 18,
+        "inc_deg": 79.0,
+        "raan_deg": 6.967741935483872
+      },
+      {
+        "rank": 19,
+        "inc_deg": 80.0,
+        "raan_deg": 1.1612903225806452
+      },
+      {
+        "rank": 20,
+        "inc_deg": 61.0,
+        "raan_deg": 0.0
+      }
+    ],
+    "salvo_size": 10,
+    "n_interceptors_per_sat": 4,
+    "r_required": 3,
+    "mip_gap_target": 0.001,
+    "time_limit_s": 14400.0,
+    "mip_focus": 1,
+    "heuristics_frac": 0.2,
+    "solver_params": {
+      "Method": 1,
+      "NodefileStart": 4,
+      "RINS": 50
+    },
+    "timestamp_utc": "2026-07-24T21:24:22.319702+00:00",
+    "result_status": "Time limit",
+    "mip_gap_achieved": 0.3626760563380282,
+    "n_satellites_selected": 568,
+    "obj_val": 568.0,
+    "obj_bound": 362.0,
+    "time_modeling_s": 5.566612223999982,
+    "time_optimization_s": 14420.115175141
+  }
+}

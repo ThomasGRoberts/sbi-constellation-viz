@@ -1,0 +1,69 @@
+
+Gurobi 13.0.2 (linux64) logging started Thu Jul 16 09:49:55 2026
+
+Set parameter LogFile to value "/tmp/sweep_20260716_013919_north-korea_alt260km_s10_i6_v5_gurobi.log"
+Set parameter Method to value 1
+Set parameter NodefileStart to value 4
+Set parameter RINS to value 50
+Gurobi Optimizer version 13.0.2 build v13.0.2rc1 (linux64 - "Debian GNU/Linux 13 (trixie)")
+
+CPU model: Intel(R) Xeon(R) Platinum 8375C CPU @ 2.90GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 16 physical cores, 32 logical processors, using up to 32 threads
+
+Non-default parameters:
+TimeLimit  14400
+MIPGap  0.001
+Method  1
+LPWarmStart  1
+Heuristics  0.2
+MIPFocus  1
+NodefileStart  4
+RINS  50
+Symmetry  2
+Cuts  2
+CoverCuts  2
+LogToConsole  0
+
+Academic license 2812613 - for non-commercial use only - registered to no___@gatech.edu
+Optimize a model with 1436 rows, 7180 columns and 91186 nonzeros (Min)
+Model fingerprint: 0xd101b608
+Model has 7180 linear objective coefficients
+Variable types: 0 continuous, 7180 integer (7180 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [2e+00, 2e+00]
+
+Found heuristic solution: objective 248.0000000
+Presolve removed 0 rows and 2872 columns
+Presolve time: 0.05s
+Presolved: 1436 rows, 4308 columns, 60312 nonzeros
+Variable types: 0 continuous, 4308 integer (3590 binary)
+
+Root relaxation: objective 1.795000e+02, 11005 iterations, 1.80 seconds (2.71 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  179.50000    0  359  248.00000  179.50000  27.6%     -    2s
+H    0     0                     233.0000000  179.50000  23.0%     -    2s
+H    0     0                     219.0000000  179.50000  18.0%     -    2s
+H    0     0                     187.0000000  179.50000  4.01%     -    2s
+H    0     0                     184.0000000  179.50000  2.45%     -    2s
+H    0     0                     183.0000000  179.50000  1.91%     -    2s
+H    0     0                     181.0000000  179.50000  0.83%     -    2s
+H    0     0                     180.0000000  179.50000  0.28%     -    2s
+
+Cutting planes:
+  Lift-and-project: 1
+
+Explored 1 nodes (11389 simplex iterations) in 2.59 seconds (3.42 work units)
+Thread count was 32 (of 32 available processors)
+
+Solution count 8: 180 181 183 ... 248
+
+Optimal solution found (tolerance 1.00e-03)
+Best objective 1.800000000000e+02, best bound 1.800000000000e+02, gap 0.0000%
+
+User-callback calls 726, time in user-callback 0.00 sec

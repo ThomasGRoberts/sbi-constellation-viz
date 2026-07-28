@@ -1,0 +1,146 @@
+
+Gurobi 13.0.2 (linux64) logging started Mon Jul 13 09:05:13 2026
+
+Set parameter LogFile to value "/tmp/sweep_20260709_012313_china_alt550km_s35_i2_v4_gurobi.log"
+Set parameter Method to value 1
+Set parameter NodefileStart to value 4
+Set parameter RINS to value 50
+Gurobi Optimizer version 13.0.2 build v13.0.2rc1 (linux64 - "Debian GNU/Linux 13 (trixie)")
+
+CPU model: Intel(R) Xeon(R) Platinum 8375C CPU @ 2.90GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 16 physical cores, 32 logical processors, using up to 32 threads
+
+Non-default parameters:
+TimeLimit  14400
+MIPGap  0.001
+Method  1
+LPWarmStart  1
+Heuristics  0.2
+MIPFocus  1
+NodefileStart  4
+RINS  50
+Symmetry  2
+Cuts  2
+CoverCuts  2
+LogToConsole  0
+
+Academic license 2812613 - for non-commercial use only - registered to no___@gatech.edu
+Optimize a model with 196014 rows, 17950 columns and 6777920 nonzeros (Min)
+Model fingerprint: 0xf5af6bab
+Model has 17950 linear objective coefficients
+Variable types: 0 continuous, 17950 integer (17950 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [2e+01, 2e+01]
+
+Found heuristic solution: objective 14360.000000
+Presolve removed 7898 rows and 5744 columns (presolve time = 5s)...
+Presolve removed 7898 rows and 5744 columns (presolve time = 10s)...
+Presolve removed 30156 rows and 5744 columns (presolve time = 16s)...
+Presolve removed 30156 rows and 5744 columns (presolve time = 20s)...
+Presolve removed 30874 rows and 5744 columns (presolve time = 25s)...
+Presolve removed 30874 rows and 5744 columns
+Presolve time: 28.45s
+Presolved: 165140 rows, 12206 columns, 4363286 nonzeros
+Variable types: 0 continuous, 12206 integer (12206 binary)
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    5.7440000e+03   0.000000e+00   2.958000e+03     31s
+      46    1.2667928e+04   0.000000e+00   0.000000e+00     31s
+      46    1.2667928e+04   0.000000e+00   0.000000e+00     31s
+
+Use crossover to convert LP symmetric solution to basic solution...
+
+Root crossover log...
+
+       0 PPushes remaining with PInf 0.0000000e+00                36s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 6.9593361e-10     36s
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+      49    1.2667928e+04   0.000000e+00   0.000000e+00     37s
+Crossover time: 5.40 seconds (10.26 work units)
+
+Root relaxation: objective 1.266793e+04, 49 iterations, 7.43 seconds (11.77 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 12667.9277    0 7180 14360.0000 12667.9277  11.8%     -   39s
+H    0     0                    14359.000000 12667.9277  11.8%     -   39s
+H    0     0                    14358.000000 12667.9277  11.8%     -   39s
+H    0     0                    13933.000000 12667.9277  9.08%     -   39s
+H    0     0                    13932.000000 12667.9277  9.07%     -   39s
+H    0     0                    13909.000000 12667.9277  8.92%     -   39s
+H    0     0                    13895.000000 12667.9277  8.83%     -   39s
+H    0     0                    13894.000000 12667.9277  8.82%     -   39s
+H    0     0                    13892.000000 12667.9277  8.81%     -   39s
+H    0     0                    13890.000000 12667.9277  8.80%     -   39s
+H    0     0                    13889.000000 12667.9277  8.79%     -   39s
+H    0     0                    13888.000000 12667.9277  8.79%     -   40s
+H    0     0                    13887.000000 12667.9277  8.78%     -   40s
+H    0     0                    13886.000000 12667.9277  8.77%     -   40s
+H    0     0                    13885.000000 12667.9277  8.77%     -   40s
+H    0     0                    13292.000000 12667.9277  4.70%     -   40s
+     0     0 12667.9277    0 7180 13292.0000 12667.9277  4.70%     -  124s
+H    0     0                    13291.000000 12667.9277  4.69%     -  278s
+H    0     0                    13234.000000 12667.9277  4.28%     -  278s
+H    0     0                    13227.000000 12667.9277  4.23%     -  278s
+H    0     0                    13215.000000 12667.9277  4.14%     -  278s
+H    0     0                    13211.000000 12667.9277  4.11%     -  278s
+H    0     0                    13207.000000 12667.9277  4.08%     -  329s
+H    0     0                    13205.000000 12667.9277  4.07%     -  387s
+H    0     0                    13203.000000 12667.9277  4.05%     -  387s
+H    0     0                    13200.000000 12667.9277  4.03%     -  388s
+H    0     0                    13199.000000 12667.9277  4.02%     -  402s
+H    0     0                    13187.000000 12667.9277  3.94%     -  402s
+H    0     0                    13186.000000 12667.9277  3.93%     -  402s
+H    0     0                    13182.000000 12667.9277  3.90%     -  403s
+H    0     0                    13181.000000 12667.9277  3.89%     -  403s
+H    0     0                    13179.000000 12667.9277  3.88%     -  403s
+H    0     0                    13178.000000 12667.9277  3.87%     -  403s
+H    0     0                    13174.000000 12667.9277  3.84%     -  404s
+H    0     0                    13173.000000 12667.9277  3.83%     -  406s
+H    0     0                    13172.000000 12667.9277  3.83%     -  406s
+H    0     0                    13159.000000 12667.9277  3.73%     -  408s
+H    0     2                    13142.000000 12667.9277  3.61%     -  437s
+     0     2 12667.9277    0 7180 13142.0000 12667.9277  3.61%     -  437s
+     1     3 12667.9443    1 7189 13142.0000 12667.9332  3.61%   273  753s
+     2     4 12667.9608    2 7202 13142.0000 12667.9332  3.61%   934 1208s
+     3     7 12667.9773    3 7208 13142.0000 12667.9332  3.61%  1299 1441s
+H    6    13                    13137.000000 12667.9332  3.57%   888 2622s
+H   12    25                    13134.000000 12667.9332  3.55%  1406 3026s
+H   13    25                    13118.000000 12667.9332  3.43%  1558 3026s
+H   24    41                    13116.000000 12667.9332  3.42%  2276 5873s
+H   40    57                    13101.000000 12667.9332  3.31%  2595 7218s
+H   41    57                    13098.000000 12667.9332  3.28%  2621 7218s
+H   42    57                    13096.000000 12667.9332  3.27%  2658 7218s
+H   56   105                    13092.000000 12667.9332  3.24%  2945 9359s
+H   56   105                    13088.000000 12667.9332  3.21%  2945 9359s
+H   56   105                    13083.000000 12667.9332  3.17%  2945 9359s
+H   57   105                    13082.000000 12667.9332  3.17%  2947 9359s
+H   58   105                    13080.000000 12667.9332  3.15%  2938 9359s
+H   87   105                    13079.000000 12667.9332  3.14%  3093 9359s
+H  104   121                    13077.000000 12667.9332  3.13%  3090 13903s
+H  105   121                    13067.000000 12667.9332  3.05%  3101 13903s
+H  108   121                    13066.000000 12667.9332  3.05%  3137 13903s
+H  120   138                    13060.000000 12667.9332  3.00%  3259 14401s
+H  122   138                    13059.000000 12667.9332  2.99%  3270 14401s
+H  129   138                    13058.000000 12667.9332  2.99%  3309 14401s
+
+Explored 137 nodes (463559 simplex iterations) in 14401.87 seconds (33131.41 work units)
+Thread count was 32 (of 32 available processors)
+
+Solution count 10: 13058 13059 13060 ... 13083
+
+Time limit reached
+Best objective 1.305800000000e+04, best bound 1.266800000000e+04, gap 2.9867%
+
+User-callback calls 3371890, time in user-callback 9.71 sec

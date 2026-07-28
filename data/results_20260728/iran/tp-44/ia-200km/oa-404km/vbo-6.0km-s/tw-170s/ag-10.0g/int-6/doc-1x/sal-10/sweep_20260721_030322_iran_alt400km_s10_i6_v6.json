@@ -1,0 +1,355 @@
+{
+  "version": 1,
+  "timestamp": "2026-07-21T21:55:59.535018",
+  "n_satellites": 472,
+  "obj_val": 472.0,
+  "mip_gap": 0.3601694915254237,
+  "status_str": "Time limit",
+  "propagator": "Nominal_Propagator",
+  "bc_kg_m2": 80.0,
+  "cov": {
+    "T_window_s": 170.0,
+    "v_bo_km_s": 6.0,
+    "a_g": 10.0,
+    "intercept_alt_km": 200.0,
+    "min_elev_deg": 0.0
+  },
+  "sim": {
+    "horizon_s": 172208.1942896936,
+    "dt_s": 120.0057103064067,
+    "use_j2": false,
+    "use_drag": false,
+    "analysis_matrix_dtype": "uint8"
+  },
+  "targets": [
+    {
+      "name": "Iran target 0",
+      "lat_deg": 38.4574545762839,
+      "lon_deg": 45.48891814265306
+    },
+    {
+      "name": "Iran target 1",
+      "lat_deg": 37.59432355487127,
+      "lon_deg": 47.29791768928135
+    },
+    {
+      "name": "Iran target 2",
+      "lat_deg": 36.94155099218202,
+      "lon_deg": 56.76996228677194
+    },
+    {
+      "name": "Iran target 3",
+      "lat_deg": 36.74109062286767,
+      "lon_deg": 49.106917235909606
+    },
+    {
+      "name": "Iran target 4",
+      "lat_deg": 36.41764004585963,
+      "lon_deg": 53.842939534707
+    },
+    {
+      "name": "Iran target 5",
+      "lat_deg": 36.21853364316842,
+      "lon_deg": 46.17989448384466
+    },
+    {
+      "name": "Iran target 6",
+      "lat_deg": 36.09553099891468,
+      "lon_deg": 58.57896183329598
+    },
+    {
+      "name": "Iran target 7",
+      "lat_deg": 35.89723984895569,
+      "lon_deg": 50.91591678253786
+    },
+    {
+      "name": "Iran target 8",
+      "lat_deg": 35.57724489029505,
+      "lon_deg": 55.651939081231035
+    },
+    {
+      "name": "Iran target 9",
+      "lat_deg": 35.38023866336804,
+      "lon_deg": 47.98889403047295
+    },
+    {
+      "name": "Iran target 10",
+      "lat_deg": 35.25852327933075,
+      "lon_deg": 60.387961379924235
+    },
+    {
+      "name": "Iran target 11",
+      "lat_deg": 35.062291087632765,
+      "lon_deg": 52.7249163290619
+    },
+    {
+      "name": "Iran target 12",
+      "lat_deg": 34.74557701539054,
+      "lon_deg": 57.46093862785932
+    },
+    {
+      "name": "Iran target 13",
+      "lat_deg": 34.55056531337263,
+      "lon_deg": 49.797893576996984
+    },
+    {
+      "name": "Iran target 14",
+      "lat_deg": 34.235796459081584,
+      "lon_deg": 54.53391587579438
+    },
+    {
+      "name": "Iran target 15",
+      "lat_deg": 34.04196753916937,
+      "lon_deg": 46.87087082493207
+    },
+    {
+      "name": "Iran target 16",
+      "lat_deg": 33.92220002993303,
+      "lon_deg": 59.26993817448758
+    },
+    {
+      "name": "Iran target 17",
+      "lat_deg": 33.729084082019796,
+      "lon_deg": 51.60689312362524
+    },
+    {
+      "name": "Iran target 18",
+      "lat_deg": 33.4173372561213,
+      "lon_deg": 56.342915422422664
+    },
+    {
+      "name": "Iran target 19",
+      "lat_deg": 33.225346207966055,
+      "lon_deg": 48.67987037156033
+    },
+    {
+      "name": "Iran target 20",
+      "lat_deg": 32.91539290543428,
+      "lon_deg": 53.41589267035772
+    },
+    {
+      "name": "Iran target 21",
+      "lat_deg": 32.60652121640932,
+      "lon_deg": 58.15191496905092
+    },
+    {
+      "name": "Iran target 22",
+      "lat_deg": 32.416279071517636,
+      "lon_deg": 50.488869918188584
+    },
+    {
+      "name": "Iran target 23",
+      "lat_deg": 32.109114638611494,
+      "lon_deg": 55.22489221698598
+    },
+    {
+      "name": "Iran target 24",
+      "lat_deg": 31.802980108357072,
+      "lon_deg": 59.96091451567918
+    },
+    {
+      "name": "Iran target 25",
+      "lat_deg": 31.61440324660522,
+      "lon_deg": 52.297869464921064
+    },
+    {
+      "name": "Iran target 26",
+      "lat_deg": 31.309894813153566,
+      "lon_deg": 57.033891763614236
+    },
+    {
+      "name": "Iran target 27",
+      "lat_deg": 31.122307400335576,
+      "lon_deg": 49.37084671285615
+    },
+    {
+      "name": "Iran target 28",
+      "lat_deg": 30.819377266818865,
+      "lon_deg": 54.10686901154932
+    },
+    {
+      "name": "Iran target 29",
+      "lat_deg": 30.517399642370783,
+      "lon_deg": 58.84289131024252
+    },
+    {
+      "name": "Iran target 30",
+      "lat_deg": 30.33135236327139,
+      "lon_deg": 51.17984625948441
+    },
+    {
+      "name": "Iran target 31",
+      "lat_deg": 30.030879223820854,
+      "lon_deg": 55.91586855817758
+    },
+    {
+      "name": "Iran target 32",
+      "lat_deg": 29.73131424101209,
+      "lon_deg": 60.651890856766556
+    },
+    {
+      "name": "Iran target 33",
+      "lat_deg": 29.546735376261218,
+      "lon_deg": 52.988845806112664
+    },
+    {
+      "name": "Iran target 34",
+      "lat_deg": 29.248605105559605,
+      "lon_deg": 57.72486810470161
+    },
+    {
+      "name": "Iran target 35",
+      "lat_deg": 28.768162731869527,
+      "lon_deg": 54.7978453526367
+    },
+    {
+      "name": "Iran target 36",
+      "lat_deg": 28.472267306327247,
+      "lon_deg": 59.5338676513299
+    },
+    {
+      "name": "Iran target 37",
+      "lat_deg": 28.289922166000228,
+      "lon_deg": 51.870822600571785
+    },
+    {
+      "name": "Iran target 38",
+      "lat_deg": 27.995356284684174,
+      "lon_deg": 56.606844899264956
+    },
+    {
+      "name": "Iran target 39",
+      "lat_deg": 27.701593287238346,
+      "lon_deg": 61.34286719806238
+    },
+    {
+      "name": "Iran target 40",
+      "lat_deg": 27.52054633389923,
+      "lon_deg": 53.67982214720004
+    },
+    {
+      "name": "Iran target 41",
+      "lat_deg": 27.228052195405017,
+      "lon_deg": 58.41584444589324
+    },
+    {
+      "name": "Iran target 42",
+      "lat_deg": 26.93632436878114,
+      "lon_deg": 63.151866744690636
+    },
+    {
+      "name": "Iran target 43",
+      "lat_deg": 26.465999796981475,
+      "lon_deg": 60.22484399262572
+    }
+  ],
+  "countries": [
+    "Iran"
+  ],
+  "run_config": {
+    "target_mode": "country",
+    "target_country": "Iran",
+    "target_points": null,
+    "target_shell_n_points": 15000,
+    "n_targets": 44,
+    "dt_s": 120.0,
+    "t_window_s": 170.0,
+    "v_bo_km_s": 6.0,
+    "a_g": 10.0,
+    "intercept_alt_km": 200.0,
+    "min_elev_deg": 0.0,
+    "r_max_km": 836.4510816639729,
+    "altitude_override_km": 400.0,
+    "altitude_max_repeat_days": 2,
+    "h_star_km": 252.96673941291007,
+    "actual_alt_km": 404.352,
+    "rgt_ratio": "31:2",
+    "L": 1436,
+    "horizon_s": 172208.1942896936,
+    "inclination_sweep_bounds_deg": [
+      20.0,
+      90.0
+    ],
+    "inclination_screen_step_deg": 1.0,
+    "n_raan_offsets": 10,
+    "raan_interval_deg": 11.612903225806452,
+    "raan_step_deg": 1.1612903225806452,
+    "n_seeds_simulated": 710,
+    "n_seeds_live": 710,
+    "n_seeds_for_milp": 10,
+    "reserve_polar_orbits": false,
+    "polar_reservation_inclinations": [],
+    "seeds_selected": [
+      {
+        "rank": 1,
+        "inc_deg": 32.0,
+        "raan_deg": 6.967741935483872
+      },
+      {
+        "rank": 2,
+        "inc_deg": 36.0,
+        "raan_deg": 1.1612903225806452
+      },
+      {
+        "rank": 3,
+        "inc_deg": 35.0,
+        "raan_deg": 0.0
+      },
+      {
+        "rank": 4,
+        "inc_deg": 37.0,
+        "raan_deg": 6.967741935483872
+      },
+      {
+        "rank": 5,
+        "inc_deg": 38.0,
+        "raan_deg": 1.1612903225806452
+      },
+      {
+        "rank": 6,
+        "inc_deg": 34.0,
+        "raan_deg": 4.645161290322581
+      },
+      {
+        "rank": 7,
+        "inc_deg": 39.0,
+        "raan_deg": 2.3225806451612905
+      },
+      {
+        "rank": 8,
+        "inc_deg": 33.0,
+        "raan_deg": 5.806451612903226
+      },
+      {
+        "rank": 9,
+        "inc_deg": 40.0,
+        "raan_deg": 2.3225806451612905
+      },
+      {
+        "rank": 10,
+        "inc_deg": 41.0,
+        "raan_deg": 8.129032258064516
+      }
+    ],
+    "salvo_size": 10,
+    "n_interceptors_per_sat": 6,
+    "r_required": 2,
+    "mip_gap_target": 0.001,
+    "time_limit_s": 14400.0,
+    "mip_focus": 1,
+    "heuristics_frac": 0.2,
+    "solver_params": {
+      "Method": 1,
+      "NodefileStart": 4,
+      "RINS": 50
+    },
+    "timestamp_utc": "2026-07-21T21:55:59.532617+00:00",
+    "result_status": "Time limit",
+    "mip_gap_achieved": 0.3601694915254237,
+    "n_satellites_selected": 472,
+    "obj_val": 472.0,
+    "obj_bound": 302.0,
+    "time_modeling_s": 0.44347862700669793,
+    "time_optimization_s": 15295.626920953
+  }
+}

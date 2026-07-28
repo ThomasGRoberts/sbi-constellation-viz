@@ -1,0 +1,950 @@
+
+Gurobi 13.0.2 (linux64) logging started Sat Jul 25 18:26:38 2026
+
+Set parameter LogFile to value "/tmp/sweep_20260724_011830_russia_alt400km_s50_i4_v4_gurobi.log"
+Set parameter Method to value 1
+Set parameter NodefileStart to value 4
+Set parameter RINS to value 50
+Gurobi Optimizer version 13.0.2 build v13.0.2rc1 (linux64 - "Debian GNU/Linux 13 (trixie)")
+
+CPU model: Intel(R) Xeon(R) Platinum 8375C CPU @ 2.90GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 16 physical cores, 32 logical processors, using up to 32 threads
+
+Non-default parameters:
+TimeLimit  14400
+MIPGap  0.001
+Method  1
+LPWarmStart  1
+Heuristics  0.2
+MIPFocus  1
+NodefileStart  4
+RINS  50
+Symmetry  2
+Cuts  2
+CoverCuts  2
+LogToConsole  0
+
+Academic license 2812613 - for non-commercial use only - registered to no___@gatech.edu
+Optimize a model with 718000 rows, 64620 columns and 114536796 nonzeros (Min)
+Model fingerprint: 0xe5139ad4
+Model has 64620 linear objective coefficients
+Variable types: 0 continuous, 64620 integer (64620 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+01, 1e+01]
+
+Found heuristic solution: objective 8595.0000000
+Presolve removed 0 rows and 0 columns (presolve time = 5s)...
+Presolve removed 0 rows and 0 columns (presolve time = 17s)...
+Presolve removed 0 rows and 0 columns (presolve time = 21s)...
+Presolve removed 0 rows and 0 columns (presolve time = 32s)...
+Presolve removed 0 rows and 0 columns (presolve time = 44s)...
+Presolve removed 0 rows and 0 columns (presolve time = 56s)...
+Presolve removed 0 rows and 0 columns (presolve time = 72s)...
+Presolve removed 0 rows and 0 columns (presolve time = 87s)...
+Presolve removed 0 rows and 0 columns (presolve time = 90s)...
+Presolve removed 0 rows and 0 columns (presolve time = 114s)...
+Presolve removed 0 rows and 0 columns (presolve time = 127s)...
+Presolve removed 0 rows and 0 columns (presolve time = 139s)...
+Presolve removed 0 rows and 0 columns (presolve time = 151s)...
+Presolve removed 0 rows and 0 columns (presolve time = 155s)...
+Presolve removed 0 rows and 0 columns (presolve time = 160s)...
+Presolve removed 0 rows and 0 columns (presolve time = 168s)...
+Presolve removed 0 rows and 0 columns (presolve time = 170s)...
+Presolve removed 0 rows and 0 columns (presolve time = 175s)...
+Presolve removed 0 rows and 0 columns (presolve time = 180s)...
+Presolve removed 0 rows and 0 columns (presolve time = 185s)...
+Presolve removed 0 rows and 0 columns (presolve time = 190s)...
+Presolve removed 0 rows and 0 columns (presolve time = 195s)...
+Presolve removed 0 rows and 0 columns (presolve time = 200s)...
+Presolve removed 0 rows and 0 columns (presolve time = 217s)...
+Presolve removed 0 rows and 0 columns (presolve time = 220s)...
+Presolve removed 0 rows and 0 columns (presolve time = 226s)...
+Presolve removed 0 rows and 0 columns (presolve time = 241s)...
+Presolve removed 0 rows and 0 columns (presolve time = 245s)...
+Presolve removed 0 rows and 0 columns (presolve time = 250s)...
+Presolve removed 0 rows and 0 columns (presolve time = 255s)...
+Presolve removed 0 rows and 0 columns (presolve time = 260s)...
+Presolve removed 0 rows and 0 columns (presolve time = 265s)...
+Presolve removed 0 rows and 0 columns (presolve time = 270s)...
+Presolve removed 0 rows and 0 columns (presolve time = 275s)...
+Presolve removed 0 rows and 0 columns (presolve time = 280s)...
+Presolve removed 0 rows and 0 columns (presolve time = 296s)...
+Presolve removed 0 rows and 0 columns (presolve time = 301s)...
+Presolve removed 0 rows and 0 columns (presolve time = 322s)...
+Presolve removed 0 rows and 0 columns (presolve time = 339s)...
+Presolve time: 338.80s
+Presolved: 718000 rows, 64620 columns, 114536796 nonzeros
+Variable types: 0 continuous, 64620 integer (64620 binary)
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0   -0.0000000e+00   0.000000e+00   7.657000e+03    408s
+     194    5.5806329e+03   0.000000e+00   0.000000e+00    408s
+     194    5.5806329e+03   0.000000e+00   0.000000e+00    408s
+
+Use crossover to convert LP symmetric solution to basic solution...
+
+Root crossover log...
+
+  676356 variables added to crossover basis                      427s
+  682746 variables added to crossover basis                      430s
+  684156 variables added to crossover basis                      435s
+  684846 variables added to crossover basis                      440s
+  685476 variables added to crossover basis                      445s
+  686046 variables added to crossover basis                      450s
+  686376 variables added to crossover basis                      455s
+  686616 variables added to crossover basis                      460s
+  686826 variables added to crossover basis                      465s
+  687126 variables added to crossover basis                      470s
+  687456 variables added to crossover basis                      475s
+  687906 variables added to crossover basis                      480s
+  688416 variables added to crossover basis                      485s
+  688776 variables added to crossover basis                      490s
+  689046 variables added to crossover basis                      495s
+  689256 variables added to crossover basis                      500s
+  689436 variables added to crossover basis                      505s
+  689616 variables added to crossover basis                      510s
+  689766 variables added to crossover basis                      515s
+  689916 variables added to crossover basis                      520s
+  690066 variables added to crossover basis                      526s
+  690186 variables added to crossover basis                      530s
+  690306 variables added to crossover basis                      535s
+  690426 variables added to crossover basis                      540s
+  690546 variables added to crossover basis                      545s
+  690666 variables added to crossover basis                      551s
+  690786 variables added to crossover basis                      557s
+  690876 variables added to crossover basis                      561s
+  690966 variables added to crossover basis                      565s
+  691056 variables added to crossover basis                      570s
+  691176 variables added to crossover basis                      576s
+  691266 variables added to crossover basis                      581s
+  691356 variables added to crossover basis                      586s
+  691446 variables added to crossover basis                      591s
+  691536 variables added to crossover basis                      597s
+  691596 variables added to crossover basis                      600s
+  691686 variables added to crossover basis                      606s
+  691776 variables added to crossover basis                      611s
+  691866 variables added to crossover basis                      617s
+  691926 variables added to crossover basis                      621s
+  692016 variables added to crossover basis                      627s
+  692076 variables added to crossover basis                      631s
+  692166 variables added to crossover basis                      637s
+  692226 variables added to crossover basis                      641s
+  692316 variables added to crossover basis                      647s
+  692376 variables added to crossover basis                      651s
+  692436 variables added to crossover basis                      655s
+  692526 variables added to crossover basis                      662s
+  692586 variables added to crossover basis                      666s
+  692646 variables added to crossover basis                      671s
+  692706 variables added to crossover basis                      675s
+  692796 variables added to crossover basis                      682s
+  692856 variables added to crossover basis                      687s
+  692916 variables added to crossover basis                      692s
+  692976 variables added to crossover basis                      696s
+  693036 variables added to crossover basis                      701s
+  693096 variables added to crossover basis                      706s
+  693156 variables added to crossover basis                      711s
+  693216 variables added to crossover basis                      716s
+  693276 variables added to crossover basis                      721s
+  693336 variables added to crossover basis                      726s
+  693396 variables added to crossover basis                      731s
+  693456 variables added to crossover basis                      736s
+  693516 variables added to crossover basis                      741s
+  693576 variables added to crossover basis                      746s
+  693636 variables added to crossover basis                      751s
+  693696 variables added to crossover basis                      756s
+  693786 variables added to crossover basis                      761s
+  693846 variables added to crossover basis                      765s
+  693936 variables added to crossover basis                      772s
+  693996 variables added to crossover basis                      777s
+  694056 variables added to crossover basis                      780s
+  694146 variables added to crossover basis                      786s
+  694206 variables added to crossover basis                      791s
+  694266 variables added to crossover basis                      796s
+  694326 variables added to crossover basis                      801s
+  694386 variables added to crossover basis                      805s
+  694476 variables added to crossover basis                      812s
+  694536 variables added to crossover basis                      817s
+  694596 variables added to crossover basis                      822s
+  694626 variables added to crossover basis                      825s
+  694686 variables added to crossover basis                      831s
+  694746 variables added to crossover basis                      836s
+  694806 variables added to crossover basis                      841s
+  694866 variables added to crossover basis                      846s
+  694926 variables added to crossover basis                      851s
+  694986 variables added to crossover basis                      857s
+  695046 variables added to crossover basis                      863s
+  695076 variables added to crossover basis                      866s
+  695136 variables added to crossover basis                      872s
+  695196 variables added to crossover basis                      878s
+  695226 variables added to crossover basis                      881s
+  695286 variables added to crossover basis                      887s
+  695346 variables added to crossover basis                      893s
+  695376 variables added to crossover basis                      897s
+  695436 variables added to crossover basis                      903s
+  695466 variables added to crossover basis                      906s
+  695526 variables added to crossover basis                      912s
+  695556 variables added to crossover basis                      915s
+  695616 variables added to crossover basis                      923s
+  695646 variables added to crossover basis                      927s
+  695706 variables added to crossover basis                      933s
+  695736 variables added to crossover basis                      936s
+  695796 variables added to crossover basis                      943s
+  695826 variables added to crossover basis                      945s
+  695886 variables added to crossover basis                      952s
+  695916 variables added to crossover basis                      956s
+  695976 variables added to crossover basis                      963s
+  696006 variables added to crossover basis                      967s
+  696036 variables added to crossover basis                      970s
+  696096 variables added to crossover basis                      977s
+  696126 variables added to crossover basis                      981s
+  696186 variables added to crossover basis                      987s
+  696216 variables added to crossover basis                      991s
+  696246 variables added to crossover basis                      995s
+  696306 variables added to crossover basis                     1003s
+  696336 variables added to crossover basis                     1007s
+  696366 variables added to crossover basis                     1010s
+  696426 variables added to crossover basis                     1017s
+  696456 variables added to crossover basis                     1021s
+  696516 variables added to crossover basis                     1029s
+  696546 variables added to crossover basis                     1033s
+  696576 variables added to crossover basis                     1037s
+  696606 variables added to crossover basis                     1041s
+  696666 variables added to crossover basis                     1049s
+  696696 variables added to crossover basis                     1053s
+  696726 variables added to crossover basis                     1056s
+  696756 variables added to crossover basis                     1060s
+  696816 variables added to crossover basis                     1068s
+  696846 variables added to crossover basis                     1072s
+  696876 variables added to crossover basis                     1076s
+  696936 variables added to crossover basis                     1084s
+  696966 variables added to crossover basis                     1088s
+  696996 variables added to crossover basis                     1093s
+  697026 variables added to crossover basis                     1097s
+  697056 variables added to crossover basis                     1101s
+  697116 variables added to crossover basis                     1108s
+  697146 variables added to crossover basis                     1112s
+  697176 variables added to crossover basis                     1116s
+  697206 variables added to crossover basis                     1120s
+  697266 variables added to crossover basis                     1129s
+  697296 variables added to crossover basis                     1133s
+  697326 variables added to crossover basis                     1138s
+  697356 variables added to crossover basis                     1142s
+  697386 variables added to crossover basis                     1146s
+  697446 variables added to crossover basis                     1154s
+  697476 variables added to crossover basis                     1158s
+  697506 variables added to crossover basis                     1162s
+  697536 variables added to crossover basis                     1166s
+  697566 variables added to crossover basis                     1171s
+  697596 variables added to crossover basis                     1176s
+  697626 variables added to crossover basis                     1180s
+  697686 variables added to crossover basis                     1189s
+  697716 variables added to crossover basis                     1193s
+  697746 variables added to crossover basis                     1197s
+  697776 variables added to crossover basis                     1202s
+  697806 variables added to crossover basis                     1206s
+  697836 variables added to crossover basis                     1210s
+  697866 variables added to crossover basis                     1215s
+  697926 variables added to crossover basis                     1225s
+  697956 variables added to crossover basis                     1229s
+  697986 variables added to crossover basis                     1234s
+  698016 variables added to crossover basis                     1238s
+  698046 variables added to crossover basis                     1243s
+  698076 variables added to crossover basis                     1247s
+  698106 variables added to crossover basis                     1252s
+  698136 variables added to crossover basis                     1256s
+  698166 variables added to crossover basis                     1260s
+  698196 variables added to crossover basis                     1265s
+  698226 variables added to crossover basis                     1270s
+  698286 variables added to crossover basis                     1280s
+  698316 variables added to crossover basis                     1285s
+  698346 variables added to crossover basis                     1290s
+  698376 variables added to crossover basis                     1294s
+  698406 variables added to crossover basis                     1299s
+  698436 variables added to crossover basis                     1304s
+  698466 variables added to crossover basis                     1309s
+  698496 variables added to crossover basis                     1313s
+  698526 variables added to crossover basis                     1318s
+  698556 variables added to crossover basis                     1323s
+  698586 variables added to crossover basis                     1329s
+  698616 variables added to crossover basis                     1334s
+  698646 variables added to crossover basis                     1339s
+  698676 variables added to crossover basis                     1344s
+  698706 variables added to crossover basis                     1349s
+  698736 variables added to crossover basis                     1354s
+  698766 variables added to crossover basis                     1359s
+  698796 variables added to crossover basis                     1364s
+  698826 variables added to crossover basis                     1369s
+  698856 variables added to crossover basis                     1374s
+  698886 variables added to crossover basis                     1380s
+  698916 variables added to crossover basis                     1385s
+  698946 variables added to crossover basis                     1391s
+  698976 variables added to crossover basis                     1396s
+  699006 variables added to crossover basis                     1401s
+  699036 variables added to crossover basis                     1406s
+  699066 variables added to crossover basis                     1411s
+  699096 variables added to crossover basis                     1416s
+  699126 variables added to crossover basis                     1421s
+  699156 variables added to crossover basis                     1426s
+  699186 variables added to crossover basis                     1432s
+  699216 variables added to crossover basis                     1437s
+  699246 variables added to crossover basis                     1443s
+  699276 variables added to crossover basis                     1448s
+  699306 variables added to crossover basis                     1453s
+  699336 variables added to crossover basis                     1459s
+  699366 variables added to crossover basis                     1464s
+  699396 variables added to crossover basis                     1469s
+  699426 variables added to crossover basis                     1474s
+  699456 variables added to crossover basis                     1480s
+  699486 variables added to crossover basis                     1485s
+  699516 variables added to crossover basis                     1490s
+  699546 variables added to crossover basis                     1496s
+  699576 variables added to crossover basis                     1501s
+  699606 variables added to crossover basis                     1507s
+  699636 variables added to crossover basis                     1513s
+  699666 variables added to crossover basis                     1519s
+  699696 variables added to crossover basis                     1524s
+  699726 variables added to crossover basis                     1529s
+  699756 variables added to crossover basis                     1535s
+  699786 variables added to crossover basis                     1541s
+  699816 variables added to crossover basis                     1546s
+  699846 variables added to crossover basis                     1551s
+  699876 variables added to crossover basis                     1557s
+  699906 variables added to crossover basis                     1563s
+  699936 variables added to crossover basis                     1569s
+  699966 variables added to crossover basis                     1575s
+  699996 variables added to crossover basis                     1581s
+  700026 variables added to crossover basis                     1586s
+  700056 variables added to crossover basis                     1592s
+  700086 variables added to crossover basis                     1597s
+  700116 variables added to crossover basis                     1603s
+  700146 variables added to crossover basis                     1609s
+  700176 variables added to crossover basis                     1614s
+  700206 variables added to crossover basis                     1620s
+  700236 variables added to crossover basis                     1627s
+  700266 variables added to crossover basis                     1633s
+  700296 variables added to crossover basis                     1639s
+  700326 variables added to crossover basis                     1644s
+  700356 variables added to crossover basis                     1650s
+  700386 variables added to crossover basis                     1656s
+  700416 variables added to crossover basis                     1662s
+  700446 variables added to crossover basis                     1668s
+  700476 variables added to crossover basis                     1674s
+  700506 variables added to crossover basis                     1679s
+  700536 variables added to crossover basis                     1686s
+  700566 variables added to crossover basis                     1692s
+  700596 variables added to crossover basis                     1698s
+  700626 variables added to crossover basis                     1704s
+  700656 variables added to crossover basis                     1711s
+  700686 variables added to crossover basis                     1717s
+  700716 variables added to crossover basis                     1722s
+  700746 variables added to crossover basis                     1728s
+  700776 variables added to crossover basis                     1734s
+  700806 variables added to crossover basis                     1740s
+  700836 variables added to crossover basis                     1746s
+  700866 variables added to crossover basis                     1752s
+  700896 variables added to crossover basis                     1758s
+  700926 variables added to crossover basis                     1765s
+  700956 variables added to crossover basis                     1771s
+  700986 variables added to crossover basis                     1777s
+  701016 variables added to crossover basis                     1784s
+  701046 variables added to crossover basis                     1790s
+  701076 variables added to crossover basis                     1796s
+  701106 variables added to crossover basis                     1802s
+  701136 variables added to crossover basis                     1809s
+  701166 variables added to crossover basis                     1815s
+  701196 variables added to crossover basis                     1821s
+  701226 variables added to crossover basis                     1827s
+  701256 variables added to crossover basis                     1834s
+  701286 variables added to crossover basis                     1841s
+  701316 variables added to crossover basis                     1848s
+  701346 variables added to crossover basis                     1854s
+  701376 variables added to crossover basis                     1861s
+  701406 variables added to crossover basis                     1867s
+  701436 variables added to crossover basis                     1874s
+  701466 variables added to crossover basis                     1880s
+  701496 variables added to crossover basis                     1887s
+  701526 variables added to crossover basis                     1893s
+  701556 variables added to crossover basis                     1900s
+  701586 variables added to crossover basis                     1907s
+  701616 variables added to crossover basis                     1914s
+  701646 variables added to crossover basis                     1920s
+  701676 variables added to crossover basis                     1927s
+  701706 variables added to crossover basis                     1933s
+  701736 variables added to crossover basis                     1940s
+  701766 variables added to crossover basis                     1946s
+  701796 variables added to crossover basis                     1953s
+  701826 variables added to crossover basis                     1959s
+  701856 variables added to crossover basis                     1966s
+  701886 variables added to crossover basis                     1972s
+  701916 variables added to crossover basis                     1979s
+  701946 variables added to crossover basis                     1986s
+  701976 variables added to crossover basis                     1992s
+  702006 variables added to crossover basis                     1999s
+  702036 variables added to crossover basis                     2006s
+  702066 variables added to crossover basis                     2013s
+  702096 variables added to crossover basis                     2019s
+  702126 variables added to crossover basis                     2026s
+  702156 variables added to crossover basis                     2033s
+  702186 variables added to crossover basis                     2040s
+  702216 variables added to crossover basis                     2046s
+  702246 variables added to crossover basis                     2053s
+  702276 variables added to crossover basis                     2060s
+  702306 variables added to crossover basis                     2067s
+  702336 variables added to crossover basis                     2074s
+  702366 variables added to crossover basis                     2080s
+  702396 variables added to crossover basis                     2087s
+  702426 variables added to crossover basis                     2094s
+  702456 variables added to crossover basis                     2102s
+  702486 variables added to crossover basis                     2108s
+  702516 variables added to crossover basis                     2115s
+  702546 variables added to crossover basis                     2122s
+  702576 variables added to crossover basis                     2129s
+  702606 variables added to crossover basis                     2136s
+  702636 variables added to crossover basis                     2143s
+  702666 variables added to crossover basis                     2150s
+  702696 variables added to crossover basis                     2158s
+  702726 variables added to crossover basis                     2165s
+  702756 variables added to crossover basis                     2172s
+  702786 variables added to crossover basis                     2179s
+  702816 variables added to crossover basis                     2186s
+  702846 variables added to crossover basis                     2193s
+  702876 variables added to crossover basis                     2200s
+  702906 variables added to crossover basis                     2208s
+  702936 variables added to crossover basis                     2215s
+  702966 variables added to crossover basis                     2222s
+  702996 variables added to crossover basis                     2230s
+  703026 variables added to crossover basis                     2237s
+  703056 variables added to crossover basis                     2244s
+  703086 variables added to crossover basis                     2251s
+  703116 variables added to crossover basis                     2259s
+  703146 variables added to crossover basis                     2266s
+  703176 variables added to crossover basis                     2273s
+  703206 variables added to crossover basis                     2279s
+  703236 variables added to crossover basis                     2287s
+  703266 variables added to crossover basis                     2294s
+  703296 variables added to crossover basis                     2302s
+  703326 variables added to crossover basis                     2309s
+  703356 variables added to crossover basis                     2316s
+  703386 variables added to crossover basis                     2323s
+  703416 variables added to crossover basis                     2330s
+  703446 variables added to crossover basis                     2337s
+  703476 variables added to crossover basis                     2345s
+  703506 variables added to crossover basis                     2352s
+  703536 variables added to crossover basis                     2360s
+  703566 variables added to crossover basis                     2367s
+  703596 variables added to crossover basis                     2374s
+  703626 variables added to crossover basis                     2382s
+  703656 variables added to crossover basis                     2389s
+  703686 variables added to crossover basis                     2397s
+  703716 variables added to crossover basis                     2404s
+  703746 variables added to crossover basis                     2412s
+  703776 variables added to crossover basis                     2420s
+  703806 variables added to crossover basis                     2428s
+  703836 variables added to crossover basis                     2436s
+  703866 variables added to crossover basis                     2443s
+  703896 variables added to crossover basis                     2451s
+  703926 variables added to crossover basis                     2458s
+  703956 variables added to crossover basis                     2465s
+  703986 variables added to crossover basis                     2473s
+  704016 variables added to crossover basis                     2481s
+  704046 variables added to crossover basis                     2489s
+  704076 variables added to crossover basis                     2497s
+  704106 variables added to crossover basis                     2505s
+  704136 variables added to crossover basis                     2512s
+  704166 variables added to crossover basis                     2520s
+  704196 variables added to crossover basis                     2528s
+  704226 variables added to crossover basis                     2535s
+  704256 variables added to crossover basis                     2543s
+  704286 variables added to crossover basis                     2551s
+  704316 variables added to crossover basis                     2559s
+  704346 variables added to crossover basis                     2567s
+  704376 variables added to crossover basis                     2575s
+  704406 variables added to crossover basis                     2583s
+  704436 variables added to crossover basis                     2591s
+  704466 variables added to crossover basis                     2599s
+  704496 variables added to crossover basis                     2606s
+  704526 variables added to crossover basis                     2614s
+  704556 variables added to crossover basis                     2622s
+  704586 variables added to crossover basis                     2630s
+  704616 variables added to crossover basis                     2638s
+  704646 variables added to crossover basis                     2646s
+  704676 variables added to crossover basis                     2654s
+  704706 variables added to crossover basis                     2662s
+  704736 variables added to crossover basis                     2670s
+  704766 variables added to crossover basis                     2678s
+  704796 variables added to crossover basis                     2686s
+  704826 variables added to crossover basis                     2694s
+  704856 variables added to crossover basis                     2703s
+  704886 variables added to crossover basis                     2711s
+  704916 variables added to crossover basis                     2719s
+  704946 variables added to crossover basis                     2727s
+  704976 variables added to crossover basis                     2735s
+  705006 variables added to crossover basis                     2743s
+  705036 variables added to crossover basis                     2751s
+  705066 variables added to crossover basis                     2759s
+  705096 variables added to crossover basis                     2767s
+  705126 variables added to crossover basis                     2776s
+  705156 variables added to crossover basis                     2784s
+  705186 variables added to crossover basis                     2792s
+  705216 variables added to crossover basis                     2800s
+  705246 variables added to crossover basis                     2808s
+  705276 variables added to crossover basis                     2816s
+  705306 variables added to crossover basis                     2824s
+  705336 variables added to crossover basis                     2832s
+  705366 variables added to crossover basis                     2840s
+  705396 variables added to crossover basis                     2849s
+  705426 variables added to crossover basis                     2858s
+  705456 variables added to crossover basis                     2866s
+  705486 variables added to crossover basis                     2874s
+  705516 variables added to crossover basis                     2882s
+  705546 variables added to crossover basis                     2891s
+  705576 variables added to crossover basis                     2898s
+  705606 variables added to crossover basis                     2907s
+  705636 variables added to crossover basis                     2916s
+  705666 variables added to crossover basis                     2924s
+  705696 variables added to crossover basis                     2933s
+  705726 variables added to crossover basis                     2941s
+  705756 variables added to crossover basis                     2949s
+  705786 variables added to crossover basis                     2957s
+  705816 variables added to crossover basis                     2965s
+  705846 variables added to crossover basis                     2974s
+  705876 variables added to crossover basis                     2983s
+  705906 variables added to crossover basis                     2991s
+  705936 variables added to crossover basis                     2999s
+  705966 variables added to crossover basis                     3008s
+  705996 variables added to crossover basis                     3016s
+  706026 variables added to crossover basis                     3024s
+  706056 variables added to crossover basis                     3033s
+  706086 variables added to crossover basis                     3042s
+  706116 variables added to crossover basis                     3050s
+  706146 variables added to crossover basis                     3059s
+  706176 variables added to crossover basis                     3067s
+  706206 variables added to crossover basis                     3075s
+  706236 variables added to crossover basis                     3083s
+  706266 variables added to crossover basis                     3092s
+  706296 variables added to crossover basis                     3101s
+  706326 variables added to crossover basis                     3110s
+  706356 variables added to crossover basis                     3118s
+  706386 variables added to crossover basis                     3126s
+  706416 variables added to crossover basis                     3135s
+  706446 variables added to crossover basis                     3143s
+  706476 variables added to crossover basis                     3152s
+  706506 variables added to crossover basis                     3161s
+  706536 variables added to crossover basis                     3169s
+  706566 variables added to crossover basis                     3178s
+  706596 variables added to crossover basis                     3186s
+  706626 variables added to crossover basis                     3195s
+  706656 variables added to crossover basis                     3204s
+  706686 variables added to crossover basis                     3212s
+  706716 variables added to crossover basis                     3221s
+  706746 variables added to crossover basis                     3230s
+  706776 variables added to crossover basis                     3238s
+  706806 variables added to crossover basis                     3247s
+  706836 variables added to crossover basis                     3255s
+  706866 variables added to crossover basis                     3263s
+  706896 variables added to crossover basis                     3272s
+  706926 variables added to crossover basis                     3281s
+  706956 variables added to crossover basis                     3290s
+  706986 variables added to crossover basis                     3298s
+  707016 variables added to crossover basis                     3307s
+  707046 variables added to crossover basis                     3316s
+  707076 variables added to crossover basis                     3325s
+  707106 variables added to crossover basis                     3333s
+  707136 variables added to crossover basis                     3342s
+  707166 variables added to crossover basis                     3350s
+  707196 variables added to crossover basis                     3359s
+  707226 variables added to crossover basis                     3368s
+  707256 variables added to crossover basis                     3376s
+  707286 variables added to crossover basis                     3385s
+  707316 variables added to crossover basis                     3394s
+  707346 variables added to crossover basis                     3403s
+  707376 variables added to crossover basis                     3412s
+  707406 variables added to crossover basis                     3420s
+  707436 variables added to crossover basis                     3429s
+  707466 variables added to crossover basis                     3437s
+  707496 variables added to crossover basis                     3446s
+  707526 variables added to crossover basis                     3454s
+  707556 variables added to crossover basis                     3463s
+  707586 variables added to crossover basis                     3472s
+  707616 variables added to crossover basis                     3481s
+  707646 variables added to crossover basis                     3490s
+  707676 variables added to crossover basis                     3499s
+  707706 variables added to crossover basis                     3507s
+  707736 variables added to crossover basis                     3516s
+  707766 variables added to crossover basis                     3525s
+  707796 variables added to crossover basis                     3534s
+  707826 variables added to crossover basis                     3543s
+  707856 variables added to crossover basis                     3552s
+  707886 variables added to crossover basis                     3561s
+  707916 variables added to crossover basis                     3570s
+  707946 variables added to crossover basis                     3579s
+  707976 variables added to crossover basis                     3588s
+  708006 variables added to crossover basis                     3597s
+  708036 variables added to crossover basis                     3605s
+  708066 variables added to crossover basis                     3615s
+  708096 variables added to crossover basis                     3624s
+  708126 variables added to crossover basis                     3633s
+  708156 variables added to crossover basis                     3642s
+  708186 variables added to crossover basis                     3651s
+  708216 variables added to crossover basis                     3660s
+  708246 variables added to crossover basis                     3668s
+  708276 variables added to crossover basis                     3677s
+  708306 variables added to crossover basis                     3686s
+  708336 variables added to crossover basis                     3695s
+  708366 variables added to crossover basis                     3704s
+  708396 variables added to crossover basis                     3713s
+  708426 variables added to crossover basis                     3722s
+  708456 variables added to crossover basis                     3731s
+  708486 variables added to crossover basis                     3740s
+  708516 variables added to crossover basis                     3749s
+  708546 variables added to crossover basis                     3758s
+  708576 variables added to crossover basis                     3768s
+  708606 variables added to crossover basis                     3777s
+  708636 variables added to crossover basis                     3786s
+  708666 variables added to crossover basis                     3795s
+  708696 variables added to crossover basis                     3804s
+  708726 variables added to crossover basis                     3813s
+  708756 variables added to crossover basis                     3823s
+  708786 variables added to crossover basis                     3832s
+  708816 variables added to crossover basis                     3841s
+  708846 variables added to crossover basis                     3851s
+  708876 variables added to crossover basis                     3860s
+  708906 variables added to crossover basis                     3869s
+  708936 variables added to crossover basis                     3878s
+  708966 variables added to crossover basis                     3887s
+  708996 variables added to crossover basis                     3896s
+  709026 variables added to crossover basis                     3905s
+  709056 variables added to crossover basis                     3914s
+  709086 variables added to crossover basis                     3923s
+  709116 variables added to crossover basis                     3933s
+  709146 variables added to crossover basis                     3942s
+  709176 variables added to crossover basis                     3952s
+  709206 variables added to crossover basis                     3961s
+  709236 variables added to crossover basis                     3970s
+  709266 variables added to crossover basis                     3979s
+  709296 variables added to crossover basis                     3989s
+  709326 variables added to crossover basis                     3998s
+  709356 variables added to crossover basis                     4007s
+  709386 variables added to crossover basis                     4016s
+  709416 variables added to crossover basis                     4026s
+  709446 variables added to crossover basis                     4035s
+  709476 variables added to crossover basis                     4045s
+  709506 variables added to crossover basis                     4054s
+  709536 variables added to crossover basis                     4064s
+  709566 variables added to crossover basis                     4073s
+  709596 variables added to crossover basis                     4083s
+  709626 variables added to crossover basis                     4092s
+  709656 variables added to crossover basis                     4101s
+  709686 variables added to crossover basis                     4110s
+  709716 variables added to crossover basis                     4120s
+  709746 variables added to crossover basis                     4129s
+  709776 variables added to crossover basis                     4139s
+  709806 variables added to crossover basis                     4149s
+  709836 variables added to crossover basis                     4158s
+  709866 variables added to crossover basis                     4168s
+  709896 variables added to crossover basis                     4177s
+  709926 variables added to crossover basis                     4186s
+  709956 variables added to crossover basis                     4196s
+  709986 variables added to crossover basis                     4206s
+  710016 variables added to crossover basis                     4215s
+  710046 variables added to crossover basis                     4225s
+  710076 variables added to crossover basis                     4234s
+  710106 variables added to crossover basis                     4244s
+  710136 variables added to crossover basis                     4253s
+  710166 variables added to crossover basis                     4263s
+  710196 variables added to crossover basis                     4273s
+  710226 variables added to crossover basis                     4282s
+  710256 variables added to crossover basis                     4292s
+  710286 variables added to crossover basis                     4302s
+  710316 variables added to crossover basis                     4311s
+  710346 variables added to crossover basis                     4321s
+  710376 variables added to crossover basis                     4330s
+  710406 variables added to crossover basis                     4339s
+  710436 variables added to crossover basis                     4349s
+  710466 variables added to crossover basis                     4359s
+  710496 variables added to crossover basis                     4369s
+  710526 variables added to crossover basis                     4378s
+  710556 variables added to crossover basis                     4388s
+  710586 variables added to crossover basis                     4398s
+  710616 variables added to crossover basis                     4408s
+  710646 variables added to crossover basis                     4417s
+  710676 variables added to crossover basis                     4427s
+  710706 variables added to crossover basis                     4437s
+  710736 variables added to crossover basis                     4446s
+  710766 variables added to crossover basis                     4456s
+  710796 variables added to crossover basis                     4465s
+  710826 variables added to crossover basis                     4475s
+  710856 variables added to crossover basis                     4485s
+  710886 variables added to crossover basis                     4494s
+  710916 variables added to crossover basis                     4504s
+  710946 variables added to crossover basis                     4514s
+  710976 variables added to crossover basis                     4524s
+  711006 variables added to crossover basis                     4534s
+  711036 variables added to crossover basis                     4544s
+  711066 variables added to crossover basis                     4554s
+  711096 variables added to crossover basis                     4563s
+  711126 variables added to crossover basis                     4573s
+  711156 variables added to crossover basis                     4582s
+  711186 variables added to crossover basis                     4592s
+  711216 variables added to crossover basis                     4602s
+  711246 variables added to crossover basis                     4612s
+  711276 variables added to crossover basis                     4622s
+  711306 variables added to crossover basis                     4632s
+  711336 variables added to crossover basis                     4642s
+  711366 variables added to crossover basis                     4651s
+  711396 variables added to crossover basis                     4661s
+  711426 variables added to crossover basis                     4671s
+  711456 variables added to crossover basis                     4681s
+  711486 variables added to crossover basis                     4691s
+  711516 variables added to crossover basis                     4701s
+  711546 variables added to crossover basis                     4710s
+  711576 variables added to crossover basis                     4720s
+  711606 variables added to crossover basis                     4730s
+  711636 variables added to crossover basis                     4740s
+  711666 variables added to crossover basis                     4750s
+  711696 variables added to crossover basis                     4760s
+  711726 variables added to crossover basis                     4770s
+  711756 variables added to crossover basis                     4780s
+  711786 variables added to crossover basis                     4790s
+  711816 variables added to crossover basis                     4800s
+  711846 variables added to crossover basis                     4809s
+  711876 variables added to crossover basis                     4819s
+  711906 variables added to crossover basis                     4829s
+  711936 variables added to crossover basis                     4839s
+  711966 variables added to crossover basis                     4849s
+  711996 variables added to crossover basis                     4859s
+  712026 variables added to crossover basis                     4870s
+  712056 variables added to crossover basis                     4879s
+  712086 variables added to crossover basis                     4889s
+  712116 variables added to crossover basis                     4899s
+  712146 variables added to crossover basis                     4909s
+  712176 variables added to crossover basis                     4919s
+  712206 variables added to crossover basis                     4929s
+  712236 variables added to crossover basis                     4939s
+  712266 variables added to crossover basis                     4949s
+  712296 variables added to crossover basis                     4959s
+  712326 variables added to crossover basis                     4969s
+  712356 variables added to crossover basis                     4980s
+  712386 variables added to crossover basis                     4990s
+  712416 variables added to crossover basis                     5000s
+  712446 variables added to crossover basis                     5010s
+  712476 variables added to crossover basis                     5020s
+  712506 variables added to crossover basis                     5030s
+  712536 variables added to crossover basis                     5040s
+  712566 variables added to crossover basis                     5050s
+  712596 variables added to crossover basis                     5060s
+  712626 variables added to crossover basis                     5070s
+  712656 variables added to crossover basis                     5080s
+  712686 variables added to crossover basis                     5090s
+  712716 variables added to crossover basis                     5100s
+  712746 variables added to crossover basis                     5111s
+  712776 variables added to crossover basis                     5121s
+  712806 variables added to crossover basis                     5131s
+  712836 variables added to crossover basis                     5141s
+  712866 variables added to crossover basis                     5151s
+  712896 variables added to crossover basis                     5161s
+  712926 variables added to crossover basis                     5171s
+  712956 variables added to crossover basis                     5181s
+  712986 variables added to crossover basis                     5192s
+  713016 variables added to crossover basis                     5202s
+  713046 variables added to crossover basis                     5212s
+  713076 variables added to crossover basis                     5222s
+  713106 variables added to crossover basis                     5233s
+  713136 variables added to crossover basis                     5243s
+  713166 variables added to crossover basis                     5253s
+  713196 variables added to crossover basis                     5263s
+  713226 variables added to crossover basis                     5274s
+  713256 variables added to crossover basis                     5283s
+  713286 variables added to crossover basis                     5293s
+  713316 variables added to crossover basis                     5304s
+  713346 variables added to crossover basis                     5314s
+  713376 variables added to crossover basis                     5324s
+  713406 variables added to crossover basis                     5334s
+  713436 variables added to crossover basis                     5345s
+  713466 variables added to crossover basis                     5355s
+  713496 variables added to crossover basis                     5365s
+  713526 variables added to crossover basis                     5375s
+  713556 variables added to crossover basis                     5385s
+  713586 variables added to crossover basis                     5396s
+  713616 variables added to crossover basis                     5406s
+  713646 variables added to crossover basis                     5416s
+  713676 variables added to crossover basis                     5426s
+  713706 variables added to crossover basis                     5436s
+  713736 variables added to crossover basis                     5446s
+  713766 variables added to crossover basis                     5457s
+  713796 variables added to crossover basis                     5467s
+  713826 variables added to crossover basis                     5478s
+  713856 variables added to crossover basis                     5488s
+  713886 variables added to crossover basis                     5499s
+  713916 variables added to crossover basis                     5509s
+  713946 variables added to crossover basis                     5519s
+  713976 variables added to crossover basis                     5529s
+  714006 variables added to crossover basis                     5540s
+  714036 variables added to crossover basis                     5550s
+  714066 variables added to crossover basis                     5560s
+  714096 variables added to crossover basis                     5571s
+  714126 variables added to crossover basis                     5581s
+  714156 variables added to crossover basis                     5591s
+  714186 variables added to crossover basis                     5602s
+  714216 variables added to crossover basis                     5612s
+  714246 variables added to crossover basis                     5622s
+  714276 variables added to crossover basis                     5633s
+  714306 variables added to crossover basis                     5643s
+  714336 variables added to crossover basis                     5653s
+  714366 variables added to crossover basis                     5664s
+  714396 variables added to crossover basis                     5674s
+  714426 variables added to crossover basis                     5684s
+  714456 variables added to crossover basis                     5694s
+  714486 variables added to crossover basis                     5705s
+  714516 variables added to crossover basis                     5715s
+  714546 variables added to crossover basis                     5726s
+  714576 variables added to crossover basis                     5736s
+  714606 variables added to crossover basis                     5747s
+  714636 variables added to crossover basis                     5758s
+  714666 variables added to crossover basis                     5768s
+  714696 variables added to crossover basis                     5778s
+  714726 variables added to crossover basis                     5788s
+  714756 variables added to crossover basis                     5799s
+  714786 variables added to crossover basis                     5809s
+  714816 variables added to crossover basis                     5820s
+  714846 variables added to crossover basis                     5830s
+  714876 variables added to crossover basis                     5841s
+  714906 variables added to crossover basis                     5851s
+  714936 variables added to crossover basis                     5861s
+  714966 variables added to crossover basis                     5872s
+  714996 variables added to crossover basis                     5882s
+  715026 variables added to crossover basis                     5892s
+  715056 variables added to crossover basis                     5903s
+  715086 variables added to crossover basis                     5913s
+  715116 variables added to crossover basis                     5924s
+  715146 variables added to crossover basis                     5934s
+  715176 variables added to crossover basis                     5945s
+  715206 variables added to crossover basis                     5955s
+  715236 variables added to crossover basis                     5966s
+  715266 variables added to crossover basis                     5976s
+  715296 variables added to crossover basis                     5987s
+  715326 variables added to crossover basis                     5998s
+  715356 variables added to crossover basis                     6008s
+  715386 variables added to crossover basis                     6018s
+  715416 variables added to crossover basis                     6029s
+  715446 variables added to crossover basis                     6039s
+  715476 variables added to crossover basis                     6050s
+  715506 variables added to crossover basis                     6060s
+  715536 variables added to crossover basis                     6071s
+  715566 variables added to crossover basis                     6081s
+  715596 variables added to crossover basis                     6092s
+  715626 variables added to crossover basis                     6102s
+  715656 variables added to crossover basis                     6113s
+  715686 variables added to crossover basis                     6123s
+  715716 variables added to crossover basis                     6134s
+  715746 variables added to crossover basis                     6144s
+  715776 variables added to crossover basis                     6154s
+  715806 variables added to crossover basis                     6165s
+  715836 variables added to crossover basis                     6175s
+  715866 variables added to crossover basis                     6186s
+  715896 variables added to crossover basis                     6196s
+  715926 variables added to crossover basis                     6207s
+  715956 variables added to crossover basis                     6218s
+  715986 variables added to crossover basis                     6228s
+  716016 variables added to crossover basis                     6239s
+  716046 variables added to crossover basis                     6250s
+  716076 variables added to crossover basis                     6260s
+  716106 variables added to crossover basis                     6271s
+  716136 variables added to crossover basis                     6281s
+  716166 variables added to crossover basis                     6292s
+  716196 variables added to crossover basis                     6302s
+  716226 variables added to crossover basis                     6312s
+  716256 variables added to crossover basis                     6323s
+  716286 variables added to crossover basis                     6334s
+  716316 variables added to crossover basis                     6344s
+  716346 variables added to crossover basis                     6355s
+  716376 variables added to crossover basis                     6365s
+  716406 variables added to crossover basis                     6376s
+  716436 variables added to crossover basis                     6386s
+  716466 variables added to crossover basis                     6397s
+  716496 variables added to crossover basis                     6407s
+  716526 variables added to crossover basis                     6418s
+  716556 variables added to crossover basis                     6428s
+  716586 variables added to crossover basis                     6439s
+  716616 variables added to crossover basis                     6450s
+  716646 variables added to crossover basis                     6460s
+  716676 variables added to crossover basis                     6471s
+  716706 variables added to crossover basis                     6482s
+  716736 variables added to crossover basis                     6492s
+  716766 variables added to crossover basis                     6503s
+  716796 variables added to crossover basis                     6514s
+  716826 variables added to crossover basis                     6524s
+  716856 variables added to crossover basis                     6535s
+  716886 variables added to crossover basis                     6545s
+  716916 variables added to crossover basis                     6556s
+  716946 variables added to crossover basis                     6567s
+  716976 variables added to crossover basis                     6577s
+  717006 variables added to crossover basis                     6588s
+  717036 variables added to crossover basis                     6599s
+  717066 variables added to crossover basis                     6609s
+  717096 variables added to crossover basis                     6620s
+  717126 variables added to crossover basis                     6630s
+  717156 variables added to crossover basis                     6641s
+  717186 variables added to crossover basis                     6651s
+  717216 variables added to crossover basis                     6662s
+  717246 variables added to crossover basis                     6672s
+  717276 variables added to crossover basis                     6683s
+  717306 variables added to crossover basis                     6694s
+  717336 variables added to crossover basis                     6704s
+  717366 variables added to crossover basis                     6715s
+  717396 variables added to crossover basis                     6726s
+  717426 variables added to crossover basis                     6736s
+  717456 variables added to crossover basis                     6747s
+  717486 variables added to crossover basis                     6758s
+  717516 variables added to crossover basis                     6768s
+  717546 variables added to crossover basis                     6779s
+  717576 variables added to crossover basis                     6790s
+  717606 variables added to crossover basis                     6800s
+  717636 variables added to crossover basis                     6811s
+  717666 variables added to crossover basis                     6822s
+  717696 variables added to crossover basis                     6833s
+  717726 variables added to crossover basis                     6843s
+  717756 variables added to crossover basis                     6854s
+  717786 variables added to crossover basis                     6865s
+  717816 variables added to crossover basis                     6875s
+  717846 variables added to crossover basis                     6886s
+  717876 variables added to crossover basis                     6896s
+  717906 variables added to crossover basis                     6907s
+  717936 variables added to crossover basis                     6917s
+  717966 variables added to crossover basis                     6928s
+  717996 variables added to crossover basis                     6938s
+
+       0 DPushes remaining with DInf 0.0000000e+00             11976s
+
+       0 PPushes remaining with PInf 0.0000000e+00             11982s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 2.8742120e-07  11986s
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+     197    5.5806329e+03   0.000000e+00   0.000000e+00  13446s
+Crossover time: 13036.98 seconds (25654.76 work units)
+
+Root relaxation: objective 5.580633e+03, 197 iterations, 13095.03 seconds (25696.39 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 5580.63289    0 41644 8595.00000 5580.63289  35.1%     - 14400s
+
+Explored 1 nodes (197 simplex iterations) in 14402.30 seconds (26788.83 work units)
+Thread count was 32 (of 32 available processors)
+
+Solution count 1: 8595 
+
+Time limit reached
+Best objective 8.595000000000e+03, best bound 5.581000000000e+03, gap 35.0669%
+
+User-callback calls 19131, time in user-callback 0.08 sec

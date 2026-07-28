@@ -1,0 +1,1650 @@
+{
+  "version": 1,
+  "timestamp": "2026-07-10T13:55:36.583077",
+  "n_satellites": 4468,
+  "obj_val": 4468.0,
+  "mip_gap": 0.19091316025067145,
+  "status_str": "Time limit",
+  "propagator": "Nominal_Propagator",
+  "bc_kg_m2": 80.0,
+  "cov": {
+    "T_window_s": 170.0,
+    "v_bo_km_s": 5.0,
+    "a_g": 10.0,
+    "intercept_alt_km": 200.0,
+    "min_elev_deg": 0.0
+  },
+  "sim": {
+    "horizon_s": 86044.0942896936,
+    "dt_s": 120.0057103064067,
+    "use_j2": false,
+    "use_drag": false,
+    "analysis_matrix_dtype": "uint8"
+  },
+  "targets": [
+    {
+      "name": "China target 0",
+      "lat_deg": 53.20018769978648,
+      "lon_deg": 123.40050924338618
+    },
+    {
+      "name": "China target 1",
+      "lat_deg": 52.079725519791374,
+      "lon_deg": 125.2095087900666
+    },
+    {
+      "name": "China target 2",
+      "lat_deg": 51.40118113437402,
+      "lon_deg": 122.28248603794952
+    },
+    {
+      "name": "China target 3",
+      "lat_deg": 50.986713002870964,
+      "lon_deg": 127.01850833669482
+    },
+    {
+      "name": "China target 4",
+      "lat_deg": 50.32396524171754,
+      "lon_deg": 124.09148558462994
+    },
+    {
+      "name": "China target 5",
+      "lat_deg": 49.67033345050436,
+      "lon_deg": 121.16446283251287
+    },
+    {
+      "name": "China target 6",
+      "lat_deg": 49.27063273282576,
+      "lon_deg": 125.9004851312061
+    },
+    {
+      "name": "China target 7",
+      "lat_deg": 49.025369770554676,
+      "lon_deg": 118.23744008044798
+    },
+    {
+      "name": "China target 8",
+      "lat_deg": 48.630818179015876,
+      "lon_deg": 122.97346237914115
+    },
+    {
+      "name": "China target 9",
+      "lat_deg": 48.23932794456585,
+      "lon_deg": 127.70948467783433
+    },
+    {
+      "name": "China target 10",
+      "lat_deg": 48.05613130469707,
+      "lon_deg": 87.5852598772592
+    },
+    {
+      "name": "China target 11",
+      "lat_deg": 47.99901596927964,
+      "lon_deg": 120.04643962702414
+    },
+    {
+      "name": "China target 12",
+      "lat_deg": 47.61229321695122,
+      "lon_deg": 124.78246192576944
+    },
+    {
+      "name": "China target 13",
+      "lat_deg": 47.22840938724936,
+      "lon_deg": 129.51848422451468
+    },
+    {
+      "name": "China target 14",
+      "lat_deg": 47.04871800988633,
+      "lon_deg": 89.39425942388743
+    },
+    {
+      "name": "China target 15",
+      "lat_deg": 46.99268855385025,
+      "lon_deg": 121.8554391737045
+    },
+    {
+      "name": "China target 16",
+      "lat_deg": 46.61323236687068,
+      "lon_deg": 126.5914614724498
+    },
+    {
+      "name": "China target 17",
+      "lat_deg": 46.435582714994126,
+      "lon_deg": 86.46723667182255
+    },
+    {
+      "name": "China target 18",
+      "lat_deg": 46.380185925699905,
+      "lon_deg": 118.92841642158743
+    },
+    {
+      "name": "China target 19",
+      "lat_deg": 46.23641649509472,
+      "lon_deg": 131.32748377109084
+    },
+    {
+      "name": "China target 20",
+      "lat_deg": 46.004965521835096,
+      "lon_deg": 123.66443872033273
+    },
+    {
+      "name": "China target 21",
+      "lat_deg": 45.8292700245779,
+      "lon_deg": 83.54021391970548
+    },
+    {
+      "name": "China target 22",
+      "lat_deg": 45.63227307782445,
+      "lon_deg": 128.40046101902595
+    },
+    {
+      "name": "China target 23",
+      "lat_deg": 45.457744255227226,
+      "lon_deg": 88.27623621839871
+    },
+    {
+      "name": "China target 24",
+      "lat_deg": 45.40331474959849,
+      "lon_deg": 120.73741596826778
+    },
+    {
+      "name": "China target 25",
+      "lat_deg": 45.26204271858335,
+      "lon_deg": 133.13648331771913
+    },
+    {
+      "name": "China target 26",
+      "lat_deg": 45.03457330034223,
+      "lon_deg": 125.47343826696101
+    },
+    {
+      "name": "China target 27",
+      "lat_deg": 44.8618685076879,
+      "lon_deg": 85.34921346633377
+    },
+    {
+      "name": "China target 28",
+      "lat_deg": 44.80800447995673,
+      "lon_deg": 117.8103932162029
+    },
+    {
+      "name": "China target 29",
+      "lat_deg": 44.668192722302436,
+      "lon_deg": 130.20946056565418
+    },
+    {
+      "name": "China target 30",
+      "lat_deg": 44.49657821038024,
+      "lon_deg": 90.08523576502694
+    },
+    {
+      "name": "China target 31",
+      "lat_deg": 44.44305223180655,
+      "lon_deg": 122.54641551489607
+    },
+    {
+      "name": "China target 32",
+      "lat_deg": 44.27209746784865,
+      "lon_deg": 82.42219071426882
+    },
+    {
+      "name": "China target 33",
+      "lat_deg": 44.218776064933195,
+      "lon_deg": 114.88337046413801
+    },
+    {
+      "name": "China target 34",
+      "lat_deg": 44.133562094216444,
+      "lon_deg": 94.82125806382436
+    },
+    {
+      "name": "China target 35",
+      "lat_deg": 44.0803657586209,
+      "lon_deg": 127.28243781358924
+    },
+    {
+      "name": "China target 36",
+      "lat_deg": 43.91045775445145,
+      "lon_deg": 87.15821301296205
+    },
+    {
+      "name": "China target 37",
+      "lat_deg": 43.85746095725762,
+      "lon_deg": 119.61939276272693
+    },
+    {
+      "name": "China target 38",
+      "lat_deg": 43.63538634355304,
+      "lon_deg": 111.95634771196882
+    },
+    {
+      "name": "China target 39",
+      "lat_deg": 43.55100224209313,
+      "lon_deg": 91.89423531165522
+    },
+    {
+      "name": "China target 40",
+      "lat_deg": 43.49832213442241,
+      "lon_deg": 124.35541506152435
+    },
+    {
+      "name": "China target 41",
+      "lat_deg": 43.330053575045184,
+      "lon_deg": 84.23119026089711
+    },
+    {
+      "name": "China target 42",
+      "lat_deg": 43.27756523893663,
+      "lon_deg": 116.69237001066199
+    },
+    {
+      "name": "China target 43",
+      "lat_deg": 43.14130687741974,
+      "lon_deg": 129.09143736021753
+    },
+    {
+      "name": "China target 44",
+      "lat_deg": 42.974019937006005,
+      "lon_deg": 88.96721255959028
+    },
+    {
+      "name": "China target 45",
+      "lat_deg": 42.92183607741086,
+      "lon_deg": 121.42839230945941
+    },
+    {
+      "name": "China target 46",
+      "lat_deg": 42.755143733751474,
+      "lon_deg": 81.30416750883217
+    },
+    {
+      "name": "China target 47",
+      "lat_deg": 42.70314431754852,
+      "lon_deg": 113.7653472585971
+    },
+    {
+      "name": "China target 48",
+      "lat_deg": 42.620035702801005,
+      "lon_deg": 93.70323485828351
+    },
+    {
+      "name": "China target 49",
+      "lat_deg": 42.56814911430255,
+      "lon_deg": 126.16441460815258
+    },
+    {
+      "name": "China target 50",
+      "lat_deg": 42.40240108598897,
+      "lon_deg": 86.0401898075254
+    },
+    {
+      "name": "China target 51",
+      "lat_deg": 42.35069461497391,
+      "lon_deg": 118.50136955729027
+    },
+    {
+      "name": "China target 52",
+      "lat_deg": 42.26805260062089,
+      "lon_deg": 98.43925715697668
+    },
+    {
+      "name": "China target 53",
+      "lat_deg": 42.13398983599502,
+      "lon_deg": 110.83832450653216
+    },
+    {
+      "name": "China target 54",
+      "lat_deg": 42.051630584212994,
+      "lon_deg": 90.77621210621857
+    },
+    {
+      "name": "China target 55",
+      "lat_deg": 42.00021024756014,
+      "lon_deg": 123.2373918560877
+    },
+    {
+      "name": "China target 56",
+      "lat_deg": 41.918024007591065,
+      "lon_deg": 103.1752794557741
+    },
+    {
+      "name": "China target 57",
+      "lat_deg": 41.83594347493772,
+      "lon_deg": 83.11316705546045
+    },
+    {
+      "name": "China target 58",
+      "lat_deg": 41.784696566003696,
+      "lon_deg": 115.57434680522539
+    },
+    {
+      "name": "China target 59",
+      "lat_deg": 41.70278658415661,
+      "lon_deg": 95.51223440491174
+    },
+    {
+      "name": "China target 60",
+      "lat_deg": 41.6516457997199,
+      "lon_deg": 127.97341415478087
+    },
+    {
+      "name": "China target 61",
+      "lat_deg": 41.56990487062523,
+      "lon_deg": 107.91130175446722
+    },
+    {
+      "name": "China target 62",
+      "lat_deg": 41.48826723765438,
+      "lon_deg": 87.84918935415362
+    },
+    {
+      "name": "China target 63",
+      "lat_deg": 41.43729592499749,
+      "lon_deg": 120.31036910402275
+    },
+    {
+      "name": "China target 64",
+      "lat_deg": 41.355824964872795,
+      "lon_deg": 100.24825670370916
+    },
+    {
+      "name": "China target 65",
+      "lat_deg": 41.27445585126056,
+      "lon_deg": 80.18614430339551
+    },
+    {
+      "name": "China target 66",
+      "lat_deg": 41.2236516320695,
+      "lon_deg": 112.64732405316045
+    },
+    {
+      "name": "China target 67",
+      "lat_deg": 41.142446859592454,
+      "lon_deg": 92.58521165284685
+    },
+    {
+      "name": "China target 68",
+      "lat_deg": 41.09174490839787,
+      "lon_deg": 125.04639140261173
+    },
+    {
+      "name": "China target 69",
+      "lat_deg": 41.01070305716064,
+      "lon_deg": 104.98427900229808
+    },
+    {
+      "name": "China target 70",
+      "lat_deg": 40.929760767049,
+      "lon_deg": 84.92216660208874
+    },
+    {
+      "name": "China target 71",
+      "lat_deg": 40.87922215978722,
+      "lon_deg": 117.38334635185362
+    },
+    {
+      "name": "China target 72",
+      "lat_deg": 40.7984405343229,
+      "lon_deg": 97.32123395153997
+    },
+    {
+      "name": "China target 73",
+      "lat_deg": 40.717757095164764,
+      "lon_deg": 77.25912155122637
+    },
+    {
+      "name": "China target 74",
+      "lat_deg": 40.66737957623143,
+      "lon_deg": 109.7203013010955
+    },
+    {
+      "name": "China target 75",
+      "lat_deg": 40.58685458980468,
+      "lon_deg": 89.65818890078191
+    },
+    {
+      "name": "China target 76",
+      "lat_deg": 40.536575681364575,
+      "lon_deg": 122.11936865054679
+    },
+    {
+      "name": "China target 77",
+      "lat_deg": 40.45620780022506,
+      "lon_deg": 102.05725625033739
+    },
+    {
+      "name": "China target 78",
+      "lat_deg": 40.37593593662292,
+      "lon_deg": 81.9951438499196
+    },
+    {
+      "name": "China target 79",
+      "lat_deg": 40.32581455831131,
+      "lon_deg": 114.45632359978867
+    },
+    {
+      "name": "China target 80",
+      "lat_deg": 40.24569765776895,
+      "lon_deg": 94.39421119947508
+    },
+    {
+      "name": "China target 81",
+      "lat_deg": 40.11570947938054,
+      "lon_deg": 106.79327854903056
+    },
+    {
+      "name": "China target 82",
+      "lat_deg": 40.03584015325245,
+      "lon_deg": 86.73116614871697
+    },
+    {
+      "name": "China target 83",
+      "lat_deg": 39.985969300902866,
+      "lon_deg": 119.19234589848185
+    },
+    {
+      "name": "China target 84",
+      "lat_deg": 39.90625155690725,
+      "lon_deg": 99.1302334982725
+    },
+    {
+      "name": "China target 85",
+      "lat_deg": 39.82662646451626,
+      "lon_deg": 79.06812109785466
+    },
+    {
+      "name": "China target 86",
+      "lat_deg": 39.77690761996612,
+      "lon_deg": 111.52930084761954
+    },
+    {
+      "name": "China target 87",
+      "lat_deg": 39.69743207370852,
+      "lon_deg": 91.46718844741014
+    },
+    {
+      "name": "China target 88",
+      "lat_deg": 39.56847906534098,
+      "lon_deg": 103.86625579696567
+    },
+    {
+      "name": "China target 89",
+      "lat_deg": 39.489242478422554,
+      "lon_deg": 83.80414339654783
+    },
+    {
+      "name": "China target 90",
+      "lat_deg": 39.43976544190358,
+      "lon_deg": 116.26532314641696
+    },
+    {
+      "name": "China target 91",
+      "lat_deg": 39.360675186051935,
+      "lon_deg": 96.20321074610331
+    },
+    {
+      "name": "China target 92",
+      "lat_deg": 39.28167438100905,
+      "lon_deg": 76.14109834578971
+    },
+    {
+      "name": "China target 93",
+      "lat_deg": 39.23234410089671,
+      "lon_deg": 108.60227809555465
+    },
+    {
+      "name": "China target 94",
+      "lat_deg": 39.15348768973721,
+      "lon_deg": 88.54016569534525
+    },
+    {
+      "name": "China target 95",
+      "lat_deg": 39.0255340871173,
+      "lon_deg": 100.93923304490073
+    },
+    {
+      "name": "China target 96",
+      "lat_deg": 38.94690843839582,
+      "lon_deg": 80.87712064448294
+    },
+    {
+      "name": "China target 97",
+      "lat_deg": 38.897811671561726,
+      "lon_deg": 113.33830039435202
+    },
+    {
+      "name": "China target 98",
+      "lat_deg": 38.819327356053144,
+      "lon_deg": 93.27618799403842
+    },
+    {
+      "name": "China target 99",
+      "lat_deg": 38.6919744346653,
+      "lon_deg": 105.67525534348971
+    },
+    {
+      "name": "China target 100",
+      "lat_deg": 38.613716010970194,
+      "lon_deg": 85.61314294328031
+    },
+    {
+      "name": "China target 101",
+      "lat_deg": 38.48672776764602,
+      "lon_deg": 98.01221029283585
+    },
+    {
+      "name": "China target 102",
+      "lat_deg": 38.40869229902489,
+      "lon_deg": 77.950097892418
+    },
+    {
+      "name": "China target 103",
+      "lat_deg": 38.359962902134214,
+      "lon_deg": 110.41127764218288
+    },
+    {
+      "name": "China target 104",
+      "lat_deg": 38.28206400484384,
+      "lon_deg": 90.34916524197348
+    },
+    {
+      "name": "China target 105",
+      "lat_deg": 38.155656203745046,
+      "lon_deg": 102.74823259142477
+    },
+    {
+      "name": "China target 106",
+      "lat_deg": 38.07797561846646,
+      "lon_deg": 82.68612019121542
+    },
+    {
+      "name": "China target 107",
+      "lat_deg": 38.02946713581999,
+      "lon_deg": 115.1472999409803
+    },
+    {
+      "name": "China target 108",
+      "lat_deg": 37.951920289246445,
+      "lon_deg": 95.08518754066665
+    },
+    {
+      "name": "China target 109",
+      "lat_deg": 37.87445521502903,
+      "lon_deg": 75.02307514035306
+    },
+    {
+      "name": "China target 110",
+      "lat_deg": 37.82608089113347,
+      "lon_deg": 107.484254890118
+    },
+    {
+      "name": "China target 111",
+      "lat_deg": 37.74874784656314,
+      "lon_deg": 87.4221424899086
+    },
+    {
+      "name": "China target 112",
+      "lat_deg": 37.62325365648937,
+      "lon_deg": 99.82120983935988
+    },
+    {
+      "name": "China target 113",
+      "lat_deg": 37.54613169240727,
+      "lon_deg": 79.75909743904629
+    },
+    {
+      "name": "China target 114",
+      "lat_deg": 37.49797096492875,
+      "lon_deg": 112.22027718891536
+    },
+    {
+      "name": "China target 115",
+      "lat_deg": 37.420978326682,
+      "lon_deg": 92.15816478860177
+    },
+    {
+      "name": "China target 116",
+      "lat_deg": 37.29603378402208,
+      "lon_deg": 104.55723213805305
+    },
+    {
+      "name": "China target 117",
+      "lat_deg": 37.2192479200582,
+      "lon_deg": 84.49511973784365
+    },
+    {
+      "name": "China target 118",
+      "lat_deg": 37.171296431403455,
+      "lon_deg": 116.95629948760853
+    },
+    {
+      "name": "China target 119",
+      "lat_deg": 37.094637264879744,
+      "lon_deg": 96.89418708719074
+    },
+    {
+      "name": "China target 120",
+      "lat_deg": 37.01805557541862,
+      "lon_deg": 76.83207468698134
+    },
+    {
+      "name": "China target 121",
+      "lat_deg": 36.970231198448836,
+      "lon_deg": 109.29325443674622
+    },
+    {
+      "name": "China target 122",
+      "lat_deg": 36.8937746193592,
+      "lon_deg": 89.23114203653682
+    },
+    {
+      "name": "China target 123",
+      "lat_deg": 36.8460281327187,
+      "lon_deg": 121.69232178630176
+    },
+    {
+      "name": "China target 124",
+      "lat_deg": 36.769695695068435,
+      "lon_deg": 101.63020938598811
+    },
+    {
+      "name": "China target 125",
+      "lat_deg": 36.69343917496081,
+      "lon_deg": 81.56809698577877
+    },
+    {
+      "name": "China target 126",
+      "lat_deg": 36.64581724138314,
+      "lon_deg": 114.02927673554365
+    },
+    {
+      "name": "China target 127",
+      "lat_deg": 36.56968331891726,
+      "lon_deg": 93.9671643351258
+    },
+    {
+      "name": "China target 128",
+      "lat_deg": 36.446125445947686,
+      "lon_deg": 106.36623168468134
+    },
+    {
+      "name": "China target 129",
+      "lat_deg": 36.37018757872364,
+      "lon_deg": 86.30411928447194
+    },
+    {
+      "name": "China target 130",
+      "lat_deg": 36.32276403702642,
+      "lon_deg": 118.76529903423682
+    },
+    {
+      "name": "China target 131",
+      "lat_deg": 36.246946322537724,
+      "lon_deg": 98.70318663392322
+    },
+    {
+      "name": "China target 132",
+      "lat_deg": 36.171202091580945,
+      "lon_deg": 78.64107423360957
+    },
+    {
+      "name": "China target 133",
+      "lat_deg": 36.123899109595094,
+      "lon_deg": 111.1022539834787
+    },
+    {
+      "name": "China target 134",
+      "lat_deg": 36.04827355400899,
+      "lon_deg": 91.04014158306086
+    },
+    {
+      "name": "China target 135",
+      "lat_deg": 35.92553667878803,
+      "lon_deg": 103.4392089326164
+    },
+    {
+      "name": "China target 136",
+      "lat_deg": 35.850100927372175,
+      "lon_deg": 83.377096532407
+    },
+    {
+      "name": "China target 137",
+      "lat_deg": 35.802990011614085,
+      "lon_deg": 115.83827628217188
+    },
+    {
+      "name": "China target 138",
+      "lat_deg": 35.727670594836596,
+      "lon_deg": 95.77616388185828
+    },
+    {
+      "name": "China target 139",
+      "lat_deg": 35.60542815206028,
+      "lon_deg": 108.17523123130957
+    },
+    {
+      "name": "China target 140",
+      "lat_deg": 35.530294808122164,
+      "lon_deg": 88.11311883099597
+    },
+    {
+      "name": "China target 141",
+      "lat_deg": 35.408352893887304,
+      "lon_deg": 100.51218618055145
+    },
+    {
+      "name": "China target 142",
+      "lat_deg": 35.33340336679962,
+      "lon_deg": 80.45007378034205
+    },
+    {
+      "name": "China target 143",
+      "lat_deg": 35.28659519504336,
+      "lon_deg": 112.91125353010699
+    },
+    {
+      "name": "China target 144",
+      "lat_deg": 35.211758344616634,
+      "lon_deg": 92.84914112968914
+    },
+    {
+      "name": "China target 145",
+      "lat_deg": 35.09029531580381,
+      "lon_deg": 105.24820847924468
+    },
+    {
+      "name": "China target 146",
+      "lat_deg": 35.01563870584456,
+      "lon_deg": 85.18609607893103
+    },
+    {
+      "name": "China target 147",
+      "lat_deg": 34.969012922521166,
+      "lon_deg": 117.64727582880016
+    },
+    {
+      "name": "China target 148",
+      "lat_deg": 34.89446680375541,
+      "lon_deg": 97.58516342848657
+    },
+    {
+      "name": "China target 149",
+      "lat_deg": 34.773473371768894,
+      "lon_deg": 109.98423077804205
+    },
+    {
+      "name": "China target 150",
+      "lat_deg": 34.69910400817788,
+      "lon_deg": 89.9221183776242
+    },
+    {
+      "name": "China target 151",
+      "lat_deg": 34.57839608388263,
+      "lon_deg": 102.32118572717974
+    },
+    {
+      "name": "China target 152",
+      "lat_deg": 34.504201366809205,
+      "lon_deg": 82.25907332686609
+    },
+    {
+      "name": "China target 153",
+      "lat_deg": 34.45786319528741,
+      "lon_deg": 114.72025307673522
+    },
+    {
+      "name": "China target 154",
+      "lat_deg": 34.383775550337795,
+      "lon_deg": 94.65814067642162
+    },
+    {
+      "name": "China target 155",
+      "lat_deg": 34.26352269127722,
+      "lon_deg": 107.05720802597716
+    },
+    {
+      "name": "China target 156",
+      "lat_deg": 34.18960634780672,
+      "lon_deg": 86.99509562555932
+    },
+    {
+      "name": "China target 157",
+      "lat_deg": 34.143441519102595,
+      "lon_deg": 119.4562753753242
+    },
+    {
+      "name": "China target 158",
+      "lat_deg": 34.06963020282725,
+      "lon_deg": 99.3941629751148
+    },
+    {
+      "name": "China target 159",
+      "lat_deg": 33.995883136219895,
+      "lon_deg": 79.33205057469695
+    },
+    {
+      "name": "China target 160",
+      "lat_deg": 33.94982371773739,
+      "lon_deg": 111.79323032467033
+    },
+    {
+      "name": "China target 161",
+      "lat_deg": 33.87618044046144,
+      "lon_deg": 91.73111792425249
+    },
+    {
+      "name": "China target 162",
+      "lat_deg": 33.75664540834313,
+      "lon_deg": 104.13018527380802
+    },
+    {
+      "name": "China target 163",
+      "lat_deg": 33.68316819493936,
+      "lon_deg": 84.06807287349437
+    },
+    {
+      "name": "China target 164",
+      "lat_deg": 33.637276819197545,
+      "lon_deg": 116.52925262325925
+    },
+    {
+      "name": "China target 165",
+      "lat_deg": 33.56390143044473,
+      "lon_deg": 96.46714022304991
+    },
+    {
+      "name": "China target 166",
+      "lat_deg": 33.444799161001626,
+      "lon_deg": 108.86620757260539
+    },
+    {
+      "name": "China target 167",
+      "lat_deg": 33.37158670091703,
+      "lon_deg": 88.80409517218754
+    },
+    {
+      "name": "China target 168",
+      "lat_deg": 33.252747642489204,
+      "lon_deg": 101.20316252174308
+    },
+    {
+      "name": "China target 169",
+      "lat_deg": 33.17969621226743,
+      "lon_deg": 81.14105012142943
+    },
+    {
+      "name": "China target 170",
+      "lat_deg": 33.134069986504315,
+      "lon_deg": 113.60222987119437
+    },
+    {
+      "name": "China target 171",
+      "lat_deg": 33.06111730214821,
+      "lon_deg": 93.54011747098497
+    },
+    {
+      "name": "China target 172",
+      "lat_deg": 32.942697921109804,
+      "lon_deg": 105.93918482054045
+    },
+    {
+      "name": "China target 173",
+      "lat_deg": 32.86990325141916,
+      "lon_deg": 85.87707242012266
+    },
+    {
+      "name": "China target 174",
+      "lat_deg": 32.824436923193296,
+      "lon_deg": 118.33825216988754
+    },
+    {
+      "name": "China target 175",
+      "lat_deg": 32.7517391549351,
+      "lon_deg": 98.27613976967814
+    },
+    {
+      "name": "China target 176",
+      "lat_deg": 32.63373161218365,
+      "lon_deg": 110.67520711912942
+    },
+    {
+      "name": "China target 177",
+      "lat_deg": 32.56118891416998,
+      "lon_deg": 90.61309471881583
+    },
+    {
+      "name": "China target 178",
+      "lat_deg": 32.44343190597349,
+      "lon_deg": 103.01216206837131
+    },
+    {
+      "name": "China target 179",
+      "lat_deg": 32.37104249386879,
+      "lon_deg": 82.95004966805772
+    },
+    {
+      "name": "China target 180",
+      "lat_deg": 32.325828545342134,
+      "lon_deg": 115.4112294178226
+    },
+    {
+      "name": "China target 181",
+      "lat_deg": 32.25353314150094,
+      "lon_deg": 95.3491170176132
+    },
+    {
+      "name": "China target 182",
+      "lat_deg": 32.13617567522454,
+      "lon_deg": 107.74818436706454
+    },
+    {
+      "name": "China target 183",
+      "lat_deg": 32.06403072218473,
+      "lon_deg": 87.68607196675089
+    },
+    {
+      "name": "China target 184",
+      "lat_deg": 32.01896901713154,
+      "lon_deg": 120.14725171662002
+    },
+    {
+      "name": "China target 185",
+      "lat_deg": 31.946916337453032,
+      "lon_deg": 100.08513931630637
+    },
+    {
+      "name": "China target 186",
+      "lat_deg": 31.874920116503276,
+      "lon_deg": 80.02302691599277
+    },
+    {
+      "name": "China target 187",
+      "lat_deg": 31.82995103952966,
+      "lon_deg": 112.48420666575771
+    },
+    {
+      "name": "China target 188",
+      "lat_deg": 31.75804604008551,
+      "lon_deg": 92.42209426554831
+    },
+    {
+      "name": "China target 189",
+      "lat_deg": 31.641319353181306,
+      "lon_deg": 104.82116161489535
+    },
+    {
+      "name": "China target 190",
+      "lat_deg": 31.569560354018442,
+      "lon_deg": 84.75904921468594
+    },
+    {
+      "name": "China target 191",
+      "lat_deg": 31.524739016929217,
+      "lon_deg": 117.22022896445088
+    },
+    {
+      "name": "China target 192",
+      "lat_deg": 31.453069567217007,
+      "lon_deg": 97.15811656424148
+    },
+    {
+      "name": "China target 193",
+      "lat_deg": 31.336723471689698,
+      "lon_deg": 109.55718391369277
+    },
+    {
+      "name": "China target 194",
+      "lat_deg": 31.265197351478694,
+      "lon_deg": 89.49507151337912
+    },
+    {
+      "name": "China target 195",
+      "lat_deg": 31.14908284597011,
+      "lon_deg": 101.89413886283046
+    },
+    {
+      "name": "China target 196",
+      "lat_deg": 31.077698435250742,
+      "lon_deg": 81.83202646262106
+    },
+    {
+      "name": "China target 197",
+      "lat_deg": 31.03311039321128,
+      "lon_deg": 114.29320621238594
+    },
+    {
+      "name": "China target 198",
+      "lat_deg": 30.96181290523096,
+      "lon_deg": 94.23109381217654
+    },
+    {
+      "name": "China target 199",
+      "lat_deg": 30.846067827242894,
+      "lon_deg": 106.63016116162783
+    },
+    {
+      "name": "China target 200",
+      "lat_deg": 30.774909472389744,
+      "lon_deg": 86.56804876131423
+    },
+    {
+      "name": "China target 201",
+      "lat_deg": 30.730462221200682,
+      "lon_deg": 119.02922851118336
+    },
+    {
+      "name": "China target 202",
+      "lat_deg": 30.659389211633354,
+      "lon_deg": 98.96711611076552
+    },
+    {
+      "name": "China target 203",
+      "lat_deg": 30.54400685679527,
+      "lon_deg": 111.36618346032105
+    },
+    {
+      "name": "China target 204",
+      "lat_deg": 30.473070459826317,
+      "lon_deg": 91.30407106011165
+    },
+    {
+      "name": "China target 205",
+      "lat_deg": 30.357908853760648,
+      "lon_deg": 103.70313840945869
+    },
+    {
+      "name": "China target 206",
+      "lat_deg": 30.287107539682285,
+      "lon_deg": 83.64102600924929
+    },
+    {
+      "name": "China target 207",
+      "lat_deg": 30.242882662166146,
+      "lon_deg": 116.10220575901423
+    },
+    {
+      "name": "China target 208",
+      "lat_deg": 30.172164213086848,
+      "lon_deg": 96.04009335870057
+    },
+    {
+      "name": "China target 209",
+      "lat_deg": 30.057354788654667,
+      "lon_deg": 108.43916070825611
+    },
+    {
+      "name": "China target 210",
+      "lat_deg": 29.986768988400932,
+      "lon_deg": 88.37704830794246
+    },
+    {
+      "name": "China target 211",
+      "lat_deg": 29.942678340124782,
+      "lon_deg": 120.83822805781165
+    },
+    {
+      "name": "China target 212",
+      "lat_deg": 29.87217391405013,
+      "lon_deg": 100.7761156573938
+    },
+    {
+      "name": "China target 213",
+      "lat_deg": 29.75771033509206,
+      "lon_deg": 113.17518300694928
+    },
+    {
+      "name": "China target 214",
+      "lat_deg": 29.68733617495853,
+      "lon_deg": 93.11307060663569
+    },
+    {
+      "name": "China target 215",
+      "lat_deg": 29.573083099021844,
+      "lon_deg": 105.51213795619117
+    },
+    {
+      "name": "China target 216",
+      "lat_deg": 29.502837757893726,
+      "lon_deg": 85.45002555587757
+    },
+    {
+      "name": "China target 217",
+      "lat_deg": 29.458959161843936,
+      "lon_deg": 117.9112053057467
+    },
+    {
+      "name": "China target 218",
+      "lat_deg": 29.388792848822728,
+      "lon_deg": 97.84909290532886
+    },
+    {
+      "name": "China target 219",
+      "lat_deg": 29.274875647285814,
+      "lon_deg": 110.2481602548844
+    },
+    {
+      "name": "China target 220",
+      "lat_deg": 29.20483584971128,
+      "lon_deg": 90.18604785446655
+    },
+    {
+      "name": "China target 221",
+      "lat_deg": 29.09112309559585,
+      "lon_deg": 102.58511520402203
+    },
+    {
+      "name": "China target 222",
+      "lat_deg": 28.977535770108542,
+      "lon_deg": 114.98418255357757
+    },
+    {
+      "name": "China target 223",
+      "lat_deg": 28.794311326288454,
+      "lon_deg": 107.32113750281945
+    },
+    {
+      "name": "China target 224",
+      "lat_deg": 28.724596292317795,
+      "lon_deg": 87.2590251025058
+    },
+    {
+      "name": "China target 225",
+      "lat_deg": 28.68104800017508,
+      "lon_deg": 119.72020485237493
+    },
+    {
+      "name": "China target 226",
+      "lat_deg": 28.61140836013902,
+      "lon_deg": 99.65809245195715
+    },
+    {
+      "name": "China target 227",
+      "lat_deg": 28.498342267011214,
+      "lon_deg": 112.05715980151263
+    },
+    {
+      "name": "China target 228",
+      "lat_deg": 28.42882333126602,
+      "lon_deg": 91.99504740119903
+    },
+    {
+      "name": "China target 229",
+      "lat_deg": 28.31595230132799,
+      "lon_deg": 104.39411475075451
+    },
+    {
+      "name": "China target 230",
+      "lat_deg": 28.2032009490652,
+      "lon_deg": 116.79318210031005
+    },
+    {
+      "name": "China target 231",
+      "lat_deg": 28.02131488676902,
+      "lon_deg": 109.13013704944774
+    },
+    {
+      "name": "China target 232",
+      "lat_deg": 27.952105833342735,
+      "lon_deg": 89.0680246490299
+    },
+    {
+      "name": "China target 233",
+      "lat_deg": 27.839735592138535,
+      "lon_deg": 101.46709199858537
+    },
+    {
+      "name": "China target 234",
+      "lat_deg": 27.72748162143429,
+      "lon_deg": 113.86615934814091
+    },
+    {
+      "name": "China target 235",
+      "lat_deg": 27.54639188881329,
+      "lon_deg": 106.2031142973828
+    },
+    {
+      "name": "China target 236",
+      "lat_deg": 27.434438291297695,
+      "lon_deg": 118.60218164683408
+    },
+    {
+      "name": "China target 237",
+      "lat_deg": 27.253829478043606,
+      "lon_deg": 110.93913659607597
+    },
+    {
+      "name": "China target 238",
+      "lat_deg": 27.07351345736605,
+      "lon_deg": 103.27609154531785
+    },
+    {
+      "name": "China target 239",
+      "lat_deg": 26.96203458225649,
+      "lon_deg": 115.67515889466495
+    },
+    {
+      "name": "China target 240",
+      "lat_deg": 26.782185845397255,
+      "lon_deg": 108.01211384401108
+    },
+    {
+      "name": "China target 241",
+      "lat_deg": 26.60262160702103,
+      "lon_deg": 100.34906879314872
+    },
+    {
+      "name": "China target 242",
+      "lat_deg": 26.491604006333617,
+      "lon_deg": 112.7481361426
+    },
+    {
+      "name": "China target 243",
+      "lat_deg": 26.312493824812375,
+      "lon_deg": 105.08509109194614
+    },
+    {
+      "name": "China target 244",
+      "lat_deg": 26.201754824440478,
+      "lon_deg": 117.48415844139743
+    },
+    {
+      "name": "China target 245",
+      "lat_deg": 26.02309071885807,
+      "lon_deg": 109.82111339053506
+    },
+    {
+      "name": "China target 246",
+      "lat_deg": 25.84469820680039,
+      "lon_deg": 102.1580683398812
+    },
+    {
+      "name": "China target 247",
+      "lat_deg": 25.734399556880906,
+      "lon_deg": 114.55713568922829
+    },
+    {
+      "name": "China target 248",
+      "lat_deg": 25.55644051391349,
+      "lon_deg": 106.89409063836592
+    },
+    {
+      "name": "China target 249",
+      "lat_deg": 25.44640783449324,
+      "lon_deg": 119.29315798792146
+    },
+    {
+      "name": "China target 250",
+      "lat_deg": 25.378745390377457,
+      "lon_deg": 99.23104558771206
+    },
+    {
+      "name": "China target 251",
+      "lat_deg": 25.26887464823379,
+      "lon_deg": 111.63011293726754
+    },
+    {
+      "name": "China target 252",
+      "lat_deg": 25.091600746518846,
+      "lon_deg": 103.96706788640523
+    },
+    {
+      "name": "China target 253",
+      "lat_deg": 24.981988459935817,
+      "lon_deg": 116.36613523596077
+    },
+    {
+      "name": "China target 254",
+      "lat_deg": 24.805128381461227,
+      "lon_deg": 108.7030901850984
+    },
+    {
+      "name": "China target 255",
+      "lat_deg": 24.62852025918657,
+      "lon_deg": 101.04004513444454
+    },
+    {
+      "name": "China target 256",
+      "lat_deg": 24.519316483380415,
+      "lon_deg": 113.43911248379163
+    },
+    {
+      "name": "China target 257",
+      "lat_deg": 24.343110483673602,
+      "lon_deg": 105.77606743292927
+    },
+    {
+      "name": "China target 258",
+      "lat_deg": 24.234153441514145,
+      "lon_deg": 118.1751347824848
+    },
+    {
+      "name": "China target 259",
+      "lat_deg": 24.167149312553196,
+      "lon_deg": 98.1130223822754
+    },
+    {
+      "name": "China target 260",
+      "lat_deg": 24.058342490939143,
+      "lon_deg": 110.51208973183088
+    },
+    {
+      "name": "China target 261",
+      "lat_deg": 23.882772059136126,
+      "lon_deg": 102.84904468096857
+    },
+    {
+      "name": "China target 262",
+      "lat_deg": 23.774204983319326,
+      "lon_deg": 115.24811203052411
+    },
+    {
+      "name": "China target 263",
+      "lat_deg": 23.599018406296477,
+      "lon_deg": 107.58506697966175
+    },
+    {
+      "name": "China target 264",
+      "lat_deg": 23.42406552590538,
+      "lon_deg": 99.92202192879944
+    },
+    {
+      "name": "China target 265",
+      "lat_deg": 23.31587735515531,
+      "lon_deg": 112.32108927835498
+    },
+    {
+      "name": "China target 266",
+      "lat_deg": 23.1412974294658,
+      "lon_deg": 104.65804422749261
+    },
+    {
+      "name": "China target 267",
+      "lat_deg": 22.859124516831578,
+      "lon_deg": 109.39406652639423
+    },
+    {
+      "name": "China target 268",
+      "lat_deg": 22.6851339787886,
+      "lon_deg": 101.73102147553192
+    },
+    {
+      "name": "China target 269",
+      "lat_deg": 22.577536244202005,
+      "lon_deg": 114.13008882508746
+    },
+    {
+      "name": "China target 270",
+      "lat_deg": 22.123237176919737,
+      "lon_deg": 111.20306607291832
+    },
+    {
+      "name": "China target 271",
+      "lat_deg": 21.670397831089552,
+      "lon_deg": 108.27604332095757
+    },
+    {
+      "name": "China target 272",
+      "lat_deg": 20.94060672207294,
+      "lon_deg": 110.08504286748166
+    }
+  ],
+  "countries": [
+    "China"
+  ],
+  "run_config": {
+    "target_mode": "country",
+    "target_country": "China",
+    "target_points": null,
+    "target_shell_n_points": 15000,
+    "n_targets": 273,
+    "dt_s": 120.0,
+    "t_window_s": 170.0,
+    "v_bo_km_s": 5.0,
+    "a_g": 10.0,
+    "intercept_alt_km": 200.0,
+    "min_elev_deg": 0.0,
+    "r_max_km": 722.5354733777589,
+    "altitude_override_km": 260.0,
+    "altitude_max_repeat_days": 2,
+    "h_star_km": 239.56229062058904,
+    "actual_alt_km": 262.304,
+    "rgt_ratio": "16:1",
+    "L": 718,
+    "horizon_s": 86044.0942896936,
+    "inclination_sweep_bounds_deg": [
+      20.0,
+      90.0
+    ],
+    "inclination_screen_step_deg": 1.0,
+    "n_raan_offsets": 10,
+    "raan_interval_deg": 22.5,
+    "raan_step_deg": 2.25,
+    "n_seeds_simulated": 710,
+    "n_seeds_live": 710,
+    "n_seeds_for_milp": 40,
+    "reserve_polar_orbits": false,
+    "polar_reservation_inclinations": [],
+    "seeds_selected": [
+      {
+        "rank": 1,
+        "inc_deg": 42.0,
+        "raan_deg": 4.5
+      },
+      {
+        "rank": 2,
+        "inc_deg": 43.0,
+        "raan_deg": 0.0
+      },
+      {
+        "rank": 3,
+        "inc_deg": 48.0,
+        "raan_deg": 18.0
+      },
+      {
+        "rank": 4,
+        "inc_deg": 31.0,
+        "raan_deg": 2.25
+      },
+      {
+        "rank": 5,
+        "inc_deg": 52.0,
+        "raan_deg": 2.25
+      },
+      {
+        "rank": 6,
+        "inc_deg": 58.0,
+        "raan_deg": 20.25
+      },
+      {
+        "rank": 7,
+        "inc_deg": 49.0,
+        "raan_deg": 0.0
+      },
+      {
+        "rank": 8,
+        "inc_deg": 44.0,
+        "raan_deg": 0.0
+      },
+      {
+        "rank": 9,
+        "inc_deg": 41.0,
+        "raan_deg": 15.75
+      },
+      {
+        "rank": 10,
+        "inc_deg": 45.0,
+        "raan_deg": 2.25
+      },
+      {
+        "rank": 11,
+        "inc_deg": 40.0,
+        "raan_deg": 2.25
+      },
+      {
+        "rank": 12,
+        "inc_deg": 46.0,
+        "raan_deg": 0.0
+      },
+      {
+        "rank": 13,
+        "inc_deg": 39.0,
+        "raan_deg": 4.5
+      },
+      {
+        "rank": 14,
+        "inc_deg": 47.0,
+        "raan_deg": 20.25
+      },
+      {
+        "rank": 15,
+        "inc_deg": 38.0,
+        "raan_deg": 9.0
+      },
+      {
+        "rank": 16,
+        "inc_deg": 37.0,
+        "raan_deg": 11.25
+      },
+      {
+        "rank": 17,
+        "inc_deg": 36.0,
+        "raan_deg": 11.25
+      },
+      {
+        "rank": 18,
+        "inc_deg": 50.0,
+        "raan_deg": 18.0
+      },
+      {
+        "rank": 19,
+        "inc_deg": 35.0,
+        "raan_deg": 15.75
+      },
+      {
+        "rank": 20,
+        "inc_deg": 51.0,
+        "raan_deg": 2.25
+      },
+      {
+        "rank": 21,
+        "inc_deg": 34.0,
+        "raan_deg": 18.0
+      },
+      {
+        "rank": 22,
+        "inc_deg": 53.0,
+        "raan_deg": 2.25
+      },
+      {
+        "rank": 23,
+        "inc_deg": 54.0,
+        "raan_deg": 6.75
+      },
+      {
+        "rank": 24,
+        "inc_deg": 33.0,
+        "raan_deg": 13.5
+      },
+      {
+        "rank": 25,
+        "inc_deg": 55.0,
+        "raan_deg": 6.75
+      },
+      {
+        "rank": 26,
+        "inc_deg": 56.0,
+        "raan_deg": 9.0
+      },
+      {
+        "rank": 27,
+        "inc_deg": 32.0,
+        "raan_deg": 15.75
+      },
+      {
+        "rank": 28,
+        "inc_deg": 57.0,
+        "raan_deg": 9.0
+      },
+      {
+        "rank": 29,
+        "inc_deg": 59.0,
+        "raan_deg": 4.5
+      },
+      {
+        "rank": 30,
+        "inc_deg": 60.0,
+        "raan_deg": 2.25
+      },
+      {
+        "rank": 31,
+        "inc_deg": 61.0,
+        "raan_deg": 6.75
+      },
+      {
+        "rank": 32,
+        "inc_deg": 62.0,
+        "raan_deg": 4.5
+      },
+      {
+        "rank": 33,
+        "inc_deg": 63.0,
+        "raan_deg": 4.5
+      },
+      {
+        "rank": 34,
+        "inc_deg": 64.0,
+        "raan_deg": 6.75
+      },
+      {
+        "rank": 35,
+        "inc_deg": 30.0,
+        "raan_deg": 0.0
+      },
+      {
+        "rank": 36,
+        "inc_deg": 65.0,
+        "raan_deg": 6.75
+      },
+      {
+        "rank": 37,
+        "inc_deg": 66.0,
+        "raan_deg": 9.0
+      },
+      {
+        "rank": 38,
+        "inc_deg": 67.0,
+        "raan_deg": 9.0
+      },
+      {
+        "rank": 39,
+        "inc_deg": 68.0,
+        "raan_deg": 11.25
+      },
+      {
+        "rank": 40,
+        "inc_deg": 72.0,
+        "raan_deg": 18.0
+      }
+    ],
+    "salvo_size": 75,
+    "n_interceptors_per_sat": 6,
+    "r_required": 13,
+    "mip_gap_target": 0.001,
+    "time_limit_s": 14400.0,
+    "mip_focus": 1,
+    "heuristics_frac": 0.2,
+    "solver_params": {
+      "Method": 1,
+      "NodefileStart": 4,
+      "RINS": 50
+    },
+    "timestamp_utc": "2026-07-10T13:55:36.562648+00:00",
+    "result_status": "Time limit",
+    "mip_gap_achieved": 0.19091316025067145,
+    "n_satellites_selected": 4468,
+    "obj_val": 4468.0,
+    "obj_bound": 3615.0,
+    "time_modeling_s": 0.879786570003489,
+    "time_optimization_s": 14430.712570230986
+  }
+}

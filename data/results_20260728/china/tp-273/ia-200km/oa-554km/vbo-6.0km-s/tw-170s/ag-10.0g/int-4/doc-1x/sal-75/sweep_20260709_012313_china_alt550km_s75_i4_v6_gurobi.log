@@ -1,0 +1,183 @@
+
+Gurobi 13.0.2 (linux64) logging started Mon Jul 13 22:27:08 2026
+
+Set parameter LogFile to value "/tmp/sweep_20260709_012313_china_alt550km_s75_i4_v6_gurobi.log"
+Set parameter Method to value 1
+Set parameter NodefileStart to value 4
+Set parameter RINS to value 50
+Gurobi Optimizer version 13.0.2 build v13.0.2rc1 (linux64 - "Debian GNU/Linux 13 (trixie)")
+
+CPU model: Intel(R) Xeon(R) Platinum 8375C CPU @ 2.90GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 16 physical cores, 32 logical processors, using up to 32 threads
+
+Non-default parameters:
+TimeLimit  14400
+MIPGap  0.001
+Method  1
+LPWarmStart  1
+Heuristics  0.2
+MIPFocus  1
+NodefileStart  4
+RINS  50
+Symmetry  2
+Cuts  2
+CoverCuts  2
+LogToConsole  0
+
+Academic license 2812613 - for non-commercial use only - registered to no___@gatech.edu
+Optimize a model with 196014 rows, 28720 columns and 23869910 nonzeros (Min)
+Model fingerprint: 0xc95e40c4
+Model has 28720 linear objective coefficients
+Variable types: 0 continuous, 28720 integer (28720 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [2e+01, 2e+01]
+
+Found heuristic solution: objective 11488.000000
+Presolve removed 0 rows and 0 columns (presolve time = 6s)...
+Presolve removed 0 rows and 0 columns (presolve time = 11s)...
+Presolve removed 0 rows and 0 columns (presolve time = 16s)...
+Presolve removed 0 rows and 0 columns (presolve time = 20s)...
+Presolve removed 0 rows and 0 columns (presolve time = 25s)...
+Presolve removed 0 rows and 0 columns (presolve time = 32s)...
+Presolve removed 0 rows and 0 columns (presolve time = 35s)...
+Presolve removed 0 rows and 0 columns (presolve time = 40s)...
+Presolve removed 0 rows and 0 columns (presolve time = 49s)...
+Presolve removed 0 rows and 0 columns (presolve time = 50s)...
+Presolve removed 0 rows and 0 columns (presolve time = 55s)...
+Presolve removed 0 rows and 0 columns (presolve time = 60s)...
+Presolve removed 0 rows and 0 columns (presolve time = 65s)...
+Presolve removed 0 rows and 0 columns (presolve time = 70s)...
+Presolve removed 0 rows and 0 columns (presolve time = 75s)...
+Presolve removed 0 rows and 0 columns (presolve time = 80s)...
+Presolve removed 0 rows and 0 columns (presolve time = 85s)...
+Presolve removed 0 rows and 0 columns (presolve time = 90s)...
+Presolve removed 0 rows and 0 columns (presolve time = 95s)...
+Presolve removed 0 rows and 0 columns (presolve time = 100s)...
+Presolve removed 0 rows and 0 columns (presolve time = 105s)...
+Presolve removed 0 rows and 0 columns (presolve time = 110s)...
+Presolve removed 0 rows and 0 columns (presolve time = 115s)...
+Presolve removed 0 rows and 0 columns (presolve time = 120s)...
+Presolve removed 0 rows and 0 columns (presolve time = 125s)...
+Presolve removed 0 rows and 0 columns (presolve time = 130s)...
+Presolve removed 0 rows and 0 columns (presolve time = 135s)...
+Presolve removed 0 rows and 0 columns (presolve time = 140s)...
+Presolve removed 0 rows and 0 columns (presolve time = 145s)...
+Presolve removed 0 rows and 0 columns (presolve time = 150s)...
+Presolve removed 0 rows and 0 columns (presolve time = 155s)...
+Presolve removed 0 rows and 0 columns (presolve time = 160s)...
+Presolve removed 0 rows and 0 columns (presolve time = 165s)...
+Presolve removed 0 rows and 0 columns (presolve time = 170s)...
+Presolve removed 0 rows and 0 columns (presolve time = 175s)...
+Presolve removed 0 rows and 0 columns (presolve time = 180s)...
+Presolve removed 0 rows and 0 columns (presolve time = 185s)...
+Presolve removed 0 rows and 0 columns (presolve time = 190s)...
+Presolve removed 0 rows and 0 columns (presolve time = 195s)...
+Presolve removed 0 rows and 0 columns (presolve time = 200s)...
+Presolve removed 0 rows and 0 columns (presolve time = 205s)...
+Presolve removed 0 rows and 0 columns (presolve time = 210s)...
+Presolve removed 0 rows and 0 columns (presolve time = 215s)...
+Presolve removed 0 rows and 0 columns (presolve time = 220s)...
+Presolve removed 0 rows and 0 columns (presolve time = 225s)...
+Presolve removed 0 rows and 0 columns (presolve time = 230s)...
+Presolve removed 0 rows and 0 columns (presolve time = 235s)...
+Presolve removed 0 rows and 0 columns (presolve time = 240s)...
+Presolve removed 0 rows and 0 columns (presolve time = 245s)...
+Presolve removed 0 rows and 0 columns (presolve time = 250s)...
+Presolve removed 0 rows and 0 columns (presolve time = 255s)...
+Presolve time: 258.12s
+Presolved: 196014 rows, 28720 columns, 23869910 nonzeros
+Variable types: 0 continuous, 28720 integer (28720 binary)
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0   -0.0000000e+00   0.000000e+00   5.187000e+03    268s
+     109    4.9117978e+03   0.000000e+00   0.000000e+00    268s
+     109    4.9117978e+03   0.000000e+00   0.000000e+00    268s
+
+Use crossover to convert LP symmetric solution to basic solution...
+
+Root crossover log...
+
+  189776 variables added to crossover basis                      275s
+  191336 variables added to crossover basis                      280s
+  192116 variables added to crossover basis                      285s
+  192746 variables added to crossover basis                      290s
+  193796 variables added to crossover basis                      295s
+  194666 variables added to crossover basis                      300s
+  195386 variables added to crossover basis                      305s
+
+       0 DPushes remaining with DInf 0.0000000e+00               322s
+
+       0 PPushes remaining with PInf 0.0000000e+00               322s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 3.6049288e-09    322s
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+     112    4.9117978e+03   0.000000e+00   0.000000e+00    330s
+Crossover time: 61.73 seconds (110.47 work units)
+
+Root relaxation: objective 4.911798e+03, 112 iterations, 70.17 seconds (118.89 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 4911.79783    0 11488 11488.0000 4911.79783  57.2%     -  348s
+H    0     0                    6462.0000000 4911.79783  24.0%     -  348s
+H    0     0                    6461.0000000 4911.79783  24.0%     -  348s
+H    0     0                    5627.0000000 4911.79783  12.7%     -  353s
+H    0     0                    5540.0000000 4911.79783  11.3%     -  353s
+H    0     0                    5539.0000000 4911.79783  11.3%     -  353s
+H    0     0                    5538.0000000 4911.79783  11.3%     -  353s
+H    0     0                    5513.0000000 4911.79783  10.9%     -  353s
+H    0     0                    5510.0000000 4911.79783  10.9%     -  354s
+H    0     0                    5509.0000000 4911.79783  10.8%     -  354s
+H    0     0                    5502.0000000 4911.79783  10.7%     -  355s
+H    0     0                    5501.0000000 4911.79783  10.7%     -  355s
+H    0     0                    5497.0000000 4911.79783  10.6%     -  356s
+H    0     0                    5495.0000000 4911.79783  10.6%     -  356s
+H    0     0                    5493.0000000 4911.79783  10.6%     -  357s
+H    0     0                    5492.0000000 4911.79783  10.6%     -  357s
+H    0     0                    5491.0000000 4911.79783  10.5%     -  357s
+H    0     0                    5489.0000000 4911.79783  10.5%     -  357s
+H    0     0                    5486.0000000 4911.79783  10.5%     -  359s
+H    0     0                    5485.0000000 4911.79783  10.5%     -  360s
+H    0     0                    5483.0000000 4911.79783  10.4%     -  361s
+H    0     0                    5482.0000000 4911.79783  10.4%     -  362s
+H    0     0                    5481.0000000 4911.79783  10.4%     -  362s
+H    0     0                    5479.0000000 4911.79783  10.4%     -  364s
+H    0     0                    5478.0000000 4911.79783  10.3%     -  369s
+H    0     0                    5477.0000000 4911.79783  10.3%     -  370s
+H    0     0                    5469.0000000 4911.79783  10.2%     -  416s
+H    0     0                    5467.0000000 4911.79783  10.2%     -  416s
+H    0     0                    5466.0000000 4911.79783  10.1%     -  416s
+H    0     0                    5465.0000000 4911.79783  10.1%     -  416s
+H    0     0                    5464.0000000 4911.79783  10.1%     -  428s
+H    0     0                    5463.0000000 4911.79783  10.1%     -  428s
+H    0     0                    5462.0000000 4911.79783  10.1%     -  437s
+H    0     0                    5461.0000000 4911.79783  10.1%     -  451s
+H    0     0                    5460.0000000 4911.79783  10.0%     -  451s
+H    0     0                    5456.0000000 4911.79783  10.0%     -  459s
+H    0     0                    5454.0000000 4911.79783  9.94%     -  459s
+     0     0 4911.79783    0 11488 5454.00000 4911.79783  9.94%     - 1122s
+H    0     0                    5453.0000000 4911.79783  9.92%     - 2650s
+H    0     0                    5452.0000000 4911.79783  9.91%     - 2656s
+H    0     2                    5450.0000000 4911.79783  9.88%     - 2871s
+     0     2 4911.79783    0 11488 5450.00000 4911.79783  9.88%     - 2871s
+     1     3 4911.85073    1 11267 5450.00000 4911.79992  9.88%  4924 13515s
+
+Explored 2 nodes (5036 simplex iterations) in 14400.59 seconds (30544.76 work units)
+Thread count was 32 (of 32 available processors)
+
+Solution count 10: 5450 5452 5453 ... 5464
+
+Time limit reached
+Best objective 5.450000000000e+03, best bound 4.912000000000e+03, gap 9.8716%
+
+User-callback calls 6211791, time in user-callback 5.23 sec

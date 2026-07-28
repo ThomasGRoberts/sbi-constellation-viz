@@ -1,0 +1,120 @@
+{
+  "version": 1,
+  "timestamp": "2026-07-19T10:57:00.036373",
+  "n_satellites": 67,
+  "obj_val": 67.0,
+  "mip_gap": 0.07462686567164178,
+  "status_str": "Time limit",
+  "propagator": "Nominal_Propagator",
+  "bc_kg_m2": 80.0,
+  "cov": {
+    "T_window_s": 170.0,
+    "v_bo_km_s": 10.0,
+    "a_g": 10.0,
+    "intercept_alt_km": 200.0,
+    "min_elev_deg": 0.0
+  },
+  "sim": {
+    "horizon_s": 86044.0942896936,
+    "dt_s": 120.0057103064067,
+    "use_j2": false,
+    "use_drag": false,
+    "analysis_matrix_dtype": "uint8"
+  },
+  "targets": [
+    {
+      "name": "North Korea target 0",
+      "lat_deg": 40.19567272214376,
+      "lon_deg": 126.85539094934421
+    },
+    {
+      "name": "North Korea target 1",
+      "lat_deg": 38.770318563183174,
+      "lon_deg": 125.73736774390755
+    }
+  ],
+  "countries": [
+    "North Korea"
+  ],
+  "run_config": {
+    "target_mode": "country",
+    "target_country": "North Korea",
+    "target_points": null,
+    "target_shell_n_points": 15000,
+    "n_targets": 2,
+    "dt_s": 120.0,
+    "t_window_s": 170.0,
+    "v_bo_km_s": 10.0,
+    "a_g": 10.0,
+    "intercept_alt_km": 200.0,
+    "min_elev_deg": 0.0,
+    "r_max_km": 1190.141893511036,
+    "altitude_override_km": 550.0,
+    "altitude_max_repeat_days": 2,
+    "h_star_km": 306.7956188316985,
+    "actual_alt_km": 554.249,
+    "rgt_ratio": "15:1",
+    "L": 718,
+    "horizon_s": 86044.0942896936,
+    "inclination_sweep_bounds_deg": [
+      35.0,
+      90.0
+    ],
+    "inclination_screen_step_deg": 1.0,
+    "n_raan_offsets": 10,
+    "raan_interval_deg": 24.0,
+    "raan_step_deg": 2.4,
+    "n_seeds_simulated": 560,
+    "n_seeds_live": 560,
+    "n_seeds_for_milp": 5,
+    "reserve_polar_orbits": false,
+    "polar_reservation_inclinations": [],
+    "seeds_selected": [
+      {
+        "rank": 1,
+        "inc_deg": 35.0,
+        "raan_deg": 0.0
+      },
+      {
+        "rank": 2,
+        "inc_deg": 46.0,
+        "raan_deg": 14.399999999999999
+      },
+      {
+        "rank": 3,
+        "inc_deg": 47.0,
+        "raan_deg": 14.399999999999999
+      },
+      {
+        "rank": 4,
+        "inc_deg": 42.0,
+        "raan_deg": 16.8
+      },
+      {
+        "rank": 5,
+        "inc_deg": 43.0,
+        "raan_deg": 16.8
+      }
+    ],
+    "salvo_size": 1,
+    "n_interceptors_per_sat": 6,
+    "r_required": 1,
+    "mip_gap_target": 0.001,
+    "time_limit_s": 14400.0,
+    "mip_focus": 1,
+    "heuristics_frac": 0.2,
+    "solver_params": {
+      "Method": 1,
+      "NodefileStart": 4,
+      "RINS": 50
+    },
+    "timestamp_utc": "2026-07-19T10:57:00.035773+00:00",
+    "result_status": "Time limit",
+    "mip_gap_achieved": 0.07462686567164178,
+    "n_satellites_selected": 67,
+    "obj_val": 67.0,
+    "obj_bound": 62.0,
+    "time_modeling_s": 0.19180778600275517,
+    "time_optimization_s": 14400.066710639978
+  }
+}

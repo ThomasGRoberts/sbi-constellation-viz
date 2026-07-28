@@ -1,0 +1,1709 @@
+{
+  "version": 1,
+  "timestamp": "2026-07-15T15:35:07.508847",
+  "n_satellites": 2466,
+  "obj_val": 2466.0,
+  "mip_gap": 0.15571776155717762,
+  "status_str": "Time limit",
+  "propagator": "Nominal_Propagator",
+  "bc_kg_m2": 80.0,
+  "cov": {
+    "T_window_s": 170.0,
+    "v_bo_km_s": 6.0,
+    "a_g": 10.0,
+    "intercept_alt_km": 200.0,
+    "min_elev_deg": 0.0
+  },
+  "sim": {
+    "horizon_s": 172208.1942896936,
+    "dt_s": 120.0057103064067,
+    "use_j2": false,
+    "use_drag": false,
+    "analysis_matrix_dtype": "uint8"
+  },
+  "targets": [
+    {
+      "name": "Pacific-N-01",
+      "lat_deg": 34.0,
+      "lon_deg": -152.0
+    },
+    {
+      "name": "Pacific-N-02",
+      "lat_deg": 34.0,
+      "lon_deg": -151.5556
+    },
+    {
+      "name": "Pacific-N-03",
+      "lat_deg": 34.0,
+      "lon_deg": -151.1111
+    },
+    {
+      "name": "Pacific-N-04",
+      "lat_deg": 34.0,
+      "lon_deg": -150.6667
+    },
+    {
+      "name": "Pacific-N-05",
+      "lat_deg": 34.0,
+      "lon_deg": -150.2222
+    },
+    {
+      "name": "Pacific-N-06",
+      "lat_deg": 34.0,
+      "lon_deg": -149.7778
+    },
+    {
+      "name": "Pacific-N-07",
+      "lat_deg": 34.0,
+      "lon_deg": -149.3333
+    },
+    {
+      "name": "Pacific-N-08",
+      "lat_deg": 34.0,
+      "lon_deg": -148.8889
+    },
+    {
+      "name": "Pacific-N-09",
+      "lat_deg": 34.0,
+      "lon_deg": -148.4444
+    },
+    {
+      "name": "Pacific-N-10",
+      "lat_deg": 34.0,
+      "lon_deg": -148.0
+    },
+    {
+      "name": "Pacific-N-11",
+      "lat_deg": 34.5,
+      "lon_deg": -152.0
+    },
+    {
+      "name": "Pacific-N-12",
+      "lat_deg": 34.5,
+      "lon_deg": -151.5556
+    },
+    {
+      "name": "Pacific-N-13",
+      "lat_deg": 34.5,
+      "lon_deg": -151.1111
+    },
+    {
+      "name": "Pacific-N-14",
+      "lat_deg": 34.5,
+      "lon_deg": -150.6667
+    },
+    {
+      "name": "Pacific-N-15",
+      "lat_deg": 34.5,
+      "lon_deg": -150.2222
+    },
+    {
+      "name": "Pacific-N-16",
+      "lat_deg": 34.5,
+      "lon_deg": -149.7778
+    },
+    {
+      "name": "Pacific-N-17",
+      "lat_deg": 34.5,
+      "lon_deg": -149.3333
+    },
+    {
+      "name": "Pacific-N-18",
+      "lat_deg": 34.5,
+      "lon_deg": -148.8889
+    },
+    {
+      "name": "Pacific-N-19",
+      "lat_deg": 34.5,
+      "lon_deg": -148.4444
+    },
+    {
+      "name": "Pacific-N-20",
+      "lat_deg": 34.5,
+      "lon_deg": -148.0
+    },
+    {
+      "name": "Pacific-N-21",
+      "lat_deg": 35.0,
+      "lon_deg": -152.0
+    },
+    {
+      "name": "Pacific-N-22",
+      "lat_deg": 35.0,
+      "lon_deg": -151.5556
+    },
+    {
+      "name": "Pacific-N-23",
+      "lat_deg": 35.0,
+      "lon_deg": -151.1111
+    },
+    {
+      "name": "Pacific-N-24",
+      "lat_deg": 35.0,
+      "lon_deg": -150.6667
+    },
+    {
+      "name": "Pacific-N-25",
+      "lat_deg": 35.0,
+      "lon_deg": -150.2222
+    },
+    {
+      "name": "Pacific-N-26",
+      "lat_deg": 35.0,
+      "lon_deg": -149.7778
+    },
+    {
+      "name": "Pacific-N-27",
+      "lat_deg": 35.0,
+      "lon_deg": -149.3333
+    },
+    {
+      "name": "Pacific-N-28",
+      "lat_deg": 35.0,
+      "lon_deg": -148.8889
+    },
+    {
+      "name": "Pacific-N-29",
+      "lat_deg": 35.0,
+      "lon_deg": -148.4444
+    },
+    {
+      "name": "Pacific-N-30",
+      "lat_deg": 35.0,
+      "lon_deg": -148.0
+    },
+    {
+      "name": "Pacific-N-31",
+      "lat_deg": 35.5,
+      "lon_deg": -152.0
+    },
+    {
+      "name": "Pacific-N-32",
+      "lat_deg": 35.5,
+      "lon_deg": -151.5556
+    },
+    {
+      "name": "Pacific-N-33",
+      "lat_deg": 35.5,
+      "lon_deg": -151.1111
+    },
+    {
+      "name": "Pacific-N-34",
+      "lat_deg": 35.5,
+      "lon_deg": -150.6667
+    },
+    {
+      "name": "Pacific-N-35",
+      "lat_deg": 35.5,
+      "lon_deg": -150.2222
+    },
+    {
+      "name": "Pacific-N-36",
+      "lat_deg": 35.5,
+      "lon_deg": -149.7778
+    },
+    {
+      "name": "Pacific-N-37",
+      "lat_deg": 35.5,
+      "lon_deg": -149.3333
+    },
+    {
+      "name": "Pacific-N-38",
+      "lat_deg": 35.5,
+      "lon_deg": -148.8889
+    },
+    {
+      "name": "Pacific-N-39",
+      "lat_deg": 35.5,
+      "lon_deg": -148.4444
+    },
+    {
+      "name": "Pacific-N-40",
+      "lat_deg": 35.5,
+      "lon_deg": -148.0
+    },
+    {
+      "name": "Pacific-N-41",
+      "lat_deg": 36.0,
+      "lon_deg": -152.0
+    },
+    {
+      "name": "Pacific-N-42",
+      "lat_deg": 36.0,
+      "lon_deg": -151.5556
+    },
+    {
+      "name": "Pacific-N-43",
+      "lat_deg": 36.0,
+      "lon_deg": -151.1111
+    },
+    {
+      "name": "Pacific-N-44",
+      "lat_deg": 36.0,
+      "lon_deg": -150.6667
+    },
+    {
+      "name": "Pacific-N-45",
+      "lat_deg": 36.0,
+      "lon_deg": -150.2222
+    },
+    {
+      "name": "Pacific-N-46",
+      "lat_deg": 36.0,
+      "lon_deg": -149.7778
+    },
+    {
+      "name": "Pacific-N-47",
+      "lat_deg": 36.0,
+      "lon_deg": -149.3333
+    },
+    {
+      "name": "Pacific-N-48",
+      "lat_deg": 36.0,
+      "lon_deg": -148.8889
+    },
+    {
+      "name": "Pacific-N-49",
+      "lat_deg": 36.0,
+      "lon_deg": -148.4444
+    },
+    {
+      "name": "Pacific-N-50",
+      "lat_deg": 36.0,
+      "lon_deg": -148.0
+    },
+    {
+      "name": "Pacific-Eq-01",
+      "lat_deg": -1.0,
+      "lon_deg": -142.0
+    },
+    {
+      "name": "Pacific-Eq-02",
+      "lat_deg": -1.0,
+      "lon_deg": -141.5556
+    },
+    {
+      "name": "Pacific-Eq-03",
+      "lat_deg": -1.0,
+      "lon_deg": -141.1111
+    },
+    {
+      "name": "Pacific-Eq-04",
+      "lat_deg": -1.0,
+      "lon_deg": -140.6667
+    },
+    {
+      "name": "Pacific-Eq-05",
+      "lat_deg": -1.0,
+      "lon_deg": -140.2222
+    },
+    {
+      "name": "Pacific-Eq-06",
+      "lat_deg": -1.0,
+      "lon_deg": -139.7778
+    },
+    {
+      "name": "Pacific-Eq-07",
+      "lat_deg": -1.0,
+      "lon_deg": -139.3333
+    },
+    {
+      "name": "Pacific-Eq-08",
+      "lat_deg": -1.0,
+      "lon_deg": -138.8889
+    },
+    {
+      "name": "Pacific-Eq-09",
+      "lat_deg": -1.0,
+      "lon_deg": -138.4444
+    },
+    {
+      "name": "Pacific-Eq-10",
+      "lat_deg": -1.0,
+      "lon_deg": -138.0
+    },
+    {
+      "name": "Pacific-Eq-11",
+      "lat_deg": -0.5,
+      "lon_deg": -142.0
+    },
+    {
+      "name": "Pacific-Eq-12",
+      "lat_deg": -0.5,
+      "lon_deg": -141.5556
+    },
+    {
+      "name": "Pacific-Eq-13",
+      "lat_deg": -0.5,
+      "lon_deg": -141.1111
+    },
+    {
+      "name": "Pacific-Eq-14",
+      "lat_deg": -0.5,
+      "lon_deg": -140.6667
+    },
+    {
+      "name": "Pacific-Eq-15",
+      "lat_deg": -0.5,
+      "lon_deg": -140.2222
+    },
+    {
+      "name": "Pacific-Eq-16",
+      "lat_deg": -0.5,
+      "lon_deg": -139.7778
+    },
+    {
+      "name": "Pacific-Eq-17",
+      "lat_deg": -0.5,
+      "lon_deg": -139.3333
+    },
+    {
+      "name": "Pacific-Eq-18",
+      "lat_deg": -0.5,
+      "lon_deg": -138.8889
+    },
+    {
+      "name": "Pacific-Eq-19",
+      "lat_deg": -0.5,
+      "lon_deg": -138.4444
+    },
+    {
+      "name": "Pacific-Eq-20",
+      "lat_deg": -0.5,
+      "lon_deg": -138.0
+    },
+    {
+      "name": "Pacific-Eq-21",
+      "lat_deg": 0.0,
+      "lon_deg": -142.0
+    },
+    {
+      "name": "Pacific-Eq-22",
+      "lat_deg": 0.0,
+      "lon_deg": -141.5556
+    },
+    {
+      "name": "Pacific-Eq-23",
+      "lat_deg": 0.0,
+      "lon_deg": -141.1111
+    },
+    {
+      "name": "Pacific-Eq-24",
+      "lat_deg": 0.0,
+      "lon_deg": -140.6667
+    },
+    {
+      "name": "Pacific-Eq-25",
+      "lat_deg": 0.0,
+      "lon_deg": -140.2222
+    },
+    {
+      "name": "Pacific-Eq-26",
+      "lat_deg": 0.0,
+      "lon_deg": -139.7778
+    },
+    {
+      "name": "Pacific-Eq-27",
+      "lat_deg": 0.0,
+      "lon_deg": -139.3333
+    },
+    {
+      "name": "Pacific-Eq-28",
+      "lat_deg": 0.0,
+      "lon_deg": -138.8889
+    },
+    {
+      "name": "Pacific-Eq-29",
+      "lat_deg": 0.0,
+      "lon_deg": -138.4444
+    },
+    {
+      "name": "Pacific-Eq-30",
+      "lat_deg": 0.0,
+      "lon_deg": -138.0
+    },
+    {
+      "name": "Pacific-Eq-31",
+      "lat_deg": 0.5,
+      "lon_deg": -142.0
+    },
+    {
+      "name": "Pacific-Eq-32",
+      "lat_deg": 0.5,
+      "lon_deg": -141.5556
+    },
+    {
+      "name": "Pacific-Eq-33",
+      "lat_deg": 0.5,
+      "lon_deg": -141.1111
+    },
+    {
+      "name": "Pacific-Eq-34",
+      "lat_deg": 0.5,
+      "lon_deg": -140.6667
+    },
+    {
+      "name": "Pacific-Eq-35",
+      "lat_deg": 0.5,
+      "lon_deg": -140.2222
+    },
+    {
+      "name": "Pacific-Eq-36",
+      "lat_deg": 0.5,
+      "lon_deg": -139.7778
+    },
+    {
+      "name": "Pacific-Eq-37",
+      "lat_deg": 0.5,
+      "lon_deg": -139.3333
+    },
+    {
+      "name": "Pacific-Eq-38",
+      "lat_deg": 0.5,
+      "lon_deg": -138.8889
+    },
+    {
+      "name": "Pacific-Eq-39",
+      "lat_deg": 0.5,
+      "lon_deg": -138.4444
+    },
+    {
+      "name": "Pacific-Eq-40",
+      "lat_deg": 0.5,
+      "lon_deg": -138.0
+    },
+    {
+      "name": "Pacific-Eq-41",
+      "lat_deg": 1.0,
+      "lon_deg": -142.0
+    },
+    {
+      "name": "Pacific-Eq-42",
+      "lat_deg": 1.0,
+      "lon_deg": -141.5556
+    },
+    {
+      "name": "Pacific-Eq-43",
+      "lat_deg": 1.0,
+      "lon_deg": -141.1111
+    },
+    {
+      "name": "Pacific-Eq-44",
+      "lat_deg": 1.0,
+      "lon_deg": -140.6667
+    },
+    {
+      "name": "Pacific-Eq-45",
+      "lat_deg": 1.0,
+      "lon_deg": -140.2222
+    },
+    {
+      "name": "Pacific-Eq-46",
+      "lat_deg": 1.0,
+      "lon_deg": -139.7778
+    },
+    {
+      "name": "Pacific-Eq-47",
+      "lat_deg": 1.0,
+      "lon_deg": -139.3333
+    },
+    {
+      "name": "Pacific-Eq-48",
+      "lat_deg": 1.0,
+      "lon_deg": -138.8889
+    },
+    {
+      "name": "Pacific-Eq-49",
+      "lat_deg": 1.0,
+      "lon_deg": -138.4444
+    },
+    {
+      "name": "Pacific-Eq-50",
+      "lat_deg": 1.0,
+      "lon_deg": -138.0
+    },
+    {
+      "name": "Pacific-S-01",
+      "lat_deg": -49.8,
+      "lon_deg": -125.4
+    },
+    {
+      "name": "Pacific-S-02",
+      "lat_deg": -49.8,
+      "lon_deg": -124.9556
+    },
+    {
+      "name": "Pacific-S-03",
+      "lat_deg": -49.8,
+      "lon_deg": -124.5111
+    },
+    {
+      "name": "Pacific-S-04",
+      "lat_deg": -49.8,
+      "lon_deg": -124.0667
+    },
+    {
+      "name": "Pacific-S-05",
+      "lat_deg": -49.8,
+      "lon_deg": -123.6222
+    },
+    {
+      "name": "Pacific-S-06",
+      "lat_deg": -49.8,
+      "lon_deg": -123.1778
+    },
+    {
+      "name": "Pacific-S-07",
+      "lat_deg": -49.8,
+      "lon_deg": -122.7333
+    },
+    {
+      "name": "Pacific-S-08",
+      "lat_deg": -49.8,
+      "lon_deg": -122.2889
+    },
+    {
+      "name": "Pacific-S-09",
+      "lat_deg": -49.8,
+      "lon_deg": -121.8444
+    },
+    {
+      "name": "Pacific-S-10",
+      "lat_deg": -49.8,
+      "lon_deg": -121.4
+    },
+    {
+      "name": "Pacific-S-11",
+      "lat_deg": -49.3,
+      "lon_deg": -125.4
+    },
+    {
+      "name": "Pacific-S-12",
+      "lat_deg": -49.3,
+      "lon_deg": -124.9556
+    },
+    {
+      "name": "Pacific-S-13",
+      "lat_deg": -49.3,
+      "lon_deg": -124.5111
+    },
+    {
+      "name": "Pacific-S-14",
+      "lat_deg": -49.3,
+      "lon_deg": -124.0667
+    },
+    {
+      "name": "Pacific-S-15",
+      "lat_deg": -49.3,
+      "lon_deg": -123.6222
+    },
+    {
+      "name": "Pacific-S-16",
+      "lat_deg": -49.3,
+      "lon_deg": -123.1778
+    },
+    {
+      "name": "Pacific-S-17",
+      "lat_deg": -49.3,
+      "lon_deg": -122.7333
+    },
+    {
+      "name": "Pacific-S-18",
+      "lat_deg": -49.3,
+      "lon_deg": -122.2889
+    },
+    {
+      "name": "Pacific-S-19",
+      "lat_deg": -49.3,
+      "lon_deg": -121.8444
+    },
+    {
+      "name": "Pacific-S-20",
+      "lat_deg": -49.3,
+      "lon_deg": -121.4
+    },
+    {
+      "name": "Pacific-S-21",
+      "lat_deg": -48.8,
+      "lon_deg": -125.4
+    },
+    {
+      "name": "Pacific-S-22",
+      "lat_deg": -48.8,
+      "lon_deg": -124.9556
+    },
+    {
+      "name": "Pacific-S-23",
+      "lat_deg": -48.8,
+      "lon_deg": -124.5111
+    },
+    {
+      "name": "Pacific-S-24",
+      "lat_deg": -48.8,
+      "lon_deg": -124.0667
+    },
+    {
+      "name": "Pacific-S-25",
+      "lat_deg": -48.8,
+      "lon_deg": -123.6222
+    },
+    {
+      "name": "Pacific-S-26",
+      "lat_deg": -48.8,
+      "lon_deg": -123.1778
+    },
+    {
+      "name": "Pacific-S-27",
+      "lat_deg": -48.8,
+      "lon_deg": -122.7333
+    },
+    {
+      "name": "Pacific-S-28",
+      "lat_deg": -48.8,
+      "lon_deg": -122.2889
+    },
+    {
+      "name": "Pacific-S-29",
+      "lat_deg": -48.8,
+      "lon_deg": -121.8444
+    },
+    {
+      "name": "Pacific-S-30",
+      "lat_deg": -48.8,
+      "lon_deg": -121.4
+    },
+    {
+      "name": "Pacific-S-31",
+      "lat_deg": -48.3,
+      "lon_deg": -125.4
+    },
+    {
+      "name": "Pacific-S-32",
+      "lat_deg": -48.3,
+      "lon_deg": -124.9556
+    },
+    {
+      "name": "Pacific-S-33",
+      "lat_deg": -48.3,
+      "lon_deg": -124.5111
+    },
+    {
+      "name": "Pacific-S-34",
+      "lat_deg": -48.3,
+      "lon_deg": -124.0667
+    },
+    {
+      "name": "Pacific-S-35",
+      "lat_deg": -48.3,
+      "lon_deg": -123.6222
+    },
+    {
+      "name": "Pacific-S-36",
+      "lat_deg": -48.3,
+      "lon_deg": -123.1778
+    },
+    {
+      "name": "Pacific-S-37",
+      "lat_deg": -48.3,
+      "lon_deg": -122.7333
+    },
+    {
+      "name": "Pacific-S-38",
+      "lat_deg": -48.3,
+      "lon_deg": -122.2889
+    },
+    {
+      "name": "Pacific-S-39",
+      "lat_deg": -48.3,
+      "lon_deg": -121.8444
+    },
+    {
+      "name": "Pacific-S-40",
+      "lat_deg": -48.3,
+      "lon_deg": -121.4
+    },
+    {
+      "name": "Pacific-S-41",
+      "lat_deg": -47.8,
+      "lon_deg": -125.4
+    },
+    {
+      "name": "Pacific-S-42",
+      "lat_deg": -47.8,
+      "lon_deg": -124.9556
+    },
+    {
+      "name": "Pacific-S-43",
+      "lat_deg": -47.8,
+      "lon_deg": -124.5111
+    },
+    {
+      "name": "Pacific-S-44",
+      "lat_deg": -47.8,
+      "lon_deg": -124.0667
+    },
+    {
+      "name": "Pacific-S-45",
+      "lat_deg": -47.8,
+      "lon_deg": -123.6222
+    },
+    {
+      "name": "Pacific-S-46",
+      "lat_deg": -47.8,
+      "lon_deg": -123.1778
+    },
+    {
+      "name": "Pacific-S-47",
+      "lat_deg": -47.8,
+      "lon_deg": -122.7333
+    },
+    {
+      "name": "Pacific-S-48",
+      "lat_deg": -47.8,
+      "lon_deg": -122.2889
+    },
+    {
+      "name": "Pacific-S-49",
+      "lat_deg": -47.8,
+      "lon_deg": -121.8444
+    },
+    {
+      "name": "Pacific-S-50",
+      "lat_deg": -47.8,
+      "lon_deg": -121.4
+    }
+  ],
+  "countries": [],
+  "run_config": {
+    "target_mode": "prespecified",
+    "target_country": "None",
+    "target_points": [
+      [
+        "Pacific-N-01",
+        34.0,
+        -152.0
+      ],
+      [
+        "Pacific-N-02",
+        34.0,
+        -151.5556
+      ],
+      [
+        "Pacific-N-03",
+        34.0,
+        -151.1111
+      ],
+      [
+        "Pacific-N-04",
+        34.0,
+        -150.6667
+      ],
+      [
+        "Pacific-N-05",
+        34.0,
+        -150.2222
+      ],
+      [
+        "Pacific-N-06",
+        34.0,
+        -149.7778
+      ],
+      [
+        "Pacific-N-07",
+        34.0,
+        -149.3333
+      ],
+      [
+        "Pacific-N-08",
+        34.0,
+        -148.8889
+      ],
+      [
+        "Pacific-N-09",
+        34.0,
+        -148.4444
+      ],
+      [
+        "Pacific-N-10",
+        34.0,
+        -148.0
+      ],
+      [
+        "Pacific-N-11",
+        34.5,
+        -152.0
+      ],
+      [
+        "Pacific-N-12",
+        34.5,
+        -151.5556
+      ],
+      [
+        "Pacific-N-13",
+        34.5,
+        -151.1111
+      ],
+      [
+        "Pacific-N-14",
+        34.5,
+        -150.6667
+      ],
+      [
+        "Pacific-N-15",
+        34.5,
+        -150.2222
+      ],
+      [
+        "Pacific-N-16",
+        34.5,
+        -149.7778
+      ],
+      [
+        "Pacific-N-17",
+        34.5,
+        -149.3333
+      ],
+      [
+        "Pacific-N-18",
+        34.5,
+        -148.8889
+      ],
+      [
+        "Pacific-N-19",
+        34.5,
+        -148.4444
+      ],
+      [
+        "Pacific-N-20",
+        34.5,
+        -148.0
+      ],
+      [
+        "Pacific-N-21",
+        35.0,
+        -152.0
+      ],
+      [
+        "Pacific-N-22",
+        35.0,
+        -151.5556
+      ],
+      [
+        "Pacific-N-23",
+        35.0,
+        -151.1111
+      ],
+      [
+        "Pacific-N-24",
+        35.0,
+        -150.6667
+      ],
+      [
+        "Pacific-N-25",
+        35.0,
+        -150.2222
+      ],
+      [
+        "Pacific-N-26",
+        35.0,
+        -149.7778
+      ],
+      [
+        "Pacific-N-27",
+        35.0,
+        -149.3333
+      ],
+      [
+        "Pacific-N-28",
+        35.0,
+        -148.8889
+      ],
+      [
+        "Pacific-N-29",
+        35.0,
+        -148.4444
+      ],
+      [
+        "Pacific-N-30",
+        35.0,
+        -148.0
+      ],
+      [
+        "Pacific-N-31",
+        35.5,
+        -152.0
+      ],
+      [
+        "Pacific-N-32",
+        35.5,
+        -151.5556
+      ],
+      [
+        "Pacific-N-33",
+        35.5,
+        -151.1111
+      ],
+      [
+        "Pacific-N-34",
+        35.5,
+        -150.6667
+      ],
+      [
+        "Pacific-N-35",
+        35.5,
+        -150.2222
+      ],
+      [
+        "Pacific-N-36",
+        35.5,
+        -149.7778
+      ],
+      [
+        "Pacific-N-37",
+        35.5,
+        -149.3333
+      ],
+      [
+        "Pacific-N-38",
+        35.5,
+        -148.8889
+      ],
+      [
+        "Pacific-N-39",
+        35.5,
+        -148.4444
+      ],
+      [
+        "Pacific-N-40",
+        35.5,
+        -148.0
+      ],
+      [
+        "Pacific-N-41",
+        36.0,
+        -152.0
+      ],
+      [
+        "Pacific-N-42",
+        36.0,
+        -151.5556
+      ],
+      [
+        "Pacific-N-43",
+        36.0,
+        -151.1111
+      ],
+      [
+        "Pacific-N-44",
+        36.0,
+        -150.6667
+      ],
+      [
+        "Pacific-N-45",
+        36.0,
+        -150.2222
+      ],
+      [
+        "Pacific-N-46",
+        36.0,
+        -149.7778
+      ],
+      [
+        "Pacific-N-47",
+        36.0,
+        -149.3333
+      ],
+      [
+        "Pacific-N-48",
+        36.0,
+        -148.8889
+      ],
+      [
+        "Pacific-N-49",
+        36.0,
+        -148.4444
+      ],
+      [
+        "Pacific-N-50",
+        36.0,
+        -148.0
+      ],
+      [
+        "Pacific-Eq-01",
+        -1.0,
+        -142.0
+      ],
+      [
+        "Pacific-Eq-02",
+        -1.0,
+        -141.5556
+      ],
+      [
+        "Pacific-Eq-03",
+        -1.0,
+        -141.1111
+      ],
+      [
+        "Pacific-Eq-04",
+        -1.0,
+        -140.6667
+      ],
+      [
+        "Pacific-Eq-05",
+        -1.0,
+        -140.2222
+      ],
+      [
+        "Pacific-Eq-06",
+        -1.0,
+        -139.7778
+      ],
+      [
+        "Pacific-Eq-07",
+        -1.0,
+        -139.3333
+      ],
+      [
+        "Pacific-Eq-08",
+        -1.0,
+        -138.8889
+      ],
+      [
+        "Pacific-Eq-09",
+        -1.0,
+        -138.4444
+      ],
+      [
+        "Pacific-Eq-10",
+        -1.0,
+        -138.0
+      ],
+      [
+        "Pacific-Eq-11",
+        -0.5,
+        -142.0
+      ],
+      [
+        "Pacific-Eq-12",
+        -0.5,
+        -141.5556
+      ],
+      [
+        "Pacific-Eq-13",
+        -0.5,
+        -141.1111
+      ],
+      [
+        "Pacific-Eq-14",
+        -0.5,
+        -140.6667
+      ],
+      [
+        "Pacific-Eq-15",
+        -0.5,
+        -140.2222
+      ],
+      [
+        "Pacific-Eq-16",
+        -0.5,
+        -139.7778
+      ],
+      [
+        "Pacific-Eq-17",
+        -0.5,
+        -139.3333
+      ],
+      [
+        "Pacific-Eq-18",
+        -0.5,
+        -138.8889
+      ],
+      [
+        "Pacific-Eq-19",
+        -0.5,
+        -138.4444
+      ],
+      [
+        "Pacific-Eq-20",
+        -0.5,
+        -138.0
+      ],
+      [
+        "Pacific-Eq-21",
+        0.0,
+        -142.0
+      ],
+      [
+        "Pacific-Eq-22",
+        0.0,
+        -141.5556
+      ],
+      [
+        "Pacific-Eq-23",
+        0.0,
+        -141.1111
+      ],
+      [
+        "Pacific-Eq-24",
+        0.0,
+        -140.6667
+      ],
+      [
+        "Pacific-Eq-25",
+        0.0,
+        -140.2222
+      ],
+      [
+        "Pacific-Eq-26",
+        0.0,
+        -139.7778
+      ],
+      [
+        "Pacific-Eq-27",
+        0.0,
+        -139.3333
+      ],
+      [
+        "Pacific-Eq-28",
+        0.0,
+        -138.8889
+      ],
+      [
+        "Pacific-Eq-29",
+        0.0,
+        -138.4444
+      ],
+      [
+        "Pacific-Eq-30",
+        0.0,
+        -138.0
+      ],
+      [
+        "Pacific-Eq-31",
+        0.5,
+        -142.0
+      ],
+      [
+        "Pacific-Eq-32",
+        0.5,
+        -141.5556
+      ],
+      [
+        "Pacific-Eq-33",
+        0.5,
+        -141.1111
+      ],
+      [
+        "Pacific-Eq-34",
+        0.5,
+        -140.6667
+      ],
+      [
+        "Pacific-Eq-35",
+        0.5,
+        -140.2222
+      ],
+      [
+        "Pacific-Eq-36",
+        0.5,
+        -139.7778
+      ],
+      [
+        "Pacific-Eq-37",
+        0.5,
+        -139.3333
+      ],
+      [
+        "Pacific-Eq-38",
+        0.5,
+        -138.8889
+      ],
+      [
+        "Pacific-Eq-39",
+        0.5,
+        -138.4444
+      ],
+      [
+        "Pacific-Eq-40",
+        0.5,
+        -138.0
+      ],
+      [
+        "Pacific-Eq-41",
+        1.0,
+        -142.0
+      ],
+      [
+        "Pacific-Eq-42",
+        1.0,
+        -141.5556
+      ],
+      [
+        "Pacific-Eq-43",
+        1.0,
+        -141.1111
+      ],
+      [
+        "Pacific-Eq-44",
+        1.0,
+        -140.6667
+      ],
+      [
+        "Pacific-Eq-45",
+        1.0,
+        -140.2222
+      ],
+      [
+        "Pacific-Eq-46",
+        1.0,
+        -139.7778
+      ],
+      [
+        "Pacific-Eq-47",
+        1.0,
+        -139.3333
+      ],
+      [
+        "Pacific-Eq-48",
+        1.0,
+        -138.8889
+      ],
+      [
+        "Pacific-Eq-49",
+        1.0,
+        -138.4444
+      ],
+      [
+        "Pacific-Eq-50",
+        1.0,
+        -138.0
+      ],
+      [
+        "Pacific-S-01",
+        -49.8,
+        -125.4
+      ],
+      [
+        "Pacific-S-02",
+        -49.8,
+        -124.9556
+      ],
+      [
+        "Pacific-S-03",
+        -49.8,
+        -124.5111
+      ],
+      [
+        "Pacific-S-04",
+        -49.8,
+        -124.0667
+      ],
+      [
+        "Pacific-S-05",
+        -49.8,
+        -123.6222
+      ],
+      [
+        "Pacific-S-06",
+        -49.8,
+        -123.1778
+      ],
+      [
+        "Pacific-S-07",
+        -49.8,
+        -122.7333
+      ],
+      [
+        "Pacific-S-08",
+        -49.8,
+        -122.2889
+      ],
+      [
+        "Pacific-S-09",
+        -49.8,
+        -121.8444
+      ],
+      [
+        "Pacific-S-10",
+        -49.8,
+        -121.4
+      ],
+      [
+        "Pacific-S-11",
+        -49.3,
+        -125.4
+      ],
+      [
+        "Pacific-S-12",
+        -49.3,
+        -124.9556
+      ],
+      [
+        "Pacific-S-13",
+        -49.3,
+        -124.5111
+      ],
+      [
+        "Pacific-S-14",
+        -49.3,
+        -124.0667
+      ],
+      [
+        "Pacific-S-15",
+        -49.3,
+        -123.6222
+      ],
+      [
+        "Pacific-S-16",
+        -49.3,
+        -123.1778
+      ],
+      [
+        "Pacific-S-17",
+        -49.3,
+        -122.7333
+      ],
+      [
+        "Pacific-S-18",
+        -49.3,
+        -122.2889
+      ],
+      [
+        "Pacific-S-19",
+        -49.3,
+        -121.8444
+      ],
+      [
+        "Pacific-S-20",
+        -49.3,
+        -121.4
+      ],
+      [
+        "Pacific-S-21",
+        -48.8,
+        -125.4
+      ],
+      [
+        "Pacific-S-22",
+        -48.8,
+        -124.9556
+      ],
+      [
+        "Pacific-S-23",
+        -48.8,
+        -124.5111
+      ],
+      [
+        "Pacific-S-24",
+        -48.8,
+        -124.0667
+      ],
+      [
+        "Pacific-S-25",
+        -48.8,
+        -123.6222
+      ],
+      [
+        "Pacific-S-26",
+        -48.8,
+        -123.1778
+      ],
+      [
+        "Pacific-S-27",
+        -48.8,
+        -122.7333
+      ],
+      [
+        "Pacific-S-28",
+        -48.8,
+        -122.2889
+      ],
+      [
+        "Pacific-S-29",
+        -48.8,
+        -121.8444
+      ],
+      [
+        "Pacific-S-30",
+        -48.8,
+        -121.4
+      ],
+      [
+        "Pacific-S-31",
+        -48.3,
+        -125.4
+      ],
+      [
+        "Pacific-S-32",
+        -48.3,
+        -124.9556
+      ],
+      [
+        "Pacific-S-33",
+        -48.3,
+        -124.5111
+      ],
+      [
+        "Pacific-S-34",
+        -48.3,
+        -124.0667
+      ],
+      [
+        "Pacific-S-35",
+        -48.3,
+        -123.6222
+      ],
+      [
+        "Pacific-S-36",
+        -48.3,
+        -123.1778
+      ],
+      [
+        "Pacific-S-37",
+        -48.3,
+        -122.7333
+      ],
+      [
+        "Pacific-S-38",
+        -48.3,
+        -122.2889
+      ],
+      [
+        "Pacific-S-39",
+        -48.3,
+        -121.8444
+      ],
+      [
+        "Pacific-S-40",
+        -48.3,
+        -121.4
+      ],
+      [
+        "Pacific-S-41",
+        -47.8,
+        -125.4
+      ],
+      [
+        "Pacific-S-42",
+        -47.8,
+        -124.9556
+      ],
+      [
+        "Pacific-S-43",
+        -47.8,
+        -124.5111
+      ],
+      [
+        "Pacific-S-44",
+        -47.8,
+        -124.0667
+      ],
+      [
+        "Pacific-S-45",
+        -47.8,
+        -123.6222
+      ],
+      [
+        "Pacific-S-46",
+        -47.8,
+        -123.1778
+      ],
+      [
+        "Pacific-S-47",
+        -47.8,
+        -122.7333
+      ],
+      [
+        "Pacific-S-48",
+        -47.8,
+        -122.2889
+      ],
+      [
+        "Pacific-S-49",
+        -47.8,
+        -121.8444
+      ],
+      [
+        "Pacific-S-50",
+        -47.8,
+        -121.4
+      ]
+    ],
+    "target_shell_n_points": null,
+    "n_targets": 150,
+    "dt_s": 120.0,
+    "t_window_s": 170.0,
+    "v_bo_km_s": 6.0,
+    "a_g": 10.0,
+    "intercept_alt_km": 200.0,
+    "min_elev_deg": 0.0,
+    "r_max_km": 836.4510816639729,
+    "altitude_override_km": 400.0,
+    "altitude_max_repeat_days": 2,
+    "h_star_km": 252.96673941291007,
+    "actual_alt_km": 404.352,
+    "rgt_ratio": "31:2",
+    "L": 1436,
+    "horizon_s": 172208.1942896936,
+    "inclination_sweep_bounds_deg": [
+      0.0,
+      90.0
+    ],
+    "inclination_screen_step_deg": 1.0,
+    "n_raan_offsets": 10,
+    "raan_interval_deg": 11.612903225806452,
+    "raan_step_deg": 1.1612903225806452,
+    "n_seeds_simulated": 910,
+    "n_seeds_live": 910,
+    "n_seeds_for_milp": 25,
+    "reserve_polar_orbits": false,
+    "polar_reservation_inclinations": [],
+    "seeds_selected": [
+      {
+        "rank": 1,
+        "inc_deg": 48.0,
+        "raan_deg": 6.967741935483872
+      },
+      {
+        "rank": 2,
+        "inc_deg": 45.0,
+        "raan_deg": 4.645161290322581
+      },
+      {
+        "rank": 3,
+        "inc_deg": 0.0,
+        "raan_deg": 0.0
+      },
+      {
+        "rank": 4,
+        "inc_deg": 1.0,
+        "raan_deg": 9.290322580645162
+      },
+      {
+        "rank": 5,
+        "inc_deg": 2.0,
+        "raan_deg": 0.0
+      },
+      {
+        "rank": 6,
+        "inc_deg": 3.0,
+        "raan_deg": 2.3225806451612905
+      },
+      {
+        "rank": 7,
+        "inc_deg": 4.0,
+        "raan_deg": 0.0
+      },
+      {
+        "rank": 8,
+        "inc_deg": 5.0,
+        "raan_deg": 0.0
+      },
+      {
+        "rank": 9,
+        "inc_deg": 6.0,
+        "raan_deg": 0.0
+      },
+      {
+        "rank": 10,
+        "inc_deg": 7.0,
+        "raan_deg": 0.0
+      },
+      {
+        "rank": 11,
+        "inc_deg": 8.0,
+        "raan_deg": 2.3225806451612905
+      },
+      {
+        "rank": 12,
+        "inc_deg": 52.0,
+        "raan_deg": 9.290322580645162
+      },
+      {
+        "rank": 13,
+        "inc_deg": 50.0,
+        "raan_deg": 8.129032258064516
+      },
+      {
+        "rank": 14,
+        "inc_deg": 51.0,
+        "raan_deg": 9.290322580645162
+      },
+      {
+        "rank": 15,
+        "inc_deg": 54.0,
+        "raan_deg": 6.967741935483872
+      },
+      {
+        "rank": 16,
+        "inc_deg": 53.0,
+        "raan_deg": 9.290322580645162
+      },
+      {
+        "rank": 17,
+        "inc_deg": 55.0,
+        "raan_deg": 6.967741935483872
+      },
+      {
+        "rank": 18,
+        "inc_deg": 49.0,
+        "raan_deg": 6.967741935483872
+      },
+      {
+        "rank": 19,
+        "inc_deg": 9.0,
+        "raan_deg": 2.3225806451612905
+      },
+      {
+        "rank": 20,
+        "inc_deg": 56.0,
+        "raan_deg": 5.806451612903226
+      },
+      {
+        "rank": 21,
+        "inc_deg": 47.0,
+        "raan_deg": 6.967741935483872
+      },
+      {
+        "rank": 22,
+        "inc_deg": 57.0,
+        "raan_deg": 5.806451612903226
+      },
+      {
+        "rank": 23,
+        "inc_deg": 10.0,
+        "raan_deg": 9.290322580645162
+      },
+      {
+        "rank": 24,
+        "inc_deg": 46.0,
+        "raan_deg": 6.967741935483872
+      },
+      {
+        "rank": 25,
+        "inc_deg": 58.0,
+        "raan_deg": 6.967741935483872
+      }
+    ],
+    "salvo_size": 10,
+    "n_interceptors_per_sat": 1,
+    "r_required": 10,
+    "mip_gap_target": 0.01,
+    "time_limit_s": 14400.0,
+    "mip_focus": 1,
+    "heuristics_frac": 0.2,
+    "solver_params": {
+      "Method": 1,
+      "NodefileStart": 4,
+      "RINS": 50
+    },
+    "timestamp_utc": "2026-07-15T15:35:07.497679+00:00",
+    "result_status": "Time limit",
+    "mip_gap_achieved": 0.15571776155717762,
+    "n_satellites_selected": 2466,
+    "obj_val": 2466.0,
+    "obj_bound": 2082.0,
+    "time_modeling_s": 1.29909062400111,
+    "time_optimization_s": 28139.159906247
+  }
+}

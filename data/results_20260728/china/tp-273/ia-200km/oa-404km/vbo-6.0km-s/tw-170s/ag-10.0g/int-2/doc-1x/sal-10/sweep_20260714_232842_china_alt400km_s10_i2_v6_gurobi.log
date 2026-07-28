@@ -1,0 +1,53 @@
+
+Gurobi 13.0.2 (linux64) logging started Tue Jul 14 23:42:42 2026
+
+Set parameter LogFile to value "/tmp/sweep_20260714_232842_china_alt400km_s10_i2_v6_gurobi.log"
+Set parameter Method to value 1
+Set parameter NodefileStart to value 4
+Set parameter RINS to value 50
+Gurobi Optimizer version 13.0.2 build v13.0.2rc1 (linux64 - "Debian GNU/Linux 13 (trixie)")
+
+CPU model: Intel(R) Xeon(R) Platinum 8375C CPU @ 2.90GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 16 physical cores, 32 logical processors, using up to 32 threads
+
+Non-default parameters:
+TimeLimit  14400
+MIPGap  0.001
+Method  1
+LPWarmStart  1
+Heuristics  0.2
+MIPFocus  1
+NodefileStart  4
+RINS  50
+Symmetry  2
+Cuts  2
+CoverCuts  2
+LogToConsole  0
+
+Academic license 2812613 - for non-commercial use only - registered to no___@gatech.edu
+Optimize a model with 392028 rows, 14360 columns and 35490740 nonzeros (Min)
+Model fingerprint: 0x839c3d2d
+Model has 14360 linear objective coefficients
+Variable types: 0 continuous, 14360 integer (14360 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [5e+00, 5e+00]
+
+Found heuristic solution: objective 2872.0000000
+Presolve removed 0 rows and 0 columns (presolve time = 5s)...
+Presolve removed 392028 rows and 14360 columns (presolve time = 11s)...
+Presolve removed 392028 rows and 14360 columns
+Presolve time: 11.06s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 13.28 seconds (6.44 work units)
+Thread count was 1 (of 32 available processors)
+
+Solution count 1: 2872 
+
+Optimal solution found (tolerance 1.00e-03)
+Best objective 2.872000000000e+03, best bound 2.872000000000e+03, gap 0.0000%
+
+User-callback calls 184, time in user-callback 0.00 sec
