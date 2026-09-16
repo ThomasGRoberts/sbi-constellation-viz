@@ -146,10 +146,10 @@ scene.add(constellationGroup);
 const statusEl = document.getElementById("status");
 
 const playBtn = document.getElementById("playBtn");
-const speedHalfBtn = document.getElementById("speedHalfBtn");
-const speedOneBtn = document.getElementById("speedOneBtn");
-const speedTwoBtn = document.getElementById("speedTwoBtn");
+const speedDownBtn = document.getElementById("speedDownBtn");
+const speedUpBtn = document.getElementById("speedUpBtn");
 const timelineSlider = document.getElementById("timelineSlider");
+const timelineTime = document.getElementById("timelineTime");
 
 const zoomInBtn = document.getElementById("zoomInBtn");
 const zoomOutBtn = document.getElementById("zoomOutBtn");
@@ -159,6 +159,38 @@ const mode3DBtn = document.getElementById("mode3DBtn");
 const mode2DBtn = document.getElementById("mode2DBtn");
 
 const cameraControls = document.getElementById("cameraControls");
+const panelToggleBtn = document.getElementById("panelToggleBtn");
+panelToggleBtn.addEventListener("click", () => {
+  const collapsed = document.body.classList.toggle("uiCollapsed");
+  panelToggleBtn.setAttribute("aria-expanded", String(!collapsed));
+  panelToggleBtn.setAttribute("aria-label", collapsed ? "Show control panel" : "Hide control panel");
+  panelToggleBtn.textContent = collapsed ? "›" : "‹";
+  const resumePlayback = isPlaying;
+  isPlaying = false;
+  updatePlaybackButton();
+  if (visualizationMode === "2d") {
+    mapNeedsGeometryRebuild = true;
+    draw2DMap();
+  }
+  const transitionStart = performance.now();
+  const animateLayoutTransition = now => {
+    if (now - transitionStart < 340) {
+      if (visualizationMode === "3d") apply3DViewOffset();
+      else { mapNeedsGeometryRebuild = true; draw2DMap(); }
+      requestAnimationFrame(animateLayoutTransition);
+    } else if (visualizationMode === "3d") {
+      apply3DViewOffset();
+    } else {
+      mapNeedsGeometryRebuild = true;
+      draw2DMap();
+    }
+    isPlaying = resumePlayback;
+    updatePlaybackButton();
+  };
+  requestAnimationFrame(animateLayoutTransition);
+});
+const legendContainer = document.querySelector(".legendContainer");
+if (legendContainer) document.body.appendChild(legendContainer);
 
 const legend3D = document.getElementById("legend3D");
 const legend2D = document.getElementById("legend2D");
@@ -173,6 +205,7 @@ const planeStat = document.getElementById("planeStat");
 
 const coverageChart = document.getElementById("coverageChart");
 const coverageChartCtx = coverageChart ? coverageChart.getContext("2d") : null;
+const chartLabelOverlay = document.getElementById("chartLabelOverlay");
 
 function setStatus(text) {
   if (statusEl) statusEl.textContent = text;
@@ -249,7 +282,7 @@ function satelliteCoversPoint(satPos, pointPos, killRadiusSceneSq) {
   return sinElevation >= minSinElevation;
 }
 
-function computeCountsForPositions(positions, timeSeconds = simulationSeconds) {
+function computeCountsForPositions(positions, timeSeconds = simulationSeconds, positionResolver = analyticalOrbitalPosition) {
   const counts = positions.map(() => 0);
 
   if (!killRadiusKm || positions.length === 0 || satObjects.length === 0) {
@@ -260,7 +293,7 @@ function computeCountsForPositions(positions, timeSeconds = simulationSeconds) {
   const killRadiusSceneSq = killRadiusScene * killRadiusScene;
 
   satObjects.forEach(obj => {
-    const satPos = analyticalOrbitalPosition(obj.row, timeSeconds);
+    const satPos = positionResolver(obj.row, timeSeconds);
 
     positions.forEach((pointPos, idx) => {
       if (satelliteCoversPoint(satPos, pointPos, killRadiusSceneSq)) {
@@ -278,7 +311,7 @@ function updateMapColorScaleMax(currentMax) {
   updateCoverageLegendMax();
 }
 
-function computeCoverageMetrics(updateMaterials = false, timeSeconds = simulationSeconds) {
+function computeCoverageMetrics(updateMaterials = false, timeSeconds = simulationSeconds, positionResolver = analyticalOrbitalPosition) {
   if (!killRadiusKm || targetPositions.length === 0 || satObjects.length === 0) {
     targetCoverageCounts = targetPositions.map(() => 0);
 
@@ -297,7 +330,7 @@ function computeCoverageMetrics(updateMaterials = false, timeSeconds = simulatio
   const killRadiusSceneSq = killRadiusScene * killRadiusScene;
 
   satObjects.forEach((obj, satIdx) => {
-    const satPos = analyticalOrbitalPosition(obj.row, timeSeconds);
+    const satPos = positionResolver(obj.row, timeSeconds);
 
     targetPositions.forEach((targetPos, targetIdx) => {
       if (satelliteCoversPoint(satPos, targetPos, killRadiusSceneSq)) {
@@ -310,7 +343,7 @@ function computeCoverageMetrics(updateMaterials = false, timeSeconds = simulatio
   targetCoverageCounts = countsByTarget;
 
   if (visualizationMode === "2d") {
-    globalCoverageCounts = computeCountsForPositions(globalCellPositions, timeSeconds);
+    globalCoverageCounts = computeCountsForPositions(globalCellPositions, timeSeconds, positionResolver);
     updateMapColorScaleMax(Math.max(1, ...globalCoverageCounts));
   }
 
@@ -358,6 +391,26 @@ function sampleCoverageAtTime(timeSeconds) {
 
   return computeCoverageMetrics(false, timeSeconds);
 }
+
+function diagnoseCoverageTimeSamples() {
+  if (satObjects.length === 0 || targetPositions.length === 0) return;
+
+  const firstRow = satObjects[0].row;
+  const pos0 = analyticalOrbitalPosition(firstRow, 0);
+  const posStep = analyticalOrbitalPosition(firstRow, scenarioTimeStepSeconds);
+  const metrics0 = computeCoverageMetrics(false, 0);
+  const metricsStep = computeCoverageMetrics(false, scenarioTimeStepSeconds);
+
+  console.info("[SBI coverage diagnostic]", {
+    stepSeconds: scenarioTimeStepSeconds,
+    firstSatelliteDeltaScene: pos0.distanceTo(posStep),
+    firstSatelliteEarthFixedPositionAt0: pos0.toArray(),
+    firstSatelliteEarthFixedPositionAtStep: posStep.toArray(),
+    metricsAt0: metrics0,
+    metricsAtStep: metricsStep
+  });
+}
+
 
 function shouldAddCoverageSample(force = false) {
   if (force || lastCoverageSampleSeconds === null) return true;
@@ -480,6 +533,8 @@ function drawStepLine(ctx, points, strokeStyle, lineWidth) {
 
   ctx.stroke();
 }
+
+let previousCoverageLabelOrder = ["Max", "Avg", "Min"];
 
 function drawRightSideValueLabel(ctx, label, value, y, color, chartRight, cssWidth) {
   const x = chartRight + 5;
@@ -658,17 +713,57 @@ function drawCoverageChart() {
     ctx.fillText(label, x, chartBottom + 6);
   }
 
-  if (latestMaxPoint) {
-    drawRightSideValueLabel(ctx, "Max", latest.max, latestMaxPoint.y, COLOR_MAX, chartRight, cssWidth);
+  const labels = [
+    { name: "Max", value: latest.max, y: latestMaxPoint?.y, color: COLOR_MAX },
+    { name: "Avg", value: latest.avg, y: latestAvgPoint?.y, color: COLOR_AVG },
+    { name: "Min", value: latest.min, y: latestMinPoint?.y, color: COLOR_MIN }
+  ].filter(item => item.y !== undefined);
+
+  labels.sort((a, b) => {
+    const aOrder = previousCoverageLabelOrder.indexOf(a.name);
+    const bOrder = previousCoverageLabelOrder.indexOf(b.name);
+    return a.y - b.y || aOrder - bOrder;
+  });
+
+  const minimumGap = 13;
+  let groupStart = 0;
+  while (groupStart < labels.length) {
+    let groupEnd = groupStart;
+    while (
+      groupEnd + 1 < labels.length &&
+      labels[groupEnd + 1].y - labels[groupEnd].y < minimumGap
+    ) {
+      groupEnd += 1;
+    }
+
+    if (groupEnd > groupStart) {
+      const anchor = labels
+        .slice(groupStart, groupEnd + 1)
+        .reduce((sum, item) => sum + item.y, 0) / (groupEnd - groupStart + 1);
+      const center = (groupEnd - groupStart) / 2;
+      for (let i = groupStart; i <= groupEnd; i += 1) {
+        labels[i].y = anchor + (i - groupStart - center) * minimumGap;
+      }
+    }
+
+    groupStart = groupEnd + 1;
   }
 
-  if (latestAvgPoint) {
-    drawRightSideValueLabel(ctx, "Avg", latest.avg, latestAvgPoint.y, COLOR_AVG, chartRight, cssWidth);
-  }
-
-  if (latestMinPoint) {
-    drawRightSideValueLabel(ctx, "Min", latest.min, latestMinPoint.y, COLOR_MIN, chartRight, cssWidth);
-  }
+  labels.forEach(item => {
+    if (item.y >= 8) drawRightSideValueLabel(ctx, item.name, item.value, item.y, item.color, chartRight, cssWidth);
+  });
+  chartLabelOverlay.innerHTML = "";
+  const chartRect = coverageChart.getBoundingClientRect();
+  labels.filter(item => item.y < 8).forEach(item => {
+    const overlayLabel = document.createElement("span");
+    overlayLabel.className = "chartOverlayLabel";
+    overlayLabel.style.left = `${chartRect.left + chartRight + 2}px`;
+    overlayLabel.style.top = `${chartRect.top + item.y}px`;
+    overlayLabel.style.color = item.color;
+    overlayLabel.textContent = `${item.name} ${formatCoverageValue(item.value)}`;
+    chartLabelOverlay.appendChild(overlayLabel);
+  });
+  previousCoverageLabelOrder = labels.map(item => item.name);
 
   ctx.restore();
 }
@@ -1125,15 +1220,7 @@ function updatePlaybackButton() {
 }
 
 function setPlaybackMultiplier(multiplier) {
-  playbackMultiplier = multiplier;
-
-  [speedHalfBtn, speedOneBtn, speedTwoBtn].forEach(btn => {
-    btn.classList.remove("activeSpeed");
-  });
-
-  if (multiplier === 0.5) speedHalfBtn.classList.add("activeSpeed");
-  if (multiplier === 1.0) speedOneBtn.classList.add("activeSpeed");
-  if (multiplier === 2.0) speedTwoBtn.classList.add("activeSpeed");
+  playbackMultiplier = Math.max(0.25, Math.min(4.0, multiplier));
 }
 
 function degToRad(d) {
@@ -1217,11 +1304,22 @@ function rotateInertialVectorToEarthFixed(position, tSeconds) {
     .clone()
     .applyAxisAngle(
       new THREE.Vector3(0, 1, 0),
-      EARTH_ROTATION_RATE_RAD_PER_SEC * tSeconds
+      -EARTH_ROTATION_RATE_RAD_PER_SEC * tSeconds
     );
 }
 
-function makeSatelliteSpriteTexture(fillColor, strokeColor) {
+// Coverage/chart path: retain the original analytical convention. The
+// display path above is intentionally allowed to use its visualization fix.
+function rotateAnalyticalVectorToEarthFixed(position, tSeconds) {
+  return position
+    .clone()
+    .applyAxisAngle(
+      new THREE.Vector3(0, 1, 0),
+      -EARTH_ROTATION_RATE_RAD_PER_SEC * tSeconds
+    );
+}
+
+function makeSatelliteSpriteTexture(fillColor, strokeColor, strokeWidth = 18) {
   const canvas = document.createElement("canvas");
   canvas.width = 128;
   canvas.height = 128;
@@ -1234,7 +1332,7 @@ function makeSatelliteSpriteTexture(fillColor, strokeColor) {
   ctx.fillStyle = fillColor;
   ctx.fill();
 
-  ctx.lineWidth = 12;
+  ctx.lineWidth = strokeWidth;
   ctx.strokeStyle = strokeColor;
   ctx.stroke();
 
@@ -1406,7 +1504,7 @@ function analyticalOrbitalPosition(row, tSeconds) {
 
   const inertialPosition = new THREE.Vector3(x * SCALE, z * SCALE, -y * SCALE);
 
-  return rotateInertialVectorToEarthFixed(inertialPosition, tSeconds);
+  return rotateAnalyticalVectorToEarthFixed(inertialPosition, tSeconds);
 }
 
 function orbitalPlanePoint(plane, uDeg, tSeconds) {
@@ -1594,7 +1692,16 @@ function updateSatellitePositions() {
 }
 
 function updateCoverageColors(forceCoverageSample = false, recordCoverageSample = true, deferMapDraw = false) {
-  const metrics = computeCoverageMetrics(true);
+  // Visual active-state must use the same display positions drawn on the globe.
+  // The chart samples its raw analytical path independently.
+  const metrics = computeCoverageMetrics(true, simulationSeconds, orbitalPosition);
+
+  // The 2D analytical coverage field must remain on the raw scenario path;
+  // only the globe's active-satellite styling uses the display resolver.
+  if (visualizationMode === "2d" && globalCellPositions.length > 0) {
+    globalCoverageCounts = computeCountsForPositions(globalCellPositions, simulationSeconds);
+    updateMapColorScaleMax(Math.max(1, ...globalCoverageCounts));
+  }
 
   coverageCurrentMetrics = metrics;
 
@@ -1619,6 +1726,10 @@ function updateTimelineSlider() {
 
   const hours = simulationSeconds / SECONDS_PER_HOUR;
   timelineSlider.value = hours.toFixed(2);
+  if (timelineTime) timelineTime.textContent = formatTimeHHMM(simulationSeconds);
+  const max = Number(timelineSlider.max) || 24;
+  const progress = Math.max(0, Math.min(100, (hours / max) * 100));
+  timelineSlider.style.setProperty("--timeline-progress", `${progress}%`);
 }
 
 function updateSceneForTime(forceCoverageSample = false, recordCoverageSample = true, deferMapDraw = false) {
@@ -1754,7 +1865,7 @@ function renderConstellation(rows, scenarioInfo = null) {
   setStats(rows.length, planeModels.length);
 
   activeSatelliteMaterial = new THREE.SpriteMaterial({
-    map: makeSatelliteSpriteTexture("#eaaa00", "#000000"),
+    map: makeSatelliteSpriteTexture("#f7d503", "#111111"),
     transparent: true,
     depthTest: true,
     depthWrite: false,
@@ -1762,7 +1873,7 @@ function renderConstellation(rows, scenarioInfo = null) {
   });
 
   inactiveSatelliteMaterial = new THREE.SpriteMaterial({
-    map: makeSatelliteSpriteTexture("#a9a9a9", "#4a4a4a"),
+    map: makeSatelliteSpriteTexture("#d5d5d5", "#4a4a4a", 14),
     transparent: true,
     depthTest: true,
     depthWrite: false,
@@ -1800,6 +1911,7 @@ async function loadCSV(path) {
 
   const scenarioInfo = await loadScenarioJson(path);
   renderConstellation(rows, scenarioInfo);
+  diagnoseCoverageTimeSamples();
 
   redrawCountryBoundaries();
 
@@ -1901,7 +2013,7 @@ function refreshDropdowns(triggerLoad = true, resetLowerDropdowns = false) {
 }
 
 async function loadManifest() {
-  const res = await fetch("manifest.json");
+  const res = await fetch(`manifest.json?refresh=${Date.now()}`, { cache: "no-store" });
   manifest = await res.json();
 
   refreshDropdowns(false, true);
@@ -2047,9 +2159,8 @@ playBtn.addEventListener("click", () => {
   updatePlaybackButton();
 });
 
-speedHalfBtn.addEventListener("click", () => setPlaybackMultiplier(0.5));
-speedOneBtn.addEventListener("click", () => setPlaybackMultiplier(1.0));
-speedTwoBtn.addEventListener("click", () => setPlaybackMultiplier(2.0));
+speedDownBtn.addEventListener("click", () => setPlaybackMultiplier(Math.max(0.25, playbackMultiplier - 0.5)));
+speedUpBtn.addEventListener("click", () => setPlaybackMultiplier(Math.min(4.0, playbackMultiplier + 0.5)));
 
 if (timelineSlider) {
   timelineSlider.addEventListener("input", () => {
