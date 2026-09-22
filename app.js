@@ -189,9 +189,6 @@ panelToggleBtn.addEventListener("click", () => {
   };
   requestAnimationFrame(animateLayoutTransition);
 });
-const legendContainer = document.querySelector(".legendContainer");
-if (legendContainer) document.body.appendChild(legendContainer);
-
 const legend3D = document.getElementById("legend3D");
 const legend2D = document.getElementById("legend2D");
 const coverageMaxLabel = document.getElementById("coverageMaxLabel");

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>Optimizing Space-Based Missile Defense</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=legend-viewport-1" />
 </head>
 
 <body>
@@ -79,38 +79,40 @@
 
       <hr>
 
-      <div class="legendContainer">
-        <div id="legend3D" class="legendList">
-          <div class="legendRow">
-            <span class="legendDot legendDotActive"></span>
-            <span>Satellites over threat region</span>
-          </div>
-
-          <div class="legendRow">
-            <span class="legendDot legendDotInactive"></span>
-            <span>Satellites away from threat region</span>
-          </div>
-        </div>
-
-        <div id="legend2D" class="legend2D">
-          <div class="gradientLegendRow">
-            <div class="noCoverageSwatch"></div>
-            <div class="gradientLegendBar"></div>
-          </div>
-
-          <div class="gradientLegendLabels">
-            <span>No coverage</span>
-            <span id="coverageRangeLabel">
-              <span class="coverageRangeMin">1</span>
-              <span class="coverageRangeText">satellites within range</span>
-              <span id="coverageMaxLabel" class="coverageRangeMax">Max</span>
-            </span>
-          </div>
-        </div>
-      </div>
     </section>
 
     <div id="status"></div>
+  </div>
+
+  <!-- Viewport-anchored legend: intentionally outside the scrollable control panel. -->
+  <div class="legendContainer">
+    <div id="legend3D" class="legendList">
+      <div class="legendRow">
+        <span class="legendDot legendDotActive"></span>
+        <span>Satellites over threat region</span>
+      </div>
+
+      <div class="legendRow">
+        <span class="legendDot legendDotInactive"></span>
+        <span>Satellites away from threat region</span>
+      </div>
+    </div>
+
+    <div id="legend2D" class="legend2D">
+      <div class="gradientLegendRow">
+        <div class="noCoverageSwatch"></div>
+        <div class="gradientLegendBar"></div>
+      </div>
+
+      <div class="gradientLegendLabels">
+        <span>No coverage</span>
+        <span id="coverageRangeLabel">
+          <span class="coverageRangeMin">1</span>
+          <span class="coverageRangeText">satellites within range</span>
+          <span id="coverageMaxLabel" class="coverageRangeMax">Max</span>
+        </span>
+      </div>
+    </div>
   </div>
 
   <button id="panelToggleBtn" type="button" aria-label="Hide control panel" aria-expanded="true">‹</button>
@@ -141,6 +143,6 @@
   }
   </script>
 
-  <script type="module" src="app.js"></script>
+  <script type="module" src="app.js?v=legend-viewport-1"></script>
 </body>
 </html>
