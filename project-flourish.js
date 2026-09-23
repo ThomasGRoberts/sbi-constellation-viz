@@ -17,19 +17,19 @@ if (link && canvas) {
   renderer.setSize(58, 58, false);
   renderer.setClearColor(0x000000, 0);
 
-  scene.add(new THREE.AmbientLight(0xffffff, 0.72));
-  const keyLight = new THREE.DirectionalLight(0xffffff, 1.15);
+  scene.add(new THREE.AmbientLight(0xffffff, 0.75));
+  const keyLight = new THREE.DirectionalLight(0xffffff, 1.3);
   keyLight.position.set(1.35, 1.65, 2.4);
   scene.add(keyLight);
-  const fillLight = new THREE.DirectionalLight(0xffe7a3, 0.16);
+  const fillLight = new THREE.DirectionalLight(0xffe7a3, 0.2);
   fillLight.position.set(-1.35, -0.7, 1.35);
   scene.add(fillLight);
 
   const globe = new THREE.Mesh(
     new THREE.IcosahedronGeometry(1, 1),
     new THREE.MeshStandardMaterial({
-      color: 0xffd400,
-      emissive: 0xffca00,
+      color: 0xf4ba20,
+      emissive: 0xeaaa00,
       emissiveIntensity: 0.18,
       flatShading: true,
       roughness: 0.76,

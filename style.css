@@ -553,6 +553,24 @@ input[type="range"]::-moz-range-thumb {
   clip-path: inset(0);
 }
 
+.projectLinkArrow {
+  display: block;
+  width: 13px;
+  height: 13px;
+  flex: 0 0 13px;
+  margin-left: 6px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform .18s ease;
+}
+
+#projectLink.is-open .projectLinkArrow {
+  transform: translateX(-2px);
+}
+
 #projectLink:focus-visible {
   outline: 2px solid rgba(180, 145, 35, .9);
   outline-offset: 4px;
@@ -560,7 +578,9 @@ input[type="range"]::-moz-range-thumb {
 
 @media (prefers-reduced-motion: reduce) {
   .projectLinkLabel,
-  #projectFlourishCanvas { transition: none; }
+  #projectFlourishCanvas,
+  .projectLinkArrow { transition: none; }
+  #projectLink.is-open .projectLinkArrow { transform: none; }
 }
 
 .cameraBtn {
