@@ -495,6 +495,74 @@ input[type="range"]::-moz-range-thumb {
   gap: 10px;
 }
 
+#projectLink {
+  position: relative;
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: #444444;
+  text-decoration: none;
+  z-index: 1;
+}
+
+.projectLinkIcon {
+  position: relative;
+  z-index: 2;
+  width: 46px;
+  height: 46px;
+  flex: 0 0 46px;
+}
+
+#projectFlourishCanvas {
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  width: 58px;
+  height: 58px;
+  display: block;
+  pointer-events: none;
+  opacity: .9;
+  transition: opacity .24s ease;
+}
+
+#projectLink.is-open #projectFlourishCanvas {
+  opacity: 1;
+}
+
+.projectLinkLabel {
+  position: absolute;
+  top: 0;
+  right: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  padding-right: 10px;
+  opacity: 0;
+  clip-path: inset(0 0 0 100%);
+  color: #666666;
+  font-size: 12px;
+  font-weight: 400;
+  transition: clip-path .5s cubic-bezier(.2,.8,.2,1), opacity .25s ease;
+}
+
+#projectLink.is-open .projectLinkLabel {
+  opacity: 1;
+  clip-path: inset(0);
+}
+
+#projectLink:focus-visible {
+  outline: 2px solid rgba(180, 145, 35, .9);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .projectLinkLabel,
+  #projectFlourishCanvas { transition: none; }
+}
+
 .cameraBtn {
   width: 46px;
   height: 46px;
@@ -519,8 +587,54 @@ input[type="range"]::-moz-range-thumb {
   width: 320px;
   opacity: .23;
   filter: grayscale(1);
-  pointer-events: none;
   z-index: 9;
+  display: block;
+  line-height: 0;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+#gtLogo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+#gtLogo::after {
+  content: "";
+  position: absolute;
+  inset: -35% -45%;
+  pointer-events: none;
+  background: linear-gradient(
+    115deg,
+    transparent 36%,
+    rgba(255,255,255,0.18) 43%,
+    rgba(255,255,255,0.98) 49%,
+    rgba(255,255,255,0.28) 56%,
+    transparent 64%
+  );
+  transform: translateX(-125%);
+}
+
+#gtLogo:hover::after,
+#gtLogo:focus-visible::after {
+  animation: esplLogoGlint 1.25s ease-out forwards;
+}
+
+#gtLogo:focus-visible {
+  outline: 2px solid rgba(180, 145, 35, .9);
+  outline-offset: 4px;
+}
+
+@keyframes esplLogoGlint {
+  to { transform: translateX(125%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #gtLogo:hover::after,
+  #gtLogo:focus-visible::after {
+    animation: none;
+  }
 }
 
 #status {

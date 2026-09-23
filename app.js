@@ -2053,10 +2053,12 @@ function clear3DViewOffset() {
 function setFullEarthView() {
   const focus = getFocusVector(1);
 
-  camera.position.copy(focus.clone().multiplyScalar(4.1));
+  // Slightly enlarge the initial globe and bias the framing upward so the
+  // open visualization area has more visual presence beneath the controls.
+  camera.position.copy(focus.clone().multiplyScalar(3.8));
   camera.up.set(0, 1, 0);
 
-  controls.target.set(0, 0, 0);
+  controls.target.set(0, -0.06, 0);
   controls.update();
 
   apply3DViewOffset();

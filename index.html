@@ -2,8 +2,9 @@
 <html>
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Optimizing Space-Based Missile Defense</title>
-  <link rel="stylesheet" href="style.css?v=legend-viewport-1" />
+  <link rel="stylesheet" href="style.css?v=project-flourish-7" />
 </head>
 
 <body>
@@ -118,6 +119,12 @@
   <button id="panelToggleBtn" type="button" aria-label="Hide control panel" aria-expanded="true">‹</button>
 
   <div id="cameraControls">
+    <a id="projectLink" href="https://espl.ae.gatech.edu/research/projects/sbi/" target="_top" aria-label="Learn more about the SBI project">
+      <span class="projectLinkIcon" aria-hidden="true">
+        <canvas id="projectFlourishCanvas" width="116" height="116"></canvas>
+      </span>
+      <span class="projectLinkLabel">About this project</span>
+    </a>
     <button id="zoomInBtn" class="cameraBtn" title="Zoom in">+</button>
     <button id="zoomOutBtn" class="cameraBtn" title="Zoom out">−</button>
     <button id="viewToggleBtn" class="cameraBtn" title="Toggle globe / horizon view">◠</button>
@@ -127,7 +134,9 @@
     <canvas id="map2dCanvas"></canvas>
   </div>
 
-  <img id="gtLogo" src="assets/ESPL.png" alt="Engineering Space Policy Laboratory">
+  <a id="gtLogo" href="https://espl.ae.gatech.edu/" target="_top" aria-label="Engineering Space Policy Laboratory home">
+    <img src="assets/ESPL.png" alt="">
+  </a>
   <div id="chartLabelOverlay" aria-hidden="true"></div>
 
   <script type="importmap">
@@ -144,5 +153,6 @@
   </script>
 
   <script type="module" src="app.js?v=legend-viewport-1"></script>
+  <script type="module" src="project-flourish.js?v=9"></script>
 </body>
 </html>
