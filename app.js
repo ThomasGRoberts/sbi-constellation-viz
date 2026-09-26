@@ -7,7 +7,7 @@ import { Delaunay } from "d3-delaunay";
 import {
   createSecretLegendActivation,
   createThreatScenarioDetailController
-} from "./scenario-detail.js?v=12";
+} from "./scenario-detail.js?v=13";
 
 const EARTH_RADIUS_KM = 6378.137;
 const MU_EARTH_KM3_S2 = 398600.4418;

@@ -111,17 +111,17 @@ export function parseThreatScenarioCsv(text) {
   }
 
   const locations = rows.slice(locationHeaderIndex + 1).flatMap(row => {
-    const latitude = Number(row[locationColumns.latitude]);
-    const longitude = Number(row[locationColumns.longitude]);
-
-    if (!Number.isFinite(latitude) || !Number.isFinite(longitude)) return [];
-    if (latitude < -90 || latitude > 90 || longitude < -180 || longitude > 180) return [];
+    const latitudeText = String(row[locationColumns.latitude] || "").trim();
+    const longitudeText = String(row[locationColumns.longitude] || "").trim();
+    const titleText = String(row[locationColumns.title] || "").trim();
+    const descriptionHtml = String(row[locationColumns.descriptionHtml] || "").trim();
+    if (!latitudeText && !longitudeText && !titleText && !descriptionHtml) return [];
 
     return [{
-      latitude,
-      longitude,
-      title: String(row[locationColumns.title] || "Launch location").trim() || "Launch location",
-      descriptionHtml: String(row[locationColumns.descriptionHtml] || "").trim()
+      latitude: latitudeText ? Number(latitudeText) : NaN,
+      longitude: longitudeText ? Number(longitudeText) : NaN,
+      title: titleText || "Launch location",
+      descriptionHtml
     }];
   });
 
@@ -322,13 +322,26 @@ export function groupScenarioLocations(locations) {
       groups.set(key, {
         title: location.title,
         descriptionHtml: location.descriptionHtml,
-        locations: []
+        coordinates: []
       });
     }
-    groups.get(key).locations.push(location);
+    const coordinateIsValid = (
+      Number.isFinite(location.latitude) &&
+      Number.isFinite(location.longitude) &&
+      location.latitude >= -90 &&
+      location.latitude <= 90 &&
+      location.longitude >= -180 &&
+      location.longitude <= 180
+    );
+    if (coordinateIsValid) {
+      groups.get(key).coordinates.push({
+        latitude: location.latitude,
+        longitude: location.longitude
+      });
+    }
   });
 
-  return [...groups.values()];
+  return [...groups.values()].filter(site => site.coordinates.length > 0);
 }
 
 function collectCoordinatesFromGeometry(geometry, longitudes, latitudes = null) {
@@ -409,9 +422,9 @@ function renderDetailMap(svg, scenario, sites, worldFeatures, selectedSiteIndex,
   const focusFeatures = worldFeatures.filter(feature =>
     featureMatchesThreatRegion(feature.properties?.name || "", scenario.threatRegion)
   );
-  const locationFeatures = sites.flatMap(site => site.locations).map(location => ({
+  const locationFeatures = sites.flatMap(site => site.coordinates).map(coordinate => ({
     type: "Feature",
-    geometry: { type: "Point", coordinates: [location.longitude, location.latitude] }
+    geometry: { type: "Point", coordinates: [coordinate.longitude, coordinate.latitude] }
   }));
   const fitFeatures = focusFeatures.length > 0 ? focusFeatures : locationFeatures;
   const centralLongitude = getCircularLongitudeStats(fitFeatures).center;
@@ -468,9 +481,9 @@ function renderDetailMap(svg, scenario, sites, worldFeatures, selectedSiteIndex,
   svg.append(boundaryLayer);
 
   const projected = sites.flatMap((site, siteIndex) =>
-    site.locations.map(location => {
-      const point = projection([location.longitude, location.latitude]);
-      return { siteIndex, location, x: point?.[0] ?? 0, y: point?.[1] ?? 0 };
+    site.coordinates.map(coordinate => {
+      const point = projection([coordinate.longitude, coordinate.latitude]);
+      return { siteIndex, site, x: point?.[0] ?? 0, y: point?.[1] ?? 0 };
     })
   );
   distributeCoincidentMarkers(projected);
@@ -482,13 +495,13 @@ function renderDetailMap(svg, scenario, sites, worldFeatures, selectedSiteIndex,
     marker.setAttribute("transform", `translate(${point.x} ${point.y})`);
     marker.setAttribute("role", "button");
     marker.setAttribute("tabindex", "0");
-    marker.setAttribute("aria-label", point.location.title);
+    marker.setAttribute("aria-label", point.site.title);
 
     const hitArea = document.createElementNS("http://www.w3.org/2000/svg", "circle");
     const core = document.createElementNS("http://www.w3.org/2000/svg", "circle");
     const pulse = document.createElementNS("http://www.w3.org/2000/svg", "circle");
     hitArea.setAttribute("class", "scenarioMapMarkerHitArea");
-    hitArea.setAttribute("r", "8");
+    hitArea.setAttribute("r", "9");
     marker.append(hitArea);
 
     pulse.setAttribute("class", "scenarioMapMarkerPulse");
@@ -496,7 +509,7 @@ function renderDetailMap(svg, scenario, sites, worldFeatures, selectedSiteIndex,
     marker.append(pulse);
 
     core.setAttribute("class", "scenarioMapMarkerCore");
-    core.setAttribute("r", point.siteIndex === selectedSiteIndex ? "4.2" : "2.2");
+    core.setAttribute("r", point.siteIndex === selectedSiteIndex ? "4.8" : "1.55");
     marker.append(core);
 
     marker.addEventListener("click", () => onSelect(point.siteIndex));
@@ -688,7 +701,7 @@ export function createThreatScenarioDetailController({
     markers.forEach(marker => {
       const selected = Number(marker.dataset.siteIndex) === selectedSiteIndex;
       marker.classList.toggle("is-selected", selected);
-      marker.querySelector(".scenarioMapMarkerCore")?.setAttribute("r", selected ? "4.2" : "2.2");
+      marker.querySelector(".scenarioMapMarkerCore")?.setAttribute("r", selected ? "4.8" : "1.55");
     });
   };
 

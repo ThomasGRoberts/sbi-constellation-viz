@@ -717,8 +717,9 @@ input[type="range"]::-moz-range-thumb {
 }
 
 .scenarioMapMarkerCore {
-  fill: #d6a516;
+  fill: #d8c995;
   stroke: none;
+  opacity: .72;
   transform-box: fill-box;
   transform-origin: center;
   transition: opacity .15s ease;
@@ -731,6 +732,7 @@ input[type="range"]::-moz-range-thumb {
 
 .scenarioMapMarker.is-selected .scenarioMapMarkerCore {
   fill: var(--scenario-selected-color);
+  opacity: 1;
 }
 
 .scenarioMapMarkerPulse {
