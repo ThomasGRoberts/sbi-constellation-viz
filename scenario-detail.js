@@ -9,7 +9,7 @@ const THREAT_SHEET_GIDS = Object.freeze({
   russia: "1222878229"
 });
 
-const ALLOWED_HTML_TAGS = new Set(["P", "EM", "I", "STRONG", "B", "BR"]);
+const ALLOWED_HTML_TAGS = new Set(["P", "EM", "I", "STRONG", "B", "BR", "A"]);
 const URL_PATTERN = /https?:\/\/[^\s<]+[^\s<.,;:!?()[\]{}'\"](?=$|\s|[.,;:!?()[\]{}'\"])/gi;
 
 function normalizeThreatRegion(value) {
@@ -157,12 +157,30 @@ export async function loadThreatScenario(threatRegion, fetchImpl = fetch) {
   return scenario;
 }
 
-function appendLinkifiedText(target, value) {
+function appendTextWithCitationBreaks(target, value) {
+  const segments = value.split(/;\s*/);
+  segments.forEach((segment, index) => {
+    target.append(document.createTextNode(segment));
+    if (index === segments.length - 1) return;
+    const breakElement = document.createElement("br");
+    breakElement.className = "scenarioFootnoteCitationBreak";
+    const spacer = document.createElement("span");
+    spacer.className = "scenarioFootnoteCitationSpacer";
+    spacer.setAttribute("aria-hidden", "true");
+    target.append(document.createTextNode("."), breakElement, spacer);
+  });
+}
+
+function appendLinkifiedText(target, value, breakOnSemicolons = false) {
   let cursor = 0;
+  const appendText = text => {
+    if (breakOnSemicolons) appendTextWithCitationBreaks(target, text);
+    else target.append(document.createTextNode(text));
+  };
 
   for (const match of value.matchAll(URL_PATTERN)) {
     const start = match.index ?? 0;
-    if (start > cursor) target.append(document.createTextNode(value.slice(cursor, start)));
+    if (start > cursor) appendText(value.slice(cursor, start));
 
     const link = document.createElement("a");
     link.href = match[0];
@@ -173,12 +191,23 @@ function appendLinkifiedText(target, value) {
     cursor = start + match[0].length;
   }
 
-  if (cursor < value.length) target.append(document.createTextNode(value.slice(cursor)));
+  if (cursor < value.length) appendText(value.slice(cursor));
+}
+
+function getSafeHttpUrl(value) {
+  const candidate = String(value || "").trim();
+  if (!candidate) return null;
+  try {
+    const url = new URL(candidate, window.location.href);
+    return url.protocol === "https:" || url.protocol === "http:" ? url.href : null;
+  } catch {
+    return null;
+  }
 }
 
 function appendSanitizedNode(target, source, footnotes, counter, linkify = false) {
   if (source.nodeType === Node.TEXT_NODE) {
-    if (linkify) appendLinkifiedText(target, source.textContent || "");
+    if (linkify) appendLinkifiedText(target, source.textContent || "", true);
     else target.append(document.createTextNode(source.textContent || ""));
     return;
   }
@@ -198,7 +227,19 @@ function appendSanitizedNode(target, source, footnotes, counter, linkify = false
   }
 
   const clean = document.createElement(source.tagName.toLowerCase());
-  [...source.childNodes].forEach(child => appendSanitizedNode(clean, child, footnotes, counter, linkify));
+  if (source.tagName === "A") {
+    const safeHref = getSafeHttpUrl(source.getAttribute("href"));
+    if (!safeHref) {
+      [...source.childNodes].forEach(child => appendSanitizedNode(target, child, footnotes, counter, linkify));
+      return;
+    }
+    clean.href = safeHref;
+    clean.target = "_blank";
+    clean.rel = "noopener noreferrer";
+  }
+  [...source.childNodes].forEach(child => {
+    appendSanitizedNode(clean, child, footnotes, counter, source.tagName === "A" ? false : linkify);
+  });
   target.append(clean);
 }
 
@@ -509,7 +550,7 @@ function renderDetailMap(svg, scenario, sites, worldFeatures, selectedSiteIndex,
     marker.append(pulse);
 
     core.setAttribute("class", "scenarioMapMarkerCore");
-    core.setAttribute("r", point.siteIndex === selectedSiteIndex ? "4.8" : "1.55");
+    core.setAttribute("r", point.siteIndex === selectedSiteIndex ? "3.8" : "2.1");
     marker.append(core);
 
     marker.addEventListener("click", () => onSelect(point.siteIndex));
@@ -701,7 +742,7 @@ export function createThreatScenarioDetailController({
     markers.forEach(marker => {
       const selected = Number(marker.dataset.siteIndex) === selectedSiteIndex;
       marker.classList.toggle("is-selected", selected);
-      marker.querySelector(".scenarioMapMarkerCore")?.setAttribute("r", selected ? "4.8" : "1.55");
+      marker.querySelector(".scenarioMapMarkerCore")?.setAttribute("r", selected ? "3.8" : "2.1");
     });
   };
 

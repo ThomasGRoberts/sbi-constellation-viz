@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Optimizing Space-Based Missile Defense</title>
-  <link rel="stylesheet" href="style.css?v=scenario-refinement-10" />
+  <link rel="stylesheet" href="style.css?v=scenario-refinement-16" />
 </head>
 
 <body>
@@ -88,45 +88,48 @@
       </div>
 
       <div id="panelBack" class="panelFace panelBack" aria-hidden="true" inert>
-        <div class="scenarioDetailHeader">
-          <button id="scenarioBackBtn" type="button" aria-label="Return to constellation controls">
-            <span>Back to controls</span>
-            <svg class="scenarioBackArrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 14 4 9l5-5"/><path d="M4 9h10a6 6 0 0 1 0 12h-2"/></svg>
-          </button>
+        <div class="scenarioTopMatter">
+          <div class="scenarioDetailHeader">
+            <button id="scenarioBackBtn" type="button" aria-label="Return to constellation controls" title="Back to controls">
+              <svg class="scenarioBackArrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 14 4 9l5-5"/><path d="M4 9h10a6 6 0 0 1 0 12h-2"/></svg>
+            </button>
+          </div>
+
+          <div class="scenarioIdentity">
+            <span class="scenarioMetaLabel">About this scenario</span>
+            <nav id="scenarioNavigator" class="scenarioNavigator" aria-label="Choose threat scenario">
+              <button type="button" data-threat-region="china">China</button>
+              <button type="button" data-threat-region="iran">Iran</button>
+              <button type="button" data-threat-region="north-korea">North Korea</button>
+              <button type="button" data-threat-region="russia">Russia</button>
+            </nav>
+          </div>
         </div>
 
-        <div class="scenarioIdentity">
-          <span class="scenarioMetaLabel">About this scenario</span>
-          <nav id="scenarioNavigator" class="scenarioNavigator" aria-label="Choose threat scenario">
-            <button type="button" data-threat-region="china">China</button>
-            <button type="button" data-threat-region="iran">Iran</button>
-            <button type="button" data-threat-region="north-korea">North Korea</button>
-            <button type="button" data-threat-region="russia">Russia</button>
-          </nav>
-        </div>
+        <div class="scenarioBody">
+          <div id="scenarioLoading" class="scenarioDetailMessage" role="status">Loading scenario details…</div>
+          <div id="scenarioEmpty" class="scenarioDetailMessage scenarioDetailEmpty" role="status" hidden></div>
+          <div id="scenarioError" class="scenarioDetailMessage scenarioDetailError" role="alert" hidden></div>
 
-        <div id="scenarioLoading" class="scenarioDetailMessage" role="status">Loading scenario details…</div>
-        <div id="scenarioEmpty" class="scenarioDetailMessage scenarioDetailEmpty" role="status" hidden></div>
-        <div id="scenarioError" class="scenarioDetailMessage scenarioDetailError" role="alert" hidden></div>
+          <div id="scenarioDetailContent" class="scenarioDetailContent" hidden>
+            <section class="scenarioNarrativeSection" aria-labelledby="scenarioNarrativeHeading">
+              <h3 id="scenarioNarrativeHeading" class="scenarioSectionHeading">Why these missiles?</h3>
+              <div id="scenarioNarrative" class="scenarioNarrative"></div>
+            </section>
 
-        <div id="scenarioDetailContent" class="scenarioDetailContent" hidden>
-          <section class="scenarioNarrativeSection" aria-labelledby="scenarioNarrativeHeading">
-            <h3 id="scenarioNarrativeHeading" class="scenarioSectionHeading">Why these missiles?</h3>
-            <div id="scenarioNarrative" class="scenarioNarrative"></div>
-          </section>
-
-          <section class="scenarioMapSection" aria-labelledby="scenarioMapHeading">
-            <h3 id="scenarioMapHeading" class="scenarioSectionHeading">Which launch sites?</h3>
-            <svg id="scenarioDetailMap" class="scenarioDetailMap" aria-label="Threat-region launch locations"></svg>
-            <div class="scenarioLocationCarousel">
-              <div class="scenarioLocationNavigation" aria-label="Launch-site carousel navigation">
-                <button id="scenarioLocationPrevious" class="scenarioLocationArrow" type="button" aria-label="Show previous launch site">‹</button>
-                <div id="scenarioLocationIndicators" class="scenarioLocationIndicators" role="tablist" aria-label="Launch-site carousel positions"></div>
-                <button id="scenarioLocationNext" class="scenarioLocationArrow" type="button" aria-label="Show next launch site">›</button>
+            <section class="scenarioMapSection" aria-labelledby="scenarioMapHeading">
+              <h3 id="scenarioMapHeading" class="scenarioSectionHeading">Which launch sites?</h3>
+              <svg id="scenarioDetailMap" class="scenarioDetailMap" aria-label="Threat-region launch locations"></svg>
+              <div class="scenarioLocationCarousel">
+                <div class="scenarioLocationNavigation" aria-label="Launch-site carousel navigation">
+                  <button id="scenarioLocationPrevious" class="scenarioLocationArrow" type="button" aria-label="Show previous launch site">‹</button>
+                  <div id="scenarioLocationIndicators" class="scenarioLocationIndicators" role="tablist" aria-label="Launch-site carousel positions"></div>
+                  <button id="scenarioLocationNext" class="scenarioLocationArrow" type="button" aria-label="Show next launch site">›</button>
+                </div>
+                <div id="scenarioLocationDetail" class="scenarioLocationDetail" aria-live="polite"></div>
               </div>
-              <div id="scenarioLocationDetail" class="scenarioLocationDetail" aria-live="polite"></div>
-            </div>
-          </section>
+            </section>
+          </div>
         </div>
       </div>
     </div>
@@ -203,7 +206,7 @@
   }
   </script>
 
-  <script type="module" src="app.js?v=scenario-refinement-11"></script>
+  <script type="module" src="app.js?v=scenario-refinement-16"></script>
   <script type="module" src="project-flourish.js?v=18"></script>
 </body>
 </html>
