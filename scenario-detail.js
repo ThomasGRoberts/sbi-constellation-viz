@@ -331,10 +331,10 @@ export function groupScenarioLocations(locations) {
   return [...groups.values()];
 }
 
-function collectLongitudesFromGeometry(geometry, longitudes) {
+function collectCoordinatesFromGeometry(geometry, longitudes, latitudes = null) {
   if (!geometry) return;
   if (geometry.type === "GeometryCollection") {
-    geometry.geometries?.forEach(item => collectLongitudesFromGeometry(item, longitudes));
+    geometry.geometries?.forEach(item => collectCoordinatesFromGeometry(item, longitudes, latitudes));
     return;
   }
 
@@ -342,6 +342,7 @@ function collectLongitudesFromGeometry(geometry, longitudes) {
     if (!Array.isArray(coordinates)) return;
     if (typeof coordinates[0] === "number" && typeof coordinates[1] === "number") {
       longitudes.push(coordinates[0]);
+      latitudes?.push(coordinates[1]);
       return;
     }
     coordinates.forEach(visit);
@@ -349,14 +350,16 @@ function collectLongitudesFromGeometry(geometry, longitudes) {
   visit(geometry.coordinates);
 }
 
-function getCircularLongitudeCenter(features) {
+function getCircularLongitudeStats(features) {
   const longitudes = [];
-  features.forEach(feature => collectLongitudesFromGeometry(feature.geometry, longitudes));
-  if (longitudes.length === 0) return 0;
+  features.forEach(feature => collectCoordinatesFromGeometry(feature.geometry, longitudes));
+  if (longitudes.length === 0) return { center: 0, span: 0 };
 
   const values = [...new Set(longitudes.map(longitude => ((longitude % 360) + 360) % 360))]
     .sort((a, b) => a - b);
-  if (values.length === 1) return values[0] > 180 ? values[0] - 360 : values[0];
+  if (values.length === 1) {
+    return { center: values[0] > 180 ? values[0] - 360 : values[0], span: 0 };
+  }
 
   let largestGap = -1;
   let arcStart = values[0];
@@ -369,8 +372,35 @@ function getCircularLongitudeCenter(features) {
     }
   });
 
-  const center = (arcStart + (360 - largestGap) / 2) % 360;
-  return center > 180 ? center - 360 : center;
+  const span = 360 - largestGap;
+  const center = (arcStart + span / 2) % 360;
+  return { center: center > 180 ? center - 360 : center, span };
+}
+
+function getBoundaryDetailSelection(worldFeatures, threatRegion) {
+  const focusFeatures = worldFeatures.filter(feature =>
+    featureMatchesThreatRegion(feature.properties?.name || "", threatRegion)
+  );
+  if (focusFeatures.length === 0) return { detail: "standard", effectiveSpan: Infinity };
+
+  const longitudes = [];
+  const latitudes = [];
+  focusFeatures.forEach(feature => {
+    collectCoordinatesFromGeometry(feature.geometry, longitudes, latitudes);
+  });
+  if (latitudes.length === 0) return { detail: "standard", effectiveSpan: Infinity };
+  const { span: longitudeSpan } = getCircularLongitudeStats(focusFeatures);
+  const minimumLatitude = Math.min(...latitudes);
+  const maximumLatitude = Math.max(...latitudes);
+  const latitudeSpan = maximumLatitude - minimumLatitude;
+  const middleLatitude = (minimumLatitude + maximumLatitude) / 2;
+  const latitudeAdjustedWidth = longitudeSpan * Math.cos(middleLatitude * Math.PI / 180);
+  const effectiveSpan = Math.max(latitudeAdjustedWidth, latitudeSpan);
+
+  return {
+    detail: effectiveSpan <= 25 ? "detailed" : "standard",
+    effectiveSpan
+  };
 }
 
 function renderDetailMap(svg, scenario, sites, worldFeatures, selectedSiteIndex, onSelect) {
@@ -384,7 +414,7 @@ function renderDetailMap(svg, scenario, sites, worldFeatures, selectedSiteIndex,
     geometry: { type: "Point", coordinates: [location.longitude, location.latitude] }
   }));
   const fitFeatures = focusFeatures.length > 0 ? focusFeatures : locationFeatures;
-  const centralLongitude = getCircularLongitudeCenter(fitFeatures);
+  const centralLongitude = getCircularLongitudeStats(fitFeatures).center;
   const projection = geoMercator().rotate([-centralLongitude, 0]);
 
   if (fitFeatures.length > 0) {
@@ -409,11 +439,27 @@ function renderDetailMap(svg, scenario, sites, worldFeatures, selectedSiteIndex,
   ];
 
   orderedFeatures.forEach(feature => {
+    const isFocus = featureMatchesThreatRegion(
+      feature.properties?.name || "",
+      scenario.threatRegion
+    );
+    if (!isFocus) {
+      const [[minimumX, minimumY], [maximumX, maximumY]] = path.bounds(feature);
+      const contextMargin = 6;
+      const isOutsideMap = (
+        maximumX < -contextMargin ||
+        minimumX > width + contextMargin ||
+        maximumY < -contextMargin ||
+        minimumY > height + contextMargin
+      );
+      if (isOutsideMap) return;
+    }
+
     const d = path(feature);
     if (!d) return;
     const shape = document.createElementNS("http://www.w3.org/2000/svg", "path");
     shape.setAttribute("d", d);
-    if (featureMatchesThreatRegion(feature.properties?.name || "", scenario.threatRegion)) {
+    if (isFocus) {
       shape.classList.add("scenarioMapFocusCountry");
     }
     boundaryLayer.append(shape);
@@ -659,7 +705,15 @@ export function createThreatScenarioDetailController({
     renderAuthoredHtml(narrative, scenario.narrativeHtml, counter);
     captionFootnoteStart = counter.value;
 
-    renderDetailMap(mapSvg, scenario, sites, getWorldFeatures(), selectedSiteIndex, selectSite);
+    const standardWorldFeatures = getWorldFeatures("standard");
+    const boundarySelection = getBoundaryDetailSelection(
+      standardWorldFeatures,
+      scenario.threatRegion
+    );
+    const selectedWorldFeatures = getWorldFeatures(boundarySelection.detail);
+    mapSvg.dataset.boundaryDetail = boundarySelection.detail;
+    mapSvg.dataset.effectiveGeographicSpan = boundarySelection.effectiveSpan.toFixed(2);
+    renderDetailMap(mapSvg, scenario, sites, selectedWorldFeatures, selectedSiteIndex, selectSite);
     renderIndicators();
     reserveCaptionHeight();
     renderSelectedSite();
@@ -843,7 +897,11 @@ export function createThreatScenarioDetailController({
       });
     },
     refreshMap() {
-      if (scenario && panel.classList.contains("is-detail-open")) renderContent();
+      if (scenario && panel.classList.contains("is-detail-open")) {
+        const preservedScrollTop = back.scrollTop;
+        renderContent();
+        back.scrollTop = preservedScrollTop;
+      }
     }
   };
 }

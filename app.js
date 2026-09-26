@@ -7,7 +7,7 @@ import { Delaunay } from "d3-delaunay";
 import {
   createSecretLegendActivation,
   createThreatScenarioDetailController
-} from "./scenario-detail.js?v=11";
+} from "./scenario-detail.js?v=12";
 
 const EARTH_RADIUS_KM = 6378.137;
 const MU_EARTH_KM3_S2 = 398600.4418;
@@ -72,6 +72,7 @@ let focusLatDeg = 35.0;
 let focusLonDeg = 103.0;
 
 let worldFeatures = [];
+let detailedWorldFeatures = [];
 let worldGeoJson = null;
 let activeSatelliteMaterial = null;
 let inactiveSatelliteMaterial = null;
@@ -233,7 +234,11 @@ const threatScenarioDetail = createThreatScenarioDetailController({
   content: document.getElementById("scenarioDetailContent"),
   getThreatRegion: () => countrySelect.value,
   setThreatRegion: threatRegion => transitionThreatScenario(threatRegion),
-  getWorldFeatures: () => worldFeatures,
+  getWorldFeatures: detail => (
+    detail === "detailed" && detailedWorldFeatures.length > 0
+      ? detailedWorldFeatures
+      : worldFeatures
+  ),
   onLayoutChange: () => animateScenarioPanelLayout()
 });
 
@@ -1412,10 +1417,10 @@ function makeFallbackEarth() {
 }
 
 async function loadWorldBoundaries() {
-  const url = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
-  const res = await fetch(url);
-  const topology = await res.json();
-  const countries = topojson.feature(topology, topology.objects.countries);
+  const standardUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
+  const standardResponse = await fetch(standardUrl);
+  const standardTopology = await standardResponse.json();
+  const countries = topojson.feature(standardTopology, standardTopology.objects.countries);
 
   worldFeatures = countries.features;
   worldGeoJson = countries;
@@ -1424,6 +1429,19 @@ async function loadWorldBoundaries() {
   mapNeedsGeometryRebuild = true;
   draw2DMap();
   threatScenarioDetail.refreshMap();
+
+  try {
+    const detailedUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json";
+    const detailedResponse = await fetch(detailedUrl);
+    const detailedTopology = await detailedResponse.json();
+    detailedWorldFeatures = topojson.feature(
+      detailedTopology,
+      detailedTopology.objects.countries
+    ).features;
+    threatScenarioDetail.refreshMap();
+  } catch (detailError) {
+    console.warn("Detailed inset boundaries could not be loaded; using standard boundaries.", detailError);
+  }
 }
 
 function redrawCountryBoundaries() {
