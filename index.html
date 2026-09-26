@@ -4,12 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Optimizing Space-Based Missile Defense</title>
-  <link rel="stylesheet" href="style.css?v=project-flourish-10" />
+  <link rel="stylesheet" href="style.css?v=scenario-refinement-9" />
 </head>
 
 <body>
   <div id="ui">
-    <h1>Optimizing Space-Based Missile Defense</h1>
+    <div id="panelFlipper" class="panelFlipper">
+      <div id="panelFront" class="panelFace panelFront" aria-hidden="false">
+        <h1>Optimizing Space-Based Missile Defense</h1>
 
     <p class="introText">
       Explore space-based interceptor constellations for various missile threats.
@@ -82,19 +84,71 @@
 
     </section>
 
-    <div id="status"></div>
+        <div id="status"></div>
+      </div>
+
+      <div id="panelBack" class="panelFace panelBack" aria-hidden="true" inert>
+        <div class="scenarioDetailHeader">
+          <button id="scenarioBackBtn" type="button" aria-label="Return to constellation controls">
+            <span>Back to controls</span>
+            <svg class="scenarioBackArrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 14 4 9l5-5"/><path d="M4 9h10a6 6 0 0 1 0 12h-2"/></svg>
+          </button>
+        </div>
+
+        <div class="scenarioIdentity">
+          <span class="scenarioMetaLabel">About this scenario</span>
+          <nav id="scenarioNavigator" class="scenarioNavigator" aria-label="Choose threat scenario">
+            <button type="button" data-threat-region="china">China</button>
+            <button type="button" data-threat-region="iran">Iran</button>
+            <button type="button" data-threat-region="north-korea">North Korea</button>
+            <button type="button" data-threat-region="russia">Russia</button>
+          </nav>
+        </div>
+
+        <div id="scenarioLoading" class="scenarioDetailMessage" role="status">Loading scenario details…</div>
+        <div id="scenarioEmpty" class="scenarioDetailMessage scenarioDetailEmpty" role="status" hidden></div>
+        <div id="scenarioError" class="scenarioDetailMessage scenarioDetailError" role="alert" hidden></div>
+
+        <div id="scenarioDetailContent" class="scenarioDetailContent" hidden>
+          <section class="scenarioNarrativeSection" aria-labelledby="scenarioNarrativeHeading">
+            <h3 id="scenarioNarrativeHeading" class="scenarioSectionHeading">Why these missiles?</h3>
+            <div id="scenarioNarrative" class="scenarioNarrative"></div>
+          </section>
+
+          <section class="scenarioMapSection" aria-labelledby="scenarioMapHeading">
+            <h3 id="scenarioMapHeading" class="scenarioSectionHeading">Which launch sites?</h3>
+            <svg id="scenarioDetailMap" class="scenarioDetailMap" aria-label="Threat-region launch locations"></svg>
+            <div class="scenarioLocationCarousel">
+              <div class="scenarioLocationNavigation" aria-label="Launch-site carousel navigation">
+                <button id="scenarioLocationPrevious" class="scenarioLocationArrow" type="button" aria-label="Show previous launch site">‹</button>
+                <div id="scenarioLocationIndicators" class="scenarioLocationIndicators" role="tablist" aria-label="Launch-site carousel positions"></div>
+                <button id="scenarioLocationNext" class="scenarioLocationArrow" type="button" aria-label="Show next launch site">›</button>
+              </div>
+              <div id="scenarioLocationDetail" class="scenarioLocationDetail" aria-live="polite"></div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <button id="panelToggleBtn" type="button" aria-label="Hide control panel" aria-expanded="true">
+      <span class="panelToggleInner" aria-hidden="true">
+        <span class="panelToggleFace panelToggleFaceFront">‹</span>
+        <span class="panelToggleFace panelToggleFaceBack">‹</span>
+      </span>
+    </button>
   </div>
 
   <!-- Viewport-anchored legend: intentionally outside the scrollable control panel. -->
   <div class="legendContainer">
     <div id="legend3D" class="legendList">
       <div class="legendRow">
-        <span class="legendDot legendDotActive"></span>
+        <span class="legendDot legendDotActive" aria-hidden="true"></span>
         <span>Satellites over threat region</span>
       </div>
 
       <div class="legendRow">
-        <span class="legendDot legendDotInactive"></span>
+        <span class="legendDot legendDotInactive" aria-hidden="true"></span>
         <span>Satellites away from threat region</span>
       </div>
     </div>
@@ -116,8 +170,6 @@
     </div>
   </div>
 
-  <button id="panelToggleBtn" type="button" aria-label="Hide control panel" aria-expanded="true">‹</button>
-
   <div id="cameraControls">
     <a id="projectLink" href="https://espl.ae.gatech.edu/research/projects/sbi/" target="_top" aria-label="Learn more about the SBI project">
       <span class="projectLinkIcon" aria-hidden="true">
@@ -137,7 +189,6 @@
   <a id="gtLogo" href="https://espl.ae.gatech.edu/" target="_top" aria-label="Engineering Space Policy Laboratory home">
     <img src="assets/ESPL.png" alt="">
   </a>
-  <div id="chartLabelOverlay" aria-hidden="true"></div>
 
   <script type="importmap">
   {
@@ -152,7 +203,7 @@
   }
   </script>
 
-  <script type="module" src="app.js?v=legend-viewport-1"></script>
+  <script type="module" src="app.js?v=scenario-refinement-9"></script>
   <script type="module" src="project-flourish.js?v=18"></script>
 </body>
 </html>

@@ -4,6 +4,10 @@ import * as topojson from "topojson-client";
 import { geoPath } from "d3-geo";
 import { geoMollweide } from "d3-geo-projection";
 import { Delaunay } from "d3-delaunay";
+import {
+  createSecretLegendActivation,
+  createThreatScenarioDetailController
+} from "./scenario-detail.js?v=11";
 
 const EARTH_RADIUS_KM = 6378.137;
 const MU_EARTH_KM3_S2 = 398600.4418;
@@ -79,6 +83,9 @@ let playbackMultiplier = 1.0;
 let isHorizonView = false;
 
 let visualizationMode = "3d";
+let suppressScenarioCameraReframe = false;
+let hideNewScenarioVisuals = false;
+let threatScenarioTransitionPromise = null;
 let mapCells = [];
 let mapProjection = null;
 let mapPath = null;
@@ -164,7 +171,9 @@ panelToggleBtn.addEventListener("click", () => {
   const collapsed = document.body.classList.toggle("uiCollapsed");
   panelToggleBtn.setAttribute("aria-expanded", String(!collapsed));
   panelToggleBtn.setAttribute("aria-label", collapsed ? "Show control panel" : "Hide control panel");
-  panelToggleBtn.textContent = collapsed ? "›" : "‹";
+  panelToggleBtn.querySelectorAll(".panelToggleFace").forEach(face => {
+    face.textContent = collapsed ? "›" : "‹";
+  });
   const resumePlayback = isPlaying;
   isPlaying = false;
   updatePlaybackButton();
@@ -202,7 +211,37 @@ const planeStat = document.getElementById("planeStat");
 
 const coverageChart = document.getElementById("coverageChart");
 const coverageChartCtx = coverageChart ? coverageChart.getContext("2d") : null;
-const chartLabelOverlay = document.getElementById("chartLabelOverlay");
+
+const threatScenarioDetail = createThreatScenarioDetailController({
+  panel: document.getElementById("ui"),
+  flipper: document.getElementById("panelFlipper"),
+  front: document.getElementById("panelFront"),
+  back: document.getElementById("panelBack"),
+  backButton: document.getElementById("scenarioBackBtn"),
+  scenarioNavigator: document.getElementById("scenarioNavigator"),
+  mapSvg: document.getElementById("scenarioDetailMap"),
+  locationDetail: document.getElementById("scenarioLocationDetail"),
+  locationIndicators: document.getElementById("scenarioLocationIndicators"),
+  locationPrevious: document.getElementById("scenarioLocationPrevious"),
+  locationNext: document.getElementById("scenarioLocationNext"),
+  narrative: document.getElementById("scenarioNarrative"),
+  narrativeHeading: document.getElementById("scenarioNarrativeHeading"),
+  launchHeading: document.getElementById("scenarioMapHeading"),
+  loading: document.getElementById("scenarioLoading"),
+  empty: document.getElementById("scenarioEmpty"),
+  error: document.getElementById("scenarioError"),
+  content: document.getElementById("scenarioDetailContent"),
+  getThreatRegion: () => countrySelect.value,
+  setThreatRegion: threatRegion => transitionThreatScenario(threatRegion),
+  getWorldFeatures: () => worldFeatures,
+  onLayoutChange: () => animateScenarioPanelLayout()
+});
+
+createSecretLegendActivation({
+  yellowDot: document.querySelector(".legendDotActive"),
+  grayDot: document.querySelector(".legendDotInactive"),
+  onActivate: () => threatScenarioDetail.open()
+});
 
 function setStatus(text) {
   if (statusEl) statusEl.textContent = text;
@@ -747,18 +786,15 @@ function drawCoverageChart() {
   }
 
   labels.forEach(item => {
-    if (item.y >= 8) drawRightSideValueLabel(ctx, item.name, item.value, item.y, item.color, chartRight, cssWidth);
-  });
-  chartLabelOverlay.innerHTML = "";
-  const chartRect = coverageChart.getBoundingClientRect();
-  labels.filter(item => item.y < 8).forEach(item => {
-    const overlayLabel = document.createElement("span");
-    overlayLabel.className = "chartOverlayLabel";
-    overlayLabel.style.left = `${chartRect.left + chartRight + 2}px`;
-    overlayLabel.style.top = `${chartRect.top + item.y}px`;
-    overlayLabel.style.color = item.color;
-    overlayLabel.textContent = `${item.name} ${formatCoverageValue(item.value)}`;
-    chartLabelOverlay.appendChild(overlayLabel);
+    drawRightSideValueLabel(
+      ctx,
+      item.name,
+      item.value,
+      Math.max(8, item.y),
+      item.color,
+      chartRight,
+      cssWidth
+    );
   });
   previousCoverageLabelOrder = labels.map(item => item.name);
 
@@ -883,6 +919,28 @@ function getAvailableMapExtent() {
     width: Math.max(100, window.innerWidth - ui.right - margin * 2),
     height: Math.max(100, window.innerHeight - margin * 2)
   };
+}
+
+let scenarioLayoutAnimationId = 0;
+
+function animateScenarioPanelLayout(durationMs = 900) {
+  const animationId = ++scenarioLayoutAnimationId;
+  const startedAt = performance.now();
+
+  const updateLayout = now => {
+    if (animationId !== scenarioLayoutAnimationId) return;
+
+    if (visualizationMode === "3d") {
+      apply3DViewOffset();
+    } else {
+      mapNeedsGeometryRebuild = true;
+      draw2DMap();
+    }
+
+    if (now - startedAt < durationMs) requestAnimationFrame(updateLayout);
+  };
+
+  requestAnimationFrame(updateLayout);
 }
 
 function resetMapView() {
@@ -1365,6 +1423,7 @@ async function loadWorldBoundaries() {
   redrawCountryBoundaries();
   mapNeedsGeometryRebuild = true;
   draw2DMap();
+  threatScenarioDetail.refreshMap();
 }
 
 function redrawCountryBoundaries() {
@@ -1378,6 +1437,10 @@ function redrawCountryBoundaries() {
     const isFocus = countryMatches(name, selectedCountry);
     addCountryBoundary(feature.geometry, isFocus);
   });
+
+  if (hideNewScenarioVisuals) {
+    setGroupOpacityFactor(focusCountryLineGroup, 0);
+  }
 
   draw2DMap();
 }
@@ -1888,6 +1951,10 @@ function renderConstellation(rows, scenarioInfo = null) {
   });
 
   planeModels.forEach(plane => makeTrajectoryTube(plane));
+  if (hideNewScenarioVisuals) {
+    setGroupOpacityFactor(constellationGroup, 0);
+    setGroupOpacityFactor(trajectoryGroup, 0);
+  }
   fillCoverageHistoryToTime(0);
   updateSceneForTime(false, false);
 
@@ -1912,10 +1979,12 @@ async function loadCSV(path) {
 
   redrawCountryBoundaries();
 
-  if (isHorizonView) {
-    setHorizonView();
-  } else {
-    setFullEarthView();
+  if (!suppressScenarioCameraReframe) {
+    if (isHorizonView) {
+      setHorizonView();
+    } else {
+      setFullEarthView();
+    }
   }
 
   draw2DMap();
@@ -1979,6 +2048,7 @@ function refreshDropdowns(triggerLoad = true, resetLowerDropdowns = false) {
     uniqueSorted(manifest.map(r => r.country)),
     formatThreatRegionName
   );
+  threatScenarioDetail.setScenarioOrder([...countrySelect.options].map(option => option.value));
 
   if (currentCountry) countrySelect.value = currentCountry;
 
@@ -2016,6 +2086,7 @@ async function loadManifest() {
   refreshDropdowns(false, true);
   setStatus(`Loaded manifest with ${manifest.length} CSV files.`);
   loadSelectedScenario();
+  threatScenarioDetail.syncHeight();
 }
 
 function getFocusVector(radius = 1) {
@@ -2104,6 +2175,177 @@ function setHorizonView() {
 
   isHorizonView = true;
   viewToggleBtn.textContent = "◎";
+}
+
+function prefersReducedMotion() {
+  return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+}
+
+function animateValue(durationMs, update) {
+  const duration = prefersReducedMotion() ? 0 : durationMs;
+
+  if (duration === 0) {
+    update(1);
+    return Promise.resolve();
+  }
+
+  return new Promise(resolve => {
+    const startedAt = performance.now();
+    const frame = now => {
+      const linear = Math.min(1, (now - startedAt) / duration);
+      const eased = linear < 0.5
+        ? 4 * linear * linear * linear
+        : 1 - Math.pow(-2 * linear + 2, 3) / 2;
+      update(eased);
+      if (linear < 1) requestAnimationFrame(frame);
+      else resolve();
+    };
+    requestAnimationFrame(frame);
+  });
+}
+
+function setGroupOpacityFactor(group, factor) {
+  const clamped = Math.max(0, Math.min(1, factor));
+  const materials = new Set();
+
+  group.traverse(child => {
+    const childMaterials = Array.isArray(child.material) ? child.material : [child.material];
+    childMaterials.filter(Boolean).forEach(material => materials.add(material));
+  });
+
+  materials.forEach(material => {
+    if (!Number.isFinite(material.userData.scenarioBaseOpacity)) {
+      material.userData.scenarioBaseOpacity = material.opacity;
+    }
+    material.transparent = true;
+    material.opacity = material.userData.scenarioBaseOpacity * clamped;
+    material.needsUpdate = true;
+  });
+
+  group.userData.scenarioOpacityFactor = clamped;
+}
+
+function fadeGroupTo(group, targetFactor, durationMs) {
+  const startFactor = Number.isFinite(group.userData.scenarioOpacityFactor)
+    ? group.userData.scenarioOpacityFactor
+    : 1;
+
+  return animateValue(durationMs, progress => {
+    setGroupOpacityFactor(group, startFactor + (targetFactor - startFactor) * progress);
+  });
+}
+
+function animateCameraToCurrentThreat(durationMs = 520) {
+  const startTarget = controls.target.clone();
+  const endTarget = new THREE.Vector3(0, -0.06, 0);
+  const startOffset = camera.position.clone().sub(startTarget);
+  const startDirection = startOffset.clone().normalize();
+  const endDirection = getFocusVector(1).normalize();
+  const rotation = new THREE.Quaternion().setFromUnitVectors(startDirection, endDirection);
+  const identity = new THREE.Quaternion();
+  const startDistance = startOffset.length();
+  const endDistance = 3.8;
+  const startUp = camera.up.clone();
+  const endUp = new THREE.Vector3(0, 1, 0);
+
+  return animateValue(durationMs, progress => {
+    const partialRotation = identity.clone().slerp(rotation, progress);
+    const direction = startDirection.clone().applyQuaternion(partialRotation).normalize();
+    const target = startTarget.clone().lerp(endTarget, progress);
+    const distance = startDistance + (endDistance - startDistance) * progress;
+
+    camera.position.copy(target).add(direction.multiplyScalar(distance));
+    controls.target.copy(target);
+    camera.up.copy(startUp).lerp(endUp, progress).normalize();
+    camera.lookAt(target);
+    apply3DViewOffset();
+  });
+}
+
+function markThreatTransitionStage(audit, name) {
+  audit.stages.push({ name, atMs: Math.round(performance.now() - audit.startedAt) });
+}
+
+async function runThreatScenarioTransition(threatRegion) {
+  if (!threatRegion || countrySelect.value === threatRegion) return;
+
+  const audit = {
+    from: countrySelect.value,
+    to: threatRegion,
+    startedAt: performance.now(),
+    stages: []
+  };
+  window.__scenarioTransitionAudit = audit;
+  const resumePlayback = isPlaying;
+  const controlsWereEnabled = controls.enabled;
+  isPlaying = false;
+  controls.enabled = false;
+  updatePlaybackButton();
+
+  if (visualizationMode !== "3d") setVisualizationMode("3d");
+
+  markThreatTransitionStage(audit, "old-constellation-fade-start");
+  await Promise.all([
+    fadeGroupTo(constellationGroup, 0, 240),
+    fadeGroupTo(trajectoryGroup, 0, 240)
+  ]);
+  markThreatTransitionStage(audit, "old-constellation-hidden");
+  await fadeGroupTo(focusCountryLineGroup, 0, 180);
+  markThreatTransitionStage(audit, "old-country-hidden");
+
+  hideNewScenarioVisuals = true;
+  suppressScenarioCameraReframe = true;
+  countrySelect.value = threatRegion;
+  refreshDropdowns(false, true);
+  clearConstellation();
+  await loadSelectedScenario();
+  isPlaying = false;
+  setGroupOpacityFactor(constellationGroup, 0);
+  setGroupOpacityFactor(trajectoryGroup, 0);
+  setGroupOpacityFactor(focusCountryLineGroup, 0);
+  markThreatTransitionStage(audit, "new-scenario-loaded-hidden");
+
+  await animateCameraToCurrentThreat(540);
+  isHorizonView = false;
+  viewToggleBtn.textContent = "◠";
+  markThreatTransitionStage(audit, "globe-rotation-complete");
+
+  hideNewScenarioVisuals = false;
+  await fadeGroupTo(focusCountryLineGroup, 1, 220);
+  markThreatTransitionStage(audit, "country-highlight-visible");
+  await Promise.all([
+    fadeGroupTo(constellationGroup, 1, 320),
+    fadeGroupTo(trajectoryGroup, 1, 320)
+  ]);
+  markThreatTransitionStage(audit, "constellation-visible");
+
+  suppressScenarioCameraReframe = false;
+  controls.enabled = controlsWereEnabled;
+  isPlaying = resumePlayback;
+  updatePlaybackButton();
+  audit.completedAtMs = Math.round(performance.now() - audit.startedAt);
+}
+
+function transitionThreatScenario(threatRegion) {
+  if (threatScenarioTransitionPromise) return threatScenarioTransitionPromise;
+  const resumePlayback = isPlaying;
+  const controlsWereEnabled = controls.enabled;
+  threatScenarioTransitionPromise = runThreatScenarioTransition(threatRegion)
+    .catch(error => {
+      console.error(error);
+      hideNewScenarioVisuals = false;
+      suppressScenarioCameraReframe = false;
+      controls.enabled = controlsWereEnabled;
+      isPlaying = resumePlayback;
+      updatePlaybackButton();
+      setGroupOpacityFactor(focusCountryLineGroup, 1);
+      setGroupOpacityFactor(constellationGroup, 1);
+      setGroupOpacityFactor(trajectoryGroup, 1);
+    })
+    .finally(() => {
+      threatScenarioTransitionPromise = null;
+    });
+  return threatScenarioTransitionPromise;
 }
 
 function toggleView() {

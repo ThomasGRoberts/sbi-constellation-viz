@@ -8,6 +8,10 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
+:root {
+  --scenario-selected-color: #b88b13;
+}
+
 #canvas-wrap {
   position: fixed;
   inset: 0;
@@ -33,38 +37,138 @@ body {
   left: 18px;
   z-index: 10;
   width: 325px;
-  /* Keep the fixed legend clear of the panel on short browser windows. */
+  height: var(--panel-height, min(536px, calc(100vh - 100px)));
   max-height: max(0px, calc(100vh - 100px));
+  box-sizing: border-box;
+  perspective: 1200px;
+  transition: transform .28s ease, width .62s cubic-bezier(.2,.72,.2,1), height .32s ease;
+}
+
+#ui.is-detail-open {
+  width: min(430px, calc(100vw - 70px));
+}
+
+.panelFlipper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform .62s cubic-bezier(.2,.72,.2,1);
+}
+
+#ui.is-detail-open .panelFlipper {
+  transform: rotateY(180deg);
+}
+
+.panelFace {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   box-sizing: border-box;
   overflow-y: auto;
   overscroll-behavior: contain;
+  padding: 16px;
   background: rgba(255,255,255,.94);
   border: 1px solid #dddddd;
   border-radius: 16px;
-  padding: 16px;
   box-shadow: 0 12px 35px rgba(0,0,0,.10);
   backdrop-filter: blur(10px);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   scrollbar-width: thin;
   scrollbar-color: rgba(0,0,0,.18) transparent;
-  transition: transform .28s ease;
 }
 
-#panelToggleBtn { position: fixed; left: 342px; top: 50px; z-index: 25; width: 16px; height: 40px; padding: 0; border: 1px solid #d8d8d8; border-left: 0; border-radius: 0 7px 7px 0; background: rgba(255,255,255,.78); color: #999; font-size: 17px; line-height: 1; cursor: pointer; transition: left .28s ease, background .15s ease, color .15s ease; }
-#panelToggleBtn:hover { background: #f5f5f5; color: #555; }
-#panelToggleBtn:hover { background: #f5f5f5; }
-body.uiCollapsed #ui { transform: translateX(calc(-100% - 24px)); }
-body.uiCollapsed #panelToggleBtn { left: 0; top: 50px; width: 16px; height: 40px; border: 1px solid #d8d8d8; border-left: 0; border-radius: 0 7px 7px 0; background: rgba(255,255,255,.78); font-size: 0; }
-body.uiCollapsed #panelToggleBtn::after { content: "›"; font-size: 25px; }
+.panelFront {
+  transform: rotateY(0deg);
+}
 
-#ui::-webkit-scrollbar {
+.panelBack {
+  transform: rotateY(180deg);
+  pointer-events: none;
+}
+
+#ui.is-detail-open .panelFront {
+  pointer-events: none;
+}
+
+#ui.is-detail-open .panelBack {
+  pointer-events: auto;
+}
+
+#panelToggleBtn {
+  position: absolute;
+  left: 100%;
+  top: 32px;
+  z-index: 25;
+  width: 16px;
+  height: 40px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #999999;
+  cursor: pointer;
+  perspective: 200px;
+}
+
+.panelToggleInner {
+  position: absolute;
+  inset: 0;
+  display: block;
+  transform-style: preserve-3d;
+  transition: transform .62s cubic-bezier(.2,.72,.2,1);
+}
+
+#ui.is-detail-open .panelToggleInner {
+  transform: rotateY(180deg);
+}
+
+.panelToggleFace {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border: 1px solid #d8d8d8;
+  border-left: 0;
+  border-radius: 0 7px 7px 0;
+  background: rgba(255,255,255,.84);
+  font-size: 17px;
+  line-height: 1;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transition: background .15s ease, color .15s ease;
+}
+
+.panelToggleFaceBack {
+  transform: rotateY(180deg);
+}
+
+#panelToggleBtn:hover .panelToggleFace,
+#panelToggleBtn:focus-visible .panelToggleFace {
+  background: #f5f5f5;
+  color: #555555;
+}
+
+#panelToggleBtn:focus-visible {
+  outline: none;
+}
+
+body.uiCollapsed #ui {
+  transform: translateX(calc(-100% - 18px));
+}
+
+.panelFace::-webkit-scrollbar {
   width: 8px;
 }
 
-#ui::-webkit-scrollbar-track {
+.panelFace::-webkit-scrollbar-track {
   background: transparent;
 }
 
-#ui::-webkit-scrollbar-thumb {
+.panelFace::-webkit-scrollbar-thumb {
   background: rgba(0,0,0,.16);
   border-radius: 999px;
   border: 2px solid transparent;
@@ -409,9 +513,469 @@ input[type="range"]::-moz-range-thumb {
   border: 1.5px solid #777777;
 }
 
+.scenarioDetailHeader {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 14px;
+}
+
+#scenarioBackBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #888888;
+  font: 500 11px/1.2 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  cursor: pointer;
+}
+
+.scenarioBackArrow {
+  display: block;
+  width: 13px;
+  height: 13px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform .18s ease;
+}
+
+#scenarioBackBtn:hover,
+#scenarioBackBtn:focus-visible {
+  color: #555555;
+  outline: none;
+}
+
+#scenarioBackBtn:hover .scenarioBackArrow,
+#scenarioBackBtn:focus-visible .scenarioBackArrow {
+  transform: translateX(-2px);
+}
+
+#scenarioBackBtn:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.scenarioSectionHeading,
+.scenarioMetaLabel {
+  color: #777777;
+  font-size: 10.5px;
+  font-weight: 750;
+  letter-spacing: .065em;
+  text-transform: uppercase;
+}
+
+.scenarioIdentity {
+  margin-bottom: 26px;
+}
+
+.scenarioMetaLabel {
+  display: block;
+  margin-bottom: 13px;
+  line-height: 1;
+}
+
+.scenarioNavigator {
+  display: flex;
+  align-items: baseline;
+  gap: 15px;
+  margin: 0;
+  padding: 0 0 8px;
+  border-bottom: 1px solid #dddddd;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.scenarioNavigator::-webkit-scrollbar {
+  display: none;
+}
+
+.scenarioNavigator button {
+  position: relative;
+  flex: 0 0 auto;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #929292;
+  font: 650 11px/1.15 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  letter-spacing: 0;
+  cursor: pointer;
+  transform-origin: left baseline;
+  transition: color .22s ease, font-size .32s cubic-bezier(.2,.72,.2,1), letter-spacing .32s ease;
+}
+
+.scenarioNavigator button::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -8px;
+  left: 0;
+  height: 2px;
+  border-radius: 99px;
+  background: #b88b13;
+  opacity: 0;
+  transform: scaleX(.35);
+  transition: opacity .18s ease, transform .18s ease;
+}
+
+.scenarioNavigator button:hover,
+.scenarioNavigator button:focus-visible {
+  color: #444444;
+}
+
+.scenarioNavigator button.is-current {
+  color: #444444;
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: -.015em;
+}
+
+.scenarioNavigator button.is-current::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.scenarioNavigator button:disabled {
+  opacity: .45;
+  cursor: wait;
+}
+
+.scenarioDetailMessage {
+  margin: 14px 0;
+  padding: 11px;
+  border: 1px solid #dddddd;
+  border-radius: 9px;
+  background: #fafafa;
+  color: #666666;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.scenarioDetailMessage[hidden] {
+  display: none;
+}
+
+.scenarioDetailError {
+  border-color: #dfcfad;
+  background: #fffdf7;
+  color: #705825;
+}
+
+.scenarioDetailEmpty {
+  border-color: #dddddd;
+  background: #fafafa;
+  color: #666666;
+}
+
+.scenarioDetailContent {
+  display: grid;
+  gap: 26px;
+}
+
+.scenarioDetailContent[hidden] {
+  display: none;
+}
+
+.scenarioSectionHeading {
+  margin: 0 0 7px;
+}
+
+.scenarioDetailMap {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  border: 1px solid #dddddd;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: inset 0 1px 7px rgba(0,0,0,.035);
+}
+
+.scenarioMapBoundaries path {
+  fill: #f6f6f6;
+  stroke: #d2d2d2;
+  stroke-width: .52;
+  vector-effect: non-scaling-stroke;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.scenarioMapBoundaries .scenarioMapFocusCountry {
+  fill: #ededed;
+  stroke: #5d5d5d;
+  stroke-width: .9;
+}
+
+.scenarioMapMarker {
+  cursor: pointer;
+  outline: none;
+}
+
+.scenarioMapMarkerCore {
+  fill: #d6a516;
+  stroke: none;
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: opacity .15s ease;
+}
+
+.scenarioMapMarkerHitArea {
+  fill: transparent;
+  pointer-events: all;
+}
+
+.scenarioMapMarker.is-selected .scenarioMapMarkerCore {
+  fill: var(--scenario-selected-color);
+}
+
+.scenarioMapMarkerPulse {
+  fill: none;
+  stroke: rgba(214,165,22,.72);
+  stroke-width: 1;
+  opacity: 0;
+  pointer-events: none;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.scenarioMapMarker:hover .scenarioMapMarkerCore,
+.scenarioMapMarker:focus .scenarioMapMarkerCore {
+  opacity: .72;
+}
+
+.scenarioMapMarker.is-selected .scenarioMapMarkerPulse {
+  animation: scenarioDetonatePulse 5.2s ease-out infinite;
+  animation-delay: -3.744s;
+}
+
+@keyframes scenarioDetonatePulse {
+  0%, 72%, 100% { opacity: 0; transform: scale(.45); }
+  78% { opacity: .8; }
+  91% { opacity: 0; transform: scale(1.7); }
+}
+
+.scenarioLocationCarousel {
+  position: relative;
+  margin-top: 7px;
+  overflow-anchor: none;
+}
+
+.scenarioLocationNavigation {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr) 28px;
+  align-items: center;
+  min-height: 29px;
+  margin-bottom: 7px;
+}
+
+.scenarioLocationArrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #777777;
+  font: 400 22px/1 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  cursor: pointer;
+  transition: color .15s ease, transform .15s ease;
+}
+
+.scenarioLocationArrow:hover,
+.scenarioLocationArrow:focus-visible {
+  color: #3f3f3f;
+  transform: scale(1.08);
+}
+
+.scenarioLocationArrow:disabled {
+  opacity: .3;
+  cursor: default;
+  transform: none;
+}
+
+.scenarioLocationDetail {
+  box-sizing: border-box;
+  height: auto;
+  overflow: visible;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.scenarioLocationCaptionContent {
+  box-sizing: border-box;
+  padding: 7px 4px 3px 11px;
+  border-left: 3px solid rgba(184,139,19,.72);
+}
+
+.scenarioLocationMeasure {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  min-height: 0 !important;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.scenarioLocationDetail h3 {
+  margin: 0;
+  color: #3f3f3f;
+  font-size: 11.5px;
+  font-weight: 750;
+  line-height: 1.52;
+}
+
+.scenarioLocationIndicators {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  min-height: 10px;
+}
+
+.scenarioLocationIndicator {
+  width: 5px;
+  height: 5px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(174,135,30,.30);
+  cursor: pointer;
+  transition: width .24s ease, background .2s ease, transform .15s ease;
+}
+
+.scenarioLocationIndicator:hover,
+.scenarioLocationIndicator:focus-visible {
+  background: rgba(174,135,30,.68);
+  transform: scale(1.12);
+}
+
+.scenarioLocationIndicator.is-current {
+  width: 18px;
+  background: var(--scenario-selected-color);
+}
+
+.scenarioLocationDescription,
+.scenarioNarrative {
+  color: #5f5f5f;
+  font-size: 11.5px;
+  line-height: 1.52;
+}
+
+.scenarioLocationDescription p,
+.scenarioNarrative p {
+  margin: 7px 0 0;
+}
+
+.scenarioNarrative p:first-child,
+.scenarioLocationDescription p:first-child {
+  margin-top: 0;
+}
+
+.scenarioNarrativeSection {
+  padding: 0;
+  border: 0;
+}
+
+.scenarioMapSection {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.scenarioFootnote {
+  position: static;
+  display: inline;
+}
+
+.scenarioFootnoteRef {
+  display: inline;
+  margin: 0 1px 0 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #806312;
+  font: inherit;
+  cursor: pointer;
+  vertical-align: baseline;
+  text-decoration: none;
+}
+
+.scenarioFootnoteRef sup {
+  font-size: 9px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.scenarioFootnoteRef:focus-visible {
+  outline: 1.5px solid #9a7413;
+  outline-offset: 1px;
+}
+
+.scenarioFootnoteExpanded {
+  position: relative;
+  display: none;
+  margin: 7px 0 9px;
+  padding: 9px 28px 9px 10px;
+  border-left: 2px solid #b9952d;
+  background: #f7f7f7;
+  color: #4f4f4f;
+  font-size: 10.5px;
+  line-height: 1.45;
+}
+
+.scenarioFootnoteExpanded a {
+  color: #725510;
+  text-decoration-color: rgba(114,85,16,.45);
+  overflow-wrap: anywhere;
+}
+
+.scenarioFootnote.is-open .scenarioFootnoteExpanded {
+  display: block;
+}
+
+.scenarioFootnoteCollapse {
+  position: absolute;
+  top: 4px;
+  right: 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: #777777;
+  font: 400 16px/1 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  cursor: pointer;
+}
+
+.scenarioFootnoteCollapse:hover,
+.scenarioFootnoteCollapse:focus-visible {
+  background: #e8e8e8;
+  color: #333333;
+}
+
+@media (max-width: 520px) {
+  #ui,
+  #ui.is-detail-open {
+    width: calc(100vw - 70px);
+  }
+}
+
 @media (max-width: 700px) {
   .legendContainer { left: 18px; bottom: 18px; }
-  #panelToggleBtn { left: 342px; }
 }
 
 .legend2D {
@@ -577,6 +1141,11 @@ input[type="range"]::-moz-range-thumb {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .panelFlipper,
+  .panelToggleInner,
+  #ui { transition: none; }
+  .scenarioMapMarker.is-selected .scenarioMapMarkerPulse { animation: none; }
+  .scenarioBackArrow,
   .projectLinkLabel,
   #projectFlourishCanvas,
   .projectLinkArrow { transition: none; }
@@ -660,5 +1229,3 @@ input[type="range"]::-moz-range-thumb {
 #status {
   display: none;
 }
-#chartLabelOverlay { position: fixed; inset: 0; z-index: 60; pointer-events: none; }
-.chartOverlayLabel { position: fixed; transform: translateY(-50%); padding: 1px 3px; background: rgba(255,255,255,.92); font: bold 10.5px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; white-space: nowrap; }
