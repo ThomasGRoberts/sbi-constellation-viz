@@ -385,6 +385,19 @@ export function groupScenarioLocations(locations) {
   return [...groups.values()].filter(site => site.coordinates.length > 0);
 }
 
+function countAuthoredFootnotes(html) {
+  return String(html || "").match(/\[fn\][\s\S]*?\[\/fn\]/gi)?.length || 0;
+}
+
+export function assignScenarioFootnoteStarts(narrativeHtml, sites) {
+  let nextNumber = countAuthoredFootnotes(narrativeHtml) + 1;
+  sites.forEach(site => {
+    site.footnoteStart = nextNumber - 1;
+    nextNumber += countAuthoredFootnotes(site.descriptionHtml);
+  });
+  return sites;
+}
+
 function collectCoordinatesFromGeometry(geometry, longitudes, latitudes = null) {
   if (!geometry) return;
   if (geometry.type === "GeometryCollection") {
@@ -479,7 +492,8 @@ function renderDetailMap(svg, scenario, sites, worldFeatures, selectedSiteIndex,
   }
 
   const path = geoPath(projection);
-  svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
+  // Keep the existing map extent; reserve a separate strip for readable coordinates.
+  svg.setAttribute("viewBox", `0 0 ${width} ${height + 22}`);
   svg.replaceChildren();
 
   const boundaryLayer = document.createElementNS("http://www.w3.org/2000/svg", "g");
@@ -522,17 +536,32 @@ function renderDetailMap(svg, scenario, sites, worldFeatures, selectedSiteIndex,
   svg.append(boundaryLayer);
 
   const projected = sites.flatMap((site, siteIndex) =>
-    site.coordinates.map(coordinate => {
+    site.coordinates.map((coordinate, coordinateIndex) => {
       const point = projection([coordinate.longitude, coordinate.latitude]);
-      return { siteIndex, site, x: point?.[0] ?? 0, y: point?.[1] ?? 0 };
+      return { siteIndex, coordinateIndex, coordinate, site, x: point?.[0] ?? 0, y: point?.[1] ?? 0 };
     })
   );
+  const coordinateLayer = document.createElementNS("http://www.w3.org/2000/svg", "g");
+  coordinateLayer.setAttribute("class", "scenarioMapCoordinates");
+  coordinateLayer.setAttribute("pointer-events", "none");
+  projected.forEach(point => {
+    // A local locator, not a graticule: anchor to the true projected point before
+    // coincident markers are spread out for interaction.
+    const locator = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    locator.setAttribute("class", "scenarioMapLocator");
+    locator.dataset.siteIndex = String(point.siteIndex);
+    locator.dataset.coordinateIndex = String(point.coordinateIndex);
+    locator.setAttribute("d", `M${point.x - 19},${point.y}h13m12,0h13M${point.x},${point.y - 19}v13m0,12v13`);
+    coordinateLayer.append(locator);
+  });
+  svg.append(coordinateLayer);
   distributeCoincidentMarkers(projected);
 
   projected.forEach(point => {
     const marker = document.createElementNS("http://www.w3.org/2000/svg", "g");
     marker.setAttribute("class", `scenarioMapMarker${point.siteIndex === selectedSiteIndex ? " is-selected" : ""}`);
     marker.dataset.siteIndex = String(point.siteIndex);
+    marker.dataset.coordinateIndex = String(point.coordinateIndex);
     marker.setAttribute("transform", `translate(${point.x} ${point.y})`);
     marker.setAttribute("role", "button");
     marker.setAttribute("tabindex", "0");
@@ -553,11 +582,11 @@ function renderDetailMap(svg, scenario, sites, worldFeatures, selectedSiteIndex,
     core.setAttribute("r", point.siteIndex === selectedSiteIndex ? "3.8" : "2.1");
     marker.append(core);
 
-    marker.addEventListener("click", () => onSelect(point.siteIndex));
+    marker.addEventListener("click", () => onSelect(point.siteIndex, point.coordinateIndex));
     marker.addEventListener("keydown", event => {
       if (event.key !== "Enter" && event.key !== " ") return;
       event.preventDefault();
-      onSelect(point.siteIndex);
+      onSelect(point.siteIndex, point.coordinateIndex);
     });
     svg.append(marker);
   });
@@ -617,6 +646,7 @@ export function createThreatScenarioDetailController({
   let scenario = null;
   let sites = [];
   let selectedSiteIndex = 0;
+  let selectedCoordinateIndex = 0;
   let requestId = 0;
   let carouselTimer = null;
   let captionFootnoteStart = 0;
@@ -693,7 +723,7 @@ export function createThreatScenarioDetailController({
       if (site.descriptionHtml) {
         const description = document.createElement("div");
         description.className = "scenarioLocationDescription";
-        renderAuthoredHtml(description, site.descriptionHtml, { value: captionFootnoteStart });
+        renderAuthoredHtml(description, site.descriptionHtml, { value: site.footnoteStart ?? captionFootnoteStart });
         captionContent.append(description);
       }
       target.append(captionContent);
@@ -744,6 +774,18 @@ export function createThreatScenarioDetailController({
       marker.classList.toggle("is-selected", selected);
       marker.querySelector(".scenarioMapMarkerCore")?.setAttribute("r", selected ? "3.8" : "2.1");
     });
+    mapSvg.querySelectorAll(".scenarioMapLocator").forEach(locator => {
+      locator.classList.remove("is-selected");
+      void locator.getBoundingClientRect();
+      locator.classList.toggle("is-selected",
+        Number(locator.dataset.siteIndex) === selectedSiteIndex &&
+        Number(locator.dataset.coordinateIndex) === selectedCoordinateIndex);
+    });
+    const coordinate = sites[selectedSiteIndex]?.coordinates[selectedCoordinateIndex];
+    const label = mapSvg.parentElement.querySelector(".scenarioMapCoordinateLabel");
+    if (label) label.textContent = coordinate
+      ? `${Math.abs(coordinate.latitude).toFixed(3)}°${coordinate.latitude < 0 ? "S" : "N"}, ${Math.abs(coordinate.longitude).toFixed(3)}°${coordinate.longitude < 0 ? "W" : "E"}`
+      : "";
   };
 
   const renderSelectedSite = () => {
@@ -776,10 +818,11 @@ export function createThreatScenarioDetailController({
     locationNext.disabled = !hasMultipleSites;
   };
 
-  function selectSite(index) {
+  function selectSite(index, coordinateIndex = 0) {
     if (sites.length === 0) return;
     const preservedScrollTop = back.scrollTop;
     selectedSiteIndex = (index + sites.length) % sites.length;
+    selectedCoordinateIndex = coordinateIndex;
     renderSelectedSite();
     back.scrollTop = preservedScrollTop;
     scheduleCarousel();
@@ -789,7 +832,9 @@ export function createThreatScenarioDetailController({
     stopCarousel();
     scenario = nextScenario;
     sites = groupScenarioLocations(scenario.locations);
+    assignScenarioFootnoteStarts(scenario.narrativeHtml, sites);
     selectedSiteIndex = 0;
+    selectedCoordinateIndex = 0;
     renderScenarioNavigation(scenario.threatRegion);
     narrativeHeading.textContent = scenario.salvoSize
       ? `Why ${scenario.salvoSize} ${Number(scenario.salvoSize) === 1 ? "missile" : "missiles"}?`

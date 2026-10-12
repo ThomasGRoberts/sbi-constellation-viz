@@ -7,7 +7,7 @@ import { Delaunay } from "d3-delaunay";
 import {
   createSecretLegendActivation,
   createThreatScenarioDetailController
-} from "./scenario-detail.js?v=18";
+} from "./scenario-detail.js?v=21";
 
 const EARTH_RADIUS_KM = 6378.137;
 const MU_EARTH_KM3_S2 = 398600.4418;
@@ -2102,9 +2102,16 @@ async function loadManifest() {
   manifest = await res.json();
 
   refreshDropdowns(false, true);
+  const previewParameters = new URLSearchParams(window.location.search);
+  const requestedThreat = previewParameters.get("scenario");
+  if ([...countrySelect.options].some(option => option.value === requestedThreat)) {
+    countrySelect.value = requestedThreat;
+    refreshDropdowns(false, true);
+  }
   setStatus(`Loaded manifest with ${manifest.length} CSV files.`);
   loadSelectedScenario();
   threatScenarioDetail.syncHeight();
+  if (previewParameters.get("pane") === "scenario") threatScenarioDetail.open();
 }
 
 function getFocusVector(radius = 1) {

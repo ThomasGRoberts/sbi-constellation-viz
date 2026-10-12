@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Optimizing Space-Based Missile Defense</title>
-  <link rel="stylesheet" href="style.css?v=scenario-refinement-16" />
+  <link rel="stylesheet" href="style.css?v=scenario-coordinates-21" />
 </head>
 
 <body>
@@ -119,7 +119,10 @@
 
             <section class="scenarioMapSection" aria-labelledby="scenarioMapHeading">
               <h3 id="scenarioMapHeading" class="scenarioSectionHeading">Which launch sites?</h3>
-              <svg id="scenarioDetailMap" class="scenarioDetailMap" aria-label="Threat-region launch locations"></svg>
+              <div class="scenarioMapFrame">
+                <svg id="scenarioDetailMap" class="scenarioDetailMap" aria-label="Threat-region launch locations"></svg>
+                <span class="scenarioMapCoordinateLabel"></span>
+              </div>
               <div class="scenarioLocationCarousel">
                 <div class="scenarioLocationNavigation" aria-label="Launch-site carousel navigation">
                   <button id="scenarioLocationPrevious" class="scenarioLocationArrow" type="button" aria-label="Show previous launch site">‹</button>
@@ -206,7 +209,7 @@
   }
   </script>
 
-  <script type="module" src="app.js?v=scenario-refinement-16"></script>
+  <script type="module" src="app.js?v=scenario-coordinates-21"></script>
   <script type="module" src="project-flourish.js?v=18"></script>
 </body>
 </html>

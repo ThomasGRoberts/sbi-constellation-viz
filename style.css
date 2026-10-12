@@ -723,6 +723,45 @@ input[type="range"]::-moz-range-thumb {
   stroke-linejoin: round;
 }
 
+.scenarioMapLocator {
+  fill: none;
+  stroke: #b68b19;
+  stroke-width: .85;
+  opacity: 0;
+}
+
+.scenarioMapLocator.is-selected {
+  animation: scenarioLocate 1.8s ease-out both;
+}
+
+@keyframes scenarioLocate {
+  0% { opacity: 0; stroke-dasharray: 0 13; }
+  30%, 60% { opacity: .8; stroke-dasharray: 13 0; }
+  100% { opacity: 0; stroke-dasharray: 13 0; }
+}
+
+.scenarioMapFrame {
+  position: relative;
+}
+
+.scenarioMapCoordinateLabel {
+  position: absolute;
+  bottom: 7px;
+  right: 10px;
+  color: #987f3e;
+  font-size: 9px;
+  font-family: inherit;
+  font-weight: 400;
+  line-height: 1;
+  white-space: nowrap;
+  background: transparent;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scenarioMapLocator.is-selected { animation: none; opacity: .45; }
+}
+
 .scenarioMapBoundaries .scenarioMapFocusCountry {
   fill: #ededed;
   stroke: #5d5d5d;
